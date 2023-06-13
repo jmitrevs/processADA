@@ -50,12 +50,6 @@ int main(int argc, char **argv)
 
     auto f = new TFile("output.root", "RECREATE");
 
-    // Need this later for making plots
-    std::vector<int> chanNumbers;
-    for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan) {
-        chanNumbers.push_back(iChan);
-    }
-
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
         size_t ibegin = link*fragsize;
