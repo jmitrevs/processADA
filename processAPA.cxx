@@ -10,6 +10,7 @@
 
 #include "TFile.h"
 #include "TGraph.h"
+#include "TH2.h"
 
 constexpr unsigned int NUM_LINKS = 10;
 
@@ -61,19 +62,14 @@ int main(int argc, char **argv)
         std::vector<int> ticks;
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
 
-        // std::stringstream histname;
-        // histname << "hist_" << link;
-        // //TCanvas *c1 = new TCanvas("c1","c1",1600,1000);
-        // std::stringstream histtitle;
-        // histtitle << "hist_" << link << ";channel;time tick";
-        // TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(), 256, 0, 255, n_frames, 0, n_frames-1);
-
-        // std::stringstream histname1d;
-        // histname1d << "hist1d_" << link;
-        // std::stringstream histtitle1d;
-        // histtitle1d << "hist1d_" << link << ";time tick";
-        // TH1F *hist1d = new TH1F(histname1d.str().c_str(), histtitle1d.str().c_str(), n_frames, 0, n_frames-1);
-        // hist1d->Sumw2();
+        std::stringstream histname;
+        histname << "hist_" << link;
+        //TCanvas *c1 = new TCanvas("c1","c1",1600,1000);
+        std::stringstream histtitle;
+        histtitle << "hist_" << link << ";channel;time tick";
+        TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
+            dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
+            n_frames, 0, n_frames-1);
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -94,7 +90,9 @@ int main(int argc, char **argv)
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
             {
-                adc_vectors[iChan].push_back(frame->get_adc(iChan));
+                auto adc = frame->get_adc(iChan);
+                adc_vectors[iChan].push_back(adc);
+                hist->Fill(iChan, iFrame, adc);
             }
               
             if (iFrame == 0)
@@ -124,7 +122,7 @@ int main(int argc, char **argv)
         auto g = new TGraph(ticks.size(), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
         ss << "graph_" << link;
-        g->SetNameTitle(ss.str().c_str(), ";tick;adc counts");
+        g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
         g->Write();
 
     }
