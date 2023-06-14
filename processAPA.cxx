@@ -114,7 +114,7 @@ int main(int argc, char **argv)
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
 
-            std::cout << "Channel: " << offline_chan << " nsamples: " << v_adc.size() << std::endl;
+            std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
             // v_adc contains the waveform for this channel
         }
 
