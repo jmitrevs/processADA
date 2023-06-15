@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
@@ -58,8 +59,10 @@ int main(int argc, char **argv)
         const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
         std::cout << "n_frames calc: " << fragsize << " " << sizeof(dunedaq::daqdataformats::FragmentHeader) 
             << " " << sizeof(dunedaq::detdataformats::wib2::WIB2Frame) << " " << n_frames << std::endl;
+
         std::vector<std::vector<int> > adc_vectors(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels);
         std::vector<int> ticks;
+        
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
 
         std::stringstream histname;
@@ -70,6 +73,10 @@ int main(int argc, char **argv)
         TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
+
+        int averageadc = 0;
+
+        std::vector<int> sums(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels,0);
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -88,12 +95,20 @@ int main(int argc, char **argv)
             ticks.push_back(iFrame);
 
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+
+            
+
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
             {
                 auto adc = frame->get_adc(iChan);
                 adc_vectors[iChan].push_back(adc);
-                hist->Fill(iChan, iFrame, adc);
+                //hist->Fill(iChan, iFrame, adc);
+                //adc_size++;
+                //std::cout << "adc:" << adc;
+                
+                sums[iChan] += adc;
             }
+
               
             if (iFrame == 0)
             {
@@ -102,7 +117,31 @@ int main(int argc, char **argv)
                 link_from_frameheader = frame->header.link;
             }
         }
+
+        for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
+            {
+        
+            //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+
+            
+
+            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
+                {
+                    //auto adc = frame->get_adc(iChan);
+                    auto ave = sums[iChan] / n_frames;
+                    adc_vectors[iChan][iFrame] -= ave;
+                    auto val = adc_vectors[iChan][iFrame];
+                    hist->Fill(iChan, iFrame, static_cast<float>(val));
+                    //std::cout << sums[iChan]/n_frames << std::endl;
+                    //std::cout<<adc<<std::endl;
+              
+                }
+
+            }
+
         std::cout << " crate, slot, link(HDF5 group), link(WIB Header): "  << crate << ", " << slot << ", " << link << ", " << link_from_frameheader << std::endl;
+
+        std::vector<int> channel;
 
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
@@ -114,11 +153,22 @@ int main(int argc, char **argv)
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
 
-            std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
+            //std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
             // v_adc contains the waveform for this channel
+
+            channel.push_back(offline_chan);
+        }
+        std::sort(channel.begin(),channel.end());
+
+        for(int i = 0; i<channel.size(); i++)
+        {
+            //std::cout << "Channel index " << i << " is actually Channel: " << channel[i] << " in the hardware" << std::endl;
         }
 
+        
+
         // draw the first 
+        
         auto g = new TGraph(ticks.size(), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
         ss << "graph_" << link;
