@@ -19,3 +19,8 @@ hist0 = infile.Get("hist_0")
 c2 = ROOT.TCanvas("c2","c2",1600,1000)
 hist0.Draw("SURF2")
 c2.SaveAs("hist0.png")
+
+hist1 = infile.Get("hist2_0")
+c2 = ROOT.TCanvas("c2","c2",1600,1000)
+hist1.Draw("SURF2")
+c2.SaveAs("hist1.png")

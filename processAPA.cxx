@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <map>
 
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
@@ -52,6 +53,10 @@ int main(int argc, char **argv)
 
     auto f = new TFile("output.root", "RECREATE");
 
+    std::map<int,std::vector<int>> plane1;
+    std::map<int,std::vector<int>> plane2;
+    std::map<int,std::vector<int>> plane3;
+
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
         size_t ibegin = link*fragsize;
@@ -67,10 +72,22 @@ int main(int argc, char **argv)
 
         std::stringstream histname;
         histname << "hist_" << link;
+
+        std::stringstream histname2;
+        histname2 << "hist2_" << link;
+
         //TCanvas *c1 = new TCanvas("c1","c1",1600,1000);
         std::stringstream histtitle;
         histtitle << "hist_" << link << ";channel;time tick";
+
+        std::stringstream histtitle2;
+        histtitle2 << "hist2_" << link << ";channel;time tick";
+
         TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
+            dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
+            n_frames, 0, n_frames-1);
+
+        TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
 
@@ -132,6 +149,7 @@ int main(int argc, char **argv)
                     adc_vectors[iChan][iFrame] -= ave;
                     auto val = adc_vectors[iChan][iFrame];
                     hist->Fill(iChan, iFrame, static_cast<float>(val));
+               
                     //std::cout << sums[iChan]/n_frames << std::endl;
                     //std::cout<<adc<<std::endl;
               
@@ -143,6 +161,8 @@ int main(int argc, char **argv)
 
         std::vector<int> channel;
 
+
+        
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
             const auto& v_adc = adc_vectors[iChan];
@@ -150,14 +170,36 @@ int main(int argc, char **argv)
             uint32_t slotloc = slot;
             slotloc &= 0x7;
 
+            
+
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
+            unsigned int offline_plane = hdchaninfo.plane;
 
+            std::vector<int> chans;
+
+            for (int i = 0; i<ticks.size(); i++)
+                chans.push_back(ticks[i]);
+
+            if(offline_plane == 0)
+            {
+                plane1[offline_chan] = chans;
+            }
+            else if(offline_plane == 1)
+            {
+                plane2[offline_chan] = chans;
+            }
+            else
+            {
+                plane3[offline_chan] = chans;
+            }
             //std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
             // v_adc contains the waveform for this channel
 
             channel.push_back(offline_chan);
         }
+
+
         std::sort(channel.begin(),channel.end());
 
         for(int i = 0; i<channel.size(); i++)
@@ -165,10 +207,8 @@ int main(int argc, char **argv)
             //std::cout << "Channel index " << i << " is actually Channel: " << channel[i] << " in the hardware" << std::endl;
         }
 
-        
-
         // draw the first 
-        
+    
         auto g = new TGraph(ticks.size(), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
         ss << "graph_" << link;
@@ -176,6 +216,10 @@ int main(int argc, char **argv)
         g->Write();
 
     }
+    for (const auto& entry : plane1) {
+        std::cout << entry.first << std::endl;
+            }
+
   
     f->Write();
 
