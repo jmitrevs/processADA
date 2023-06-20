@@ -57,22 +57,22 @@ int main(int argc, char **argv)
     std::map<int,std::vector<int>> plane3;
 
     std::stringstream histname2;
-    histname2 << "hist2_";
+    histname2 << "U";
 
     std::stringstream histtitle2;
-    histtitle2 << "hist2_" << ";channel;time tick";
+    histtitle2 << "U" << ";channel;time tick";
 
     std::stringstream histname3;
-    histname3 << "hist3_";
+    histname3 << "V";
 
     std::stringstream histtitle3;
-    histtitle3 << "hist3_" << ";channel;time tick";
+    histtitle3 << "V" << ";channel;time tick";
 
     std::stringstream histname4;
-    histname4 << "hist4_";
+    histname4 << "X";
 
     std::stringstream histtitle4;
-    histtitle4 << "hist4_" << ";channel;time tick";
+    histtitle4 << "X" << ";channel;time tick";
 
     const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
 
