@@ -8,4 +8,4 @@ setup dunesw v09_48_01d00 -q e20:prof
 ```
 You can run those commands also by issuing `source setup.sh`
 
-There is a sample file, `makePlot.py` showing how to look at the plots. This uses ROOT (http://root.cern.ch). Run in in the same terminal. If you keep the program from exiting, then you can interact with the plots, I think.
+There is a sample file, `makePlot.py` showing how to look at the plots. This uses ROOT (http://root.cern.ch). Run in in the same terminal. 
