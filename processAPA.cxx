@@ -18,7 +18,6 @@ constexpr unsigned int NUM_LINKS = 10;
 
 int main(int argc, char **argv)
 {
-
     dune::FDHDChannelMapSP chanmap;
     chanmap.ReadMapFromFiles("FDHDChannelMap_v1_wireends.txt","FDHD_CrateMap_v1.txt");
     std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
@@ -100,13 +99,10 @@ int main(int argc, char **argv)
         std::stringstream histtitle;
         histtitle << "hist_" << link << ";channel;time tick";
 
-      
-
         TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
 
-        int averageadc = 0;
 
         std::vector<int> sums(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels,0);
 
@@ -128,15 +124,10 @@ int main(int argc, char **argv)
 
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
 
-            
-
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
             {
                 auto adc = frame->get_adc(iChan);
                 adc_vectors[iChan].push_back(adc);
-                //hist->Fill(iChan, iFrame, adc);
-                //adc_size++;
-                //std::cout << "adc:" << adc;
                 
                 sums[iChan] += adc;
             }
@@ -152,35 +143,21 @@ int main(int argc, char **argv)
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
             {
-        
-            //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-
-           
-       
 
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
                 {
-                    //auto adc = frame->get_adc(iChan);
                     auto ave = sums[iChan] / n_frames;
                     adc_vectors[iChan][iFrame] -= ave;
                     auto val = adc_vectors[iChan][iFrame];
-                    hist->Fill(iChan, iFrame, static_cast<float>(val));
-             
-          
-               
-                    //std::cout << sums[iChan]/n_frames << std::endl;
-                    //std::cout<<adc<<std::endl;
-              
+                    hist->Fill(iChan, iFrame, static_cast<float>(val));           
                 }
 
             }
 
         std::cout << " crate, slot, link(HDF5 group), link(WIB Header): "  << crate << ", " << slot << ", " << link << ", " << link_from_frameheader << std::endl;
 
-        std::vector<int> channel;
+        //std::vector<int> channel;
 
-
-        
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
             const auto& v_adc = adc_vectors[iChan];
@@ -188,8 +165,7 @@ int main(int argc, char **argv)
             uint32_t slotloc = slot;
             slotloc &= 0x7;
 
-            
-
+        
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
@@ -214,10 +190,10 @@ int main(int argc, char **argv)
             //std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
             // v_adc contains the waveform for this channel
 
-            channel.push_back(offline_chan);
+            //channel.push_back(offline_chan);
         }
 
-
+        /*
         std::sort(channel.begin(),channel.end());
 
         for(int i = 0; i<channel.size(); i++)
@@ -226,6 +202,7 @@ int main(int argc, char **argv)
         }
 
         // draw the first 
+        */
     
         auto g = new TGraph(ticks.size(), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
@@ -233,10 +210,8 @@ int main(int argc, char **argv)
         g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
         g->Write();
 
-  
 
     }
-
 
     TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
             plane1.size(), plane1.begin()->first, std::prev(plane1.end())->first,
@@ -250,58 +225,30 @@ int main(int argc, char **argv)
             plane3.size(), plane3.begin()->first, std::prev(plane3.end())->first,
             n_frames,0, n_frames-1);
 
-
-    
-    //dunedaq::daqdataformats::Fragment frag( &infiledata[0], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
- 
-    
-    //std::cout << plane1[2800][0];
-  
-
     for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
-        {
-    //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-
-    for (const auto& entry : plane1) 
     {
-        
-            hist2->Fill(entry.first, iFrame, entry.second[iFrame]);
-            
-      
-    }   
-        }
+        for (const auto& entry : plane1) 
+        {
+            hist2->Fill(entry.first, iFrame, entry.second[iFrame]);     
+        }   
+    }
     
     for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
-        {
- 
-
-    for (const auto& entry : plane2) 
     {
-        
+        for (const auto& entry : plane2) 
+        {
             hist3->Fill(entry.first, iFrame, entry.second[iFrame]);
-            
-      
-    }   
-        }
+        }   
+    }
     
     for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
-        {
-    //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-
-    for (const auto& entry : plane3) 
     {
-        
-            hist4->Fill(entry.first, iFrame, entry.second[iFrame]);
-            
-      
-    }   
-        }
+        for (const auto& entry : plane3) 
+        {
+            hist4->Fill(entry.first, iFrame, entry.second[iFrame]);  
+        }   
+    }
     
-
-  
-   
-
-  
     f->Write();
 
     return 0;
