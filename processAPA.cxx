@@ -57,6 +57,28 @@ int main(int argc, char **argv)
     std::map<int,std::vector<int>> plane2;
     std::map<int,std::vector<int>> plane3;
 
+    std::stringstream histname2;
+    histname2 << "hist2_";
+
+    std::stringstream histtitle2;
+    histtitle2 << "hist2_" << ";channel;time tick";
+
+    std::stringstream histname3;
+    histname3 << "hist3_";
+
+    std::stringstream histtitle3;
+    histtitle3 << "hist3_" << ";channel;time tick";
+
+    std::stringstream histname4;
+    histname4 << "hist4_";
+
+    std::stringstream histtitle4;
+    histtitle4 << "hist4_" << ";channel;time tick";
+
+    const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
+
+
+
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
         size_t ibegin = link*fragsize;
@@ -73,21 +95,14 @@ int main(int argc, char **argv)
         std::stringstream histname;
         histname << "hist_" << link;
 
-        std::stringstream histname2;
-        histname2 << "hist2_" << link;
 
         //TCanvas *c1 = new TCanvas("c1","c1",1600,1000);
         std::stringstream histtitle;
         histtitle << "hist_" << link << ";channel;time tick";
 
-        std::stringstream histtitle2;
-        histtitle2 << "hist2_" << link << ";channel;time tick";
+      
 
         TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
-            dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
-            n_frames, 0, n_frames-1);
-
-        TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
 
@@ -140,7 +155,8 @@ int main(int argc, char **argv)
         
             //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
 
-            
+           
+       
 
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
                 {
@@ -149,6 +165,8 @@ int main(int argc, char **argv)
                     adc_vectors[iChan][iFrame] -= ave;
                     auto val = adc_vectors[iChan][iFrame];
                     hist->Fill(iChan, iFrame, static_cast<float>(val));
+             
+          
                
                     //std::cout << sums[iChan]/n_frames << std::endl;
                     //std::cout<<adc<<std::endl;
@@ -183,15 +201,15 @@ int main(int argc, char **argv)
 
             if(offline_plane == 0)
             {
-                plane1[offline_chan] = chans;
+                plane1[offline_chan] = adc_vectors[iChan];
             }
             else if(offline_plane == 1)
             {
-                plane2[offline_chan] = chans;
+                plane2[offline_chan] = adc_vectors[iChan];
             }
             else
             {
-                plane3[offline_chan] = chans;
+                plane3[offline_chan] = adc_vectors[iChan];
             }
             //std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
             // v_adc contains the waveform for this channel
@@ -215,10 +233,73 @@ int main(int argc, char **argv)
         g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
         g->Write();
 
+  
+
     }
-    for (const auto& entry : plane1) {
-        std::cout << entry.first << std::endl;
-            }
+
+
+    TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
+            plane1.size(), plane1.begin()->first, std::prev(plane1.end())->first,
+            n_frames,0, n_frames-1);
+
+    TH2F *hist3 = new TH2F(histname3.str().c_str(), histtitle3.str().c_str(),
+            plane2.size(), plane2.begin()->first, std::prev(plane2.end())->first,
+            n_frames,0, n_frames-1);
+
+    TH2F *hist4 = new TH2F(histname4.str().c_str(), histtitle4.str().c_str(),
+            plane3.size(), plane3.begin()->first, std::prev(plane3.end())->first,
+            n_frames,0, n_frames-1);
+
+
+    
+    //dunedaq::daqdataformats::Fragment frag( &infiledata[0], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
+ 
+    
+    //std::cout << plane1[2800][0];
+  
+
+    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+        {
+    //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+
+    for (const auto& entry : plane1) 
+    {
+        
+            hist2->Fill(entry.first, iFrame, entry.second[iFrame]);
+            
+      
+    }   
+        }
+    
+    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+        {
+ 
+
+    for (const auto& entry : plane2) 
+    {
+        
+            hist3->Fill(entry.first, iFrame, entry.second[iFrame]);
+            
+      
+    }   
+        }
+    
+    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+        {
+    //auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+
+    for (const auto& entry : plane3) 
+    {
+        
+            hist4->Fill(entry.first, iFrame, entry.second[iFrame]);
+            
+      
+    }   
+        }
+    
+
+  
+   
 
   
     f->Write();
