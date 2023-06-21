@@ -272,9 +272,9 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
                 plane3[offline_chan-chan_min-plane1.size()-plane2.size()] = adc_vectors[iChan];
             }
         }
+    
 
     }
-
     TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
             plane1.size(), chan_min, plane1.size()+chan_min,
             n_frames,0, n_frames-1);
