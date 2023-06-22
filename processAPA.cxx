@@ -2,6 +2,14 @@
 
 //std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
 
+//input is 28320800 long
+
+//might need to use cstandard arrays
+
+const int infile_size = 28320800;
+
+std::array<char,infile_size> infiledata;
+
 int main(int argc, char **argv)
 {
     // Check if the correct number of arguments is provided
@@ -23,13 +31,14 @@ int main(int argc, char **argv)
     chanmap.ReadMapFromFiles("FDHDChannelMap_v1_wireends.txt","FDHD_CrateMap_v1.txt");
     FILE *infile = fopen(inputFilename.data(),"r");
 
-    std::vector<char> infiledata;
+    int i = 0;
 
     while (1)
     {
         char c=fgetc(infile);
         if (feof(infile)) break;
-        infiledata.push_back(c);
+        infiledata[i]=c;
+        i++;
     }
     fclose(infile);
 

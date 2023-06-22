@@ -19,11 +19,13 @@
 constexpr unsigned int NUM_LINKS = 10;
 
 const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
+const int input_size = 28320800;
 
 std::array<std::array<int,6000>,total_channels> planes;
 std::array<std::array<int,6000>,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> adc_vectors;
 
-void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,std::vector<int>& outdata)
+//std::vector<char>& infiledata
+void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapSP& chanmap,std::vector<int>& outdata)
 {
     std::cout << "Input file size: " << infiledata.size() << std::endl;
     if ( infiledata.size() % NUM_LINKS != 0)
