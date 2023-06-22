@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <map>
 #include <fstream>
+#include <array>
 
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
@@ -29,10 +30,12 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
     auto f = new TFile("output.root", "RECREATE");
 
-     std::vector<std::vector<int>> plane1;
+    int plane1_length = 0;
+    //std::vector<std::vector<int>> plane1;
     //std::map<int,std::vector<int>> plane1;
     //std::map<int,std::vector<int>> plane2;
     //std::map<int,std::vector<int>> plane3;
+
     std::vector<std::vector<int>> plane2;
     std::vector<std::vector<int>> plane3;
 
@@ -169,7 +172,8 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
            if (offline_plane == 0)
            {
-            plane1.push_back(empty);
+                //plane1.push_back(empty);
+                plane1_length++;  //for some reason plane1_length causes segmentation fault
            }
            
             if(offline_plane == 1)
@@ -206,8 +210,12 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
         //std::cout << "chan min: " << chan_min << std::endl;
     }
+    std::cout << "plane1_length: " << plane1_length << std::endl;
+    //std::cout <<  "plane1.size(): " << plane1.size() << std::endl;
+    const int length = plane1_length;
 
-   
+    //std::array<std::array<int,6000>,length> plane1;      
+    int plane1[plane1_length][600];
 
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
@@ -259,32 +267,39 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
             if(offline_plane == 0)
             {
-                plane1[offline_chan-chan_min] = adc_vectors[iChan];
+                
+                for (int i = 0; i < 600; i++) //should be adc_vectors[iChan].size()
+                {
+                    plane1[offline_chan-chan_min][i] = adc_vectors[iChan][i];  
+                }
+                
+                
+                //plane1[offline_chan-chan_min] = adc_vectors[iChan];
                 //plane1[offline_chan] = adc_vectors[iChan];
                 //std::cout << offline_chan << std::endl;
             }
             else if(offline_plane == 1)
             {
-                plane2[offline_chan-chan_min-plane1.size()] = adc_vectors[iChan];
+                plane2[offline_chan-chan_min-plane1_length] = adc_vectors[iChan];
             }
             else if(offline_plane == 2)
             {
-                plane3[offline_chan-chan_min-plane1.size()-plane2.size()] = adc_vectors[iChan];
+                plane3[offline_chan-chan_min-plane1_length-plane2.size()] = adc_vectors[iChan];
             }
         }
     
 
     }
     TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
-            plane1.size(), chan_min, plane1.size()+chan_min,
+            plane1_length, chan_min, plane1_length+chan_min,
             n_frames,0, n_frames-1);
     
     TH2F *hist3 = new TH2F(histname3.str().c_str(), histtitle3.str().c_str(),
-            plane2.size(), chan_min+plane1.size(), plane1.size()+plane2.size()+chan_min,
+            plane2.size(), chan_min+plane1_length, plane1_length+plane2.size()+chan_min,
             n_frames,0, n_frames-1);
     
     TH2F *hist4 = new TH2F(histname4.str().c_str(), histtitle4.str().c_str(),
-            plane3.size(), chan_min+plane1.size()+plane2.size(), plane1.size()+plane2.size()+plane3.size()+chan_min,
+            plane3.size(), chan_min+plane1_length+plane2.size(), plane1_length+plane2.size()+plane3.size()+chan_min,
             n_frames,0, n_frames-1);
 /*
     TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
@@ -302,7 +317,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
     for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
     {
-        for (int i = 0; i < plane1.size(); i++) 
+        for (int i = 0; i < plane1_length; i++) 
         {
             hist2->Fill(i+chan_min, iFrame, plane1[i][iFrame]);     
         }   
@@ -312,7 +327,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     {
         for (int i = 0; i < plane2.size(); i++) 
         {
-            hist3->Fill(i+chan_min+plane1.size(), iFrame, plane2[i][iFrame]);     
+            hist3->Fill(i+chan_min+plane1_length, iFrame, plane2[i][iFrame]);     
         }   
     }
 
@@ -320,7 +335,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     {
         for (int i = 0; i < plane3.size(); i++) 
         {
-            hist4->Fill(i+chan_min+plane1.size()+plane2.size(), iFrame, plane3[i][iFrame]);     
+            hist4->Fill(i+chan_min+plane1_length+plane2.size(), iFrame, plane3[i][iFrame]);     
         }   
     }
 /*
