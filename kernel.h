@@ -18,6 +18,9 @@
 
 constexpr unsigned int NUM_LINKS = 10;
 
+const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
+std::array<std::array<int,6000>,total_channels> planes;
+
 void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,std::vector<int>& outdata)
 {
     std::cout << "Input file size: " << infiledata.size() << std::endl;
@@ -31,6 +34,8 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     auto f = new TFile("output.root", "RECREATE");
 
     int plane1_length = 0;
+    int plane2_length = 0;
+    int plane3_length = 0;
     //std::vector<std::vector<int>> plane1;
     //std::map<int,std::vector<int>> plane1;
     //std::map<int,std::vector<int>> plane2;
@@ -61,6 +66,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
 
     int chan_min = 1000000;
 
+    
 
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
@@ -71,6 +77,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
             << " " << sizeof(dunedaq::detdataformats::wib2::WIB2Frame) << " " << n_frames << std::endl;
 
         std::vector<std::vector<int> > adc_vectors(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels);
+    
         std::vector<int> ticks;
         
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
@@ -212,10 +219,11 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     }
     std::cout << "plane1_length: " << plane1_length << std::endl;
     //std::cout <<  "plane1.size(): " << plane1.size() << std::endl;
-    const int length = plane1_length;
 
-    //std::array<std::array<int,6000>,length> plane1;      
+    //std::array<std::array<int,600>,total_channels> planes; //make same for adc   planes[index] = adc[index]     
     int plane1[plane1_length][600];
+
+    //could make one 2d std array or a bunch of 1 d
 
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
@@ -268,9 +276,9 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
             if(offline_plane == 0)
             {
                 
-                for (int i = 0; i < 600; i++) //should be adc_vectors[iChan].size()
+                for (int i = 0; i < 6000; i++) //should be adc_vectors[iChan].size()
                 {
-                    plane1[offline_chan-chan_min][i] = adc_vectors[iChan][i];  
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];  
                 }
                 
                 
@@ -319,7 +327,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     {
         for (int i = 0; i < plane1_length; i++) 
         {
-            hist2->Fill(i+chan_min, iFrame, plane1[i][iFrame]);     
+            hist2->Fill(i+chan_min, iFrame, planes[i][iFrame]);     
         }   
     }
 
@@ -338,6 +346,7 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
             hist4->Fill(i+chan_min+plane1_length+plane2.size(), iFrame, plane3[i][iFrame]);     
         }   
     }
+
 /*
     for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
     {
@@ -367,5 +376,4 @@ void process_data(std::vector<char>& infiledata,dune::FDHDChannelMapSP& chanmap,
     f->Write();
 
 }
-
 
