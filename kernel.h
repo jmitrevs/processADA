@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <string>
-#include <vector>
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include <map>
 #include <fstream>
 #include <array>
 
@@ -16,8 +14,7 @@
 #include "TGraph.h"
 #include "TH2.h"
 
-//there is something wrong with the commit where you combined all the planes
-//problem is with adc
+//note: values are different when adc is filled by links vs when adc is completely filled
 
 constexpr unsigned int NUM_LINKS = 10;
 
@@ -64,8 +61,6 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
 
     int chan_min = 1000000;
 
-    
-
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
         size_t ibegin = link*fragsize;
@@ -75,10 +70,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             << " " << sizeof(dunedaq::detdataformats::wib2::WIB2Frame) << " " << n_frames << std::endl;
 
         
-    
-        //std::array<int,6000> ticks;
         std::array<int,6000> ticks;
-        
         
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
 
@@ -94,8 +86,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
 
-
-        std::vector<int> sums(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels,0);
+        std::array<int,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> sums = {0};
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -146,8 +137,6 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
 
         std::cout << " crate, slot, link(HDF5 group), link(WIB Header): "  << crate << ", " << slot << ", " << link << ", " << link_from_frameheader << std::endl;
 
-        //std::vector<int> channel;
-
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
             const auto& v_adc = adc_vectors[iChan];
@@ -159,54 +148,27 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
-
-        
-
+    
             if (hdchaninfo.offlchan < chan_min)
                 {
                     chan_min = hdchaninfo.offlchan;
                 }
 
-            /*
-            if(offline_plane == 0)
+            if (offline_plane == 0)
             {
-                plane1.push_back(adc_vectors[iChan]);
-                //plane1[offline_chan] = adc_vectors[iChan];
-                //std::cout << offline_chan << std::endl;
+                 plane1_length++;  
             }
-            */
-           std::vector<int> empty;
-
-           if (offline_plane == 0)
-           {
-                plane1_length++;  
-           }
            
-            if(offline_plane == 1)
-            {
-                plane2_length++;
-            }
+             if(offline_plane == 1)
+             {
+                 plane2_length++;
+             }
             
-            else if(offline_plane == 2)
-            {
-                plane3_length++;
-            }
-            //std::cout << "Channel index " << iChan << " is actually Channel: " << offline_chan << " in the hardware; Number of time ticks available: " << v_adc.size() << std::endl;
-            // v_adc contains the waveform for this channel
-
-            //channel.push_back(offline_chan);
+             else if(offline_plane == 2)
+             {
+                 plane3_length++;
+             }
         }
-
-        /*
-        std::sort(channel.begin(),channel.end());
-
-        for(int i = 0; i<channel.size(); i++)
-        {
-            //std::cout << "Channel index " << i << " is actually Channel: " << channel[i] << " in the hardware" << std::endl;
-        }
-
-        // draw the first 
-        */
     
         auto g = new TGraph(sizeof(ticks) / sizeof(ticks[0]), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
@@ -214,24 +176,14 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
         g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
         g->Write();
 
-        //std::cout << "chan min: " << chan_min << std::endl;
     }
-    //std::cout <<  "plane1.size(): " << plane1.size() << std::endl;
-
-    //std::array<std::array<int,600>,total_channels> planes; //make same for adc   planes[index] = adc[index]     
-
-
-    //could make one 2d std array or a bunch of 1 d
-
-    //problem is def the adc vectors
 
     for (size_t link = 0; link < NUM_LINKS; ++link)
     {
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
-        std::vector<std::vector<int> > adc_vectors(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels);
-        std::vector<int> sums(dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels,0);
+        std::array<int,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> sums = {0};
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -245,7 +197,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
             {
                 auto adc = frame->get_adc(iChan);
-                adc_vectors[iChan].push_back(adc);
+                adc_vectors[iChan][iFrame] = adc;
 
                 sums[iChan] += adc;
             }
@@ -263,10 +215,6 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
                 }
 
             }
-
-
-     
-        
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
             uint32_t slotloc = slot;
@@ -277,49 +225,21 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
 
-            /*
-            plane1 length: 800
-            plane2 length: 800
-            plane3 length: 960
-            */
-
             if(offline_plane == 0)
             {
-                
-                for (int i = 0; i < 6000; i++) //should be adc_vectors[iChan].size()
-                {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];  
-  
-                    
-                }
-                
-                
-                //plane1[offline_chan-chan_min] = adc_vectors[iChan];
-                //plane1[offline_chan] = adc_vectors[iChan];
-                //std::cout << offline_chan << std::endl;
+                planes[offline_chan-chan_min] = adc_vectors[iChan];  
             }
             else if(offline_plane == 1)
             {
-                for (int i = 0; i < 6000; i++) 
-                {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];  
-
-                
-                }
+                planes[offline_chan-chan_min] = adc_vectors[iChan];  
             }
             else if(offline_plane == 2)
             {
-                for (int i = 0; i < 6000; i++) 
-                {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];
-
-                   
-                }
+                planes[offline_chan-chan_min] = adc_vectors[iChan];
             }
         }
     
     }
-
 
     TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
             plane1_length, chan_min, plane1_length+chan_min,
