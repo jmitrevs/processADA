@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     }
     fclose(infile);
 
-    std::vector<int> outdata;
+    std::array<int,500> outdata;
     
     process_data(infiledata, chanmap, outdata);
 
