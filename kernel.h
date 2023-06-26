@@ -4,14 +4,11 @@
 #include <sstream>
 #include <algorithm>
 #include <fstream>
+#include <CL/cl.h>
 
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
 #include "WIB2Frame.hpp"
-
-#include "TFile.h"
-#include "TGraph.h"
-#include "TH2.h"
 
 constexpr unsigned int NUM_LINKS = 10;
 
@@ -32,29 +29,9 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
     }
     size_t fragsize = (infile_size / NUM_LINKS);
 
-    auto f = new TFile("output.root", "RECREATE");
-
     int plane1_length = 0;
     int plane2_length = 0;
     int plane3_length = 0;
-
-    std::stringstream histname2;
-    histname2 << "U";
-
-    std::stringstream histtitle2;
-    histtitle2 << "U" << ";channel;time tick";
-
-    std::stringstream histname3;
-    histname3 << "V";
-
-    std::stringstream histtitle3;
-    histtitle3 << "V" << ";channel;time tick";
-
-    std::stringstream histname4;
-    histname4 << "X";
-
-    std::stringstream histtitle4;
-    histtitle4 << "X" << ";channel;time tick";
 
     const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
 
@@ -73,21 +50,8 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
         
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
 
-        std::stringstream histname;
-        histname << "hist_" << link;
-
-
-        //TCanvas *c1 = new TCanvas("c1","c1",1600,1000);
-        std::stringstream histtitle;
-        histtitle << "hist_" << link << ";channel;time tick";
-
-        TH2F *hist = new TH2F(histname.str().c_str(), histtitle.str().c_str(),
-            dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
-            n_frames, 0, n_frames-1);
-
         int sums[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels] = {0};
         
-
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
             // dump WIB frames in hex
@@ -129,8 +93,7 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
                 {
                     auto ave = sums[iChan] / n_frames;
                     adc_vectors[iChan][iFrame] -= ave;
-                    auto val = adc_vectors[iChan][iFrame];
-                    hist->Fill(iChan, iFrame, static_cast<float>(val));           
+                    auto val = adc_vectors[iChan][iFrame];           
                 }
 
             }
@@ -169,14 +132,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
                  plane3_length++;
              }
         }
-
-        /*
-        auto g = new TGraph(sizeof(ticks) / sizeof(ticks[0]), ticks.data(), adc_vectors[0].data());
-        std::stringstream ss;
-        ss << "graph_" << link;
-        g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
-        g->Write();
-        */
 
     }
 
@@ -252,42 +207,5 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
     
     }
 
-    TH2F *hist2 = new TH2F(histname2.str().c_str(), histtitle2.str().c_str(),
-            plane1_length, chan_min, plane1_length+chan_min,
-            n_frames,0, n_frames-1);
-    
-    TH2F *hist3 = new TH2F(histname3.str().c_str(), histtitle3.str().c_str(),
-            plane2_length, chan_min+plane1_length, plane1_length+plane2_length+chan_min,
-            n_frames,0, n_frames-1);
-    
-    TH2F *hist4 = new TH2F(histname4.str().c_str(), histtitle4.str().c_str(),
-            plane3_length, chan_min+plane1_length+plane2_length, plane1_length+plane2_length+plane3_length+chan_min,
-            n_frames,0, n_frames-1);
-
-    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
-    {
-        for (int i = 0; i < plane1_length; i++) 
-        {
-            hist2->Fill(i+chan_min, iFrame, planes[i][iFrame]);     
-        }   
-    }
-
-    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
-    {
-        for (int i = 0; i < plane2_length; i++) 
-        {
-            hist3->Fill(i+chan_min+plane1_length, iFrame, planes[i+plane1_length][iFrame]);     
-        }   
-    }
-
-    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
-    {
-        for (int i = 0; i < plane3_length; i++) 
-        {
-            hist4->Fill(i+chan_min+plane1_length+plane2_length, iFrame, planes[i+plane1_length+plane2_length][iFrame]);     
-        }   
-    }
-    
-    f->Write();
 }
 
