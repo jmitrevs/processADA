@@ -4,7 +4,6 @@
 #include <sstream>
 #include <algorithm>
 #include <fstream>
-#include <array>
 
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
@@ -14,24 +13,24 @@
 #include "TGraph.h"
 #include "TH2.h"
 
-//note: values are different when adc is filled by links vs when adc is completely filled
-
 constexpr unsigned int NUM_LINKS = 10;
 
+const int num_ticks = 6000;
 const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 const int input_size = 28320800;
 
-std::array<std::array<int,6000>,total_channels> planes;
-std::array<std::array<int,6000>,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> adc_vectors;
+int planes[total_channels][num_ticks];
+int adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][num_ticks];
 
-void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapSP& chanmap,std::array<int, 500>& outdata)
+
+void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,char outdata[500], const int infile_size)
 {
-    if ( infiledata.size() % NUM_LINKS != 0)
+    if ( infile_size% NUM_LINKS != 0)
     {
         std::cout << "Input file size not divisible by " << NUM_LINKS << ". Stopping." << std::endl;
         return;
     }
-    size_t fragsize = infiledata.size() / NUM_LINKS;
+    size_t fragsize = (infile_size / NUM_LINKS);
 
     auto f = new TFile("output.root", "RECREATE");
 
@@ -70,7 +69,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             << " " << sizeof(dunedaq::detdataformats::wib2::WIB2Frame) << " " << n_frames << std::endl;
 
         
-        std::array<int,6000> ticks;
+        int ticks[num_ticks];
         
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
 
@@ -86,7 +85,8 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels, 0, dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels-1,
             n_frames, 0, n_frames-1);
 
-        std::array<int,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> sums = {0};
+        int sums[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels] = {0};
+        
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -169,12 +169,14 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
                  plane3_length++;
              }
         }
-    
+
+        /*
         auto g = new TGraph(sizeof(ticks) / sizeof(ticks[0]), ticks.data(), adc_vectors[0].data());
         std::stringstream ss;
         ss << "graph_" << link;
         g->SetNameTitle(ss.str().c_str(), ";time tick;adc counts");
         g->Write();
+        */
 
     }
 
@@ -183,7 +185,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
-        std::array<int,dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels> sums = {0};
+        int sums[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels] = {0};
 
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -227,15 +229,24 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
 
             if(offline_plane == 0)
             {
-                planes[offline_chan-chan_min] = adc_vectors[iChan];  
+                for (int i = 0; i < num_ticks; i++)
+                {
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
+                } 
             }
             else if(offline_plane == 1)
             {
-                planes[offline_chan-chan_min] = adc_vectors[iChan];  
+                for (int i = 0; i < num_ticks; i++)
+                {
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
+                } 
             }
             else if(offline_plane == 2)
             {
-                planes[offline_chan-chan_min] = adc_vectors[iChan];
+                for (int i = 0; i < num_ticks; i++)
+                {
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
+                } 
             }
         }
     
@@ -253,7 +264,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
             plane3_length, chan_min+plane1_length+plane2_length, plane1_length+plane2_length+plane3_length+chan_min,
             n_frames,0, n_frames-1);
 
-    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
     {
         for (int i = 0; i < plane1_length; i++) 
         {
@@ -261,7 +272,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
         }   
     }
 
-    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
     {
         for (int i = 0; i < plane2_length; i++) 
         {
@@ -269,7 +280,7 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
         }   
     }
 
-    for (size_t iFrame = 0; iFrame < 6000; ++iFrame)
+    for (size_t iFrame = 0; iFrame < num_ticks; ++iFrame)
     {
         for (int i = 0; i < plane3_length; i++) 
         {
@@ -278,6 +289,5 @@ void process_data(std::array<char, input_size>& infiledata,dune::FDHDChannelMapS
     }
     
     f->Write();
-
 }
 

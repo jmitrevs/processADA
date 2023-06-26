@@ -1,6 +1,8 @@
 #include "kernel.h"
 
 //std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
+//  ../datfiles/TriggerRecord00001_0000TPCAPA002.dat
+//  ../datfiles/TriggerRecord00001_0000TPCAPA003.dat
 
 //input is 28320800 long
 
@@ -8,7 +10,7 @@
 
 const int infile_size = 28320800;
 
-std::array<char,infile_size> infiledata;
+char infiledata[infile_size];
 
 int main(int argc, char **argv)
 {
@@ -42,9 +44,9 @@ int main(int argc, char **argv)
     }
     fclose(infile);
 
-    std::array<int,500> outdata;
+    char outdata[500];
     
-    process_data(infiledata, chanmap, outdata);
+    process_data(infiledata, chanmap, outdata,infile_size);
 
     return 0;
 }
