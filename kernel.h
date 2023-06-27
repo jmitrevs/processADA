@@ -42,9 +42,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
         const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
-        std::cout << "n_frames calc: " << fragsize << " " << sizeof(dunedaq::daqdataformats::FragmentHeader) 
-            << " " << sizeof(dunedaq::detdataformats::wib2::WIB2Frame) << " " << n_frames << std::endl;
-
         
         int ticks[num_ticks];
         
@@ -54,18 +51,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
         
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
-            // dump WIB frames in hex
-            //std::cout << "Frame number: " << iFrame << std::endl;
-            // size_t wfs32 = sizeof(dunedaq::detdataformats::wib2::WIB2Frame)/4;
-            //uint32_t *fdp = reinterpret_cast<uint32_t*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-            //std::cout << std::dec;
-            //for (size_t iwdt = 0; iwdt < 1; iwdt++)  // dumps just the first 32 bits.  use wfs32 if you want them all
-            //{
-            //  std::cout << iwdt << " : 10987654321098765432109876543210" << std::endl;
-            //  std::cout << iwdt << " : " << std::bitset<32>{fdp[iwdt]} << std::endl;
-            //}
-            //std::cout << std::dec;
-
             ticks[iFrame] = iFrame;
 
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
@@ -76,29 +61,7 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
                 slot = frame->header.slot;
                 link_from_frameheader = frame->header.link;
             }
-
-            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
-            {
-                auto adc = frame->get_adc(iChan);
-                adc_vectors[iChan][iFrame] = adc;
-
-                sums[iChan] += adc;
-            }
         }
-
-        for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
-            {
-
-            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
-                {
-                    auto ave = sums[iChan] / n_frames;
-                    adc_vectors[iChan][iFrame] -= ave;
-                    auto val = adc_vectors[iChan][iFrame];           
-                }
-
-            }
-
-        std::cout << " crate, slot, link(HDF5 group), link(WIB Header): "  << crate << ", " << slot << ", " << link << ", " << link_from_frameheader << std::endl;
 
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
@@ -113,9 +76,9 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
             unsigned int offline_plane = hdchaninfo.plane;
     
             if (hdchaninfo.offlchan < chan_min)
-                {
-                    chan_min = hdchaninfo.offlchan;
-                }
+            {
+                chan_min = hdchaninfo.offlchan;
+            }
 
             if (offline_plane == 0)
             {
