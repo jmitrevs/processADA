@@ -46,8 +46,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
         int ticks[num_ticks];
         
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
-
-        int sums[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels] = {0};
         
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
@@ -65,17 +63,14 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
 
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
         {
-            const auto& v_adc = adc_vectors[iChan];
-
             uint32_t slotloc = slot;
             slotloc &= 0x7;
 
-        
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
-            unsigned int offline_chan = hdchaninfo.offlchan;
+            int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
     
-            if (hdchaninfo.offlchan < chan_min)
+            if (offline_chan < chan_min)
             {
                 chan_min = hdchaninfo.offlchan;
             }
@@ -95,7 +90,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
                  plane3_length++;
              }
         }
-
     }
 
     for (size_t link = 0; link < NUM_LINKS; ++link)
@@ -130,8 +124,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
                 {
                     auto ave = sums[iChan] / n_frames;
                     adc_vectors[iChan][iFrame] -= ave;
-                    auto val = adc_vectors[iChan][iFrame];
-
                 }
 
             }
@@ -139,7 +131,6 @@ void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,ch
         {
             uint32_t slotloc = slot;
             slotloc &= 0x7;
-
         
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
             unsigned int offline_chan = hdchaninfo.offlchan;
