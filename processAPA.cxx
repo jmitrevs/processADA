@@ -12,7 +12,7 @@ int main()
 {
 
     // Open input file
-    std::ifstream inputFile(inputFilename);
+    std::ifstream inputFile(infilename);
     if (!inputFile) {
         std::cout << "Error opening input file.\n";
         return 1;  // Terminate the program
@@ -20,7 +20,7 @@ int main()
 
     dune::FDHDChannelMapSP chanmap;
     chanmap.ReadMapFromFiles("FDHDChannelMap_v1_wireends.txt","FDHD_CrateMap_v1.txt");
-    FILE *infile = fopen(inputFilename.data(),"r");
+    FILE *infile = fopen(infilename.data(),"r");
 
     int i = 0;
 
@@ -35,7 +35,7 @@ int main()
 
     char outdata[500];
     
-    process_data(infiledata, chanmap, outdata,infile_size);
+    process_data(infile_size,infiledata, chanmap, outdata);
 
     return 0;
 }

@@ -13,6 +13,7 @@
 #include "Fragment.hpp"
 #include "WIB2Frame.hpp"
 
-void process_data(char infiledata[input_size], dune::FDHDChannelMapSP& chanmap, char outdata[500], const int infile_size);
+
+void process_data(const int infile_size, char infiledata[infile_size], dune::FDHDChannelMapSP& chanmap, char outdata[500]);
 
 #endif

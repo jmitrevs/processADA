@@ -10,7 +10,7 @@ int planes[total_channels][num_ticks];
 int adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][num_ticks];
 
 
-void process_data(char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,char outdata[500], const int infile_size)
+void process_data(const int infile_size, char infiledata[input_size],dune::FDHDChannelMapSP& chanmap,char outdata[500])
 {
     if ( infile_size% NUM_LINKS != 0)
     {

@@ -91,7 +91,7 @@ public:
   uint16_t get_adc(int i) const // NOLINT(build/unsigned)
   {
     if (i < 0 || i >= s_num_channels)
-      throw std::out_of_range("ADC index out of range");
+      return 0;
 
     // The index of the first (and sometimes only) word containing the required ADC value
     int word_index = s_bits_per_adc * i / s_bits_per_word;
@@ -116,9 +116,9 @@ public:
   void set_adc(int i, uint16_t val) // NOLINT(build/unsigned)
   {
     if (i < 0 || i >= s_num_channels)
-      throw std::out_of_range("ADC index out of range");
+      return;
     if (val >= (1 << s_bits_per_adc))
-      throw std::out_of_range("ADC value out of range");
+      return;
 
     // The index of the first (and sometimes only) word containing the required ADC value
     int word_index = s_bits_per_adc * i / s_bits_per_word;
