@@ -1,26 +1,15 @@
 #include "kernel.h"
+#include <string>
 
-//std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
-//  ../datfiles/TriggerRecord00001_0000TPCAPA002.dat
-//  ../datfiles/TriggerRecord00001_0000TPCAPA003.dat
+std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
 
-//input is 28320800 long
-
-//might need to use cstandard arrays
 
 const int infile_size = 28320800;
 
 char infiledata[infile_size];
 
-int main(int argc, char **argv)
+int main()
 {
-    // Check if the correct number of arguments is provided
-    if (argc != 2) {
-        std::cout << "Usage: " << argv[0] << " <input_filename> \n";
-        return 1;  // Terminate the program
-    }
-
-    std::string inputFilename = argv[1];
 
     // Open input file
     std::ifstream inputFile(inputFilename);

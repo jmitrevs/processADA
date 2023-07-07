@@ -99,7 +99,7 @@ private:
   {
   if (offlineChannel >= fNChans)
     {      
-      throw std::range_error("FDHDChannelMapSP offline Channel out of range"); 
+	  return;
     }
   };
 
