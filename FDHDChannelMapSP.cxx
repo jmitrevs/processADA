@@ -77,7 +77,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
     linestream >> cratenum >> apaname;
     if (fAPANameFromCrate.find(cratenum) != fAPANameFromCrate.end())
       {
-	throw std::invalid_argument("FDHDChannelMapSP: Duplicate crate number in cratemap file\n"); 
+	return;
       }
     fAPANameFromCrate[cratenum] = apaname;
   }
@@ -133,7 +133,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   auto TPCSi = fTPCSetFromCrate.find(scrate);
   if (TPCSi == fTPCSetFromCrate.end())
     {
-      throw std::invalid_argument("FDHDChannelMapSP: Logic error in TPCSet from crate\n");
+
     }
   auto tpcset = TPCSi->second;
 
