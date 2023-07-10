@@ -1,7 +1,7 @@
 #include "kernel.h"
 #include <string>
 
-std::string infilename = "../datfiles/TriggerRecord00001_0000TPCAPA001.dat";
+std::string infilename = "TriggerRecord00001_0000TPCAPA001.dat";
 
 
 const int infile_size = 28320800;

@@ -29,6 +29,9 @@ namespace wib2 {
  *  The canonical definition of the WIB format is given in EDMS document 2088713:
  *  https://edms.cern.ch/document/2088713/4
  */
+
+static constexpr int s_bits_per_adc = 14;
+
 class WIB2Frame
 {
 public:
@@ -39,7 +42,7 @@ public:
   // The definition of the format is in terms of 32-bit words
   typedef uint32_t word_t; // NOLINT
 
-  static constexpr int s_bits_per_adc = 14;
+  //static constexpr int s_bits_per_adc = 14;
   static constexpr int s_bits_per_word = 8 * sizeof(word_t);
   static constexpr int s_u_channels_per_femb = 40;
   static constexpr int s_v_channels_per_femb = 40;
