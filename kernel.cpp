@@ -9,7 +9,7 @@ int planes[total_channels][num_ticks];
 int adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][num_ticks];
 
 
-void process_data(const int infile_size, char infiledata[infile_size],dune::FDHDChannelMapSP& chanmap,char outdata[500])
+void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500])
 {
     if ( infile_size% NUM_LINKS != 0)
     {
@@ -31,17 +31,17 @@ void process_data(const int infile_size, char infiledata[infile_size],dune::FDHD
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
         const size_t n_frames = (fragsize - sizeof(dunedaq::daqdataformats::FragmentHeader))/sizeof(dunedaq::detdataformats::wib2::WIB2Frame);
-        
+
         int ticks[num_ticks];
-        
+
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
-        
+
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
             ticks[iFrame] = iFrame;
 
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-              
+
             if (iFrame == 0)
             {
                 crate = frame->header.crate;
@@ -55,10 +55,10 @@ void process_data(const int infile_size, char infiledata[infile_size],dune::FDHD
             uint32_t slotloc = slot;
             slotloc &= 0x7;
 
-            auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
+            auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
             int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
-    
+
             if (offline_chan < chan_min)
             {
                 chan_min = hdchaninfo.offlchan;
@@ -66,14 +66,14 @@ void process_data(const int infile_size, char infiledata[infile_size],dune::FDHD
 
             if (offline_plane == 0)
             {
-                 plane1_length++;  
+                 plane1_length++;
             }
-           
+
              if(offline_plane == 1)
              {
                  plane2_length++;
              }
-            
+
              else if(offline_plane == 2)
              {
                  plane3_length++;
@@ -120,8 +120,8 @@ void process_data(const int infile_size, char infiledata[infile_size],dune::FDHD
         {
             uint32_t slotloc = slot;
             slotloc &= 0x7;
-        
-            auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan); 
+
+            auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
 
@@ -129,26 +129,25 @@ void process_data(const int infile_size, char infiledata[infile_size],dune::FDHD
             {
                 for (int i = 0; i < num_ticks; i++)
                 {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
-                } 
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];
+                }
             }
             else if(offline_plane == 1)
             {
                 for (int i = 0; i < num_ticks; i++)
                 {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
-                } 
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];
+                }
             }
             else if(offline_plane == 2)
             {
                 for (int i = 0; i < num_ticks; i++)
                 {
-                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i]; 
-                } 
+                    planes[offline_chan-chan_min][i] = adc_vectors[iChan][i];
+                }
             }
         }
-    
+
     }
 
 }
-
