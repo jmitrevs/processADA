@@ -78,10 +78,14 @@ private:
 
   APAInfoKeyValuePair fAPANameFromCrate[10000]; //replace 10000 with actual size
 
+  struct KeyValuePair {
+      unsigned int key;
+      unsigned int value;
+  };
 
-  std::unordered_map<unsigned int, unsigned int>  fUprightFromCrate; // 0: inverted;  1: upright
-  std::unordered_map<unsigned int, unsigned int>  fCrateFromTPCSet;
-  std::unordered_map<unsigned int, unsigned int>  fTPCSetFromCrate;
+  KeyValuePair fUprightFromCrate[10000];//replace 1000 with actual size
+  KeyValuePair fCrateFromTPCSet[10000];
+  KeyValuePair fTPCSetFromCrate[10000];
 
   // map of crate, slot, link, femb_on_link, plane, chan to channel info struct
   // This is only for two APAs, one upright, and one inverted

@@ -104,7 +104,21 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
       {
           upright = 1;
       }
-      fUprightFromCrate[crate] = upright;
+      bool found = false;
+      for (int j = 0; j < 10000; ++j) {
+          if (fUprightFromCrate[j].key == crate) {
+              fUprightFromCrate[j].value = upright;
+              found = true;
+              break;
+          }
+      }
+
+      // If not found, add new KeyValuePair to the array
+      // Here, we assume the last position in the array is always available for new insertions.
+      if (!found) {
+          fUprightFromCrate[10000 - 1].key = crate;
+          fUprightFromCrate[10000 - 1].value = upright;
+      }
 
       unsigned int TPCSet = 0;
       if(aname.size() > 6) {
@@ -118,8 +132,20 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
           TPCSet = 6*(column - 1) + 3*upright + nms;
       }
 
-      fCrateFromTPCSet[TPCSet] = crate;
-      fTPCSetFromCrate[crate] = TPCSet;
+      for (int i = 0; i < 10000; ++i) { //remember to replace all 100000 with actual sizes
+          if (fCrateFromTPCSet[i].key == TPCSet) {
+              fCrateFromTPCSet[i].value = crate;
+              break; // assuming keys are unique, so we can break after finding the match
+          }
+      }
+
+      // Similarly for fTPCSetFromCrate
+      for (int i = 0; i < 10000; ++i) {
+          if (fTPCSetFromCrate[i].key == crate) {
+              fTPCSetFromCrate[i].value = TPCSet;
+              break; // assuming keys are unique, so we can break after finding the match
+          }
+      }
   }
 }
 
@@ -137,18 +163,32 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 // ununderstood crates are mapped to the first crate in the APA name map
 
   auto scrate = crate;   // substitute crate
-  auto upri = fUprightFromCrate.find(crate);
-  if (upri == fUprightFromCrate.end())
-  {
-      scrate = fAPANameFromCrate[0].key; // Get key of first struct in the array
-  }
-  auto upright = upri->second;
-  auto TPCSi = fTPCSetFromCrate.find(scrate);
-  if (TPCSi == fTPCSetFromCrate.end())
-    {
 
-    }
-  auto tpcset = TPCSi->second;
+  unsigned int upright = 0;
+  for (int i = 0; i < 10000; ++i) {
+      if (fUprightFromCrate[i].key == crate) {
+          upright = fUprightFromCrate[i].value;
+          break;
+      }
+  }
+  if (upright == 0) {
+      scrate = fAPANameFromCrate[0].key;
+  }
+  auto TPCSi = 0;
+
+  for (int i = 0; i < 10000; ++i) {
+      if (fTPCSetFromCrate[i].key == scrate) {
+          TPCSi = fTPCSetFromCrate[i].value;
+          break;
+      }
+  }
+
+
+  if (TPCSi == 0) {
+
+  }
+
+  auto tpcset = TPCSi;
 
   auto fm1 = DetToChanInfo.find(upright);  // this should never fail as we have a substitute crate
   auto& m1 = fm1->second;
