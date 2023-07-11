@@ -26,8 +26,11 @@ dune::FDHDChannelMapSP::FDHDChannelMapSP()
 
 void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, const std::string &cratemapfile)
 {
+
   std::ifstream inFile(chanmapfile, std::ios::in);
   std::string line;
+
+  int i = 0;
 
   while (std::getline(inFile,line)) {
     std::stringstream linestream(line);
@@ -58,16 +61,10 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
     check_offline_channel(chanInfo.offlchan);
 
     DetToChanInfo[chanInfo.upright][chanInfo.wib][chanInfo.link][chanInfo.wibframechan] = chanInfo;
-    if (chanInfo.upright)
-      {
-        OfflToChanInfo_Upright[chanInfo.offlchan] = chanInfo;
-      }
-    else
-      {
-        OfflToChanInfo_Inverted[chanInfo.offlchan] = chanInfo;
-      }
   }
   inFile.close();
+
+  int j = 0;
 
   std::ifstream inFile2(cratemapfile, std::ios::in);
   while (std::getline(inFile2,line)) {
@@ -75,39 +72,55 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
     unsigned int cratenum;
     std::stringstream linestream(line);
     linestream >> cratenum >> apaname;
-    if (fAPANameFromCrate.find(cratenum) != fAPANameFromCrate.end())
-      {
-	return;
-      }
-    fAPANameFromCrate[cratenum] = apaname;
+
+    bool found = false;
+    for(int i = 0; i < j; ++i) {
+        if(fAPANameFromCrate[i].key == cratenum) {
+            found = true;
+            break;
+        }
+    }
+
+    if(!found) {
+        APAInfoKeyValuePair newPair;
+        newPair.key = cratenum;
+        newPair.value = apaname;
+        fAPANameFromCrate[j] = newPair;
+        j++;
+    }
   }
   inFile2.close();
 
   // fill maps of crates and TPCSets
 
-  for (auto &ani : fAPANameFromCrate )
-    {
-      auto crate = ani.first;
-      std::string &aname = ani.second;
+  for (int i = 0; i < 10000; ++i)
+  {
+      APAInfoKeyValuePair &ani = fAPANameFromCrate[i];
+      unsigned int crate = ani.key;
+      std::string &aname = ani.value;
+
       unsigned int upright=0;
       if (aname.find('U') != std::string::npos)
-	{
-	  upright = 1;
-	}
+      {
+          upright = 1;
+      }
       fUprightFromCrate[crate] = upright;
 
       unsigned int TPCSet = 0;
-      std::string columnstring = aname.substr(5,2);
-      unsigned int column = atoi(columnstring.c_str());
-      unsigned int nms = 0;   //   0=north, 1=middle,  2=south
-      if (aname.find('N') != std::string::npos) nms = 0;
-      if (aname.find('M') != std::string::npos) nms = 1;
-      if (aname.find('S') != std::string::npos) nms = 2;
+      if(aname.size() > 6) {
+          std::string columnstring = aname.substr(5,2);
+          unsigned int column = atoi(columnstring.c_str());
+          unsigned int nms = 0;   //   0=north, 1=middle,  2=south
+          if (aname.find('N') != std::string::npos) nms = 0;
+          if (aname.find('M') != std::string::npos) nms = 1;
+          if (aname.find('S') != std::string::npos) nms = 2;
 
-      TPCSet = 6*(column - 1) + 3*upright + nms;
+          TPCSet = 6*(column - 1) + 3*upright + nms;
+      }
+
       fCrateFromTPCSet[TPCSet] = crate;
       fTPCSetFromCrate[crate] = TPCSet;
-    }
+  }
 }
 
 dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBElements(
@@ -126,9 +139,9 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   auto scrate = crate;   // substitute crate
   auto upri = fUprightFromCrate.find(crate);
   if (upri == fUprightFromCrate.end())
-    {
-      scrate = fAPANameFromCrate.begin()->first;  
-    }
+  {
+      scrate = fAPANameFromCrate[0].key; // Get key of first struct in the array
+  }
   auto upright = upri->second;
   auto TPCSi = fTPCSetFromCrate.find(scrate);
   if (TPCSi == fTPCSetFromCrate.end())
@@ -154,15 +167,22 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   auto outputinfo = fm4->second;
   outputinfo.offlchan += tpcset * 2560;
   outputinfo.crate = scrate;
-  auto aci = fAPANameFromCrate.find(scrate);
-  outputinfo.APAName = aci->second;
+  const APAInfoKeyValuePair* aci = nullptr; // Pointer to the desired element, initialized to nullptr
+
+  for (auto &item : fAPANameFromCrate) {
+      if (item.key == scrate) {
+          aci = &item;
+          break;
+      }
+  }
+  outputinfo.APAName = aci->value;
   outputinfo.upright = upright;
 
   return outputinfo;
 
 }
 
-
+/*
 dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromOfflChan(unsigned int offlineChannel) const {
 
   check_offline_channel(offlineChannel);
@@ -204,4 +224,6 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromOffl
   outputinfo.valid = true;
 
   return outputinfo;
+
 }
+*/

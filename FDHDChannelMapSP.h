@@ -13,10 +13,8 @@
 #ifndef FDHDChannelMapSP_H
 #define FDHDChannelMapSP_H
 
-#include <unordered_map>
-#include <vector>
 #include <string>
-#include <stdexcept>
+#include <unordered_map>
 
 namespace dune {
   class FDHDChannelMapSP;
@@ -62,7 +60,7 @@ public:
    unsigned int link,
    unsigned int wibframechan) const;
 
-  HDChanInfo_t GetChanInfoFromOfflChan(unsigned int offlchan) const;
+  //HDChanInfo_t GetChanInfoFromOfflChan(unsigned int offlchan) const;
 
   unsigned int getNChans() { return fNChans; }
 
@@ -73,8 +71,14 @@ private:
 
   // maps of crate numbers and APAs.  These are maps so we do not have to assume that
   // crates are numbered consecutively or the numbering scheme may start at an unusual number.
+  struct APAInfoKeyValuePair {
+      unsigned int key;
+      std::string value;
+  };
 
-  std::unordered_map<unsigned int, std::string>   fAPANameFromCrate;  
+  APAInfoKeyValuePair fAPANameFromCrate[10000]; //replace 10000 with actual size
+
+
   std::unordered_map<unsigned int, unsigned int>  fUprightFromCrate; // 0: inverted;  1: upright
   std::unordered_map<unsigned int, unsigned int>  fCrateFromTPCSet;
   std::unordered_map<unsigned int, unsigned int>  fTPCSetFromCrate;
@@ -90,10 +94,10 @@ private:
 
   // maps of chan info indexed by offline channel number modulo 2560, for one APA each
 
-  std::unordered_map<unsigned int, HDChanInfo_t> OfflToChanInfo_Inverted;
-  std::unordered_map<unsigned int, HDChanInfo_t> OfflToChanInfo_Upright;
+
 
   //-----------------------------------------------
+
 
   void check_offline_channel(unsigned int offlineChannel) const
   {
