@@ -14,7 +14,6 @@
 #define FDHDChannelMapSP_H
 
 #include <string>
-#include <unordered_map>
 
 namespace dune {
   class FDHDChannelMapSP;
@@ -58,7 +57,7 @@ public:
    unsigned int crate,
    unsigned int slot,
    unsigned int link,
-   unsigned int wibframechan) const;
+   unsigned int wibframechan);
 
   //HDChanInfo_t GetChanInfoFromOfflChan(unsigned int offlchan) const;
 
@@ -90,11 +89,22 @@ private:
   // map of crate, slot, link, femb_on_link, plane, chan to channel info struct
   // This is only for two APAs, one upright, and one inverted
 
+  /*
   std::unordered_map<unsigned int,   // upright
     std::unordered_map<unsigned int, // wib
     std::unordered_map<unsigned int, // link
     std::unordered_map<unsigned int, // wibframechan
     HDChanInfo_t > > > > DetToChanInfo;
+    */
+  struct HDChanInfoStruct {
+      unsigned int upright;
+      unsigned int wib;
+      unsigned int link;
+      unsigned int wibframechan;
+      HDChanInfo_t info;
+  };
+
+  HDChanInfoStruct DetToChanInfo[10000];
 
   // maps of chan info indexed by offline channel number modulo 2560, for one APA each
 

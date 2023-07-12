@@ -60,7 +60,19 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
 
     check_offline_channel(chanInfo.offlchan);
 
-    DetToChanInfo[chanInfo.upright][chanInfo.wib][chanInfo.link][chanInfo.wibframechan] = chanInfo;
+    //DetToChanInfo[chanInfo.upright][chanInfo.wib][chanInfo.link][chanInfo.wibframechan] = chanInfo;
+
+    HDChanInfoStruct newEntry;
+    newEntry.upright = chanInfo.upright;
+    newEntry.wib = chanInfo.wib;
+    newEntry.link = chanInfo.link;
+    newEntry.wibframechan = chanInfo.wibframechan;
+    newEntry.info = chanInfo;
+
+    DetToChanInfo[i] = newEntry;
+    i++;
+
+
   }
   inFile.close();
 
@@ -153,7 +165,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
     unsigned int crate,
     unsigned int slot,
     unsigned int link,
-    unsigned int wibframechan ) const {
+    unsigned int wibframechan ) {
 
   unsigned int wib = slot + 1;
 
@@ -190,21 +202,18 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
   auto tpcset = TPCSi;
 
-  auto fm1 = DetToChanInfo.find(upright);  // this should never fail as we have a substitute crate
-  auto& m1 = fm1->second;
 
-  auto fm2 = m1.find(wib);
-  if (fm2 == m1.end()) return badInfo;
-  auto& m2 = fm2->second;
 
-  auto fm3 = m2.find(link);
-  if (fm3 == m2.end()) return badInfo;
-  auto& m3 = fm3->second;
+     HDChanInfoStruct* fm4 = nullptr;
+          for(int i = 0; i < 10000; i++) {
+              if (DetToChanInfo[i].wibframechan == wibframechan) {
+                  fm4 = &DetToChanInfo[i];
+                  break;
+              }
+          }
+          auto& m4 = fm4->wibframechan;
 
-  auto fm4 = m3.find(wibframechan);
-  if (fm4 == m3.end()) return badInfo;
-
-  auto outputinfo = fm4->second;
+  auto outputinfo = fm4->info;
   outputinfo.offlchan += tpcset * 2560;
   outputinfo.crate = scrate;
   const APAInfoKeyValuePair* aci = nullptr; // Pointer to the desired element, initialized to nullptr
