@@ -26,7 +26,7 @@ public:
   typedef struct HDChanInfo {
     unsigned int offlchan;        // in gdml and channel sorting convention
     unsigned int crate;           // crate number
-    std::string APAName;          // Descriptive APA name
+         // Descriptive APA name
     unsigned int upright;         // 0 for inverted, 1 for upright
     unsigned int wib;             // 1, 2, 3, 4 or 5  (slot number +1?)
     unsigned int link;            // link identifier: 0 or 1
@@ -70,17 +70,16 @@ private:
 
   // maps of crate numbers and APAs.  These are maps so we do not have to assume that
   // crates are numbered consecutively or the numbering scheme may start at an unusual number.
-  struct APAInfoKeyValuePair {
-      unsigned int key;
-      std::string value;
-  };
 
-  APAInfoKeyValuePair fAPANameFromCrate[10000]; //replace 10000 with actual size
+
+  unsigned int fAPANameFromCrate[10000]; //replace 10000 with actual size
 
   struct KeyValuePair {
       unsigned int key;
       unsigned int value;
   };
+
+  std::string APAval[10000];
 
   KeyValuePair fUprightFromCrate[10000];//replace 1000 with actual size
   KeyValuePair fCrateFromTPCSet[10000];

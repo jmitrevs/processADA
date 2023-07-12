@@ -54,7 +54,6 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
     // be generic for all APAs.
 
     chanInfo.crate = 0;
-    chanInfo.APAName = "";
 
     // fill maps.
 
@@ -87,17 +86,15 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
 
     bool found = false;
     for(int i = 0; i < j; ++i) {
-        if(fAPANameFromCrate[i].key == cratenum) {
+        if(fAPANameFromCrate[i] == cratenum) {
             found = true;
             break;
         }
-    }
+    } //can just make seperate data structure for the name and try it out
 
     if(!found) {
-        APAInfoKeyValuePair newPair;
-        newPair.key = cratenum;
-        newPair.value = apaname;
-        fAPANameFromCrate[j] = newPair;
+        fAPANameFromCrate[j] = cratenum;
+        APAval[j] = apaname;
         j++;
     }
   }
@@ -107,9 +104,8 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
 
   for (int i = 0; i < 10000; ++i)
   {
-      APAInfoKeyValuePair &ani = fAPANameFromCrate[i];
-      unsigned int crate = ani.key;
-      std::string &aname = ani.value;
+      unsigned int crate = fAPANameFromCrate[i];
+      std::string &aname = APAval[i];
 
       unsigned int upright=0;
       if (aname.find('U') != std::string::npos)
@@ -184,7 +180,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
       }
   }
   if (upright == 0) {
-      scrate = fAPANameFromCrate[0].key;
+      scrate = fAPANameFromCrate[0];
   }
   auto TPCSi = 0;
 
@@ -216,15 +212,8 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   auto outputinfo = fm4->info;
   outputinfo.offlchan += tpcset * 2560;
   outputinfo.crate = scrate;
-  const APAInfoKeyValuePair* aci = nullptr; // Pointer to the desired element, initialized to nullptr
 
-  for (auto &item : fAPANameFromCrate) {
-      if (item.key == scrate) {
-          aci = &item;
-          break;
-      }
-  }
-  outputinfo.APAName = aci->value;
+  //outputinfo.APAName = aci->value;
   outputinfo.upright = upright;
 
   return outputinfo;
