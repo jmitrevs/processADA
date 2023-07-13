@@ -155,6 +155,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
           }
       }
   }
+
 }
 
 dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBElements(
@@ -218,6 +219,8 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
   return outputinfo;
 
+	HDChanInfo_t h;
+	return h;
 }
 
 /*

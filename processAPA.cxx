@@ -1,5 +1,6 @@
 #include "kernel.h"
 #include <string>
+#include <iostream>
 
 std::string infilename = "TriggerRecord00001_0000TPCAPA001.dat";
 
@@ -11,6 +12,7 @@ char infiledata[infile_size];
 int main()
 {
 
+	std::cout << "started running" << std::endl;
     // Open input file
     std::ifstream inputFile(infilename);
     if (!inputFile) {
@@ -35,7 +37,11 @@ int main()
 
     char outdata[500];
     
+    std::cout << "here" << std::endl;
+
     process_data(infile_size,infiledata, chanmap, outdata);
+
+    std::cout << "after" << std::endl;
 
     return 0;
 }
