@@ -72,18 +72,18 @@ private:
   // crates are numbered consecutively or the numbering scheme may start at an unusual number.
 
 
-  unsigned int fAPANameFromCrate[10000]; //replace 10000 with actual size
+  unsigned int fAPANameFromCrate[150];
 
   struct KeyValuePair {
       unsigned int key;
       unsigned int value;
   };
 
-  std::string APAval[10000];
+  std::string APAval[150];
 
-  KeyValuePair fUprightFromCrate[10000];//replace 1000 with actual size
-  KeyValuePair fCrateFromTPCSet[10000];
-  KeyValuePair fTPCSetFromCrate[10000];
+  KeyValuePair fUprightFromCrate[150];
+  KeyValuePair fCrateFromTPCSet[150];
+  KeyValuePair fTPCSetFromCrate[150];
 
   // map of crate, slot, link, femb_on_link, plane, chan to channel info struct
   // This is only for two APAs, one upright, and one inverted
@@ -103,7 +103,7 @@ private:
       HDChanInfo_t info;
   };
 
-  HDChanInfoStruct DetToChanInfo[100000];
+  HDChanInfoStruct DetToChanInfo[5120];
 
   // maps of chan info indexed by offline channel number modulo 2560, for one APA each
 

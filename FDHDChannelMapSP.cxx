@@ -90,7 +90,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
             found = true;
             break;
         }
-    } //can just make seperate data structure for the name and try it out
+    }
 
     if(!found) {
         fAPANameFromCrate[j] = cratenum;
@@ -98,11 +98,12 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
         j++;
     }
   }
+
   inFile2.close();
 
   // fill maps of crates and TPCSets
 
-  for (int i = 0; i < 10000; ++i)
+  for (int i = 0; i < 150; ++i)
   {
       unsigned int crate = fAPANameFromCrate[i];
       std::string &aname = APAval[i];
@@ -113,7 +114,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
           upright = 1;
       }
       bool found = false;
-      for (int j = 0; j < 10000; ++j) {
+      for (int j = 0; j < 150; ++j) {
           if (fUprightFromCrate[j].key == crate) {
               fUprightFromCrate[j].value = upright;
               found = true;
@@ -124,8 +125,8 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
       // If not found, add new KeyValuePair to the array
       // Here, we assume the last position in the array is always available for new insertions.
       if (!found) {
-          fUprightFromCrate[10000 - 1].key = crate;
-          fUprightFromCrate[10000 - 1].value = upright;
+          fUprightFromCrate[150 - 1].key = crate;
+          fUprightFromCrate[150 - 1].value = upright;
       }
 
       unsigned int TPCSet = 0;
@@ -140,7 +141,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
           TPCSet = 6*(column - 1) + 3*upright + nms;
       }
 
-      for (int i = 0; i < 10000; ++i) { //remember to replace all 100000 with actual sizes
+      for (int i = 0; i < 150; ++i) { //remember to replace all 100000 with actual sizes
           if (fCrateFromTPCSet[i].key == TPCSet) {
               fCrateFromTPCSet[i].value = crate;
               break; // assuming keys are unique, so we can break after finding the match
@@ -148,7 +149,7 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
       }
 
       // Similarly for fTPCSetFromCrate
-      for (int i = 0; i < 10000; ++i) {
+      for (int i = 0; i < 150; ++i) {
           if (fTPCSetFromCrate[i].key == crate) {
               fTPCSetFromCrate[i].value = TPCSet;
               break; // assuming keys are unique, so we can break after finding the match
@@ -174,7 +175,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   auto scrate = crate;   // substitute crate
 
   unsigned int upright = 0;
-  for (int i = 0; i < 10000; ++i) {
+  for (int i = 0; i < 150; ++i) {
       if (fUprightFromCrate[i].key == crate) {
           upright = fUprightFromCrate[i].value;
           break;
@@ -185,7 +186,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   }
   auto TPCSi = 0;
 
-  for (int i = 0; i < 10000; ++i) {
+  for (int i = 0; i < 150; ++i) {
       if (fTPCSetFromCrate[i].key == scrate) {
           TPCSi = fTPCSetFromCrate[i].value;
           break;
@@ -217,6 +218,7 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
   //outputinfo.APAName = aci->value;
   outputinfo.upright = upright;
+
 
   return outputinfo;
 }
