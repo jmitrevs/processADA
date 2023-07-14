@@ -203,7 +203,8 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
      HDChanInfoStruct* fm4 = nullptr;
           for(int i = 0; i < 10000; i++) {
-              if (DetToChanInfo[i].wibframechan == wibframechan) {
+              if (DetToChanInfo[i].wibframechan == wibframechan && DetToChanInfo[i].upright == upright
+            		&&  DetToChanInfo[i].link == link && DetToChanInfo[i].wib == wib) {
                   fm4 = &DetToChanInfo[i];
                   break;
               }
@@ -218,9 +219,6 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
   outputinfo.upright = upright;
 
   return outputinfo;
-
-	HDChanInfo_t h;
-	return h;
 }
 
 /*

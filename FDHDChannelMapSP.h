@@ -103,7 +103,7 @@ private:
       HDChanInfo_t info;
   };
 
-  HDChanInfoStruct DetToChanInfo[10000];
+  HDChanInfoStruct DetToChanInfo[100000];
 
   // maps of chan info indexed by offline channel number modulo 2560, for one APA each
 
