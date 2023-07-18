@@ -5,7 +5,7 @@
 // Author:      Tom Junk, August 2022
 //
 // Implementation of hardware-offline channel mapping reading from a file.
-// art-independent class  
+// art-independent class
 // The SP in the class and file anme means "Service Provider"
 // DUNE Far Detector Module 1 Horizontal Drift APA wire to offline channel map
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +115,7 @@ private:
   void check_offline_channel(unsigned int offlineChannel) const
   {
   if (offlineChannel >= fNChans)
-    {      
+    {
 	  return;
     }
   };

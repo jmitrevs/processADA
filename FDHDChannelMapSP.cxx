@@ -113,21 +113,11 @@ void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, co
       {
           upright = 1;
       }
-      bool found = false;
-      for (int j = 0; j < 150; ++j) {
-          if (fUprightFromCrate[j].key == crate) {
-              fUprightFromCrate[j].value = upright;
-              found = true;
-              break;
-          }
-      }
+      //fUprightFromCrate[crate] = upright;
+      fUprightFromCrate[i].value = upright;
+      fUprightFromCrate[i].key = crate;
 
-      // If not found, add new KeyValuePair to the array
-      // Here, we assume the last position in the array is always available for new insertions.
-      if (!found) {
-          fUprightFromCrate[150 - 1].key = crate;
-          fUprightFromCrate[150 - 1].value = upright;
-      }
+
 
       unsigned int TPCSet = 0;
       if(aname.size() > 6) {
@@ -174,16 +164,23 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
   auto scrate = crate;   // substitute crate
 
-  unsigned int upright = 0;
-  for (int i = 0; i < 150; ++i) {
-      if (fUprightFromCrate[i].key == crate) {
-          upright = fUprightFromCrate[i].value;
-          break;
-      }
+  //auto upri = fUprightFromCrate.find(crate);
+  unsigned int upri;
+  for(int i = 0; i < 150; i++)
+  {
+	  if(fUprightFromCrate[i].key == crate)
+	  {
+		  upri = fUprightFromCrate[i].value;
+	  }
   }
-  if (upright == 0) {
-      scrate = fAPANameFromCrate[0];
-  }
+
+   if (upri == fUprightFromCrate[150].value)
+     {
+       scrate = fAPANameFromCrate[0];
+     }
+
+
+  auto upright = upri;
   auto TPCSi = 0;
 
   for (int i = 0; i < 150; ++i) {
