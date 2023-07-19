@@ -32,9 +32,11 @@ public:
     unsigned int link;            // link identifier: 0 or 1
     unsigned int femb_on_link;    // which of two FEMBs in the WIB frame this FEMB is:  0 or 1
     unsigned int cebchan;         // cold electronics channel on FEMB:  0 to 127
+    //these 3
     unsigned int plane;           // 0: U,  1: V,  2: X
     unsigned int chan_in_plane;   // which channel this is in the plane in the FEMB:  0:39 for U and V, 0:47 for X
     unsigned int femb;            // which FEMB on an APA -- 1 to 20
+
     unsigned int asic;            // ASIC:   1 to 8
     unsigned int asicchan;        // ASIC channel:  0 to 15
     unsigned int wibframechan;    // channel index in WIB frame (used with get_adc in detdataformats/WIB2Frame.hh).  0:255

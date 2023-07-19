@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-std::string infilename = "TriggerRecord00001_0000TPCAPA003.dat";
+std::string infilename = "TriggerRecord00001_0000TPCAPA001.dat";
 
 
 //const int infile_size = 28320800;
