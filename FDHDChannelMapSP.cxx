@@ -197,10 +197,8 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
 
   auto tpcset = TPCSi;
 
-
-
      HDChanInfoStruct* fm4 = nullptr;
-          for(int i = 0; i < 10000; i++) {
+          for(int i = 0; i < 5120;  i++) {
               if (DetToChanInfo[i].wibframechan == wibframechan && DetToChanInfo[i].upright == upright
             		&&  DetToChanInfo[i].link == link && DetToChanInfo[i].wib == wib) {
                   fm4 = &DetToChanInfo[i];
@@ -210,58 +208,11 @@ dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromWIBE
           auto& m4 = fm4->wibframechan;
 
   auto outputinfo = fm4->info;
-  outputinfo.offlchan += tpcset * 2560;
+  //outputinfo.offlchan += tpcset * 2560;
   outputinfo.crate = scrate;
 
-  //outputinfo.APAName = aci->value;
   outputinfo.upright = upright;
 
 
   return outputinfo;
 }
-
-/*
-dune::FDHDChannelMapSP::HDChanInfo_t dune::FDHDChannelMapSP::GetChanInfoFromOfflChan(unsigned int offlineChannel) const {
-
-  check_offline_channel(offlineChannel);
-
-  HDChanInfo_t outputinfo;
-  HDChanInfo_t internalinfo;
-
-  unsigned int tpcset = offlineChannel / 2560;
-  auto ci = fCrateFromTPCSet.find(tpcset);
-  unsigned int crate = ci->second;
-  auto ui = fUprightFromCrate.find(crate);
-  unsigned int upright = ui->second;
-  if (upright)
-    {
-       auto ci = OfflToChanInfo_Upright.find(offlineChannel % 2560);
-       internalinfo = ci->second;
-    }
-  else
-    {
-       auto ci = OfflToChanInfo_Inverted.find(offlineChannel % 2560);
-       internalinfo = ci->second;
-    }
-
-  outputinfo.offlchan = offlineChannel;
-  outputinfo.crate = crate;
-  auto aci = fAPANameFromCrate.find(crate);
-  outputinfo.APAName = aci->second;
-  outputinfo.upright = upright;
-  outputinfo.wib = internalinfo.wib;
-  outputinfo.link = internalinfo.link;
-  outputinfo.femb_on_link = internalinfo.femb_on_link;
-  outputinfo.cebchan = internalinfo.cebchan;
-  outputinfo.plane = internalinfo.plane;
-  outputinfo.chan_in_plane = internalinfo.chan_in_plane;
-  outputinfo.femb = internalinfo.femb;
-  outputinfo.asic = internalinfo.asic;
-  outputinfo.asicchan = internalinfo.asicchan;
-  outputinfo.wibframechan = internalinfo.wibframechan;
-  outputinfo.valid = true;
-
-  return outputinfo;
-
-}
-*/

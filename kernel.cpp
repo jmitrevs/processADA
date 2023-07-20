@@ -95,23 +95,24 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
 
                 auto adc = frame->get_adc(iChan);
 
-                sums[iChan] += adc;
+                //sums[iChan] += adc;
 
                 adc_vectors[iChan][iFrame] = adc;
 
             }
         }
-        secon_link_second_frame_loop:
-        for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
+     	secon_link_second_frame_chan_loop:
+          for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
             {
+        	  int sum = 0;
+        	  	  for (int i =0; i<100; i++)
+        	  	  {
+        	  		  sum += adc_vectors[iChan][i];
+        	  	  }
+                 ave[iChan] = sum / 100;
 
-        	secon_link_second_frame_chan_loop:
-            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
-                {
-                    ave[iChan] = sums[iChan] / n_frames;
-
-                }
             }
+
 
         second_link_third_chan_loop:
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; ++iChan)
@@ -155,10 +156,12 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
     }
 
     //check if planes is filled correctly
+/*
     for(int i = 0; i <10; i++)
     {
     	std::cout<<planes[4][i] << std::endl;
     }
+*/
 
 
 }
