@@ -1,14 +1,18 @@
 #include "kernel.h"
+#include "ap_int.h"
+#include "hls_stream.h"
 #include<iostream>
 
 void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500])
 {
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
+	const int z_channels = 480;
 	const int n_frames = 6000;
 
 	static int adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][n_frames];
-	static int planes[total_channels][n_frames];
+	static int planes[z_channels][n_frames];
+	static int planes2[z_channels][n_frames];
 
 	if ( infile_size% NUM_LINKS != 0)
 	{
@@ -25,7 +29,6 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
     {
     	int ave[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels];
 
-    	std::cout << "processing link " << link << std::endl;
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
@@ -34,8 +37,6 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
 
-        	if (iFrame % 1000 == 0)
-        		std::cout << "processing frame " << iFrame << std::endl;
 
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
             if (iFrame == 0)
@@ -73,30 +74,25 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
             uint32_t slotloc = slot;
             slotloc &= 0x7;
 
+            const int CHAN_MIN = 1600;
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
 
-            if(offline_plane == 0)
+            if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
             {
                 for (int i = 0; i < n_frames; i++)
                 {
-                    planes[offline_chan][i] = adc_vectors[iChan][i]-ave[iChan];
+                	//std::cout << "offline chan" << offline_chan << std::endl;
+                    planes[offline_chan - CHAN_MIN][i] = adc_vectors[iChan][i]-ave[iChan];
                 }
             }
-            else if(offline_plane == 1)
+            else if(offline_plane == 2)
             {
-                for (int i = 0; i < n_frames; i++)
-                {
-                    planes[offline_chan][i] = adc_vectors[iChan][i]-ave[iChan];
-                }
-            }
-            else
-            {
-                for (int i = 0; i < n_frames; i++)
-                {
-                    planes[offline_chan][i] = adc_vectors[iChan][i]-ave[iChan];
-                }
+            	for (int i = 0; i < n_frames; i++)
+            	{
+            		planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors[iChan][i]-ave[iChan];
+            	}
             }
         }
     }
@@ -108,5 +104,27 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
     	std::cout<<planes[4][i] << std::endl;
     }
 */
+    const int TICK_SIZE = 128;
+
+    for(int i = 0; i <n_frames; i+=TICK_SIZE)
+    {
+    	static int chunk[z_channels][TICK_SIZE];
+    	for(int j = 0; j <z_channels; j++)
+    	{
+    	      for(int k = 0; k < TICK_SIZE; k++)
+    	      {
+    	    	  /*
+    	    	  //can call 2D CNN with chunk.
+    	    	  typedef ap_uint<128> uint128_t;
+    	    	  chunk[i][k] = planes[i][j+k];
+    	    	  uint128_t = chunk[i][k];
+    	    	  hls::stream<chunk[i][k]> &input;
+    	    	  //myproject(input)
+    	    	   *
+    	    	   */
+    	      }
+
+    	}
+    }
 
 }
