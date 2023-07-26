@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="FDHDChannelMapSP.cxx" path="/home/brenton/kernel/processAPA/FDHDChannelMapSP.cxx"/>
+    <originFiles name="kernel.cpp" path="/home/brenton/kernel/processAPA/kernel.cpp"/>
+    <originFiles name="myproject.cpp" path="/home/brenton/kernel/processAPA/myproject.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="FDHDChannelMap_v1_visiblewires.txt" path="/home/brenton/kernel/processAPA/FDHDChannelMap_v1_visiblewires.txt"/>
+    <originFiles name="FDHDChannelMap_v1_wireends.txt" path="/home/brenton/kernel/processAPA/FDHDChannelMap_v1_wireends.txt"/>
+    <originFiles name="FDHD_CrateMap_v1.txt" path="/home/brenton/kernel/processAPA/FDHD_CrateMap_v1.txt"/>
+    <originFiles name="TriggerRecord00001_0000TPCAPA000.dat" path="/home/brenton/workspace/datfiles/TriggerRecord00001_0000TPCAPA000.dat"/>
+    <originFiles name="TriggerRecord00001_0000TPCAPA001.dat" path="/home/brenton/workspace/datfiles/TriggerRecord00001_0000TPCAPA001.dat"/>
+    <originFiles name="TriggerRecord00001_0000TPCAPA002.dat" path="/home/brenton/workspace/datfiles/TriggerRecord00001_0000TPCAPA002.dat"/>
+    <originFiles name="TriggerRecord00001_0000TPCAPA003.dat" path="/home/brenton/workspace/datfiles/TriggerRecord00001_0000TPCAPA003.dat"/>
+    <originFiles name="processAPA.cxx" path="/home/brenton/kernel/processAPA/processAPA.cxx"/>
+    <originFiles name="weights" path="/home/brenton/workspace/processAPA/weights"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

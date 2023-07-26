@@ -1,6 +1,7 @@
 #include "kernel.h"
 #include <string>
 #include <iostream>
+#include <fstream>
 
 std::string infilename = "TriggerRecord00001_0000TPCAPA003.dat";
 

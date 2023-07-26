@@ -3,10 +3,12 @@
 #include "hls_stream.h"
 #include <iostream>
 #include <ap_fixed.h>
+#include "defines3.h"
 
 void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500])
 {
 	typedef ap_fixed<15, 15> fixed15_t;
+	typedef ap_fixed<16,6> fixed16_t;
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 	const int z_channels = 480;
@@ -86,6 +88,7 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
                 for (int i = 0; i < n_frames; i++)
                 {
                 	//std::cout << "offline chan" << offline_chan << std::endl;
+                	//std::cout << "pedestal: " << ave[iChan] << std::endl;
                     planes[offline_chan - CHAN_MIN][i] = adc_vectors[iChan][i]-ave[iChan];
                 }
             }
@@ -93,6 +96,7 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
             {
             	for (int i = 0; i < n_frames; i++)
             	{
+            		//std::cout << "pedestal: " << ave[iChan] << std::endl;
             		planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors[iChan][i]-ave[iChan];
             	}
             }
@@ -106,35 +110,43 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
     	std::cout<<planes[4][i] << std::endl;
     }
 */
+    //Call 2D CNN
+
     const int TICK_SIZE = 128;
+    hls::stream<nnet::array<ap_fixed<15, 15>, 1> > input_stream;
 
-    hls::stream<fixed15_t> input_stream;
-    hls::stream<fixed15_t> output_stream;
+    hls::stream<nnet::array<ap_fixed<16,6>, 3>> output_stream;
 
-    for(int i = 0; i < n_frames; i += TICK_SIZE) {
-        //fixed15_t chunk[z_channels][TICK_SIZE];
-
+    int i = 0;
+    nnet::array<ap_fixed<15,15>, 1> ad;
 
         for(int j = 0; j < z_channels; j++) {
-            for(int k = 0; k < TICK_SIZE; k++) {
-                if(i+k < n_frames) {
-                    //chunk[j][k] = planes[j][i+k];
-                	input_stream.write(planes[j][i+k]);
+
+            for(int k = 0; k <TICK_SIZE; k++) {
+               if(i+k < n_frames) {
+                    ad[0] = planes[j][i+k]; // this line prevents synthesis
+                	input_stream.write(ad);
                 } else {
-                	input_stream.write(0);
+                	input_stream.write(ad);
                 }
 
-
-
+            }
+            if(i<n_frames)
+            {
+                i+=TICK_SIZE;
             }
         }
 
-        //myproject(input_stream, output_stream);
+        myproject(input_stream, output_stream);
+/*
+            auto cc_prob = output_stream.read();
+            auto nc_prob = output_stream.read();
+            auto back = output_stream.read();
+*/
 
-        //auto cc_prob = output_stream.read();
-        //auto nc_prob = output_stream.read();
-        //auto back = output_stream.read();
-    }
+
+
+
 
 
 }

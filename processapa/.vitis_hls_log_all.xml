@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog>
+        <logs message="WARNING [HLS SIM]: hls::stream 'hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>0' contains leftover data, which may result in RTL simulation hanging.&#xA;after" projectName="processapa" solutionName="solution1" date="2023-07-26T17:45:20.568-0400" type="Warning"/>
+        <logs message="WARNING [HLS SIM]: hls::stream 'hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>0' contains leftover data, which may result in RTL simulation hanging.&#xA;after" projectName="processapa" solutionName="solution1" date="2023-07-26T17:42:43.531-0400" type="Warning"/>
+      </csimLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../processAPA.cxx in debug mode
+   Compiling ../../../../FDHDChannelMapSP.cxx in debug mode
+   Compiling ../../../../kernel.cpp in debug mode
+   Compiling ../../../../myproject.cpp in debug mode
+   Generating csim.exe
+started running
+here
+WARNING [HLS SIM]: hls::stream 'hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+after
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 65536
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
