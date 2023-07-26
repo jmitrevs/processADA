@@ -1,17 +1,19 @@
 #include "kernel.h"
 #include "ap_int.h"
 #include "hls_stream.h"
-#include<iostream>
+#include <iostream>
+#include <ap_fixed.h>
 
 void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500])
 {
+	typedef ap_fixed<15, 15> fixed15_t;
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 	const int z_channels = 480;
 	const int n_frames = 6000;
 
 	static int adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][n_frames];
-	static int planes[z_channels][n_frames];
+	static fixed15_t planes[z_channels][n_frames];
 	static int planes2[z_channels][n_frames];
 
 	if ( infile_size% NUM_LINKS != 0)
@@ -106,25 +108,33 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
 */
     const int TICK_SIZE = 128;
 
-    for(int i = 0; i <n_frames; i+=TICK_SIZE)
-    {
-    	static int chunk[z_channels][TICK_SIZE];
-    	for(int j = 0; j <z_channels; j++)
-    	{
-    	      for(int k = 0; k < TICK_SIZE; k++)
-    	      {
-    	    	  /*
-    	    	  //can call 2D CNN with chunk.
-    	    	  typedef ap_uint<128> uint128_t;
-    	    	  chunk[i][k] = planes[i][j+k];
-    	    	  uint128_t = chunk[i][k];
-    	    	  hls::stream<chunk[i][k]> &input;
-    	    	  //myproject(input)
-    	    	   *
-    	    	   */
-    	      }
+    hls::stream<fixed15_t> input_stream;
+    hls::stream<fixed15_t> output_stream;
 
-    	}
+    for(int i = 0; i < n_frames; i += TICK_SIZE) {
+        //fixed15_t chunk[z_channels][TICK_SIZE];
+
+
+        for(int j = 0; j < z_channels; j++) {
+            for(int k = 0; k < TICK_SIZE; k++) {
+                if(i+k < n_frames) {
+                    //chunk[j][k] = planes[j][i+k];
+                	input_stream.write(planes[j][i+k]);
+                } else {
+                	input_stream.write(0);
+                }
+
+
+
+            }
+        }
+
+        //myproject(input_stream, output_stream);
+
+        //auto cc_prob = output_stream.read();
+        //auto nc_prob = output_stream.read();
+        //auto back = output_stream.read();
     }
+
 
 }

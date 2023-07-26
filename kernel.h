@@ -12,6 +12,7 @@
 #include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
 #include "WIB2Frame.hpp"
+#include "myproject.h"
 
 
 void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500]);
