@@ -1,0 +1,85 @@
+---
+MainSourceFile:  /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_1:  '
+    FileOffset:      35
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          853637
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_81_2:  '
+    FileOffset:      81
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          854510
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_81_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_88_3:  '
+    FileOffset:      88
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          854707
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_88_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_106_4:  '
+    FileOffset:      106
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          854980
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_106_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_5:  '
+    FileOffset:      134
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          855767
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_142_6:  '
+    FileOffset:      142
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          855948
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_142_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_169_1:  '
+    FileOffset:      169
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          856460
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_169_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_186_2:  '
+    FileOffset:      186
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          856731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_186_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_201_3:  '
+    FileOffset:      201
+    FilePath:        FDHDChannelMapSP.cxx
+    Replacements:    
+      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/FDHDChannelMapSP.pp.0.cxx
+        Offset:          856984
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_201_3: '
+...

@@ -5,10 +5,9 @@
 #include <ap_fixed.h>
 #include "defines3.h"
 
-void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, char outdata[500])
+void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, int outdata[3])
 {
 	typedef ap_fixed<15, 15> fixed15_t;
-	typedef ap_fixed<16,6> fixed16_t;
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 	const int z_channels = 480;
@@ -119,7 +118,9 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
 
     int i = 0;
     nnet::array<ap_fixed<15,15>, 1> ad;
-
+    nnet::array<ap_fixed<15,15>, 1> zero = {0};
+    for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
+    {
         for(int j = 0; j < z_channels; j++) {
 
             for(int k = 0; k <TICK_SIZE; k++) {
@@ -127,26 +128,22 @@ void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMap
                     ad[0] = planes[j][i+k]; // this line prevents synthesis
                 	input_stream.write(ad);
                 } else {
-                	input_stream.write(ad);
+                	input_stream.write(zero);
                 }
 
             }
-            if(i<n_frames)
-            {
-                i+=TICK_SIZE;
-            }
+
         }
+    }
 
         myproject(input_stream, output_stream);
-/*
-            auto cc_prob = output_stream.read();
-            auto nc_prob = output_stream.read();
-            auto back = output_stream.read();
-*/
 
+        auto cc_prob = output_stream.read();
 
-
-
+        for (int i = 0; i < 3; i++)
+        {
+        	outdata[i] = cc_prob[i];
+        }
 
 
 }

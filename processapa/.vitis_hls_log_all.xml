@@ -2,15 +2,25 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <csimLog/>
+      <synLog>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="processapa" solutionName="solution1" date="2023-07-27T11:07:23.787-0400"/>
+      </synLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <csimLog>
-        <logs message="WARNING [HLS SIM]: hls::stream 'hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>0' contains leftover data, which may result in RTL simulation hanging.&#xA;after" projectName="processapa" solutionName="solution1" date="2023-07-26T17:45:20.568-0400" type="Warning"/>
-        <logs message="WARNING [HLS SIM]: hls::stream 'hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>0' contains leftover data, which may result in RTL simulation hanging.&#xA;after" projectName="processapa" solutionName="solution1" date="2023-07-26T17:42:43.531-0400" type="Warning"/>
-      </csimLog>
+      <synLog>
+        <logs message="WARNING: [HLS 200-1995] There were 108,726 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/brenton/kernel/processAPA/processapa/solution1/syn/report/csynth_design_size.rpt" projectName="processapa" solutionName="solution1" date="2023-07-27T11:07:18.760-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'partition' (./nnet_utils/nnet_code_gen.h:23:32)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.186-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'buffer' (./nnet_utils/nnet_code_gen.h:22:24)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.173-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'data' (./nnet_utils/nnet_code_gen.h:21:24)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.164-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'partition' (./nnet_utils/nnet_code_gen.h:13:44)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.163-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'buffer' (./nnet_utils/nnet_code_gen.h:12:36)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.161-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'data' (./nnet_utils/nnet_code_gen.h:11:36)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.160-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'keep' (./nnet_utils/nnet_helpers.h:285:99)" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.158-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 12 issue(s) in file myproject.cpp&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-471.html" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:53.156-0400" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (myproject.cpp:84:77)&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html" projectName="processapa" solutionName="solution1" date="2023-07-27T11:05:48.532-0400" type="Warning"/>
+      </synLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

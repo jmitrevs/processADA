@@ -38,7 +38,7 @@ int main()
     }
     fclose(infile);
 
-    char outdata[500];
+    int outdata[3];
     
     std::cout << "here" << std::endl;
 
