@@ -22,26 +22,6 @@ using namespace std;
 #define AUTOTB_TVOUT_infile_size "../tv/cdatafile/c.process_data.autotvout_infile_size.dat"
 #define AUTOTB_TVIN_infiledata "../tv/cdatafile/c.process_data.autotvin_infiledata.dat"
 #define AUTOTB_TVOUT_infiledata "../tv/cdatafile/c.process_data.autotvout_infiledata.dat"
-#define AUTOTB_TVIN_chanmap_fNAPAs "../tv/cdatafile/c.process_data.autotvin_chanmap_fNAPAs.dat"
-#define AUTOTB_TVOUT_chanmap_fNAPAs "../tv/cdatafile/c.process_data.autotvout_chanmap_fNAPAs.dat"
-#define AUTOTB_TVIN_chanmap_fNChans "../tv/cdatafile/c.process_data.autotvin_chanmap_fNChans.dat"
-#define AUTOTB_TVOUT_chanmap_fNChans "../tv/cdatafile/c.process_data.autotvout_chanmap_fNChans.dat"
-#define AUTOTB_TVIN_chanmap_fAPANameFromCrate "../tv/cdatafile/c.process_data.autotvin_chanmap_fAPANameFromCrate.dat"
-#define AUTOTB_TVOUT_chanmap_fAPANameFromCrate "../tv/cdatafile/c.process_data.autotvout_chanmap_fAPANameFromCrate.dat"
-#define AUTOTB_TVIN_chanmap_APAval_0 "../tv/cdatafile/c.process_data.autotvin_chanmap_APAval_0.dat"
-#define AUTOTB_TVOUT_chanmap_APAval_0 "../tv/cdatafile/c.process_data.autotvout_chanmap_APAval_0.dat"
-#define AUTOTB_TVIN_chanmap_APAval_1 "../tv/cdatafile/c.process_data.autotvin_chanmap_APAval_1.dat"
-#define AUTOTB_TVOUT_chanmap_APAval_1 "../tv/cdatafile/c.process_data.autotvout_chanmap_APAval_1.dat"
-#define AUTOTB_TVIN_chanmap_APAval_2 "../tv/cdatafile/c.process_data.autotvin_chanmap_APAval_2.dat"
-#define AUTOTB_TVOUT_chanmap_APAval_2 "../tv/cdatafile/c.process_data.autotvout_chanmap_APAval_2.dat"
-#define AUTOTB_TVIN_chanmap_fUprightFromCrate "../tv/cdatafile/c.process_data.autotvin_chanmap_fUprightFromCrate.dat"
-#define AUTOTB_TVOUT_chanmap_fUprightFromCrate "../tv/cdatafile/c.process_data.autotvout_chanmap_fUprightFromCrate.dat"
-#define AUTOTB_TVIN_chanmap_fCrateFromTPCSet "../tv/cdatafile/c.process_data.autotvin_chanmap_fCrateFromTPCSet.dat"
-#define AUTOTB_TVOUT_chanmap_fCrateFromTPCSet "../tv/cdatafile/c.process_data.autotvout_chanmap_fCrateFromTPCSet.dat"
-#define AUTOTB_TVIN_chanmap_fTPCSetFromCrate "../tv/cdatafile/c.process_data.autotvin_chanmap_fTPCSetFromCrate.dat"
-#define AUTOTB_TVOUT_chanmap_fTPCSetFromCrate "../tv/cdatafile/c.process_data.autotvout_chanmap_fTPCSetFromCrate.dat"
-#define AUTOTB_TVIN_chanmap_DetToChanInfo "../tv/cdatafile/c.process_data.autotvin_chanmap_DetToChanInfo.dat"
-#define AUTOTB_TVOUT_chanmap_DetToChanInfo "../tv/cdatafile/c.process_data.autotvout_chanmap_DetToChanInfo.dat"
 #define AUTOTB_TVIN_outdata "../tv/cdatafile/c.process_data.autotvin_outdata.dat"
 #define AUTOTB_TVOUT_outdata "../tv/cdatafile/c.process_data.autotvout_outdata.dat"
 #define AUTOTB_TVIN_gmem "../tv/cdatafile/c.process_data.autotvin_gmem.dat"
@@ -1158,10 +1138,10 @@ namespace hls::sim
 
 
 extern "C"
-void process_data_hw_stub_wrapper(hls::sim::Byte<4>, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
+void process_data_hw_stub_wrapper(hls::sim::Byte<4>, void*, void*);
 
 extern "C"
-void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void* __xlx_apatb_param_infiledata, void* __xlx_apatb_param_chanmap_fNAPAs, void* __xlx_apatb_param_chanmap_fNChans, void* __xlx_apatb_param_chanmap_fAPANameFromCrate, void* __xlx_apatb_param_chanmap_APAval_0, void* __xlx_apatb_param_chanmap_APAval_1, void* __xlx_apatb_param_chanmap_APAval_2, void* __xlx_apatb_param_chanmap_fUprightFromCrate, void* __xlx_apatb_param_chanmap_fCrateFromTPCSet, void* __xlx_apatb_param_chanmap_fTPCSetFromCrate, void* __xlx_apatb_param_chanmap_DetToChanInfo, void* __xlx_apatb_param_outdata)
+void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void* __xlx_apatb_param_infiledata, void* __xlx_apatb_param_outdata)
 {
   static hls::sim::Register port0 {
     .name = "infile_size",
@@ -1186,126 +1166,8 @@ void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void
   };
   port1.param = &__xlx_offset_byte_param_infiledata;
 
-  static hls::sim::Register port2 {
-    .name = "chanmap_fNAPAs",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fNAPAs),
-#endif
-  };
-  port2.param = __xlx_apatb_param_chanmap_fNAPAs;
-
-  static hls::sim::Register port3 {
-    .name = "chanmap_fNChans",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fNChans),
-#endif
-  };
-  port3.param = __xlx_apatb_param_chanmap_fNChans;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_fAPANameFromCrate;
-  static hls::sim::Register port4 {
-    .name = "chanmap_fAPANameFromCrate",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fAPANameFromCrate),
-#endif
-  };
-  port4.param = &__xlx_offset_byte_param_chanmap_fAPANameFromCrate;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_APAval_0;
-  static hls::sim::Register port5 {
-    .name = "chanmap_APAval_0",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_APAval_0),
-#endif
-  };
-  port5.param = &__xlx_offset_byte_param_chanmap_APAval_0;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_APAval_1;
-  static hls::sim::Register port6 {
-    .name = "chanmap_APAval_1",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_APAval_1),
-#endif
-  };
-  port6.param = &__xlx_offset_byte_param_chanmap_APAval_1;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_APAval_2;
-  static hls::sim::Register port7 {
-    .name = "chanmap_APAval_2",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_APAval_2),
-#endif
-  };
-  port7.param = &__xlx_offset_byte_param_chanmap_APAval_2;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_fUprightFromCrate;
-  static hls::sim::Register port8 {
-    .name = "chanmap_fUprightFromCrate",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fUprightFromCrate),
-#endif
-  };
-  port8.param = &__xlx_offset_byte_param_chanmap_fUprightFromCrate;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_fCrateFromTPCSet;
-  static hls::sim::Register port9 {
-    .name = "chanmap_fCrateFromTPCSet",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fCrateFromTPCSet),
-#endif
-  };
-  port9.param = &__xlx_offset_byte_param_chanmap_fCrateFromTPCSet;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_fTPCSetFromCrate;
-  static hls::sim::Register port10 {
-    .name = "chanmap_fTPCSetFromCrate",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_fTPCSetFromCrate),
-#endif
-  };
-  port10.param = &__xlx_offset_byte_param_chanmap_fTPCSetFromCrate;
-
-  hls::sim::Byte<4> __xlx_offset_byte_param_chanmap_DetToChanInfo;
-  static hls::sim::Register port11 {
-    .name = "chanmap_DetToChanInfo",
-    .width = 32,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chanmap_DetToChanInfo),
-#endif
-  };
-  port11.param = &__xlx_offset_byte_param_chanmap_DetToChanInfo;
-
   hls::sim::Byte<4> __xlx_offset_byte_param_outdata;
-  static hls::sim::Register port12 {
+  static hls::sim::Register port2 {
     .name = "outdata",
     .width = 32,
 #ifdef POST_CHECK
@@ -1314,15 +1176,15 @@ void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_outdata),
 #endif
   };
-  port12.param = &__xlx_offset_byte_param_outdata;
+  port2.param = &__xlx_offset_byte_param_outdata;
 
 #ifdef USE_BINARY_TV_FILE
-  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port13 {
+  static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port3 {
 #else
-  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port13 {
+  static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port3 {
 #endif
-    .width = 512,
-    .asize = 64,
+    .width = 32,
+    .asize = 4,
     .hbm = false,
     .name = { "gmem" },
 #ifdef POST_CHECK
@@ -1344,25 +1206,17 @@ void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void
 #endif
 #endif
   };
-  __xlx_offset_byte_param_infiledata = 0*64;
-  __xlx_offset_byte_param_chanmap_fAPANameFromCrate = 1*64;
-  __xlx_offset_byte_param_chanmap_APAval_0 = 11*64;
-  __xlx_offset_byte_param_chanmap_APAval_1 = 30*64;
-  __xlx_offset_byte_param_chanmap_APAval_2 = 49*64;
-  __xlx_offset_byte_param_chanmap_fUprightFromCrate = 87*64;
-  __xlx_offset_byte_param_chanmap_fCrateFromTPCSet = 106*64;
-  __xlx_offset_byte_param_chanmap_fTPCSetFromCrate = 125*64;
-  __xlx_offset_byte_param_chanmap_DetToChanInfo = 144*64;
-  __xlx_offset_byte_param_outdata = 5904*64;
-  port13.param = { __xlx_apatb_param_infiledata, __xlx_apatb_param_chanmap_fAPANameFromCrate, __xlx_apatb_param_chanmap_APAval_0, __xlx_apatb_param_chanmap_APAval_1, __xlx_apatb_param_chanmap_APAval_2, __xlx_apatb_param_chanmap_fUprightFromCrate, __xlx_apatb_param_chanmap_fCrateFromTPCSet, __xlx_apatb_param_chanmap_fTPCSetFromCrate, __xlx_apatb_param_chanmap_DetToChanInfo, __xlx_apatb_param_outdata };
-  port13.nbytes = { 0, 600, 1200, 1200, 2400, 1200, 1200, 1200, 368640, 12 };
-  port13.offset = { 0, 1, 11, 30, 49, 87, 106, 125, 144, 5904 };
-  port13.hasWrite = { true, true, true, true, true, true, true, true, true, true };
+  __xlx_offset_byte_param_infiledata = 0*4;
+  __xlx_offset_byte_param_outdata = 1*4;
+  port3.param = { __xlx_apatb_param_infiledata, __xlx_apatb_param_outdata };
+  port3.nbytes = { 0, 12 };
+  port3.offset = { 0, 1 };
+  port3.hasWrite = { true, true };
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port13);
+    check(port3);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
@@ -1370,34 +1224,14 @@ void apatb_process_data_hw(hls::sim::Byte<4> __xlx_apatb_param_infile_size, void
     dump(port1, port1.iwriter, tcl.AESL_transaction);
     dump(port2, port2.iwriter, tcl.AESL_transaction);
     dump(port3, port3.iwriter, tcl.AESL_transaction);
-    dump(port4, port4.iwriter, tcl.AESL_transaction);
-    dump(port5, port5.iwriter, tcl.AESL_transaction);
-    dump(port6, port6.iwriter, tcl.AESL_transaction);
-    dump(port7, port7.iwriter, tcl.AESL_transaction);
-    dump(port8, port8.iwriter, tcl.AESL_transaction);
-    dump(port9, port9.iwriter, tcl.AESL_transaction);
-    dump(port10, port10.iwriter, tcl.AESL_transaction);
-    dump(port11, port11.iwriter, tcl.AESL_transaction);
-    dump(port12, port12.iwriter, tcl.AESL_transaction);
-    dump(port13, port13.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
     port3.doTCL(tcl);
-    port4.doTCL(tcl);
-    port5.doTCL(tcl);
-    port6.doTCL(tcl);
-    port7.doTCL(tcl);
-    port8.doTCL(tcl);
-    port9.doTCL(tcl);
-    port10.doTCL(tcl);
-    port11.doTCL(tcl);
-    port12.doTCL(tcl);
-    port13.doTCL(tcl);
     CodeState = CALL_C_DUT;
-    process_data_hw_stub_wrapper(__xlx_apatb_param_infile_size, __xlx_apatb_param_infiledata, __xlx_apatb_param_chanmap_fNAPAs, __xlx_apatb_param_chanmap_fNChans, __xlx_apatb_param_chanmap_fAPANameFromCrate, __xlx_apatb_param_chanmap_APAval_0, __xlx_apatb_param_chanmap_APAval_1, __xlx_apatb_param_chanmap_APAval_2, __xlx_apatb_param_chanmap_fUprightFromCrate, __xlx_apatb_param_chanmap_fCrateFromTPCSet, __xlx_apatb_param_chanmap_fTPCSetFromCrate, __xlx_apatb_param_chanmap_DetToChanInfo, __xlx_apatb_param_outdata);
+    process_data_hw_stub_wrapper(__xlx_apatb_param_infile_size, __xlx_apatb_param_infiledata, __xlx_apatb_param_outdata);
     CodeState = DUMP_OUTPUTS;
-    dump(port13, port13.owriter, tcl.AESL_transaction);
+    dump(port3, port3.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

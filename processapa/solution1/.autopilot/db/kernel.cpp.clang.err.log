@@ -1,0 +1,13 @@
+kernel.cpp:85:13: warning: '/*' within block comment [-Wcomment]
+            /*
+            ^
+kernel.cpp:117:1: warning: '/*' within block comment [-Wcomment]
+/*
+^
+kernel.cpp:139:1: warning: '/*' within block comment [-Wcomment]
+/*
+^
+kernel.cpp:169:1: warning: '/*' within block comment [-Wcomment]
+/*
+^
+4 warnings generated.

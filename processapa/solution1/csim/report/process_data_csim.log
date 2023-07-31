@@ -7,7 +7,8 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Generating csim.exe
 started running
 here
-cc_prob size: 3after
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 65536
+WARNING [HLS SIM]: hls::stream 'hls::stream<nnet::array<ap_fixed<15, 15, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+after
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2887680
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

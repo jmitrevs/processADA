@@ -7,7 +7,7 @@ In file included from ./defines3.h:6:
 In file included from myproject.cpp:4:
 In file included from ./parameters.h:7:
 In file included from ./nnet_utils/nnet_code_gen.h:4:
-./nnet_utils/nnet_helpers.h:285:99: warning: unused parameter 'keep' [-Wunused-parameter]
+./nnet_utils/nnet_helpers.h:286:99: warning: unused parameter 'keep' [-Wunused-parameter]
 template <class res_T, size_t SIZE> void print_result(res_T result[SIZE], std::ostream &out, bool keep = false) {
                                                                                                   ^
 In file included from myproject.cpp:4:

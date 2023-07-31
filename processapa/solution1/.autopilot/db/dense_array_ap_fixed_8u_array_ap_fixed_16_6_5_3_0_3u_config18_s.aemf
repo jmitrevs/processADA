@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690840964837">
+  <ports id="1" name="layer16_out" type="PortType" coreName="FIFO_SRL" coreId="641609760" bitwidth="128" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="layer18_out" type="PortType" coreName="FIFO_SRL" coreId="641609760" bitwidth="48" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="25" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="41" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="72" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="74" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@ports.1"/>
+  <edges id="91" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="92" sink_obj="//@blocks.0/@node_objs.9"/>
+  <blocks id="22" name="dense&lt;array&lt;ap_fixed,8u>,array&lt;ap_fixed&lt;16,6,5,3,0>,3u>,config18>" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="layer16_out_read" lineNumber="40" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="128" opcode="read" m_display="0" m_delay="2.1" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>layer16_out</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="data" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_fu_81_p1" coreId="539767593" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="data_6" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_6_reg_191" coreId="539767593" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="data_7" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_7_reg_196" coreId="539767593" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="data_1" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_1_reg_201" coreId="539767593" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="data_2" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_2_reg_206" coreId="539770485" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="data_3" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_3_reg_211" coreId="539770485" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="data_4" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_4_reg_216" coreId="3960119952" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="data_5" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_5_reg_221" coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="call_ret" lineNumber="48" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="grp_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_fu_67" coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="call" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <dataOutputObjs>extractvalue</dataOutputObjs>
+      <constName>dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="res" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="res_1" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="res_2" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>bitconcatenate</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="p_s" lineNumber="62" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="layer18_out_din" coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="62" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataInputObjs>extractvalue</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="layer18_out_write_ln62" lineNumber="62" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" opcode="write" nodeLabel="1.0" m_display="0" m_delay="2.1" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="62" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+      <dataInputObjs>bitconcatenate</dataInputObjs>
+      <dataOutputObjs>layer18_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln64" lineNumber="64" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="3988665056" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="64" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="./nnet_utils/nnet_dense_stream.h">
+      <validLinenumbers>40</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>62</validLinenumbers>
+      <validLinenumbers>64</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="data_4_reg_216">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="data_1_reg_201">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="data_5_reg_221">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="data_6_reg_191">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="data_reg_186">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="data_7_reg_196">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <regnodes realName="data_3_reg_211">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="data_2_reg_206">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <expressionNodes realName="data_1_fu_108">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_3_fu_130">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_6_fu_86">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_s_fu_175">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_1_fu_167">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_2_fu_119">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_fu_81">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_7_fu_97">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_2_fu_171">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_fu_163">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_5_fu_152">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="data_4_fu_141">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_fu_67">
+    <nodeIds>15</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="layer16_out_read_read_fu_54">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln62_write_fu_60">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="w18" portID="100">
+    <nodeIds>15</nodeIds>
+  </memoryPorts>
+  <ioPorts name="layer16_out">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="layer18_out">
+    <contents name="write">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="2"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="9" mMaxLatency="10">
+      <basicBlocks>22</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

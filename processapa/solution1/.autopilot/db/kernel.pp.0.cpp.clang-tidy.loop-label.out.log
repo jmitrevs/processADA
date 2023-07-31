@@ -38,33 +38,68 @@
         ^~~
         VITIS_LOOP_27_1: 
 /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54027:9: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54203:17: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
-                for (int i = 0; i < n_frames; i++)
-                ^~~
-                VITIS_LOOP_87_1: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54203:17: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54212:14: warning: Added loop label VITIS_LOOP_96_2:   [xilinx-label-all-loops]
-             for (int i = 0; i < n_frames; i++)
-             ^~~
-             VITIS_LOOP_96_2: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54212:14: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54229:5: warning: Added loop label VITIS_LOOP_122_3:   [xilinx-label-all-loops]
-    for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60715:5: warning: Added loop label VITIS_LOOP_265_1:   [xilinx-label-all-loops]
+    for (src_T* i = in_begin; i != in_end; ++i) {
     ^~~
-    VITIS_LOOP_122_3: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54229:5: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54231:9: warning: Added loop label VITIS_LOOP_124_4:   [xilinx-label-all-loops]
-        for(int j = 0; j < z_channels; j++) {
+    VITIS_LOOP_265_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60715:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60726:5: warning: Added loop label VITIS_LOOP_276_1:   [xilinx-label-all-loops]
+    for (auto i = 0; i < SIZE; i++)
+    ^~~
+    VITIS_LOOP_276_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60726:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60737:5: warning: Added loop label VITIS_LOOP_287_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE; i++) {
+    ^~~
+    VITIS_LOOP_287_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60737:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60744:5: warning: Added loop label VITIS_LOOP_294_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE / res_T::size; i++) {
+    ^~~
+    VITIS_LOOP_294_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60744:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60746:9: warning: Added loop label VITIS_LOOP_296_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < res_T::size; j++) {
         ^~~
-        VITIS_LOOP_124_4: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54231:9: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54233:13: warning: Added loop label VITIS_LOOP_126_5:   [xilinx-label-all-loops]
-            for(int k = 0; k <TICK_SIZE; k++) {
-            ^~~
-            VITIS_LOOP_126_5: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54233:13: note: FIX-IT applied suggested code changes
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54250:9: warning: Added loop label VITIS_LOOP_143_6:   [xilinx-label-all-loops]
-        for (int i = 0; i < 3; i++)
+        VITIS_LOOP_296_2: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60746:9: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60758:5: warning: Added loop label VITIS_LOOP_308_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < SIZE / data_T::size; i++) {
+    ^~~
+    VITIS_LOOP_308_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60758:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60760:9: warning: Added loop label VITIS_LOOP_310_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < data_T::size; j++) {
         ^~~
-        VITIS_LOOP_143_6: 
-/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:54250:9: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_310_2: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60760:9: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60775:5: warning: Added loop label VITIS_LOOP_325_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < nrows; ii++) {
+    ^~~
+    VITIS_LOOP_325_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60775:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60795:5: warning: Added loop label VITIS_LOOP_345_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < nrows; ii++) {
+    ^~~
+    VITIS_LOOP_345_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60795:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60796:9: warning: Added loop label VITIS_LOOP_346_2:   [xilinx-label-all-loops]
+        for (int jj = 0; jj < ncols; jj++) {
+        ^~~
+        VITIS_LOOP_346_2: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60796:9: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60811:5: warning: Added loop label VITIS_LOOP_361_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_IN; ii++) {
+    ^~~
+    VITIS_LOOP_361_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60811:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60818:5: warning: Added loop label VITIS_LOOP_368_1:   [xilinx-label-all-loops]
+    for (int ii = 0; ii < N_IN; ii++) {
+    ^~~
+    VITIS_LOOP_368_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60818:5: note: FIX-IT applied suggested code changes
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60860:24: warning: Added loop label VITIS_LOOP_195_1:   [xilinx-label-all-loops]
+                       for (int i = 0; i < 3; i++)
+                       ^~~
+                       VITIS_LOOP_195_1: 
+/home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp:60860:24: note: FIX-IT applied suggested code changes

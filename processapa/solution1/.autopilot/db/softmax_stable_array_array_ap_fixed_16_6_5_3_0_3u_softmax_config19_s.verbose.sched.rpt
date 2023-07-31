@@ -1,0 +1,254 @@
+
+
+================================================================
+== Vitis HLS Report for 'softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s'
+================================================================
+* Date:           Mon Jul 31 18:01:14 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        processapa
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.427 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    5|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.42>
+ST_1 : Operation 7 [1/1] (2.10ns)   --->   "%layer18_out_read = read i48 @_ssdm_op_Read.ap_fifo.volatile.i48P0A, i48 %layer18_out" [./nnet_utils/nnet_activation_stream.h:199]   --->   Operation 7 'read' 'layer18_out_read' <Predicate = true> <Delay = 2.10> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.10> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 1> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln199 = trunc i48 %layer18_out_read" [./nnet_utils/nnet_activation_stream.h:199]   --->   Operation 8 'trunc' 'trunc_ln199' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%trunc_ln199_1 = partselect i16 @_ssdm_op_PartSelect.i16.i48.i32.i32, i48 %layer18_out_read, i32 16, i32 31" [./nnet_utils/nnet_activation_stream.h:199]   --->   Operation 9 'partselect' 'trunc_ln199_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln199_2 = partselect i16 @_ssdm_op_PartSelect.i16.i48.i32.i32, i48 %layer18_out_read, i32 32, i32 47" [./nnet_utils/nnet_activation_stream.h:199]   --->   Operation 10 'partselect' 'trunc_ln199_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.12ns)   --->   "%icmp_ln65 = icmp_slt  i16 %trunc_ln199, i16 %trunc_ln199_1" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 11 'icmp' 'icmp_ln65' <Predicate = true> <Delay = 1.12> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node select_ln65)   --->   "%xor_ln65 = xor i1 %icmp_ln65, i1 1" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 12 'xor' 'xor_ln65' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.29ns) (out node of the LUT)   --->   "%select_ln65 = select i1 %xor_ln65, i16 %trunc_ln199, i16 %trunc_ln199_1" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 13 'select' 'select_ln65' <Predicate = true> <Delay = 0.29> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (1.12ns)   --->   "%icmp_ln65_1 = icmp_slt  i16 %select_ln65, i16 %trunc_ln199_2" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 14 'icmp' 'icmp_ln65_1' <Predicate = true> <Delay = 1.12> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node x_max)   --->   "%xor_ln65_1 = xor i1 %icmp_ln65_1, i1 1" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 15 'xor' 'xor_ln65_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.29ns) (out node of the LUT)   --->   "%x_max = select i1 %xor_ln65_1, i16 %select_ln65, i16 %trunc_ln199_2" [./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209]   --->   Operation 16 'select' 'x_max' <Predicate = true> <Delay = 0.29> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%sext_ln215 = sext i16 %trunc_ln199" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 17 'sext' 'sext_ln215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln215_1 = sext i16 %x_max" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 18 'sext' 'sext_ln215_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.12ns)   --->   "%sub_ln215 = sub i17 %sext_ln215, i17 %sext_ln215_1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 19 'sub' 'sub_ln215' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215, i32 16" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 20 'bitselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215, i32 15" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 21 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_1)   --->   "%xor_ln215 = xor i1 %tmp_4, i1 1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 22 'xor' 'xor_ln215' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_1)   --->   "%and_ln215 = and i1 %tmp_5, i1 %xor_ln215" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 23 'and' 'and_ln215' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_1)   --->   "%xor_ln215_1 = xor i1 %tmp_4, i1 %tmp_5" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 24 'xor' 'xor_ln215_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln215_2 = sext i16 %trunc_ln199_1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 25 'sext' 'sext_ln215_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.12ns)   --->   "%sub_ln215_1 = sub i17 %sext_ln215_2, i17 %sext_ln215_1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 26 'sub' 'sub_ln215_1' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215_1, i32 16" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 27 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215_1, i32 15" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 28 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_3)   --->   "%xor_ln215_2 = xor i1 %tmp_6, i1 1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 29 'xor' 'xor_ln215_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_3)   --->   "%and_ln215_1 = and i1 %tmp_7, i1 %xor_ln215_2" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 30 'and' 'and_ln215_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_3)   --->   "%xor_ln215_3 = xor i1 %tmp_6, i1 %tmp_7" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 31 'xor' 'xor_ln215_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%sext_ln215_3 = sext i16 %trunc_ln199_2" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 32 'sext' 'sext_ln215_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.12ns)   --->   "%sub_ln215_2 = sub i17 %sext_ln215_3, i17 %sext_ln215_1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 33 'sub' 'sub_ln215_2' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_8 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215_2, i32 16" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 34 'bitselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i17.i32, i17 %sub_ln215_2, i32 15" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 35 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_5)   --->   "%xor_ln215_4 = xor i1 %tmp_8, i1 1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 36 'xor' 'xor_ln215_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_5)   --->   "%and_ln215_2 = and i1 %tmp_9, i1 %xor_ln215_4" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 37 'and' 'and_ln215_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_5)   --->   "%xor_ln215_5 = xor i1 %tmp_8, i1 %tmp_9" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 38 'xor' 'xor_ln215_5' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.14> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_1)   --->   "%select_ln215 = select i1 %and_ln215, i10 511, i10 512" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 39 'select' 'select_ln215' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_1)   --->   "%tmp = partselect i10 @_ssdm_op_PartSelect.i10.i17.i32.i32, i17 %sub_ln215, i32 6, i32 15" [./nnet_utils/nnet_activation.h:145->./nnet_utils/nnet_activation_stream.h:224]   --->   Operation 40 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.37ns) (out node of the LUT)   --->   "%select_ln215_1 = select i1 %xor_ln215_1, i10 %select_ln215, i10 %tmp" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 41 'select' 'select_ln215_1' <Predicate = true> <Delay = 0.37> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_3)   --->   "%select_ln215_2 = select i1 %and_ln215_1, i10 511, i10 512" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 42 'select' 'select_ln215_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_3)   --->   "%tmp_1 = partselect i10 @_ssdm_op_PartSelect.i10.i17.i32.i32, i17 %sub_ln215_1, i32 6, i32 15" [./nnet_utils/nnet_activation.h:145->./nnet_utils/nnet_activation_stream.h:224]   --->   Operation 43 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.37ns) (out node of the LUT)   --->   "%select_ln215_3 = select i1 %xor_ln215_3, i10 %select_ln215_2, i10 %tmp_1" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 44 'select' 'select_ln215_3' <Predicate = true> <Delay = 0.37> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_5)   --->   "%select_ln215_4 = select i1 %and_ln215_2, i10 511, i10 512" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 45 'select' 'select_ln215_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node select_ln215_5)   --->   "%tmp_2 = partselect i10 @_ssdm_op_PartSelect.i10.i17.i32.i32, i17 %sub_ln215_2, i32 6, i32 15" [./nnet_utils/nnet_activation.h:145->./nnet_utils/nnet_activation_stream.h:224]   --->   Operation 46 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.37ns) (out node of the LUT)   --->   "%select_ln215_5 = select i1 %xor_ln215_5, i10 %select_ln215_4, i10 %tmp_2" [./nnet_utils/nnet_activation_stream.h:215]   --->   Operation 47 'select' 'select_ln215_5' <Predicate = true> <Delay = 0.37> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.29>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln225 = zext i10 %select_ln215_1" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 48 'zext' 'zext_ln225' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%exp_table_addr = getelementptr i17 %exp_table, i64 0, i64 %zext_ln225" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 49 'getelementptr' 'exp_table_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [2/2] (1.29ns)   --->   "%exp_table_load = load i10 %exp_table_addr" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 50 'load' 'exp_table_load' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln225_1 = zext i10 %select_ln215_3" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 51 'zext' 'zext_ln225_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%exp_table_addr_1 = getelementptr i17 %exp_table, i64 0, i64 %zext_ln225_1" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 52 'getelementptr' 'exp_table_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [2/2] (1.29ns)   --->   "%exp_table_load_1 = load i10 %exp_table_addr_1" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 53 'load' 'exp_table_load_1' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln225_2 = zext i10 %select_ln215_5" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 54 'zext' 'zext_ln225_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%exp_table_addr_2 = getelementptr i17 %exp_table, i64 0, i64 %zext_ln225_2" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 55 'getelementptr' 'exp_table_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [2/2] (1.29ns)   --->   "%exp_table_load_2 = load i10 %exp_table_addr_2" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 56 'load' 'exp_table_load_2' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+
+State 3 <SV = 2> <Delay = 5.21>
+ST_3 : Operation 57 [1/2] (1.29ns)   --->   "%exp_table_load = load i10 %exp_table_addr" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 57 'load' 'exp_table_load' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%exp_table_load_cast1 = zext i17 %exp_table_load" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 58 'zext' 'exp_table_load_cast1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/2] (1.29ns)   --->   "%exp_table_load_1 = load i10 %exp_table_addr_1" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 59 'load' 'exp_table_load_1' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%exp_table_load_1_cast2 = zext i17 %exp_table_load_1" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 60 'zext' 'exp_table_load_1_cast2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/2] (1.29ns)   --->   "%exp_table_load_2 = load i10 %exp_table_addr_2" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 61 'load' 'exp_table_load_2' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 17> <Depth = 1024> <ROM>
+ST_3 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node add_ln50_1)   --->   "%exp_table_load_2_cast3 = zext i17 %exp_table_load_2" [./nnet_utils/nnet_activation_stream.h:225]   --->   Operation 62 'zext' 'exp_table_load_2_cast3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (1.12ns)   --->   "%add_ln50 = add i18 %exp_table_load_1_cast2, i18 %exp_table_load_cast1" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 63 'add' 'add_ln50' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 64 [1/1] (1.12ns)   --->   "%add_ln50_2 = add i17 %exp_table_load_1, i17 %exp_table_load" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 64 'add' 'add_ln50_2' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node add_ln50_1)   --->   "%tmp_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i18.i32, i18 %add_ln50, i32 17" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 65 'bitselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node add_ln50_1)   --->   "%select_ln50 = select i1 %tmp_10, i17 131071, i17 %add_ln50_2" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 66 'select' 'select_ln50' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.32> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node add_ln50_1)   --->   "%zext_ln50 = zext i17 %select_ln50" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 67 'zext' 'zext_ln50' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (1.12ns) (out node of the LUT)   --->   "%add_ln50_1 = add i18 %zext_ln50, i18 %exp_table_load_2_cast3" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 68 'add' 'add_ln50_1' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_11 = bitselect i1 @_ssdm_op_BitSelect.i1.i18.i32, i18 %add_ln50_1, i32 17" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 69 'bitselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i10 @_ssdm_op_PartSelect.i10.i18.i32.i32, i18 %add_ln50_1, i32 8, i32 17" [./nnet_utils/nnet_activation.h:145->./nnet_utils/nnet_activation_stream.h:235]   --->   Operation 70 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.37ns)   --->   "%select_ln50_1 = select i1 %tmp_11, i10 511, i10 %tmp_3" [./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232]   --->   Operation 71 'select' 'select_ln50_1' <Predicate = true> <Delay = 0.37> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.37> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln235 = zext i10 %select_ln50_1" [./nnet_utils/nnet_activation_stream.h:235]   --->   Operation 72 'zext' 'zext_ln235' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%invert_table_addr = getelementptr i18 %invert_table, i64 0, i64 %zext_ln235" [./nnet_utils/nnet_activation_stream.h:235]   --->   Operation 73 'getelementptr' 'invert_table_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [2/2] (1.29ns)   --->   "%inv_exp_sum = load i10 %invert_table_addr" [./nnet_utils/nnet_activation_stream.h:235]   --->   Operation 74 'load' 'inv_exp_sum' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 18> <Depth = 1024> <ROM>
+
+State 4 <SV = 3> <Delay = 3.91>
+ST_4 : Operation 75 [1/2] (1.29ns)   --->   "%inv_exp_sum = load i10 %invert_table_addr" [./nnet_utils/nnet_activation_stream.h:235]   --->   Operation 75 'load' 'inv_exp_sum' <Predicate = true> <Delay = 1.29> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 18> <Depth = 1024> <ROM>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%sext_ln244 = sext i18 %inv_exp_sum" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 76 'sext' 'sext_ln244' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln244 = zext i17 %exp_table_load" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 77 'zext' 'zext_ln244' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (2.62ns)   --->   "%mul_ln244 = mul i26 %sext_ln244, i26 %zext_ln244" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 78 'mul' 'mul_ln244' <Predicate = true> <Delay = 2.62> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln244, i32 10, i32 25" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 79 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.62>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln244_1 = zext i17 %exp_table_load_1" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 80 'zext' 'zext_ln244_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (2.62ns)   --->   "%mul_ln244_1 = mul i26 %sext_ln244, i26 %zext_ln244_1" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 81 'mul' 'mul_ln244_1' <Predicate = true> <Delay = 2.62> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln244_1 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln244_1, i32 10, i32 25" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 82 'partselect' 'trunc_ln244_1' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 4.72>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %layer19_out, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %layer18_out, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%rbegin4 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_2" [./nnet_utils/nnet_activation_stream.h:241]   --->   Operation 85 'specregionbegin' 'rbegin4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%specresourcelimit_ln245 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_13, void @empty_1, void @empty_1, void @empty_1" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 86 'specresourcelimit' 'specresourcelimit_ln245' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%rend5 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_2, i32 %rbegin4" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 87 'specregionend' 'rend5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%rbegin2 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_11" [./nnet_utils/nnet_activation_stream.h:241]   --->   Operation 88 'specregionbegin' 'rbegin2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "%specresourcelimit_ln245 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_13, void @empty_1, void @empty_1, void @empty_1" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 89 'specresourcelimit' 'specresourcelimit_ln245' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%rend3 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_11, i32 %rbegin2" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 90 'specregionend' 'rend3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_15" [./nnet_utils/nnet_activation_stream.h:241]   --->   Operation 91 'specregionbegin' 'rbegin' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln244_2 = zext i17 %exp_table_load_2" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 92 'zext' 'zext_ln244_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] (2.62ns)   --->   "%mul_ln244_2 = mul i26 %sext_ln244, i26 %zext_ln244_2" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 93 'mul' 'mul_ln244_2' <Predicate = true> <Delay = 2.62> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.62> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln244_2 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln244_2, i32 10, i32 25" [./nnet_utils/nnet_activation_stream.h:244]   --->   Operation 94 'partselect' 'trunc_ln244_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] (0.00ns)   --->   "%specresourcelimit_ln245 = specresourcelimit void @_ssdm_op_SpecResourceLimit, i64 1, void @empty_13, void @empty_1, void @empty_1, void @empty_1" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 95 'specresourcelimit' 'specresourcelimit_ln245' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_15, i32 %rbegin" [./nnet_utils/nnet_activation_stream.h:245]   --->   Operation 96 'specregionend' 'rend' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i48 @_ssdm_op_BitConcatenate.i48.i16.i16.i16, i16 %trunc_ln244_2, i16 %trunc_ln244_1, i16 %trunc_ln2" [./nnet_utils/nnet_activation_stream.h:246]   --->   Operation 97 'bitconcatenate' 'p_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 98 [1/1] (2.10ns)   --->   "%write_ln246 = write void @_ssdm_op_Write.ap_fifo.volatile.i48P0A, i48 %layer19_out, i48 %p_s" [./nnet_utils/nnet_activation_stream.h:246]   --->   Operation 98 'write' 'write_ln246' <Predicate = true> <Delay = 2.10> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.10> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 48> <Depth = 2> <FIFO>
+ST_6 : Operation 99 [1/1] (0.00ns)   --->   "%ret_ln248 = ret" [./nnet_utils/nnet_activation_stream.h:248]   --->   Operation 99 'ret' 'ret_ln248' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.427ns
+The critical path consists of the following:
+	fifo read operation ('layer18_out_read', ./nnet_utils/nnet_activation_stream.h:199) on port 'layer18_out' (./nnet_utils/nnet_activation_stream.h:199) [7]  (2.102 ns)
+	'icmp' operation ('icmp_ln65', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [11]  (1.121 ns)
+	'xor' operation ('xor_ln65', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [12]  (0.000 ns)
+	'select' operation ('select_ln65', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [13]  (0.294 ns)
+	'icmp' operation ('icmp_ln65_1', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [14]  (1.121 ns)
+	'xor' operation ('xor_ln65_1', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [15]  (0.000 ns)
+	'select' operation ('x_max', ./nnet_utils/nnet_common.h:65->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:209) [16]  (0.294 ns)
+	'sub' operation ('sub_ln215', ./nnet_utils/nnet_activation_stream.h:215) [19]  (1.121 ns)
+	'select' operation ('select_ln215_1', ./nnet_utils/nnet_activation_stream.h:215) [41]  (0.374 ns)
+
+ <State 2>: 1.297ns
+The critical path consists of the following:
+	'getelementptr' operation ('exp_table_addr', ./nnet_utils/nnet_activation_stream.h:225) [43]  (0.000 ns)
+	'load' operation ('exp_table_load', ./nnet_utils/nnet_activation_stream.h:225) on array 'exp_table' [44]  (1.297 ns)
+
+ <State 3>: 5.213ns
+The critical path consists of the following:
+	'load' operation ('exp_table_load', ./nnet_utils/nnet_activation_stream.h:225) on array 'exp_table' [44]  (1.297 ns)
+	'add' operation ('add_ln50_2', ./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232) [61]  (1.122 ns)
+	'select' operation ('select_ln50', ./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:43->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232) [63]  (0.000 ns)
+	'add' operation ('add_ln50_1', ./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232) [65]  (1.122 ns)
+	'select' operation ('select_ln50_1', ./nnet_utils/nnet_common.h:50->./nnet_utils/nnet_common.h:45->./nnet_utils/nnet_activation_stream.h:232) [68]  (0.374 ns)
+	'getelementptr' operation ('invert_table_addr', ./nnet_utils/nnet_activation_stream.h:235) [70]  (0.000 ns)
+	'load' operation ('inv_exp_sum', ./nnet_utils/nnet_activation_stream.h:235) on array 'invert_table' [71]  (1.297 ns)
+
+ <State 4>: 3.917ns
+The critical path consists of the following:
+	'load' operation ('inv_exp_sum', ./nnet_utils/nnet_activation_stream.h:235) on array 'invert_table' [71]  (1.297 ns)
+	'mul' operation ('mul_ln244', ./nnet_utils/nnet_activation_stream.h:244) [75]  (2.620 ns)
+
+ <State 5>: 2.620ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln244_1', ./nnet_utils/nnet_activation_stream.h:244) [81]  (2.620 ns)
+
+ <State 6>: 4.722ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln244_2', ./nnet_utils/nnet_activation_stream.h:244) [87]  (2.620 ns)
+	fifo write operation ('write_ln246', ./nnet_utils/nnet_activation_stream.h:246) on port 'layer19_out' (./nnet_utils/nnet_activation_stream.h:246) [92]  (2.102 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

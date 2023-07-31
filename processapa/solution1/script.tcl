@@ -9,15 +9,15 @@ set_top process_data
 add_files FDHDChannelMapSP.cxx
 add_files kernel.cpp
 add_files myproject.cpp
-add_files -tb FDHDChannelMap_v1_visiblewires.txt
-add_files -tb FDHDChannelMap_v1_wireends.txt
-add_files -tb FDHD_CrateMap_v1.txt
-add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA000.dat
-add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA001.dat
-add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA002.dat
-add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA003.dat
-add_files -tb processAPA.cxx
-add_files -tb ../../workspace/processAPA/weights
+add_files -tb FDHDChannelMap_v1_visiblewires.txt -cflags "-Wno-unknown-pragmas"
+add_files -tb FDHDChannelMap_v1_wireends.txt -cflags "-Wno-unknown-pragmas"
+add_files -tb FDHD_CrateMap_v1.txt -cflags "-Wno-unknown-pragmas"
+add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA000.dat -cflags "-Wno-unknown-pragmas"
+add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA001.dat -cflags "-Wno-unknown-pragmas"
+add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA002.dat -cflags "-Wno-unknown-pragmas"
+add_files -tb ../../workspace/datfiles/TriggerRecord00001_0000TPCAPA003.dat -cflags "-Wno-unknown-pragmas"
+add_files -tb processAPA.cxx -cflags "-Wno-unknown-pragmas"
+add_files -tb ../../workspace/processAPA/weights -cflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vitis
 set_part {xcvu11p-flga2577-1-e}
 create_clock -period 10 -name default

@@ -57612,13 +57612,13 @@ template <class src_T, class dst_T, size_t OFFSET, size_t SIZE> void copy_data(s
 }
 
 template <class src_T, class dst_T, size_t OFFSET, size_t SIZE>
-void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {
-    typename std::vector<src_T>::const_iterator in_begin = src.cbegin() + OFFSET;
-    typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE;
+void copy_data(src_T src[1], hls::stream<dst_T> &dst) {
+    src_T* in_begin = src + OFFSET;
+    src_T* in_end = in_begin + SIZE;
 
     size_t i_pack = 0;
     dst_T dst_pack;
-    VITIS_LOOP_265_1: for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {
+    VITIS_LOOP_265_1: for (src_T* i = in_begin; i != in_end; ++i) {
         dst_pack[i_pack++] = typename dst_T::value_type(*i);
         if (i_pack == dst_T::size) {
             i_pack = 0;
@@ -57627,8 +57627,9 @@ void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {
     }
 }
 
+
 template <class src_T, class dst_T, size_t OFFSET, size_t SIZE> void copy_data_axi(std::vector<src_T> src, dst_T dst[SIZE]) {
-    VITIS_LOOP_275_1: for (auto i = 0; i < SIZE; i++)
+    VITIS_LOOP_276_1: for (auto i = 0; i < SIZE; i++)
         if (i == SIZE - 1) {
             dst[i].data = src[i];
             dst[i].last = 1;
@@ -57639,16 +57640,16 @@ template <class src_T, class dst_T, size_t OFFSET, size_t SIZE> void copy_data_a
 }
 
 template <class res_T, size_t SIZE> void print_result(res_T result[SIZE], std::ostream &out, bool keep = false) {
-    VITIS_LOOP_286_1: for (int i = 0; i < SIZE; i++) {
+    VITIS_LOOP_287_1: for (int i = 0; i < SIZE; i++) {
         out << result[i] << " ";
     }
     out << std::endl;
 }
 
 template <class res_T, size_t SIZE> void print_result(hls::stream<res_T> &result, std::ostream &out, bool keep = false) {
-    VITIS_LOOP_293_1: for (int i = 0; i < SIZE / res_T::size; i++) {
+    VITIS_LOOP_294_1: for (int i = 0; i < SIZE / res_T::size; i++) {
         res_T res_pack = result.read();
-        VITIS_LOOP_295_2: for (int j = 0; j < res_T::size; j++) {
+        VITIS_LOOP_296_2: for (int j = 0; j < res_T::size; j++) {
             out << res_pack[j] << " ";
         }
         if (keep)
@@ -57660,9 +57661,9 @@ template <class res_T, size_t SIZE> void print_result(hls::stream<res_T> &result
 template <class data_T, size_t SIZE> void fill_zero(data_T data[SIZE]) { std::fill_n(data, SIZE, 0.); }
 
 template <class data_T, size_t SIZE> void fill_zero(hls::stream<data_T> &data) {
-    VITIS_LOOP_307_1: for (int i = 0; i < SIZE / data_T::size; i++) {
+    VITIS_LOOP_308_1: for (int i = 0; i < SIZE / data_T::size; i++) {
         data_T data_pack;
-        VITIS_LOOP_309_2: for (int j = 0; j < data_T::size; j++) {
+        VITIS_LOOP_310_2: for (int j = 0; j < data_T::size; j++) {
             data_pack[j] = 0.;
         }
         data.write(data_pack);
@@ -57677,7 +57678,7 @@ template <class dataType, unsigned int nrows> int read_file_1D(const char *filen
     }
 
     float newval;
-    VITIS_LOOP_324_1: for (int ii = 0; ii < nrows; ii++) {
+    VITIS_LOOP_325_1: for (int ii = 0; ii < nrows; ii++) {
         if (fscanf(fp, "%f\n", &newval) != 0) {
             data[ii] = newval;
         } else {
@@ -57697,8 +57698,8 @@ int read_file_2D(const char *filename, dataType data[nrows][ncols]) {
     }
 
     float newval;
-    VITIS_LOOP_344_1: for (int ii = 0; ii < nrows; ii++) {
-        VITIS_LOOP_345_2: for (int jj = 0; jj < ncols; jj++) {
+    VITIS_LOOP_345_1: for (int ii = 0; ii < nrows; ii++) {
+        VITIS_LOOP_346_2: for (int jj = 0; jj < ncols; jj++) {
             if (fscanf(fp, "%f\n", &newval) != 0) {
                 data[ii][jj] = newval;
             } else {
@@ -57713,14 +57714,14 @@ int read_file_2D(const char *filename, dataType data[nrows][ncols]) {
 template <class in_T, class out_T, int N_IN> void change_type(hls::stream<in_T> &in, hls::stream<out_T> &out) {
     in_T datareg;
     hls::stream<out_T> input_trunc;
-    VITIS_LOOP_360_1: for (int ii = 0; ii < N_IN; ii++) {
+    VITIS_LOOP_361_1: for (int ii = 0; ii < N_IN; ii++) {
         out << (out_T)in.read();
     }
 }
 
 template <class data_T, int N_IN> void hls_stream_debug(hls::stream<data_T> &data, hls::stream<data_T> &res) {
     data_T datareg;
-    VITIS_LOOP_367_1: for (int ii = 0; ii < N_IN; ii++) {
+    VITIS_LOOP_368_1: for (int ii = 0; ii < N_IN; ii++) {
         datareg = data.read();
         std::cout << "[" << ii << "]: " << datareg << std::endl;
         res << datareg;
