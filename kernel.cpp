@@ -10,7 +10,7 @@
 void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMapSP& chanmap,*/ ,int outdata[3])
 {
 
-	/*
+
 	typedef ap_fixed<15, 15> fixed15_t;
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
@@ -82,13 +82,15 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
             slotloc &= 0x7;
 
             const int CHAN_MIN = 1600;
+
             /*
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
             */
 
-	/*
+
+
             unsigned int offline_chan = 2;
             unsigned int offline_plane = iChan+ 1600;
 
@@ -122,21 +124,20 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
 */
     //Call 2D CNN
 
-/*
+
     const int TICK_SIZE = 128;
-    hls::stream<input_t> input_stream;
-
-    hls::stream<result_t> output_stream;
-
-
-
-        nnet::array<ap_fixed<15,15>, 1> ad;
-        input_t zero = {0};
-//works with no chanmap!
+    hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
+    input_t pack;
+    hls::stream<result_t> layer19_out;
 
 
 
-/*
+
+//works with no chanmap
+
+
+
+
         for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
         {
             for(int j = 0; j < z_channels; j++) {
@@ -145,42 +146,33 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
                    if(i+k < n_frames)
                 	{
                 	   int fill = planes[j][i+k];
-                	    const nnet::array<ap_fixed<15,15>, 1> ad = {fill};
-                	    //ad[0] = planes[j][i+k]; // this line prevents synthesis
-
-                    	input_stream.write(ad); // this works with zero!
-                    	auto rv = input_stream.read(); // allows input stream write
+                	   pack[0] = typename input_t::value_type(fill);
+                	   zero_padding2d_input.write(pack);
                     } else {
-                    	input_stream.write(zero);
+                    	pack[0] = typename input_t::value_type(0);
+                    	zero_padding2d_input.write(pack);
                     }
 
                 }
 
             }
-            */
 
-	/*
-        input_stream.write(zero); // this works with zero!
-        auto rv = input_stream.read(); // allows input stream write
+            myproject(zero_padding2d_input, layer19_out);
 
-//works with no chanmap in function call
-
-            myproject(input_stream, output_stream); //problem when calling this
-/*
-                    auto cc_prob = output_stream.read();
+                    auto cc_prob = layer19_out.read();
 
                     for (int i = 0; i < 3; i++)
 
                     	outdata[i] = cc_prob[i];
                     }
-                    */
-
-        //}
 
 
-	  //float in[1];
-	  //in[0] = 0;
-	  //std::vector<float> in;
+
+
+
+
+
+	/*
 	  hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
 	  input_t pack;
 	  pack[0] = typename input_t::value_type(4);
@@ -197,6 +189,6 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
 	                      	outdata[i] = cc_prob[i];
 	                      }
 
-
+*/
 
 }

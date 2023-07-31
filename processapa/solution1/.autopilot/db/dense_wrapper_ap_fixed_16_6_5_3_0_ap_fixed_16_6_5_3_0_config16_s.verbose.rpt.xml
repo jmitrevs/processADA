@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config16_s'" level="0">
-<item name = "Date">Mon Jul 31 18:02:42 2023
+<item name = "Date">Mon Jul 31 18:30:29 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -64,13 +64,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_16s_26_1_1_U4497">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4499">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4501">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4503">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4505">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4507">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4509">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4498">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4500">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4502">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4504">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4506">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U4508">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U4510">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U4511">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U4512">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
@@ -119,14 +118,15 @@
 <column name="mul_16s_16s_26_1_1_U4555">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U4556">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U4557">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_8s_24_1_1_U4558">mul_16s_8s_24_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_128_7_16_1_1_U4496">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4498">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4500">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4502">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4504">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4506">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
-<column name="mux_128_7_16_1_1_U4508">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mul_16s_16s_26_1_1_U4558">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_8s_24_1_1_U4559">mul_16s_8s_24_1_1, 0, 1, 0, 5, 0</column>
+<column name="mux_128_7_16_1_1_U4497">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4499">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4501">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4503">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4505">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4507">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
+<column name="mux_128_7_16_1_1_U4509">mux_128_7_16_1_1, 0, 0, 0, 673, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

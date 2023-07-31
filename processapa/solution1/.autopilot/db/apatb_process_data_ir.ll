@@ -4,7 +4,7 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nocapture nonnull readnone %infiledata, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="3" %outdata) local_unnamed_addr #0 {
+define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nonnull %infiledata, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="3" %outdata) local_unnamed_addr #0 {
 entry:
   %infiledata_copy = alloca i8, align 512
   %outdata_copy = alloca [3 x i32], align 512
@@ -101,6 +101,7 @@ declare void @apatb_process_data_hw(i32, i8*, [3 x i32]*)
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_back(i8* noalias, i8* noalias readonly align 512, [3 x i32]* noalias, [3 x i32]* noalias readonly align 512) unnamed_addr #4 {
 entry:
+  call fastcc void @onebyonecpy_hls.p0i8(i8* %0, i8* align 512 %1)
   call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* %2, [3 x i32]* align 512 %3)
   ret void
 }

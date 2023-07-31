@@ -5,10 +5,16 @@
 <ModuleName>process_data</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_myproject_fu_5715</InstName>
+<InstName>grp_process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5_fu_5720</InstName>
+<ModuleName>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>5720</ID>
+</Instance>
+<Instance>
+<InstName>grp_myproject_fu_5725</InstName>
 <ModuleName>myproject</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>5715</ID>
+<ID>5725</ID>
 <InstancesList>
 <Instance>
 <InstName>zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_U0</InstName>
@@ -223,16 +229,173 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_process_data_Pipeline_VITIS_LOOP_195_1_fu_11265</InstName>
-<ModuleName>process_data_Pipeline_VITIS_LOOP_195_1</ModuleName>
+<InstName>grp_process_data_Pipeline_VITIS_LOOP_164_6_fu_11275</InstName>
+<ModuleName>process_data_Pipeline_VITIS_LOOP_164_6</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>11265</ID>
+<ID>11275</ID>
 </Instance>
 </InstancesList>
 </TopModule>
 </RTLDesignHierarchy>
 
 <ModuleInformation>
+<Module>
+<Name>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Name>
+<Loops>
+<VITIS_LOOP_143_4_VITIS_LOOP_145_5></VITIS_LOOP_143_4_VITIS_LOOP_145_5>
+</Loops>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<EstimatedClockPeriod>2.102</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>61442</Best-caseLatency>
+<Average-caseLatency>61442</Average-caseLatency>
+<Worst-caseLatency>61442</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.614 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.614 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.614 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>61442</PipelineInitiationInterval>
+<PipelineType>no</PipelineType>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<VITIS_LOOP_143_4_VITIS_LOOP_145_5>
+<Name>VITIS_LOOP_143_4_VITIS_LOOP_145_5</Name>
+<Slack>7.30</Slack>
+<TripCount>61440</TripCount>
+<Latency>61440</Latency>
+<AbsoluteTimeLatency>0.614 ms</AbsoluteTimeLatency>
+<PipelineII>1</PipelineII>
+<PipelineDepth>2</PipelineDepth>
+<PipelineType>yes</PipelineType>
+<InstanceList>
+</InstanceList>
+</VITIS_LOOP_143_4_VITIS_LOOP_145_5>
+</SummaryOfLoopLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<FF>19</FF>
+<AVAIL_FF>2592000</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>95</LUT>
+<AVAIL_LUT>1296000</AVAIL_LUT>
+<UTIL_LUT>~0</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>4032</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<DSP>0</DSP>
+<AVAIL_DSP>9216</AVAIL_DSP>
+<UTIL_DSP>0</UTIL_DSP>
+<URAM>0</URAM>
+<AVAIL_URAM>960</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>zero_padding2d_input_din</name>
+<Object>zero_padding2d_input</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>15</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>zero_padding2d_input_full_n</name>
+<Object>zero_padding2d_input</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>zero_padding2d_input_write</name>
+<Object>zero_padding2d_input</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
 <Module>
 <Name>zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth</Name>
 <Loops>
@@ -100285,9 +100448,9 @@
 </InterfaceSummary>
 </Module>
 <Module>
-<Name>process_data_Pipeline_VITIS_LOOP_195_1</Name>
+<Name>process_data_Pipeline_VITIS_LOOP_164_6</Name>
 <Loops>
-<VITIS_LOOP_195_1></VITIS_LOOP_195_1>
+<VITIS_LOOP_164_6></VITIS_LOOP_164_6>
 </Loops>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
@@ -100306,8 +100469,8 @@
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_195_1>
-<Name>VITIS_LOOP_195_1</Name>
+<VITIS_LOOP_164_6>
+<Name>VITIS_LOOP_164_6</Name>
 <Slack>7.30</Slack>
 <TripCount>3</TripCount>
 <Latency>4</Latency>
@@ -100317,7 +100480,7 @@
 <PipelineType>yes</PipelineType>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_195_1>
+</VITIS_LOOP_164_6>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
@@ -100342,7 +100505,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100353,7 +100516,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100364,7 +100527,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_start</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100375,7 +100538,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_done</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100386,7 +100549,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_idle</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100397,7 +100560,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_ready</name>
-<Object>process_data_Pipeline_VITIS_LOOP_195_1</Object>
+<Object>process_data_Pipeline_VITIS_LOOP_164_6</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -100913,8 +101076,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln195</name>
-<Object>sext_ln195</Object>
+<name>sext_ln164</name>
+<Object>sext_ln164</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -100967,13 +101130,13 @@
 <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>9830360</Best-caseLatency>
-<Average-caseLatency>9830360</Average-caseLatency>
-<Worst-caseLatency>9830648</Worst-caseLatency>
-<Best-caseRealTimeLatency>98.304 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>98.304 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>98.306 ms</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>9830361 ~ 9830649</PipelineInitiationInterval>
+<Best-caseLatency>36</Best-caseLatency>
+<Average-caseLatency>4945937</Average-caseLatency>
+<Worst-caseLatency>9892126</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.360 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>49.459 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>98.921 ms</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>37 ~ 9892127</PipelineInitiationInterval>
 <PipelineType>no</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
@@ -100985,10 +101148,10 @@
 <DSP>382</DSP>
 <AVAIL_DSP>9216</AVAIL_DSP>
 <UTIL_DSP>4</UTIL_DSP>
-<FF>179917</FF>
+<FF>180368</FF>
 <AVAIL_FF>2592000</AVAIL_FF>
 <UTIL_FF>6</UTIL_FF>
-<LUT>133628</LUT>
+<LUT>134192</LUT>
 <AVAIL_LUT>1296000</AVAIL_LUT>
 <UTIL_LUT>10</UTIL_LUT>
 <URAM>0</URAM>
@@ -101764,7 +101927,7 @@
 <FIFOInformation>
 <FIFOInst>
 <Name>layer2_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>65536</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101779,7 +101942,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer3_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>64260</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101794,7 +101957,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer5_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>3937</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101809,7 +101972,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer6_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>3625</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101824,7 +101987,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer8_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>868</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101839,7 +102002,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer9_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>720</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101854,7 +102017,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer11_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>180</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101869,7 +102032,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer12_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>112</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101884,7 +102047,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer14_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>28</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101899,7 +102062,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer16_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>1</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>
@@ -101914,7 +102077,7 @@
 </FIFOInst>
 <FIFOInst>
 <Name>layer18_out_U</Name>
-<ParentInst>grp_myproject_fu_5715</ParentInst>
+<ParentInst>grp_myproject_fu_5725</ParentInst>
 <StaticDepth>1</StaticDepth>
 <RuntimeDepth>mOutPtr</RuntimeDepth>
 <InterfaceList>

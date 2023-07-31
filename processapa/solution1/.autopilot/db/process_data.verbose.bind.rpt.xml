@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data'" level="0">
-<item name = "Date">Mon Jul 31 18:01:20 2023
+<item name = "Date">Mon Jul 31 18:29:06 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -24,15 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">9830360, 9830648, 98.304 ms, 98.306 ms, 9830361, 9830649, no</column>
+<column name="">36, 9892126, 0.360 us, 98.921 ms, 37, 9892127, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_myproject_fu_5715">myproject, 9830280, 9830568, 98.303 ms, 98.306 ms, 262146, 9830402, dataflow</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_195_1_fu_11265">process_data_Pipeline_VITIS_LOOP_195_1, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5_fu_5720">process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5, 61442, 61442, 0.614 ms, 0.614 ms, 61442, 61442, no</column>
+<column name="grp_myproject_fu_5725">myproject, 9830280, 9830568, 98.303 ms, 98.306 ms, 262146, 9830402, dataflow</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_164_6_fu_11275">process_data_Pipeline_VITIS_LOOP_164_6, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

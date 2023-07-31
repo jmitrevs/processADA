@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s'" level="0">
-<item name = "Date">Mon Jul 31 18:02:45 2023
+<item name = "Date">Mon Jul 31 18:30:32 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_18s_17ns_26_1_1_U5476">mul_18s_17ns_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_18s_17ns_26_1_1_U5477">mul_18s_17ns_26_1_1, 0, 1, 0, 5, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

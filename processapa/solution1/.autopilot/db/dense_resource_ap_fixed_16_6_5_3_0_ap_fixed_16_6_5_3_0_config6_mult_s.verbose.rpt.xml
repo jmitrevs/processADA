@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_mult_s'" level="0">
-<item name = "Date">Mon Jul 31 18:01:36 2023
+<item name = "Date">Mon Jul 31 18:29:22 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -64,8 +64,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_16s_26_1_1_U368">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U370">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U369">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U371">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U372">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U373">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
@@ -191,9 +190,10 @@
 <column name="mul_16s_16s_26_1_1_U493">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U494">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
 <column name="mul_16s_16s_26_1_1_U495">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_8s_24_1_1_U496">mul_16s_8s_24_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_144_8_16_1_1_U367">mux_144_8_16_1_1, 0, 0, 0, 759, 0</column>
-<column name="mux_144_8_16_1_1_U369">mux_144_8_16_1_1, 0, 0, 0, 759, 0</column>
+<column name="mul_16s_16s_26_1_1_U496">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_8s_24_1_1_U497">mul_16s_8s_24_1_1, 0, 1, 0, 5, 0</column>
+<column name="mux_144_8_16_1_1_U368">mux_144_8_16_1_1, 0, 0, 0, 759, 0</column>
+<column name="mux_144_8_16_1_1_U370">mux_144_8_16_1_1, 0, 0, 0, 759, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">

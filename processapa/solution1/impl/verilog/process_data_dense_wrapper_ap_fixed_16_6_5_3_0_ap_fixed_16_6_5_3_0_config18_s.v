@@ -119,7 +119,7 @@ wire   [15:0] a_fu_443_p10;
 wire  signed [15:0] mul_ln55_fu_477_p1;
 wire  signed [25:0] sext_ln73_1_fu_473_p1;
 wire   [25:0] mul_ln55_fu_477_p2;
-wire   [15:0] trunc_ln4_fu_483_p4;
+wire   [15:0] trunc_ln5_fu_483_p4;
 wire  signed [15:0] w_1_fu_499_p4;
 wire  signed [15:0] mul_ln55_1_fu_513_p1;
 wire   [25:0] mul_ln55_1_fu_513_p2;
@@ -175,7 +175,7 @@ process_data_mux_8_3_16_1_1 #(
     .din7_WIDTH( 16 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 16 ))
-mux_8_3_16_1_1_U5459(
+mux_8_3_16_1_1_U5460(
     .din0(ap_phi_mux_data_0_val113_phi_phi_fu_334_p4),
     .din1(ap_phi_mux_data_1_val214_phi_phi_fu_346_p4),
     .din2(ap_phi_mux_data_2_val315_phi_phi_fu_358_p4),
@@ -194,7 +194,7 @@ process_data_mul_16s_16s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 26 ))
-mul_16s_16s_26_1_1_U5460(
+mul_16s_16s_26_1_1_U5461(
     .din0(w_fu_465_p1),
     .din1(mul_ln55_fu_477_p1),
     .dout(mul_ln55_fu_477_p2)
@@ -206,7 +206,7 @@ process_data_mul_16s_16s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 26 ))
-mul_16s_16s_26_1_1_U5461(
+mul_16s_16s_26_1_1_U5462(
     .din0(w_1_fu_499_p4),
     .din1(mul_ln55_1_fu_513_p1),
     .dout(mul_ln55_1_fu_513_p2)
@@ -218,7 +218,7 @@ process_data_mul_16s_11s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 11 ),
     .dout_WIDTH( 26 ))
-mul_16s_11s_26_1_1_U5462(
+mul_16s_11s_26_1_1_U5463(
     .din0(mul_ln55_2_fu_549_p0),
     .din1(tmp_fu_535_p4),
     .dout(mul_ln55_2_fu_549_p2)
@@ -627,7 +627,7 @@ assign add_ln55_1_fu_529_p2 = (trunc_ln55_1_fu_519_p4 + res_1_06_reg_302);
 
 assign add_ln55_2_fu_565_p2 = (trunc_ln55_2_fu_555_p4 + res_2_04_reg_316);
 
-assign add_ln55_fu_493_p2 = (trunc_ln4_fu_483_p4 + res_0_08_reg_288);
+assign add_ln55_fu_493_p2 = (trunc_ln5_fu_483_p4 + res_0_08_reg_288);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
@@ -683,11 +683,11 @@ assign sext_ln73_1_fu_473_p1 = $signed(a_fu_443_p10);
 
 assign tmp_fu_535_p4 = {{w18_q0[42:32]}};
 
-assign trunc_ln4_fu_483_p4 = {{mul_ln55_fu_477_p2[25:10]}};
-
 assign trunc_ln55_1_fu_519_p4 = {{mul_ln55_1_fu_513_p2[25:10]}};
 
 assign trunc_ln55_2_fu_555_p4 = {{mul_ln55_2_fu_549_p2[25:10]}};
+
+assign trunc_ln5_fu_483_p4 = {{mul_ln55_fu_477_p2[25:10]}};
 
 assign w18_address0 = zext_ln43_fu_426_p1;
 

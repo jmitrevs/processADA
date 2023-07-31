@@ -1,9 +1,10 @@
 set SynModuleInfo {
-  {SRCNAME zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadTop_PadTopWidth MODELNAME zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth RTLNAME process_data_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5 MODELNAME process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5
     SUBMODULES {
       {MODELNAME process_data_flow_control_loop_pipe_sequential_init RTLNAME process_data_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME process_data_flow_control_loop_pipe_sequential_init_U}
     }
   }
+  {SRCNAME zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadTop_PadTopWidth MODELNAME zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth RTLNAME process_data_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth}
   {SRCNAME zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadMain_CopyMain MODELNAME zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain RTLNAME process_data_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain}
   {SRCNAME zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadBottom_PadBottomWidth MODELNAME zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth RTLNAME process_data_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth}
   {SRCNAME zeropad2d_cl<array<ap_fixed,1u>,array<ap_fixed<16,6,5,3,0>,1u>,config2> MODELNAME zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s RTLNAME process_data_zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s}
@@ -136,9 +137,10 @@ set SynModuleInfo {
       {MODELNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 RTLNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0_U}
     }
   }
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_195_1 MODELNAME process_data_Pipeline_VITIS_LOOP_195_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_195_1}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_164_6 MODELNAME process_data_Pipeline_VITIS_LOOP_164_6 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_164_6}
   {SRCNAME process_data MODELNAME process_data RTLNAME process_data IS_TOP 1
     SUBMODULES {
+      {MODELNAME process_data_urem_32ns_5ns_4_36_seq_1 RTLNAME process_data_urem_32ns_5ns_4_36_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
       {MODELNAME process_data_cc_prob_RAM_AUTO_1R1W RTLNAME process_data_cc_prob_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME process_data_fifo_w15_d2_S RTLNAME process_data_fifo_w15_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME zero_padding2d_input_U}
       {MODELNAME process_data_fifo_w48_d2_S RTLNAME process_data_fifo_w48_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME layer19_out_U}

@@ -229,7 +229,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3928428792</coreId>
+              <coreId>3147626496</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>

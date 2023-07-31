@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s'
 ================================================================
-* Date:           Mon Jul 31 18:00:36 2023
+* Date:           Mon Jul 31 18:28:21 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -79,7 +79,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.50>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [./nnet_utils/nnet_conv_stream.h:241]   --->   Operation 2 'specpipeline' 'specpipeline_ln241' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_9" [./nnet_utils/nnet_conv_stream.h:241]   --->   Operation 2 'specpipeline' 'specpipeline_ln241' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_elem_0_0_0_0_0_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %in_elem_0_0_0_0_0_val" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 3 'read' 'in_elem_0_0_0_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (0.75ns)   --->   "%p_03_i = memshiftread i16 @_ssdm_op_MemShiftRead.[128 x i16]P0A, i16 127, i16 %in_elem_0_0_0_0_0_val_read, i1 1" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 4 'memshiftread' 'p_03_i' <Predicate = true> <Delay = 0.75> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.75> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 16> <Depth = 128> <ShiftMem>
 ST_1 : Operation 5 [1/1] (0.75ns)   --->   "%p_0_i = memshiftread i16 @_ssdm_op_MemShiftRead.[128 x i16]P0A, i16 127, i16 %p_03_i, i1 1" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 5 'memshiftread' 'p_0_i' <Predicate = true> <Delay = 0.75> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.75> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 16> <Depth = 128> <ShiftMem>

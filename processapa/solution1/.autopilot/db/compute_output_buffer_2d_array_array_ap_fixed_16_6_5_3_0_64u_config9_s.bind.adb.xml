@@ -1009,7 +1009,7 @@ entry:65 %call_ln286 = call void @shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 
 
 <Node id="775" bw="0" op_0_bw="0" op_1_bw="1024" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %layer9_out, void @empty_0, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %layer9_out, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -7054,23 +7054,23 @@ if.end39:0 %ret_ln330 = ret
 </dataflow>
 <dataflow id="1856" from="layer9_out" to="specinterface_ln0" fromId="245" toId="69">
 </dataflow>
-<dataflow id="1858" from="empty_0" to="specinterface_ln0" fromId="1857" toId="69">
+<dataflow id="1858" from="empty_19" to="specinterface_ln0" fromId="1857" toId="69">
 </dataflow>
 <dataflow id="1860" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
 <dataflow id="1861" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
-<dataflow id="1863" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1863" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
 <dataflow id="1864" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
 <dataflow id="1865" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
-<dataflow id="1866" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1866" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
-<dataflow id="1867" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1867" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
-<dataflow id="1868" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1868" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
 <dataflow id="1869" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
@@ -7080,9 +7080,9 @@ if.end39:0 %ret_ln330 = ret
 </dataflow>
 <dataflow id="1872" from="StgValue_1859" to="specinterface_ln0" fromId="1859" toId="69">
 </dataflow>
-<dataflow id="1873" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1873" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
-<dataflow id="1874" from="empty_1" to="specinterface_ln0" fromId="1862" toId="69">
+<dataflow id="1874" from="empty_9" to="specinterface_ln0" fromId="1862" toId="69">
 </dataflow>
 <dataflow id="1876" from="StgValue_1875" to="specinterface_ln0" fromId="1875" toId="69">
 </dataflow>

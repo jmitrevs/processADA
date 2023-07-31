@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data'" level="0">
-<item name = "Date">Mon Jul 31 18:01:18 2023
+<item name = "Date">Mon Jul 31 18:29:04 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">9830360, 9830648, 98.304 ms, 98.306 ms, 9830361, 9830649, no</column>
+<column name="">36, 9892126, 0.360 us, 98.921 ms, 37, 9892127, no</column>
 </table>
 </item>
 <item name = "Detail">

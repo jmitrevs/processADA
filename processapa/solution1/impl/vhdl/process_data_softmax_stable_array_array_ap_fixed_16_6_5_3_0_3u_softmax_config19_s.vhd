@@ -251,7 +251,7 @@ begin
         ce0 => invert_table_ce0,
         q0 => invert_table_q0);
 
-    mul_18s_17ns_26_1_1_U5476 : component process_data_mul_18s_17ns_26_1_1
+    mul_18s_17ns_26_1_1_U5477 : component process_data_mul_18s_17ns_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

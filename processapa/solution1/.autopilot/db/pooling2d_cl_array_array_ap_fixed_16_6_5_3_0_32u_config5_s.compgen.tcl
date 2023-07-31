@@ -6,7 +6,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 # FIFO definition:
-set ID 43
+set ID 44
 set FifoName process_data_frp_fifoout
 set InstName process_data_frp_fifoout_U
 set CoreName ap_simcore_frp_fifoout
@@ -45,7 +45,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 44 \
+    id 45 \
     name layer3_out \
     type fifo \
     dir I \
@@ -60,7 +60,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 45 \
+    id 46 \
     name layer5_out \
     type fifo \
     dir O \

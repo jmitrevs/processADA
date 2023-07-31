@@ -6,9 +6,14 @@
 +--------------------------------------------+------------------------------+------------------+---------------------+----------------------+--------------------+
 | Function                                   | Location                     | Compile/Link     | Unroll/Inline       | Performance/Pipeline | Optimizations      |
 +--------------------------------------------+------------------------------+------------------+---------------------+----------------------+--------------------+
-| + process_data                             | kernel.cpp:10                | 19,298           | 108,260 *           | 39,266               | 37,186             |
+| + process_data                             | kernel.cpp:10                | 19,700           | 108,426 *           | 39,318               | 37,248             |
+|    Fragment                                | Fragment.hpp:281             |     44           |                     |                      |                    |
+|  + get_data                                | Fragment.hpp:230             |      8           |       6             |                      |                    |
+|     header_                                | Fragment.hpp:241             |      4           |       2             |                      |                    |
+|    get_adc                                 | WIB2Frame.hpp:94             |     56           |      50             |                      |                    |
+|    ~Fragment                               | Fragment.hpp:299             |      8           |       5             |                      |                    |
 |    array                                   | nnet_types.h:11              |     18           |                     |                      |                    |
-|    operator[]                              | nnet_types.h:17              |      6 (2 calls) |       4 (2 calls)   |                      |                    |
+|    operator[]                              | nnet_types.h:17              |      9 (3 calls) |       6 (3 calls)   |                      |                    |
 |  + myproject                               | myproject.cpp:6              | 18,973           | 108,186             | 38,615               | 37,108             |
 |   + zeropad2d_cl<nnet::array<ap_...        | nnet_padding_stream.h:48     |    661           |      91             |     63               |     65             |
 |    + fill_zero<nnet::array<ap_fix...       | nnet_padding_stream.h:8      |    436 (4 calls) |                     |                      |                    |

@@ -580,6 +580,20 @@ Args:
   - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
 ...
 --- !Passed
+Pass:            reflow-disaggr
+Name:            AutoInline
+DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+Function:        _Z12process_dataiPcPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dunedaq::daqdataformats::Fragment::Fragment(void*, dunedaq::daqdataformats::Fragment::BufferAdoptionMode)'
+    DebugLoc:        { File: ./Fragment.hpp, Line: 282, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_data(int, char*, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
 DebugLoc:        { File: ./nnet_utils/nnet_activation_stream.h, Line: 201, 
@@ -12863,6 +12877,35 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
+DebugLoc:        { File: ./Fragment.hpp, Line: 231, Column: 0 }
+Function:        _ZNK7dunedaq14daqdataformats8Fragment8get_dataEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dunedaq::daqdataformats::Fragment::header_() const'
+    DebugLoc:        { File: ./Fragment.hpp, Line: 241, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dunedaq::daqdataformats::Fragment::get_data() const'
+    DebugLoc:        { File: ./Fragment.hpp, Line: 231, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
+Function:        _ZNK7dunedaq14detdataformats4wib29WIB2Frame7get_adcEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int const& std::min<int>(int const&, int const&)'
+    DebugLoc:        { File: '/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/stl_algobase.h', 
+                       Line: 196, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const'
+    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
 DebugLoc:        { File: ./nnet_utils/nnet_padding_stream.h, Line: 48, 
                    Column: 0 }
 Function:        _ZN4nnet12zeropad2d_clINS_5arrayI8ap_fixedILi15ELi15EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEENS1_IS2_ILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE7config2EEvRN3hls6streamIT_Li0EEERNSB_IT0_Li0EEE
@@ -13552,6 +13595,48 @@ Args:
   - Caller:          'void nnet::softmax_stable<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, softmax_config19>(hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 3u>, 0>&)'
     DebugLoc:        { File: ./nnet_utils/nnet_activation_stream.h, Line: 170, 
                        Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+Function:        _Z12process_dataiPcPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dunedaq::daqdataformats::Fragment::get_data() const'
+    DebugLoc:        { File: ./Fragment.hpp, Line: 231, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_data(int, char*, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+Function:        _Z12process_dataiPcPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const'
+    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_data(int, char*, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
+Function:        _Z12process_dataiPcPi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'dunedaq::daqdataformats::Fragment::~Fragment()'
+    DebugLoc:        { File: ./Fragment.hpp, Line: 300, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_data(int, char*, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -14524,7 +14609,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 184, Column: 25 }
+DebugLoc:        { File: kernel.cpp, Line: 129, Column: 26 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          'Aggregating '
@@ -14540,7 +14625,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 189, Column: 26 }
+DebugLoc:        { File: kernel.cpp, Line: 131, Column: 27 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          'Aggregating '
@@ -23346,7 +23431,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: kernel.cpp, Line: 195, Column: 42 }
+DebugLoc:        { File: kernel.cpp, Line: 164, Column: 39 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          'Sequential '
@@ -23355,43 +23440,43 @@ Args:
   - Length:          '3'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        outdata4seq
+  - AccessID:        outdata6seq
   - ArrayName:       outdata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_195_1
+  - LoopName:        VITIS_LOOP_164_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:195:42'
+  - LoopLoc:         'kernel.cpp:164:39'
   - String:          ' '
   - Function:        'process_data(int, char*, int*)'
     DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 36 }
+    DebugLoc:        { File: kernel.cpp, Line: 166, Column: 33 }
   - OrigDirection:   write
-  - OrigID:          for.inc.store.4
+  - OrigID:          for.inc154.store.4
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            BadAccessLen
-DebugLoc:        { File: kernel.cpp, Line: 195, Column: 42 }
+DebugLoc:        { File: kernel.cpp, Line: 164, Column: 39 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          Sequential access length is not divisible by 2
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 195, Column: 42 }
+    DebugLoc:        { File: kernel.cpp, Line: 164, Column: 39 }
   - OrigDirection:   write
-  - OrigID:          outdata4seq
+  - OrigID:          outdata6seq
   - ArrayName:       outdata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_195_1
+  - LoopName:        VITIS_LOOP_164_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:195:42'
+  - LoopLoc:         'kernel.cpp:164:39'
   - String:          ' '
   - Function:        'process_data(int, char*, int*)'
     DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
@@ -23434,40 +23519,6 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=ref.tmp'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
-  - String:          ' '
-  - VarName:         ref.tmp
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            ref.tmp
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
 Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
 Args:            
   - PragmaType:      array_partition
@@ -23485,6 +23536,40 @@ Args:
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
 Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            ref.tmp
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=ref.tmp'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
+  - String:          ' '
+  - VarName:         ref.tmp
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -23566,7 +23651,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: kernel.cpp, Line: 195, Column: 42 }
+DebugLoc:        { File: kernel.cpp, Line: 164, Column: 39 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          'Multiple burst '
@@ -23583,9 +23668,9 @@ Args:
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_195_1
+  - LoopName:        VITIS_LOOP_164_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:195:42'
+  - LoopLoc:         'kernel.cpp:164:39'
   - String:          ' '
   - Function:        'process_data(int, char*, int*)'
     DebugLoc:        { File: kernel.cpp, Line: 11, Column: 0 }
@@ -23594,7 +23679,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: kernel.cpp, Line: 195, Column: 42 }
+DebugLoc:        { File: kernel.cpp, Line: 164, Column: 39 }
 Function:        _Z12process_dataiPcPi
 Args:            
   - String:          'Multiple burst '
@@ -23604,9 +23689,9 @@ Args:
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''
-  - LoopName:        VITIS_LOOP_195_1
+  - LoopName:        VITIS_LOOP_164_6
   - String:          '''('
-  - LoopLoc:         'kernel.cpp:195:42'
+  - LoopLoc:         'kernel.cpp:164:39'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem
