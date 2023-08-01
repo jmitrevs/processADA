@@ -125,7 +125,7 @@ attribute shreg_extract : string;
     signal mul_ln55_fu_477_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal sext_ln73_1_fu_473_p1 : STD_LOGIC_VECTOR (25 downto 0);
     signal mul_ln55_fu_477_p2 : STD_LOGIC_VECTOR (25 downto 0);
-    signal trunc_ln5_fu_483_p4 : STD_LOGIC_VECTOR (15 downto 0);
+    signal trunc_ln_fu_483_p4 : STD_LOGIC_VECTOR (15 downto 0);
     signal w_1_fu_499_p4 : STD_LOGIC_VECTOR (15 downto 0);
     signal mul_ln55_1_fu_513_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal mul_ln55_1_fu_513_p2 : STD_LOGIC_VECTOR (25 downto 0);
@@ -231,7 +231,7 @@ begin
         ce0 => w18_ce0,
         q0 => w18_q0);
 
-    mux_8_3_16_1_1_U5460 : component process_data_mux_8_3_16_1_1
+    mux_8_3_16_1_1_U5494 : component process_data_mux_8_3_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -257,7 +257,7 @@ begin
         din8 => w_index3_reg_161,
         dout => a_fu_443_p10);
 
-    mul_16s_16s_26_1_1_U5461 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5495 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -269,7 +269,7 @@ begin
         din1 => mul_ln55_fu_477_p1,
         dout => mul_ln55_fu_477_p2);
 
-    mul_16s_16s_26_1_1_U5462 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5496 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -281,7 +281,7 @@ begin
         din1 => mul_ln55_1_fu_513_p1,
         dout => mul_ln55_1_fu_513_p2);
 
-    mul_16s_11s_26_1_1_U5463 : component process_data_mul_16s_11s_26_1_1
+    mul_16s_11s_26_1_1_U5497 : component process_data_mul_16s_11s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -580,7 +580,7 @@ begin
     end process;
     add_ln55_1_fu_529_p2 <= std_logic_vector(unsigned(trunc_ln55_1_fu_519_p4) + unsigned(res_1_06_reg_302));
     add_ln55_2_fu_565_p2 <= std_logic_vector(unsigned(trunc_ln55_2_fu_555_p4) + unsigned(res_2_04_reg_316));
-    add_ln55_fu_493_p2 <= std_logic_vector(unsigned(trunc_ln5_fu_483_p4) + unsigned(res_0_08_reg_288));
+    add_ln55_fu_493_p2 <= std_logic_vector(unsigned(trunc_ln_fu_483_p4) + unsigned(res_0_08_reg_288));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(1);
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
@@ -831,7 +831,7 @@ begin
     tmp_fu_535_p4 <= w18_q0(42 downto 32);
     trunc_ln55_1_fu_519_p4 <= mul_ln55_1_fu_513_p2(25 downto 10);
     trunc_ln55_2_fu_555_p4 <= mul_ln55_2_fu_549_p2(25 downto 10);
-    trunc_ln5_fu_483_p4 <= mul_ln55_fu_477_p2(25 downto 10);
+    trunc_ln_fu_483_p4 <= mul_ln55_fu_477_p2(25 downto 10);
     w18_address0 <= zext_ln43_fu_426_p1(3 - 1 downto 0);
 
     w18_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)

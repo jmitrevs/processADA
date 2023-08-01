@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s'
 ================================================================
-* Date:           Mon Jul 31 18:28:59 2023
+* Date:           Tue Aug  1 14:26:09 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -130,17 +130,17 @@ ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%data_4_val517_phi = phi i16 %data_
 ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%data_5_val618_phi = phi i16 %data_5_val6_read, void %rewind_init, i16 %data_5_val618_rewind, void %rewind_header" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 41 'phi' 'data_5_val618_phi' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%data_6_val719_phi = phi i16 %data_6_val7_read, void %rewind_init, i16 %data_6_val719_rewind, void %rewind_header" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 42 'phi' 'data_6_val719_phi' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%data_7_val820_phi = phi i16 %data_7_val8_read, void %rewind_init, i16 %data_7_val820_rewind, void %rewind_header" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 43 'phi' 'data_7_val820_phi' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_9" [./nnet_utils/nnet_dense_resource.h:44->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 44 'specpipeline' 'specpipeline_ln44' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_21" [./nnet_utils/nnet_dense_resource.h:44->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 44 'specpipeline' 'specpipeline_ln44' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%speclooptripcount_ln46 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [./nnet_utils/nnet_dense_resource.h:46->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 45 'speclooptripcount' 'speclooptripcount_ln46' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 46 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 46 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 47 [1/1] (0.71ns)   --->   "%a = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %data_0_val113_phi, i16 %data_1_val214_phi, i16 %data_2_val315_phi, i16 %data_3_val416_phi, i16 %data_4_val517_phi, i16 %data_5_val618_phi, i16 %data_6_val719_phi, i16 %data_7_val820_phi, i3 %w_index3" [./nnet_utils/nnet_dense_resource.h:43->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 47 'mux' 'a' <Predicate = true> <Delay = 0.71> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 48 [1/2] (0.73ns)   --->   "%w18_load = load i3 %w18_addr" [./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 48 'load' 'w18_load' <Predicate = true> <Delay = 0.73> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 43> <Depth = 8> <ROM>
 ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%w = trunc i43 %w18_load" [./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 49 'trunc' 'w' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%sext_ln73 = sext i16 %w" [./nnet_utils/nnet_mult.h:73->./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 50 'sext' 'sext_ln73' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%sext_ln73_1 = sext i16 %a" [./nnet_utils/nnet_mult.h:73->./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 51 'sext' 'sext_ln73_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 52 [1/1] (2.54ns)   --->   "%mul_ln55 = mul i26 %sext_ln73, i26 %sext_ln73_1" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 52 'mul' 'mul_ln55' <Predicate = true> <Delay = 2.54> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.54> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln55, i32 10, i32 25" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 53 'partselect' 'trunc_ln5' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 54 [1/1] (1.12ns)   --->   "%add_ln55 = add i16 %trunc_ln5, i16 %res_0_08" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 54 'add' 'add_ln55' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln55, i32 10, i32 25" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 53 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (1.12ns)   --->   "%add_ln55 = add i16 %trunc_ln, i16 %res_0_08" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 54 'add' 'add_ln55' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%w_1 = partselect i16 @_ssdm_op_PartSelect.i16.i43.i32.i32, i43 %w18_load, i32 16, i32 31" [./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 55 'partselect' 'w_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%sext_ln73_2 = sext i16 %w_1" [./nnet_utils/nnet_mult.h:73->./nnet_utils/nnet_dense_resource.h:56->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 56 'sext' 'sext_ln73_2' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 57 [1/1] (2.54ns)   --->   "%mul_ln55_1 = mul i26 %sext_ln73_2, i26 %sext_ln73_1" [./nnet_utils/nnet_dense_resource.h:55->./nnet_utils/nnet_dense_resource.h:253->./nnet_utils/nnet_dense_stream.h:21]   --->   Operation 57 'mul' 'mul_ln55_1' <Predicate = true> <Delay = 2.54> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.54> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
@@ -232,7 +232,7 @@ w                      (trunc            ) [ 0000]
 sext_ln73              (sext             ) [ 0000]
 sext_ln73_1            (sext             ) [ 0000]
 mul_ln55               (mul              ) [ 0000]
-trunc_ln5              (partselect       ) [ 0000]
+trunc_ln               (partselect       ) [ 0000]
 add_ln55               (add              ) [ 0111]
 w_1                    (partselect       ) [ 0000]
 sext_ln73_2            (sext             ) [ 0000]
@@ -485,7 +485,7 @@ return_ln23            (return           ) [ 0000]
 <pin id="51" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -521,7 +521,7 @@ return_ln23            (return           ) [ 0000]
 <pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_18"/></StgValue>
+<StgValue><ssdm name="empty_14"/></StgValue>
 </bind>
 </comp>
 
@@ -1385,7 +1385,7 @@ return_ln23            (return           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="483" class="1004" name="trunc_ln5_fu_483">
+<comp id="483" class="1004" name="trunc_ln_fu_483">
 <pin_list>
 <pin id="484" dir="0" index="0" bw="16" slack="0"/>
 <pin id="485" dir="0" index="1" bw="26" slack="0"/>
@@ -1395,7 +1395,7 @@ return_ln23            (return           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="trunc_ln5/3 "/>
+<opset="trunc_ln/3 "/>
 </bind>
 </comp>
 
@@ -2111,7 +2111,7 @@ return_ln23            (return           ) [ 0000]
 		sext_ln73 : 2
 		sext_ln73_1 : 3
 		mul_ln55 : 4
-		trunc_ln5 : 5
+		trunc_ln : 5
 		add_ln55 : 6
 		w_1 : 1
 		sext_ln73_2 : 2
@@ -2168,7 +2168,7 @@ return_ln23            (return           ) [ 0000]
 |          |      sext_ln73_2_fu_509      |    0    |    0    |    0    |
 |          |      sext_ln73_3_fu_545      |    0    |    0    |    0    |
 |----------|------------------------------|---------|---------|---------|
-|          |       trunc_ln5_fu_483       |    0    |    0    |    0    |
+|          |        trunc_ln_fu_483       |    0    |    0    |    0    |
 |          |          w_1_fu_499          |    0    |    0    |    0    |
 |partselect|      trunc_ln55_1_fu_519     |    0    |    0    |    0    |
 |          |          tmp_fu_535          |    0    |    0    |    0    |

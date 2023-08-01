@@ -120,7 +120,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5507 \
+    id 5541 \
     name zero_padding2d_input \
     type fifo \
     dir I \
@@ -135,7 +135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5508 \
+    id 5542 \
     name layer19_out \
     type fifo \
     dir O \

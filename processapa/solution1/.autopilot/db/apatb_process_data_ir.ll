@@ -3,28 +3,61 @@ source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
+%"class.dune::FDHDChannelMapSP" = type { i32, i32, [150 x i32], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"] }
+%"struct.dune::FDHDChannelMapSP::KeyValuePair" = type { i32, i32 }
+%"struct.dune::FDHDChannelMapSP::HDChanInfoStruct" = type { i32, i32, i32, i32, %"struct.dune::FDHDChannelMapSP::HDChanInfo" }
+%"struct.dune::FDHDChannelMapSP::HDChanInfo" = type { i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i1 }
+
+; Function Attrs: nounwind
+declare void @free(i8* nocapture) local_unnamed_addr #0
+
+; Function Attrs: nounwind
+declare noalias i8* @malloc(i64) local_unnamed_addr #0
+
 ; Function Attrs: noinline
-define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nonnull %infiledata, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="3" %outdata) local_unnamed_addr #0 {
+define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nonnull %infiledata, %"class.dune::FDHDChannelMapSP"* noalias nocapture nonnull readonly dereferenceable(372848) %chanmap, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="3" %outdata) local_unnamed_addr #1 {
 entry:
   %infiledata_copy = alloca i8, align 512
+  %malloccall.0 = call i8* @malloc(i64 4)
+  %chanmap_copy.0 = bitcast i8* %malloccall.0 to i32*
+  %malloccall.1 = call i8* @malloc(i64 4)
+  %chanmap_copy.1 = bitcast i8* %malloccall.1 to i32*
+  %malloccall.2 = call i8* @malloc(i64 600)
+  %chanmap_copy.2 = bitcast i8* %malloccall.2 to [150 x i32]*
+  %malloccall.3 = call i8* @malloc(i64 1200)
+  %chanmap_copy.3 = bitcast i8* %malloccall.3 to [150 x i64]*
+  %malloccall.4 = call i8* @malloc(i64 1200)
+  %chanmap_copy.4 = bitcast i8* %malloccall.4 to [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*
+  %malloccall.5 = call i8* @malloc(i64 1200)
+  %chanmap_copy.5 = bitcast i8* %malloccall.5 to [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*
+  %malloccall.6 = call i8* @malloc(i64 368640)
+  %chanmap_copy.6 = bitcast i8* %malloccall.6 to [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]*
   %outdata_copy = alloca [3 x i32], align 512
   %0 = bitcast i32* %outdata to [3 x i32]*
-  call fastcc void @copy_in(i8* nonnull %infiledata, i8* nonnull align 512 %infiledata_copy, [3 x i32]* nonnull %0, [3 x i32]* nonnull align 512 %outdata_copy)
-  call void @apatb_process_data_hw(i32 %infile_size, i8* %infiledata_copy, [3 x i32]* %outdata_copy)
-  call void @copy_back(i8* %infiledata, i8* %infiledata_copy, [3 x i32]* %0, [3 x i32]* %outdata_copy)
+  call fastcc void @copy_in(i8* nonnull %infiledata, i8* nonnull align 512 %infiledata_copy, %"class.dune::FDHDChannelMapSP"* nonnull %chanmap, i32* %chanmap_copy.0, i32* %chanmap_copy.1, [150 x i32]* %chanmap_copy.2, [150 x i64]* %chanmap_copy.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %chanmap_copy.6, [3 x i32]* nonnull %0, [3 x i32]* nonnull align 512 %outdata_copy)
+  call void @apatb_process_data_hw(i32 %infile_size, i8* %infiledata_copy, i32* %chanmap_copy.0, i32* %chanmap_copy.1, [150 x i32]* %chanmap_copy.2, [150 x i64]* %chanmap_copy.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %chanmap_copy.6, [3 x i32]* %outdata_copy)
+  call void @copy_back(i8* %infiledata, i8* %infiledata_copy, %"class.dune::FDHDChannelMapSP"* %chanmap, i32* %chanmap_copy.0, i32* %chanmap_copy.1, [150 x i32]* %chanmap_copy.2, [150 x i64]* %chanmap_copy.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %chanmap_copy.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %chanmap_copy.6, [3 x i32]* %0, [3 x i32]* %outdata_copy)
+  call void @free(i8* %malloccall.0)
+  call void @free(i8* %malloccall.1)
+  call void @free(i8* %malloccall.2)
+  call void @free(i8* %malloccall.3)
+  call void @free(i8* %malloccall.4)
+  call void @free(i8* %malloccall.5)
+  call void @free(i8* %malloccall.6)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_in(i8* noalias readonly, i8* noalias align 512, [3 x i32]* noalias readonly, [3 x i32]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in(i8* noalias readonly "unpacked"="0", i8* noalias align 512 "unpacked"="1", %"class.dune::FDHDChannelMapSP"* noalias readonly "unpacked"="2", i32* noalias nocapture "unpacked"="3.0" %.0, i32* noalias nocapture "unpacked"="3.1" %.1, [150 x i32]* noalias "unpacked"="3.2" %.2, [150 x i64]* noalias "unpacked"="3.3" %.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias "unpacked"="3.4" %.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias "unpacked"="3.5" %.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* noalias "unpacked"="3.6" %.6, [3 x i32]* noalias readonly "unpacked"="4", [3 x i32]* noalias align 512 "unpacked"="5") unnamed_addr #2 {
 entry:
   call fastcc void @onebyonecpy_hls.p0i8(i8* align 512 %1, i8* %0)
-  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* align 512 %3, [3 x i32]* %2)
+  call fastcc void @"onebyonecpy_hls.p0class.dune::FDHDChannelMapSP"(i32* %.0, i32* %.1, [150 x i32]* %.2, [150 x i64]* %.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %.6, %"class.dune::FDHDChannelMapSP"* %2)
+  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* align 512 %4, [3 x i32]* %3)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0i8(i8* noalias align 512 %dst, i8* noalias readonly %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0i8(i8* noalias align 512 %dst, i8* noalias readonly %src) unnamed_addr #3 {
 entry:
   %0 = icmp eq i8* %dst, null
   %1 = icmp eq i8* %src, null
@@ -41,7 +74,206 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* noalias align 512 %dst, [3 x i32]* noalias readonly %src) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0class.dune::FDHDChannelMapSP"(i32* noalias nocapture "unpacked"="0.0" %dst.01, i32* noalias nocapture "unpacked"="0.1" %dst.12, [150 x i32]* noalias "unpacked"="0.2" %dst.23, [150 x i64]* noalias "unpacked"="0.3" %dst.34, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias "unpacked"="0.4" %dst.45, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias "unpacked"="0.5" %dst.56, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* noalias "unpacked"="0.6" %dst.67, %"class.dune::FDHDChannelMapSP"* noalias readonly "unpacked"="1" %src) unnamed_addr #3 {
+entry:
+  %0 = icmp eq %"class.dune::FDHDChannelMapSP"* %src, null
+  br i1 %0, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %src.0 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 0
+  %1 = load i32, i32* %src.0, align 4
+  store i32 %1, i32* %dst.01, align 4
+  %src.1 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 1
+  %2 = load i32, i32* %src.1, align 4
+  store i32 %2, i32* %dst.12, align 4
+  %src.2 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 2
+  call void @arraycpy_hls.p0a150i32([150 x i32]* %dst.23, [150 x i32]* %src.2, i64 150)
+  %src.3 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 3
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.381"([150 x i64]* %dst.34, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.3, i64 150)
+  %src.4 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 4
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.45, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.4, i64 150)
+  %src.5 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 5
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.56, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.5, i64 150)
+  %src.6 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 6
+  call void @"arraycpy_hls.p0a5120struct.dune::FDHDChannelMapSP::HDChanInfoStruct"([5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst.67, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src.6, i64 5120)
+  br label %ret
+
+ret:                                              ; preds = %copy, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @arraycpy_hls.p0a150i32([150 x i32]* %dst, [150 x i32]* readonly %src, i64 %num) local_unnamed_addr #4 {
+entry:
+  %0 = icmp eq [150 x i32]* %src, null
+  %1 = icmp eq [150 x i32]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond1 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond1, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx2 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %dst.addr = getelementptr [150 x i32], [150 x i32]* %dst, i64 0, i64 %for.loop.idx2
+  %src.addr = getelementptr [150 x i32], [150 x i32]* %src, i64 0, i64 %for.loop.idx2
+  %3 = load i32, i32* %src.addr, align 4
+  store i32 %3, i32* %dst.addr, align 4
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx2, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* readonly %src, i64 %num) local_unnamed_addr #4 {
+entry:
+  %0 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, null
+  %1 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond5 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond5, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx6 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.01 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, i64 0, i64 %for.loop.idx6, i32 0
+  %dst.addr.02 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, i64 0, i64 %for.loop.idx6, i32 0
+  %3 = load i32, i32* %src.addr.01, align 4
+  store i32 %3, i32* %dst.addr.02, align 4
+  %src.addr.13 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, i64 0, i64 %for.loop.idx6, i32 1
+  %dst.addr.14 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, i64 0, i64 %for.loop.idx6, i32 1
+  %4 = load i32, i32* %src.addr.13, align 4
+  store i32 %4, i32* %dst.addr.14, align 4
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx6, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a5120struct.dune::FDHDChannelMapSP::HDChanInfoStruct"([5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* readonly %src, i64 %num) local_unnamed_addr #4 {
+entry:
+  %0 = icmp eq [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, null
+  %1 = icmp eq [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond39 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond39, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx40 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.01 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 0
+  %dst.addr.02 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 0
+  %3 = load i32, i32* %src.addr.01, align 4
+  store i32 %3, i32* %dst.addr.02, align 4
+  %src.addr.13 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 1
+  %dst.addr.14 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 1
+  %4 = load i32, i32* %src.addr.13, align 4
+  store i32 %4, i32* %dst.addr.14, align 4
+  %src.addr.25 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 2
+  %dst.addr.26 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 2
+  %5 = load i32, i32* %src.addr.25, align 4
+  store i32 %5, i32* %dst.addr.26, align 4
+  %src.addr.37 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 3
+  %dst.addr.38 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 3
+  %6 = load i32, i32* %src.addr.37, align 4
+  store i32 %6, i32* %dst.addr.38, align 4
+  %src.addr.4.011 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 0
+  %dst.addr.4.012 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 0
+  %7 = load i32, i32* %src.addr.4.011, align 4
+  store i32 %7, i32* %dst.addr.4.012, align 4
+  %src.addr.4.113 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 1
+  %dst.addr.4.114 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 1
+  %8 = load i32, i32* %src.addr.4.113, align 4
+  store i32 %8, i32* %dst.addr.4.114, align 4
+  %src.addr.4.215 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 2
+  %dst.addr.4.216 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 2
+  %9 = load i32, i32* %src.addr.4.215, align 4
+  store i32 %9, i32* %dst.addr.4.216, align 4
+  %src.addr.4.317 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 3
+  %dst.addr.4.318 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 3
+  %10 = load i32, i32* %src.addr.4.317, align 4
+  store i32 %10, i32* %dst.addr.4.318, align 4
+  %src.addr.4.419 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 4
+  %dst.addr.4.420 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 4
+  %11 = load i32, i32* %src.addr.4.419, align 4
+  store i32 %11, i32* %dst.addr.4.420, align 4
+  %src.addr.4.521 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 5
+  %dst.addr.4.522 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 5
+  %12 = load i32, i32* %src.addr.4.521, align 4
+  store i32 %12, i32* %dst.addr.4.522, align 4
+  %src.addr.4.623 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 6
+  %dst.addr.4.624 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 6
+  %13 = load i32, i32* %src.addr.4.623, align 4
+  store i32 %13, i32* %dst.addr.4.624, align 4
+  %src.addr.4.725 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 7
+  %dst.addr.4.726 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 7
+  %14 = load i32, i32* %src.addr.4.725, align 4
+  store i32 %14, i32* %dst.addr.4.726, align 4
+  %src.addr.4.827 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 8
+  %dst.addr.4.828 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 8
+  %15 = load i32, i32* %src.addr.4.827, align 4
+  store i32 %15, i32* %dst.addr.4.828, align 4
+  %src.addr.4.929 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 9
+  %dst.addr.4.930 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 9
+  %16 = load i32, i32* %src.addr.4.929, align 4
+  store i32 %16, i32* %dst.addr.4.930, align 4
+  %src.addr.4.1031 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 10
+  %dst.addr.4.1032 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 10
+  %17 = load i32, i32* %src.addr.4.1031, align 4
+  store i32 %17, i32* %dst.addr.4.1032, align 4
+  %src.addr.4.1133 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 11
+  %dst.addr.4.1134 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 11
+  %18 = load i32, i32* %src.addr.4.1133, align 4
+  store i32 %18, i32* %dst.addr.4.1134, align 4
+  %src.addr.4.1235 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 12
+  %dst.addr.4.1236 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 12
+  %19 = load i32, i32* %src.addr.4.1235, align 4
+  store i32 %19, i32* %dst.addr.4.1236, align 4
+  %src.addr.4.1337 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src, i64 0, i64 %for.loop.idx40, i32 4, i32 13
+  %dst.addr.4.1338 = getelementptr [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"], [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst, i64 0, i64 %for.loop.idx40, i32 4, i32 13
+  %20 = bitcast i1* %src.addr.4.1337 to i8*
+  %21 = load i8, i8* %20
+  %22 = trunc i8 %21 to i1
+  store i1 %22, i1* %dst.addr.4.1338, align 1
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx40, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define internal fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* noalias align 512 %dst, [3 x i32]* noalias readonly %src) unnamed_addr #3 {
 entry:
   %0 = icmp eq [3 x i32]* %dst, null
   %1 = icmp eq [3 x i32]* %src, null
@@ -57,7 +289,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @arraycpy_hls.p0a3i32([3 x i32]* %dst, [3 x i32]* readonly %src, i64 %num) local_unnamed_addr #3 {
+define void @arraycpy_hls.p0a3i32([3 x i32]* %dst, [3 x i32]* readonly %src, i64 %num) local_unnamed_addr #4 {
 entry:
   %0 = icmp eq [3 x i32]* %src, null
   %1 = icmp eq [3 x i32]* %dst, null
@@ -89,40 +321,153 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_out(i8* noalias, i8* noalias readonly align 512, [3 x i32]* noalias, [3 x i32]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @copy_out(i8* noalias "unpacked"="0", i8* noalias readonly align 512 "unpacked"="1", %"class.dune::FDHDChannelMapSP"* noalias "unpacked"="2", i32* noalias nocapture readonly "unpacked"="3.0" %.0, i32* noalias nocapture readonly "unpacked"="3.1" %.1, [150 x i32]* noalias readonly "unpacked"="3.2" %.2, [150 x i64]* noalias readonly "unpacked"="3.3" %.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="3.4" %.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="3.5" %.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* noalias readonly "unpacked"="3.6" %.6, [3 x i32]* noalias "unpacked"="4", [3 x i32]* noalias readonly align 512 "unpacked"="5") unnamed_addr #5 {
 entry:
   call fastcc void @onebyonecpy_hls.p0i8(i8* %0, i8* align 512 %1)
-  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* %2, [3 x i32]* align 512 %3)
+  call fastcc void @"onebyonecpy_hls.p0class.dune::FDHDChannelMapSP.273"(%"class.dune::FDHDChannelMapSP"* %2, i32* %.0, i32* %.1, [150 x i32]* %.2, [150 x i64]* %.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %.6)
+  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* %3, [3 x i32]* align 512 %4)
   ret void
 }
-
-declare void @apatb_process_data_hw(i32, i8*, [3 x i32]*)
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_back(i8* noalias, i8* noalias readonly align 512, [3 x i32]* noalias, [3 x i32]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @"onebyonecpy_hls.p0class.dune::FDHDChannelMapSP.273"(%"class.dune::FDHDChannelMapSP"* noalias "unpacked"="0" %dst, i32* noalias nocapture readonly "unpacked"="1.0" %src.01, i32* noalias nocapture readonly "unpacked"="1.1" %src.12, [150 x i32]* noalias readonly "unpacked"="1.2" %src.23, [150 x i64]* noalias readonly "unpacked"="1.3" %src.34, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="1.4" %src.45, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="1.5" %src.56, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* noalias readonly "unpacked"="1.6" %src.67) unnamed_addr #3 {
+entry:
+  %0 = icmp eq %"class.dune::FDHDChannelMapSP"* %dst, null
+  br i1 %0, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %dst.0 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 0
+  %1 = load i32, i32* %src.01, align 4
+  store i32 %1, i32* %dst.0, align 4
+  %dst.1 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 1
+  %2 = load i32, i32* %src.12, align 4
+  store i32 %2, i32* %dst.1, align 4
+  %dst.2 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 2
+  call void @arraycpy_hls.p0a150i32([150 x i32]* %dst.2, [150 x i32]* %src.23, i64 150)
+  %dst.3 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 3
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.386"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.3, [150 x i64]* %src.34, i64 150)
+  %dst.4 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 4
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.45, i64 150)
+  %dst.5 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 5
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.5, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.56, i64 150)
+  %dst.6 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 6
+  call void @"arraycpy_hls.p0a5120struct.dune::FDHDChannelMapSP::HDChanInfoStruct"([5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %dst.6, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %src.67, i64 5120)
+  br label %ret
+
+ret:                                              ; preds = %copy, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.381"([150 x i64]* %dst, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* readonly %src, i64 %num) local_unnamed_addr #4 {
+entry:
+  %0 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, null
+  %1 = icmp eq [150 x i64]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond5 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond5, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx6 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.01 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, i64 0, i64 %for.loop.idx6, i32 0
+  %3 = getelementptr [150 x i64], [150 x i64]* %dst, i64 0, i64 %for.loop.idx6
+  %4 = load i32, i32* %src.addr.01, align 4
+  %5 = load i64, i64* %3, align 4
+  %6 = zext i32 %4 to i64
+  %7 = and i64 %5, -4294967296
+  %.partset1 = or i64 %7, %6
+  store i64 %.partset1, i64* %3, align 4
+  %src.addr.13 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, i64 0, i64 %for.loop.idx6, i32 1
+  %8 = load i32, i32* %src.addr.13, align 4
+  %9 = zext i32 %8 to i64
+  %10 = shl i64 %9, 32
+  %.partset = or i64 %10, %6
+  store i64 %.partset, i64* %3, align 4
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx6, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.386"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, [150 x i64]* readonly %src, i64 %num) local_unnamed_addr #4 {
+entry:
+  %0 = icmp eq [150 x i64]* %src, null
+  %1 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond5 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond5, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx6 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %3 = getelementptr [150 x i64], [150 x i64]* %src, i64 0, i64 %for.loop.idx6
+  %dst.addr.02 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, i64 0, i64 %for.loop.idx6, i32 0
+  %4 = load i64, i64* %3, align 4
+  %.partselect1 = trunc i64 %4 to i32
+  store i32 %.partselect1, i32* %dst.addr.02, align 4
+  %dst.addr.14 = getelementptr [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"], [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, i64 0, i64 %for.loop.idx6, i32 1
+  %5 = load i64, i64* %3, align 4
+  %6 = lshr i64 %5, 32
+  %.partselect = trunc i64 %6 to i32
+  store i32 %.partselect, i32* %dst.addr.14, align 4
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx6, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+declare void @apatb_process_data_hw(i32, i8*, i32*, i32*, [150 x i32]*, [150 x i64]*, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]*, [3 x i32]*)
+
+; Function Attrs: argmemonly noinline norecurse
+define internal fastcc void @copy_back(i8* noalias "unpacked"="0", i8* noalias readonly align 512 "unpacked"="1", %"class.dune::FDHDChannelMapSP"* noalias "unpacked"="2", i32* noalias nocapture readonly "unpacked"="3.0" %.0, i32* noalias nocapture readonly "unpacked"="3.1" %.1, [150 x i32]* noalias readonly "unpacked"="3.2" %.2, [150 x i64]* noalias readonly "unpacked"="3.3" %.3, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="3.4" %.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* noalias readonly "unpacked"="3.5" %.5, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* noalias readonly "unpacked"="3.6" %.6, [3 x i32]* noalias "unpacked"="4", [3 x i32]* noalias readonly align 512 "unpacked"="5") unnamed_addr #5 {
 entry:
   call fastcc void @onebyonecpy_hls.p0i8(i8* %0, i8* align 512 %1)
-  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* %2, [3 x i32]* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a3i32([3 x i32]* %3, [3 x i32]* align 512 %4)
   ret void
 }
 
-define void @process_data_hw_stub_wrapper(i32, i8*, [3 x i32]*) #5 {
+define void @process_data_hw_stub_wrapper(i32, i8*, i32*, i32*, [150 x i32]*, [150 x i64]*, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]*, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]*, [3 x i32]*) #6 {
 entry:
-  call void @copy_out(i8* null, i8* %1, [3 x i32]* null, [3 x i32]* %2)
-  %3 = bitcast [3 x i32]* %2 to i32*
-  call void @process_data_hw_stub(i32 %0, i8* %1, i32* %3)
-  call void @copy_in(i8* null, i8* %1, [3 x i32]* null, [3 x i32]* %2)
+  %malloccall = tail call i8* @malloc(i64 372848)
+  %10 = bitcast i8* %malloccall to %"class.dune::FDHDChannelMapSP"*
+  call void @copy_out(i8* null, i8* %1, %"class.dune::FDHDChannelMapSP"* %10, i32* %2, i32* %3, [150 x i32]* %4, [150 x i64]* %5, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %6, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %7, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %8, [3 x i32]* null, [3 x i32]* %9)
+  %11 = bitcast [3 x i32]* %9 to i32*
+  call void @process_data_hw_stub(i32 %0, i8* %1, %"class.dune::FDHDChannelMapSP"* %10, i32* %11)
+  call void @copy_in(i8* null, i8* %1, %"class.dune::FDHDChannelMapSP"* %10, i32* %2, i32* %3, [150 x i32]* %4, [150 x i64]* %5, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %6, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %7, [5120 x %"struct.dune::FDHDChannelMapSP::HDChanInfoStruct"]* %8, [3 x i32]* null, [3 x i32]* %9)
   ret void
 }
 
-declare void @process_data_hw_stub(i32, i8*, i32*)
+declare void @process_data_hw_stub(i32, i8*, %"class.dune::FDHDChannelMapSP"*, i32*)
 
-attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
-attributes #1 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyin" }
-attributes #2 = { argmemonly noinline norecurse "fpga.wrapper.func"="onebyonecpy_hls" }
-attributes #3 = { argmemonly noinline norecurse "fpga.wrapper.func"="arraycpy_hls" }
-attributes #4 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyout" }
-attributes #5 = { "fpga.wrapper.func"="stub" }
+attributes #0 = { nounwind "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { noinline "fpga.wrapper.func"="wrapper" }
+attributes #2 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyin" }
+attributes #3 = { argmemonly noinline norecurse "fpga.wrapper.func"="onebyonecpy_hls" }
+attributes #4 = { argmemonly noinline norecurse "fpga.wrapper.func"="arraycpy_hls" }
+attributes #5 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyout" }
+attributes #6 = { "fpga.wrapper.func"="stub" }
 
 !llvm.dbg.cu = !{}
 !llvm.ident = !{!0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0}

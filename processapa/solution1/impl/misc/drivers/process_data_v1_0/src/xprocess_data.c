@@ -122,6 +122,135 @@ u64 XProcess_data_Get_infiledata(XProcess_data *InstancePtr) {
     return Data;
 }
 
+void XProcess_data_Set_chanmap_fNAPAs(XProcess_data *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FNAPAS_DATA, Data);
+}
+
+u32 XProcess_data_Get_chanmap_fNAPAs(XProcess_data *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FNAPAS_DATA);
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_fNChans(XProcess_data *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FNCHANS_DATA, Data);
+}
+
+u32 XProcess_data_Get_chanmap_fNChans(XProcess_data *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FNCHANS_DATA);
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_fAPANameFromCrate(XProcess_data *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA, (u32)(Data));
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XProcess_data_Get_chanmap_fAPANameFromCrate(XProcess_data *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA);
+    Data += (u64)XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA + 4) << 32;
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_fUprightFromCrate(XProcess_data *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA, (u32)(Data));
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XProcess_data_Get_chanmap_fUprightFromCrate(XProcess_data *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA);
+    Data += (u64)XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA + 4) << 32;
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_fCrateFromTPCSet(XProcess_data *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FCRATEFROMTPCSET_DATA, (u32)(Data));
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FCRATEFROMTPCSET_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XProcess_data_Get_chanmap_fCrateFromTPCSet(XProcess_data *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FCRATEFROMTPCSET_DATA);
+    Data += (u64)XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FCRATEFROMTPCSET_DATA + 4) << 32;
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_fTPCSetFromCrate(XProcess_data *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FTPCSETFROMCRATE_DATA, (u32)(Data));
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FTPCSETFROMCRATE_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XProcess_data_Get_chanmap_fTPCSetFromCrate(XProcess_data *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FTPCSETFROMCRATE_DATA);
+    Data += (u64)XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_FTPCSETFROMCRATE_DATA + 4) << 32;
+    return Data;
+}
+
+void XProcess_data_Set_chanmap_DetToChanInfo(XProcess_data *InstancePtr, u64 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_DETTOCHANINFO_DATA, (u32)(Data));
+    XProcess_data_WriteReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_DETTOCHANINFO_DATA + 4, (u32)(Data >> 32));
+}
+
+u64 XProcess_data_Get_chanmap_DetToChanInfo(XProcess_data *InstancePtr) {
+    u64 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_DETTOCHANINFO_DATA);
+    Data += (u64)XProcess_data_ReadReg(InstancePtr->Control_BaseAddress, XPROCESS_DATA_CONTROL_ADDR_CHANMAP_DETTOCHANINFO_DATA + 4) << 32;
+    return Data;
+}
+
 void XProcess_data_Set_outdata(XProcess_data *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

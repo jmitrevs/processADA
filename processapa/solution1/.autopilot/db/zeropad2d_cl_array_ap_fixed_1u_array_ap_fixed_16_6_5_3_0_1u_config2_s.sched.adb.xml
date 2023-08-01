@@ -112,10 +112,10 @@ entry:3 %call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pi
 
 <Node id="7" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-entry:4 %empty_67 = wait i32 @_ssdm_op_Wait
+entry:4 %empty_87 = wait i32 @_ssdm_op_Wait
 
 ]]></Node>
-<StgValue><ssdm name="empty_67"/></StgValue>
+<StgValue><ssdm name="empty_87"/></StgValue>
 </operation>
 </state>
 
@@ -130,10 +130,10 @@ entry:4 %empty_67 = wait i32 @_ssdm_op_Wait
 
 <Node id="8" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-entry:5 %empty_68 = wait i32 @_ssdm_op_Wait
+entry:5 %empty_88 = wait i32 @_ssdm_op_Wait
 
 ]]></Node>
-<StgValue><ssdm name="empty_68"/></StgValue>
+<StgValue><ssdm name="empty_88"/></StgValue>
 </operation>
 
 <operation id="14" st_id="4" stage="2" lat="2">
@@ -181,10 +181,10 @@ entry:6 %call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pi
 
 <Node id="10" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-entry:7 %empty_69 = wait i32 @_ssdm_op_Wait
+entry:7 %empty_89 = wait i32 @_ssdm_op_Wait
 
 ]]></Node>
-<StgValue><ssdm name="empty_69"/></StgValue>
+<StgValue><ssdm name="empty_89"/></StgValue>
 </operation>
 </state>
 
@@ -199,10 +199,10 @@ entry:7 %empty_69 = wait i32 @_ssdm_op_Wait
 
 <Node id="11" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-entry:8 %empty_70 = wait i32 @_ssdm_op_Wait
+entry:8 %empty_90 = wait i32 @_ssdm_op_Wait
 
 ]]></Node>
-<StgValue><ssdm name="empty_70"/></StgValue>
+<StgValue><ssdm name="empty_90"/></StgValue>
 </operation>
 
 <operation id="18" st_id="7" stage="2" lat="2">
@@ -232,7 +232,7 @@ entry:9 %call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pi
 
 <Node id="3" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -247,7 +247,7 @@ entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %la
 
 <Node id="4" bw="0" op_0_bw="0" op_1_bw="15" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>

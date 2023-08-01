@@ -159,7 +159,7 @@ extern "C" {
 # 1 "./kernel.h" 1
 # 12 "./kernel.h"
 # 1 "./FDHDChannelMapSP.h" 1
-# 16 "./FDHDChannelMapSP.h"
+# 17 "./FDHDChannelMapSP.h"
 # 1 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 1 3
 # 37 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 3
 
@@ -19562,7 +19562,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 54 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 2 3
-# 17 "./FDHDChannelMapSP.h" 2
+# 18 "./FDHDChannelMapSP.h" 2
 
 namespace dune {
   class FDHDChannelMapSP;
@@ -19592,18 +19592,14 @@ public:
     bool valid;
   } HDChanInfo_t;
 
+
   FDHDChannelMapSP();
 
 
 
 
   void ReadMapFromFiles(const std::string &chanlist, const std::string &cratelist);
-
-
-
-
-
-
+# 63 "./FDHDChannelMapSP.h"
   HDChanInfo_t GetChanInfoFromWIBElements(
    unsigned int crate,
    unsigned int slot,
@@ -19612,30 +19608,30 @@ public:
 
 
 
+
+
+
+
   unsigned int getNChans() { return fNChans; }
+
+
 
 private:
 
   const unsigned int fNAPAs = 150;
   const unsigned int fNChans = 2560*fNAPAs;
-
-
-
-
-
+# 91 "./FDHDChannelMapSP.h"
   unsigned int fAPANameFromCrate[150];
 
   struct KeyValuePair {
       unsigned int key;
       unsigned int value;
   };
-
-  std::string APAval[150];
-
+# 105 "./FDHDChannelMapSP.h"
   KeyValuePair fUprightFromCrate[150];
   KeyValuePair fCrateFromTPCSet[150];
   KeyValuePair fTPCSetFromCrate[150];
-# 100 "./FDHDChannelMapSP.h"
+# 122 "./FDHDChannelMapSP.h"
   struct HDChanInfoStruct {
       unsigned int upright;
       unsigned int wib;
@@ -19645,7 +19641,7 @@ private:
   };
 
   HDChanInfoStruct DetToChanInfo[5120];
-# 117 "./FDHDChannelMapSP.h"
+# 139 "./FDHDChannelMapSP.h"
   void check_offline_channel(unsigned int offlineChannel) const
   {
   if (offlineChannel >= fNChans)
@@ -54080,7 +54076,7 @@ void myproject(
 # 16 "./kernel.h" 2
 
 
-void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, int outdata[3]);
+__attribute__((sdx_kernel("process_data", 0))) void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, int outdata[3]);
 # 2 "kernel.cpp" 2
 # 1 "/data/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_int.h" 1
 # 3 "kernel.cpp" 2
@@ -60835,7 +60831,7 @@ constexpr int pow2(int x) { return x == 0 ? 1 : 2 * pow2(x - 1); }
 
 
 
-__attribute__((sdx_kernel("process_data", 0))) void process_data(const int infile_size, char infiledata[] ,int outdata[3])
+__attribute__((sdx_kernel("process_data", 0))) void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapSP& chanmap ,int outdata[3])
 {
 #line 27 "/home/brenton/kernel/processAPA/processapa/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=process_data
@@ -60846,8 +60842,6 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 # 11 "kernel.cpp"
 
 
-
- typedef ap_fixed<15, 15> fixed15_t;
  constexpr unsigned int NUM_LINKS = 10;
  const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
  const int z_channels = 480;
@@ -60918,14 +60912,15 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
             slotloc &= 0x7;
 
             const int CHAN_MIN = 1600;
-# 94 "kernel.cpp"
-            unsigned int offline_chan = 2;
-            unsigned int offline_plane = iChan+ 1600;
 
 
+            auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
+            unsigned int offline_chan = hdchaninfo.offlchan;
+            unsigned int offline_plane = hdchaninfo.plane;
+# 97 "kernel.cpp"
             if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
             {
-                VITIS_LOOP_100_1: for (int i = 0; i < n_frames; i++)
+                VITIS_LOOP_99_1: for (int i = 0; i < n_frames; i++)
                 {
 
 
@@ -60934,7 +60929,7 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
             }
             else if(offline_plane == 2)
             {
-             VITIS_LOOP_109_2: for (int i = 0; i < n_frames; i++)
+             VITIS_LOOP_108_2: for (int i = 0; i < n_frames; i++)
              {
 
               planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors[iChan][i]-ave[iChan];
@@ -60942,17 +60937,17 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
             }
         }
     }
-# 128 "kernel.cpp"
+# 153 "kernel.cpp"
     const int TICK_SIZE = 128;
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     input_t pack;
     hls::stream<result_t> layer19_out;
-# 141 "kernel.cpp"
-        VITIS_LOOP_141_3: for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
-        {
-            VITIS_LOOP_143_4: for(int j = 0; j < z_channels; j++) {
 
-                VITIS_LOOP_145_5: for(int k = 0; k <TICK_SIZE; k++) {
+        VITIS_LOOP_158_3: for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
+        {
+            VITIS_LOOP_160_4: for(int j = 0; j < z_channels; j++) {
+
+                VITIS_LOOP_162_5: for(int k = 0; k <TICK_SIZE; k++) {
                    if(i+k < n_frames)
                  {
                     int fill = planes[j][i+k];
@@ -60971,9 +60966,11 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
                     auto cc_prob = layer19_out.read();
 
-                    VITIS_LOOP_164_6: for (int i = 0; i < 3; i++)
+                    VITIS_LOOP_181_6: for (int i = 0; i < 3; i++)
 
                      outdata[i] = cc_prob[i];
                     }
-# 194 "kernel.cpp"
+
+
+
 }

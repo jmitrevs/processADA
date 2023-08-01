@@ -7,11 +7,9 @@
 #include "defines3.h"
 
 
-void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMapSP& chanmap,*/ ,int outdata[3])
+void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapSP& chanmap ,int outdata[3])
 {
 
-
-	typedef ap_fixed<15, 15> fixed15_t;
 	constexpr unsigned int NUM_LINKS = 10;
 	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 	const int z_channels = 480;
@@ -83,16 +81,17 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
 
             const int CHAN_MIN = 1600;
 
-            /*
+
             auto hdchaninfo = chanmap.GetChanInfoFromWIBElements (crate, slotloc, link_from_frameheader, iChan);
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
-            */
 
 
 
+/*
             unsigned int offline_chan = 2;
             unsigned int offline_plane = iChan+ 1600;
+            */
 
 
             if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
@@ -124,19 +123,10 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
 */
     //Call 2D CNN
 
-
     const int TICK_SIZE = 128;
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     input_t pack;
     hls::stream<result_t> layer19_out;
-
-
-
-
-//works with no chanmap
-
-
-
 
         for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
         {
@@ -167,28 +157,5 @@ void process_data(const int infile_size, char infiledata[]/*,dune::FDHDChannelMa
                     }
 
 
-
-
-
-
-
-	/*
-	  hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
-	  input_t pack;
-	  pack[0] = typename input_t::value_type(4);
-	  zero_padding2d_input.write(pack);
-	  //nnet::copy_data<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(in, zero_padding2d_input);
-	  hls::stream<result_t> layer19_out;
-
-	  myproject(zero_padding2d_input,layer19_out );
-
-	  auto cc_prob = layer19_out.read();
-
-	                      for (int i = 0; i < 3; i++)
-	                      {
-	                      	outdata[i] = cc_prob[i];
-	                      }
-
-*/
 
 }

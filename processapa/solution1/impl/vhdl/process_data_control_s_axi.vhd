@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity process_data_control_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -37,6 +37,13 @@ port (
     interrupt             :out  STD_LOGIC;
     infile_size           :out  STD_LOGIC_VECTOR(31 downto 0);
     infiledata            :out  STD_LOGIC_VECTOR(63 downto 0);
+    chanmap_fNAPAs        :out  STD_LOGIC_VECTOR(31 downto 0);
+    chanmap_fNChans       :out  STD_LOGIC_VECTOR(31 downto 0);
+    chanmap_fAPANameFromCrate :out  STD_LOGIC_VECTOR(63 downto 0);
+    chanmap_fUprightFromCrate :out  STD_LOGIC_VECTOR(63 downto 0);
+    chanmap_fCrateFromTPCSet :out  STD_LOGIC_VECTOR(63 downto 0);
+    chanmap_fTPCSetFromCrate :out  STD_LOGIC_VECTOR(63 downto 0);
+    chanmap_DetToChanInfo :out  STD_LOGIC_VECTOR(63 downto 0);
     outdata               :out  STD_LOGIC_VECTOR(63 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
@@ -75,11 +82,42 @@ end entity process_data_control_s_axi;
 -- 0x1c : Data signal of infiledata
 --        bit 31~0 - infiledata[63:32] (Read/Write)
 -- 0x20 : reserved
--- 0x24 : Data signal of outdata
+-- 0x24 : Data signal of chanmap_fNAPAs
+--        bit 31~0 - chanmap_fNAPAs[31:0] (Read/Write)
+-- 0x28 : reserved
+-- 0x2c : Data signal of chanmap_fNChans
+--        bit 31~0 - chanmap_fNChans[31:0] (Read/Write)
+-- 0x30 : reserved
+-- 0x34 : Data signal of chanmap_fAPANameFromCrate
+--        bit 31~0 - chanmap_fAPANameFromCrate[31:0] (Read/Write)
+-- 0x38 : Data signal of chanmap_fAPANameFromCrate
+--        bit 31~0 - chanmap_fAPANameFromCrate[63:32] (Read/Write)
+-- 0x3c : reserved
+-- 0x40 : Data signal of chanmap_fUprightFromCrate
+--        bit 31~0 - chanmap_fUprightFromCrate[31:0] (Read/Write)
+-- 0x44 : Data signal of chanmap_fUprightFromCrate
+--        bit 31~0 - chanmap_fUprightFromCrate[63:32] (Read/Write)
+-- 0x48 : reserved
+-- 0x4c : Data signal of chanmap_fCrateFromTPCSet
+--        bit 31~0 - chanmap_fCrateFromTPCSet[31:0] (Read/Write)
+-- 0x50 : Data signal of chanmap_fCrateFromTPCSet
+--        bit 31~0 - chanmap_fCrateFromTPCSet[63:32] (Read/Write)
+-- 0x54 : reserved
+-- 0x58 : Data signal of chanmap_fTPCSetFromCrate
+--        bit 31~0 - chanmap_fTPCSetFromCrate[31:0] (Read/Write)
+-- 0x5c : Data signal of chanmap_fTPCSetFromCrate
+--        bit 31~0 - chanmap_fTPCSetFromCrate[63:32] (Read/Write)
+-- 0x60 : reserved
+-- 0x64 : Data signal of chanmap_DetToChanInfo
+--        bit 31~0 - chanmap_DetToChanInfo[31:0] (Read/Write)
+-- 0x68 : Data signal of chanmap_DetToChanInfo
+--        bit 31~0 - chanmap_DetToChanInfo[63:32] (Read/Write)
+-- 0x6c : reserved
+-- 0x70 : Data signal of outdata
 --        bit 31~0 - outdata[31:0] (Read/Write)
--- 0x28 : Data signal of outdata
+-- 0x74 : Data signal of outdata
 --        bit 31~0 - outdata[63:32] (Read/Write)
--- 0x2c : reserved
+-- 0x78 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of process_data_control_s_axi is
@@ -87,19 +125,38 @@ architecture behave of process_data_control_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL            : INTEGER := 16#00#;
-    constant ADDR_GIE                : INTEGER := 16#04#;
-    constant ADDR_IER                : INTEGER := 16#08#;
-    constant ADDR_ISR                : INTEGER := 16#0c#;
-    constant ADDR_INFILE_SIZE_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_INFILE_SIZE_CTRL   : INTEGER := 16#14#;
-    constant ADDR_INFILEDATA_DATA_0  : INTEGER := 16#18#;
-    constant ADDR_INFILEDATA_DATA_1  : INTEGER := 16#1c#;
-    constant ADDR_INFILEDATA_CTRL    : INTEGER := 16#20#;
-    constant ADDR_OUTDATA_DATA_0     : INTEGER := 16#24#;
-    constant ADDR_OUTDATA_DATA_1     : INTEGER := 16#28#;
-    constant ADDR_OUTDATA_CTRL       : INTEGER := 16#2c#;
-    constant ADDR_BITS         : INTEGER := 6;
+    constant ADDR_AP_CTRL                          : INTEGER := 16#00#;
+    constant ADDR_GIE                              : INTEGER := 16#04#;
+    constant ADDR_IER                              : INTEGER := 16#08#;
+    constant ADDR_ISR                              : INTEGER := 16#0c#;
+    constant ADDR_INFILE_SIZE_DATA_0               : INTEGER := 16#10#;
+    constant ADDR_INFILE_SIZE_CTRL                 : INTEGER := 16#14#;
+    constant ADDR_INFILEDATA_DATA_0                : INTEGER := 16#18#;
+    constant ADDR_INFILEDATA_DATA_1                : INTEGER := 16#1c#;
+    constant ADDR_INFILEDATA_CTRL                  : INTEGER := 16#20#;
+    constant ADDR_CHANMAP_FNAPAS_DATA_0            : INTEGER := 16#24#;
+    constant ADDR_CHANMAP_FNAPAS_CTRL              : INTEGER := 16#28#;
+    constant ADDR_CHANMAP_FNCHANS_DATA_0           : INTEGER := 16#2c#;
+    constant ADDR_CHANMAP_FNCHANS_CTRL             : INTEGER := 16#30#;
+    constant ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0 : INTEGER := 16#34#;
+    constant ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1 : INTEGER := 16#38#;
+    constant ADDR_CHANMAP_FAPANAMEFROMCRATE_CTRL   : INTEGER := 16#3c#;
+    constant ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0 : INTEGER := 16#40#;
+    constant ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1 : INTEGER := 16#44#;
+    constant ADDR_CHANMAP_FUPRIGHTFROMCRATE_CTRL   : INTEGER := 16#48#;
+    constant ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0  : INTEGER := 16#4c#;
+    constant ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1  : INTEGER := 16#50#;
+    constant ADDR_CHANMAP_FCRATEFROMTPCSET_CTRL    : INTEGER := 16#54#;
+    constant ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0  : INTEGER := 16#58#;
+    constant ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1  : INTEGER := 16#5c#;
+    constant ADDR_CHANMAP_FTPCSETFROMCRATE_CTRL    : INTEGER := 16#60#;
+    constant ADDR_CHANMAP_DETTOCHANINFO_DATA_0     : INTEGER := 16#64#;
+    constant ADDR_CHANMAP_DETTOCHANINFO_DATA_1     : INTEGER := 16#68#;
+    constant ADDR_CHANMAP_DETTOCHANINFO_CTRL       : INTEGER := 16#6c#;
+    constant ADDR_OUTDATA_DATA_0                   : INTEGER := 16#70#;
+    constant ADDR_OUTDATA_DATA_1                   : INTEGER := 16#74#;
+    constant ADDR_OUTDATA_CTRL                     : INTEGER := 16#78#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -130,6 +187,13 @@ architecture behave of process_data_control_s_axi is
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_infile_size     : UNSIGNED(31 downto 0) := (others => '0');
     signal int_infiledata      : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_chanmap_fNAPAs  : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_chanmap_fNChans : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_chanmap_fAPANameFromCrate : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_chanmap_fUprightFromCrate : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_chanmap_fCrateFromTPCSet : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_chanmap_fTPCSetFromCrate : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_chanmap_DetToChanInfo : UNSIGNED(63 downto 0) := (others => '0');
     signal int_outdata         : UNSIGNED(63 downto 0) := (others => '0');
 
 
@@ -266,6 +330,30 @@ begin
                         rdata_data <= RESIZE(int_infiledata(31 downto 0), 32);
                     when ADDR_INFILEDATA_DATA_1 =>
                         rdata_data <= RESIZE(int_infiledata(63 downto 32), 32);
+                    when ADDR_CHANMAP_FNAPAS_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fNAPAs(31 downto 0), 32);
+                    when ADDR_CHANMAP_FNCHANS_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fNChans(31 downto 0), 32);
+                    when ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fAPANameFromCrate(31 downto 0), 32);
+                    when ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1 =>
+                        rdata_data <= RESIZE(int_chanmap_fAPANameFromCrate(63 downto 32), 32);
+                    when ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fUprightFromCrate(31 downto 0), 32);
+                    when ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1 =>
+                        rdata_data <= RESIZE(int_chanmap_fUprightFromCrate(63 downto 32), 32);
+                    when ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fCrateFromTPCSet(31 downto 0), 32);
+                    when ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1 =>
+                        rdata_data <= RESIZE(int_chanmap_fCrateFromTPCSet(63 downto 32), 32);
+                    when ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_fTPCSetFromCrate(31 downto 0), 32);
+                    when ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1 =>
+                        rdata_data <= RESIZE(int_chanmap_fTPCSetFromCrate(63 downto 32), 32);
+                    when ADDR_CHANMAP_DETTOCHANINFO_DATA_0 =>
+                        rdata_data <= RESIZE(int_chanmap_DetToChanInfo(31 downto 0), 32);
+                    when ADDR_CHANMAP_DETTOCHANINFO_DATA_1 =>
+                        rdata_data <= RESIZE(int_chanmap_DetToChanInfo(63 downto 32), 32);
                     when ADDR_OUTDATA_DATA_0 =>
                         rdata_data <= RESIZE(int_outdata(31 downto 0), 32);
                     when ADDR_OUTDATA_DATA_1 =>
@@ -286,6 +374,13 @@ begin
     ap_continue          <= int_ap_continue or auto_restart_status;
     infile_size          <= STD_LOGIC_VECTOR(int_infile_size);
     infiledata           <= STD_LOGIC_VECTOR(int_infiledata);
+    chanmap_fNAPAs       <= STD_LOGIC_VECTOR(int_chanmap_fNAPAs);
+    chanmap_fNChans      <= STD_LOGIC_VECTOR(int_chanmap_fNChans);
+    chanmap_fAPANameFromCrate <= STD_LOGIC_VECTOR(int_chanmap_fAPANameFromCrate);
+    chanmap_fUprightFromCrate <= STD_LOGIC_VECTOR(int_chanmap_fUprightFromCrate);
+    chanmap_fCrateFromTPCSet <= STD_LOGIC_VECTOR(int_chanmap_fCrateFromTPCSet);
+    chanmap_fTPCSetFromCrate <= STD_LOGIC_VECTOR(int_chanmap_fTPCSetFromCrate);
+    chanmap_DetToChanInfo <= STD_LOGIC_VECTOR(int_chanmap_DetToChanInfo);
     outdata              <= STD_LOGIC_VECTOR(int_outdata);
 
     process (ACLK)
@@ -516,6 +611,138 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_INFILEDATA_DATA_1) then
                     int_infiledata(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_infiledata(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FNAPAS_DATA_0) then
+                    int_chanmap_fNAPAs(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fNAPAs(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FNCHANS_DATA_0) then
+                    int_chanmap_fNChans(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fNChans(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0) then
+                    int_chanmap_fAPANameFromCrate(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fAPANameFromCrate(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1) then
+                    int_chanmap_fAPANameFromCrate(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fAPANameFromCrate(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0) then
+                    int_chanmap_fUprightFromCrate(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fUprightFromCrate(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1) then
+                    int_chanmap_fUprightFromCrate(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fUprightFromCrate(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0) then
+                    int_chanmap_fCrateFromTPCSet(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fCrateFromTPCSet(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1) then
+                    int_chanmap_fCrateFromTPCSet(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fCrateFromTPCSet(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0) then
+                    int_chanmap_fTPCSetFromCrate(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fTPCSetFromCrate(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1) then
+                    int_chanmap_fTPCSetFromCrate(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_fTPCSetFromCrate(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_DETTOCHANINFO_DATA_0) then
+                    int_chanmap_DetToChanInfo(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_DetToChanInfo(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CHANMAP_DETTOCHANINFO_DATA_1) then
+                    int_chanmap_DetToChanInfo(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_chanmap_DetToChanInfo(63 downto 32));
                 end if;
             end if;
         end if;

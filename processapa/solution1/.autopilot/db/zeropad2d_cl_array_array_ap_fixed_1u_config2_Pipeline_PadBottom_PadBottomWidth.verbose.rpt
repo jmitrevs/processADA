@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth'
 ================================================================
-* Date:           Mon Jul 31 18:29:09 2023
+* Date:           Tue Aug  1 14:26:23 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -186,7 +186,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.45>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%indvar_flatten13 = alloca i32 1"   --->   Operation 5 'alloca' 'indvar_flatten13' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.46ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten13"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc50"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten13_load = load i12 %indvar_flatten13" [./nnet_utils/nnet_padding_stream.h:75]   --->   Operation 9 'load' 'indvar_flatten13_load' <Predicate = true> <Delay = 0.00>
@@ -201,7 +201,7 @@ State 2 <SV = 1> <Delay = 1.72>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @PadBottom_PadBottomWidth_str"   --->   Operation 15 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 2048, i64 2048, i64 2048"   --->   Operation 16 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 17 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [./nnet_utils/nnet_padding_stream.h:77]   --->   Operation 18 'specloopname' 'specloopname_ln77' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24" [./nnet_utils/nnet_padding_stream.h:77]   --->   Operation 18 'specloopname' 'specloopname_ln77' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (1.72ns)   --->   "%write_ln15 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %layer2_out, i16 0" [./nnet_utils/nnet_padding_stream.h:15->./nnet_utils/nnet_padding_stream.h:78]   --->   Operation 19 'write' 'write_ln15' <Predicate = true> <Delay = 1.72> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 65536> <FIFO>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln77 = br void %for.inc50" [./nnet_utils/nnet_padding_stream.h:77]   --->   Operation 20 'br' 'br_ln77' <Predicate = true> <Delay = 0.00>
 
@@ -278,7 +278,7 @@ ret_ln0               (ret              ) [ 000]
 <pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_19"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 
@@ -296,7 +296,7 @@ ret_ln0               (ret              ) [ 000]
 <pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -395,7 +395,7 @@ ret_ln0               (ret              ) [ 000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_24"/></StgValue>
 </bind>
 </comp>
 

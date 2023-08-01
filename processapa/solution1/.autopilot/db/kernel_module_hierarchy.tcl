@@ -1,10 +1,10 @@
 set ModuleHierarchy {[{
 "Name" : "process_data","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_145_5_fu_5720","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5_fu_6063","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "VITIS_LOOP_143_4_VITIS_LOOP_145_5","ID" : "2","Type" : "pipeline"},]},
-	{"Name" : "grp_myproject_fu_5725","ID" : "3","Type" : "dataflow",
+		{"Name" : "VITIS_LOOP_160_4_VITIS_LOOP_162_5","ID" : "2","Type" : "pipeline"},]},
+	{"Name" : "grp_myproject_fu_6129","ID" : "3","Type" : "dataflow",
 		"SubInsts" : [
 		{"Name" : "zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_U0","ID" : "4","Type" : "sequential",
 			"SubInsts" : [
@@ -85,7 +85,30 @@ set ModuleHierarchy {[{
 		{"Name" : "softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0","ID" : "51","Type" : "sequential",
 			"SubInsts" : [
 			{"Name" : "grp_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_fu_20","ID" : "52","Type" : "sequential"},]},]},
-	{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_164_6_fu_11275","ID" : "53","Type" : "sequential",
+	{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_181_6_fu_11679","ID" : "53","Type" : "sequential",
 		"SubLoops" : [
-		{"Name" : "VITIS_LOOP_164_6","ID" : "54","Type" : "pipeline"},]},]
+		{"Name" : "VITIS_LOOP_181_6","ID" : "54","Type" : "pipeline"},]},],
+"SubLoops" : [
+	{"Name" : "link_loop","ID" : "55","Type" : "no",
+	"SubInsts" : [
+	{"Name" : "grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6070","ID" : "56","Type" : "sequential",
+			"SubLoops" : [
+			{"Name" : "first_chan_loop_first_chan_frame_loop","ID" : "57","Type" : "pipeline"},]},],
+	"SubLoops" : [
+	{"Name" : "frame_loop","ID" : "58","Type" : "no",
+		"SubInsts" : [
+		{"Name" : "grp_process_data_Pipeline_frame_chan_loop_fu_6077","ID" : "59","Type" : "sequential",
+				"SubLoops" : [
+				{"Name" : "frame_chan_loop","ID" : "60","Type" : "pipeline"},]},]},
+	{"Name" : "second_chan_loop","ID" : "61","Type" : "no",
+		"SubInsts" : [
+		{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6090","ID" : "62","Type" : "sequential",
+				"SubLoops" : [
+				{"Name" : "VITIS_LOOP_169_1","ID" : "63","Type" : "pipeline"},]},
+		{"Name" : "grp_process_data_Pipeline_4_fu_6101","ID" : "64","Type" : "sequential",
+				"SubLoops" : [
+				{"Name" : "Loop 1","ID" : "65","Type" : "pipeline"},]},
+		{"Name" : "grp_process_data_Pipeline_VITIS_LOOP_99_1_fu_6116","ID" : "66","Type" : "sequential",
+				"SubLoops" : [
+				{"Name" : "VITIS_LOOP_99_1","ID" : "67","Type" : "pipeline"},]},]},]},]
 }]}

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare'
 ================================================================
-* Date:           Mon Jul 31 18:30:27 2023
+* Date:           Tue Aug  1 14:27:43 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -3771,7 +3771,7 @@ ST_1 : Operation 898 [1/1] (0.00ns)   --->   "%p_0_28_0_0_01785 = alloca i32 1" 
 ST_1 : Operation 899 [1/1] (0.00ns)   --->   "%p_0_29_0_0_01787 = alloca i32 1"   --->   Operation 899 'alloca' 'p_0_29_0_0_01787' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 900 [1/1] (0.00ns)   --->   "%p_0_30_0_0_01789 = alloca i32 1"   --->   Operation 900 'alloca' 'p_0_30_0_0_01789' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 901 [1/1] (0.00ns)   --->   "%p_0_31_0_0_01791 = alloca i32 1"   --->   Operation 901 'alloca' 'p_0_31_0_0_01791' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 902 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer14_out, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 902 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 902 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer14_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 902 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 903 [1/1] (0.46ns)   --->   "%store_ln0 = store i5 0, i5 %i_in"   --->   Operation 903 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
 ST_1 : Operation 904 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 904 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 905 [1/1] (0.00ns)   --->   "%i_in_1 = load i5 %i_in" [./nnet_utils/nnet_dense_stream.h:36]   --->   Operation 905 'load' 'i_in_1' <Predicate = true> <Delay = 0.00>
@@ -5578,7 +5578,7 @@ ST_1 : Operation 3664 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operatio
 
 State 2 <SV = 1> <Delay = 1.72>
 ST_2 : Operation 913 [1/1] (0.00ns)   --->   "%speclooptripcount_ln36 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 28, i64 28, i64 28" [./nnet_utils/nnet_dense_stream.h:36]   --->   Operation 913 'speclooptripcount' 'speclooptripcount_ln36' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 914 [1/1] (0.00ns)   --->   "%specloopname_ln36 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [./nnet_utils/nnet_dense_stream.h:36]   --->   Operation 914 'specloopname' 'specloopname_ln36' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 914 [1/1] (0.00ns)   --->   "%specloopname_ln36 = specloopname void @_ssdm_op_SpecLoopName, void @empty_33" [./nnet_utils/nnet_dense_stream.h:36]   --->   Operation 914 'specloopname' 'specloopname_ln36' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 915 [1/1] (1.72ns)   --->   "%layer14_out_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %layer14_out" [./nnet_utils/nnet_dense_stream.h:40]   --->   Operation 915 'read' 'layer14_out_read' <Predicate = true> <Delay = 1.72> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.72> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 28> <FIFO>
 ST_2 : Operation 916 [1/1] (0.00ns)   --->   "%trunc_ln40 = trunc i512 %layer14_out_read" [./nnet_utils/nnet_dense_stream.h:40]   --->   Operation 916 'trunc' 'trunc_ln40' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 917 [1/1] (0.00ns)   --->   "%trunc_ln40_s = partselect i16 @_ssdm_op_PartSelect.i16.i512.i32.i32, i512 %layer14_out_read, i32 480, i32 495" [./nnet_utils/nnet_dense_stream.h:40]   --->   Operation 917 'partselect' 'trunc_ln40_s' <Predicate = true> <Delay = 0.00>
@@ -19213,7 +19213,7 @@ ret_ln0                (ret              ) [ 000]
 <pin id="1799" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_19"/></StgValue>
+<StgValue><ssdm name="empty_11"/></StgValue>
 </bind>
 </comp>
 
@@ -19231,7 +19231,7 @@ ret_ln0                (ret              ) [ 000]
 <pin id="1803" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_9"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -19546,7 +19546,7 @@ ret_ln0                (ret              ) [ 000]
 <pin id="1873" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_6"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 

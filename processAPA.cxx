@@ -5,7 +5,6 @@
 
 std::string infilename = "TriggerRecord00001_0000TPCAPA003.dat";
 
-
 //const int infile_size = 28320800;
 
 const int infile_size = 28320800;

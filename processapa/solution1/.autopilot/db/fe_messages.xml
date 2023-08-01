@@ -1031,6 +1031,21 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="myproject.cpp:83:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="myproject" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=layer18_out depth=1" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'chanmap_fAPANameFromCrate' since this interface mode only supports scalar types">
+        <args Name="chanmap_fAPANameFromCrate"/>
+    </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'chanmap_fUprightFromCrate' since this interface mode only supports scalar types">
+        <args Name="chanmap_fUprightFromCrate"/>
+    </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'chanmap_fCrateFromTPCSet' since this interface mode only supports scalar types">
+        <args Name="chanmap_fCrateFromTPCSet"/>
+    </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'chanmap_fTPCSetFromCrate' since this interface mode only supports scalar types">
+        <args Name="chanmap_fTPCSetFromCrate"/>
+    </msg>
+    <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'chanmap_DetToChanInfo' since this interface mode only supports scalar types">
+        <args Name="chanmap_DetToChanInfo"/>
+    </msg>
     <msg msg_groups="" msg_id="214-414" msg_severity="WARNING" msg_loc="kernel.cpp:11:0" msg_body="Cannot apply interface mode 'ap_none' on function argument 'outdata' since this interface mode only supports scalar types">
         <args Name="outdata"/>
     </msg>
@@ -1652,20 +1667,23 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./nnet_utils/nnet_activation_stream.h:170:0" msg_body="Inlining function 'unsigned int nnet::softmax_idx_from_real_val&lt;ap_fixed&lt;18, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, softmax_config19&gt;(ap_fixed&lt;18, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)' into 'void nnet::softmax_stable&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, softmax_config19&gt;(hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, 0&gt;&amp;, hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, 0&gt;&amp;)'">
         <args Callee="unsigned int nnet::softmax_idx_from_real_val&lt;ap_fixed&lt;18, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, softmax_config19&gt;(ap_fixed&lt;18, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)" Callee-DebugLoc="File ./nnet_utils/nnet_activation.h Line 141 Column 0" Caller="void nnet::softmax_stable&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, softmax_config19&gt;(hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, 0&gt;&amp;, hls::stream&lt;nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;, 0&gt;&amp;)" Caller-DebugLoc="File ./nnet_utils/nnet_activation_stream.h Line 170 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::daqdataformats::Fragment::get_data() const' into 'process_data(int, char*, int*)'">
-        <args Callee="dunedaq::daqdataformats::Fragment::get_data() const" Callee-DebugLoc="File ./Fragment.hpp Line 231 Column 0" Caller="process_data(int, char*, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::daqdataformats::Fragment::get_data() const' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="dunedaq::daqdataformats::Fragment::get_data() const" Callee-DebugLoc="File ./Fragment.hpp Line 231 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const' into 'process_data(int, char*, int*)'">
-        <args Callee="dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const" Callee-DebugLoc="File ./WIB2Frame.hpp Line 95 Column 0" Caller="process_data(int, char*, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const" Callee-DebugLoc="File ./WIB2Frame.hpp Line 95 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::daqdataformats::Fragment::~Fragment()' into 'process_data(int, char*, int*)'">
-        <args Callee="dunedaq::daqdataformats::Fragment::~Fragment()" Callee-DebugLoc="File ./Fragment.hpp Line 300 Column 0" Caller="process_data(int, char*, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dune::FDHDChannelMapSP::GetChanInfoFromWIBElements(unsigned int, unsigned int, unsigned int, unsigned int)' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="dune::FDHDChannelMapSP::GetChanInfoFromWIBElements(unsigned int, unsigned int, unsigned int, unsigned int)" Callee-DebugLoc="File FDHDChannelMapSP.cxx Line 156 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'nnet::array&lt;ap_fixed&lt;15, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 1u&gt;::operator[](unsigned long)' into 'process_data(int, char*, int*)'">
-        <args Callee="nnet::array&lt;ap_fixed&lt;15, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 1u&gt;::operator[](unsigned long)" Callee-DebugLoc="File ./nnet_utils/nnet_types.h Line 17 Column 0" Caller="process_data(int, char*, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'dunedaq::daqdataformats::Fragment::~Fragment()' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="dunedaq::daqdataformats::Fragment::~Fragment()" Callee-DebugLoc="File ./Fragment.hpp Line 300 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)' into 'process_data(int, char*, int*)'">
-        <args Callee="nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)" Callee-DebugLoc="File ./nnet_utils/nnet_types.h Line 17 Column 0" Caller="process_data(int, char*, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'nnet::array&lt;ap_fixed&lt;15, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 1u&gt;::operator[](unsigned long)' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="nnet::array&lt;ap_fixed&lt;15, 15, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 1u&gt;::operator[](unsigned long)" Callee-DebugLoc="File ./nnet_utils/nnet_types.h Line 17 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:11:0" msg_body="Inlining function 'nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+        <args Callee="nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)" Callee-DebugLoc="File ./nnet_utils/nnet_types.h Line 17 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 11 Column 0"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./nnet_utils/nnet_pooling_stream.h:236:0" msg_body="Applying array_partition to '_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEES6_8config14EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEE11line_buffer': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
         <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEES6_8config14EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEE11line_buffer"/>
@@ -1784,10 +1802,10 @@
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="myproject.cpp:41:24" msg_body="Aggregating fifo (hls::stream) variable 'layer2_out' with compact=bit mode in 16-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="fifo (hls::stream)" Name="layer2_out"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:129:26" msg_body="Aggregating fifo (hls::stream) variable 'zero_padding2d_input' with compact=bit mode in 15-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:154:26" msg_body="Aggregating fifo (hls::stream) variable 'zero_padding2d_input' with compact=bit mode in 15-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="15" HwTyName="fifo (hls::stream)" Name="zero_padding2d_input"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:131:27" msg_body="Aggregating fifo (hls::stream) variable 'layer19_out' with compact=bit mode in 48-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:156:27" msg_body="Aggregating fifo (hls::stream) variable 'layer19_out' with compact=bit mode in 48-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="48" HwTyName="fifo (hls::stream)" Name="layer19_out"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights/w18.h:12:0" msg_body="Applying array_reshape to 'w18': Block reshaping with factor 3 on dimension 1.">

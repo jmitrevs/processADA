@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module process_data_control_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 6,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -34,6 +34,13 @@ module process_data_control_s_axi
     output wire                          interrupt,
     output wire [31:0]                   infile_size,
     output wire [63:0]                   infiledata,
+    output wire [31:0]                   chanmap_fNAPAs,
+    output wire [31:0]                   chanmap_fNChans,
+    output wire [63:0]                   chanmap_fAPANameFromCrate,
+    output wire [63:0]                   chanmap_fUprightFromCrate,
+    output wire [63:0]                   chanmap_fCrateFromTPCSet,
+    output wire [63:0]                   chanmap_fTPCSetFromCrate,
+    output wire [63:0]                   chanmap_DetToChanInfo,
     output wire [63:0]                   outdata,
     output wire                          ap_start,
     input  wire                          ap_done,
@@ -70,35 +77,85 @@ module process_data_control_s_axi
 // 0x1c : Data signal of infiledata
 //        bit 31~0 - infiledata[63:32] (Read/Write)
 // 0x20 : reserved
-// 0x24 : Data signal of outdata
+// 0x24 : Data signal of chanmap_fNAPAs
+//        bit 31~0 - chanmap_fNAPAs[31:0] (Read/Write)
+// 0x28 : reserved
+// 0x2c : Data signal of chanmap_fNChans
+//        bit 31~0 - chanmap_fNChans[31:0] (Read/Write)
+// 0x30 : reserved
+// 0x34 : Data signal of chanmap_fAPANameFromCrate
+//        bit 31~0 - chanmap_fAPANameFromCrate[31:0] (Read/Write)
+// 0x38 : Data signal of chanmap_fAPANameFromCrate
+//        bit 31~0 - chanmap_fAPANameFromCrate[63:32] (Read/Write)
+// 0x3c : reserved
+// 0x40 : Data signal of chanmap_fUprightFromCrate
+//        bit 31~0 - chanmap_fUprightFromCrate[31:0] (Read/Write)
+// 0x44 : Data signal of chanmap_fUprightFromCrate
+//        bit 31~0 - chanmap_fUprightFromCrate[63:32] (Read/Write)
+// 0x48 : reserved
+// 0x4c : Data signal of chanmap_fCrateFromTPCSet
+//        bit 31~0 - chanmap_fCrateFromTPCSet[31:0] (Read/Write)
+// 0x50 : Data signal of chanmap_fCrateFromTPCSet
+//        bit 31~0 - chanmap_fCrateFromTPCSet[63:32] (Read/Write)
+// 0x54 : reserved
+// 0x58 : Data signal of chanmap_fTPCSetFromCrate
+//        bit 31~0 - chanmap_fTPCSetFromCrate[31:0] (Read/Write)
+// 0x5c : Data signal of chanmap_fTPCSetFromCrate
+//        bit 31~0 - chanmap_fTPCSetFromCrate[63:32] (Read/Write)
+// 0x60 : reserved
+// 0x64 : Data signal of chanmap_DetToChanInfo
+//        bit 31~0 - chanmap_DetToChanInfo[31:0] (Read/Write)
+// 0x68 : Data signal of chanmap_DetToChanInfo
+//        bit 31~0 - chanmap_DetToChanInfo[63:32] (Read/Write)
+// 0x6c : reserved
+// 0x70 : Data signal of outdata
 //        bit 31~0 - outdata[31:0] (Read/Write)
-// 0x28 : Data signal of outdata
+// 0x74 : Data signal of outdata
 //        bit 31~0 - outdata[63:32] (Read/Write)
-// 0x2c : reserved
+// 0x78 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL            = 6'h00,
-    ADDR_GIE                = 6'h04,
-    ADDR_IER                = 6'h08,
-    ADDR_ISR                = 6'h0c,
-    ADDR_INFILE_SIZE_DATA_0 = 6'h10,
-    ADDR_INFILE_SIZE_CTRL   = 6'h14,
-    ADDR_INFILEDATA_DATA_0  = 6'h18,
-    ADDR_INFILEDATA_DATA_1  = 6'h1c,
-    ADDR_INFILEDATA_CTRL    = 6'h20,
-    ADDR_OUTDATA_DATA_0     = 6'h24,
-    ADDR_OUTDATA_DATA_1     = 6'h28,
-    ADDR_OUTDATA_CTRL       = 6'h2c,
-    WRIDLE                  = 2'd0,
-    WRDATA                  = 2'd1,
-    WRRESP                  = 2'd2,
-    WRRESET                 = 2'd3,
-    RDIDLE                  = 2'd0,
-    RDDATA                  = 2'd1,
-    RDRESET                 = 2'd2,
-    ADDR_BITS                = 6;
+    ADDR_AP_CTRL                          = 7'h00,
+    ADDR_GIE                              = 7'h04,
+    ADDR_IER                              = 7'h08,
+    ADDR_ISR                              = 7'h0c,
+    ADDR_INFILE_SIZE_DATA_0               = 7'h10,
+    ADDR_INFILE_SIZE_CTRL                 = 7'h14,
+    ADDR_INFILEDATA_DATA_0                = 7'h18,
+    ADDR_INFILEDATA_DATA_1                = 7'h1c,
+    ADDR_INFILEDATA_CTRL                  = 7'h20,
+    ADDR_CHANMAP_FNAPAS_DATA_0            = 7'h24,
+    ADDR_CHANMAP_FNAPAS_CTRL              = 7'h28,
+    ADDR_CHANMAP_FNCHANS_DATA_0           = 7'h2c,
+    ADDR_CHANMAP_FNCHANS_CTRL             = 7'h30,
+    ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0 = 7'h34,
+    ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1 = 7'h38,
+    ADDR_CHANMAP_FAPANAMEFROMCRATE_CTRL   = 7'h3c,
+    ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0 = 7'h40,
+    ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1 = 7'h44,
+    ADDR_CHANMAP_FUPRIGHTFROMCRATE_CTRL   = 7'h48,
+    ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0  = 7'h4c,
+    ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1  = 7'h50,
+    ADDR_CHANMAP_FCRATEFROMTPCSET_CTRL    = 7'h54,
+    ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0  = 7'h58,
+    ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1  = 7'h5c,
+    ADDR_CHANMAP_FTPCSETFROMCRATE_CTRL    = 7'h60,
+    ADDR_CHANMAP_DETTOCHANINFO_DATA_0     = 7'h64,
+    ADDR_CHANMAP_DETTOCHANINFO_DATA_1     = 7'h68,
+    ADDR_CHANMAP_DETTOCHANINFO_CTRL       = 7'h6c,
+    ADDR_OUTDATA_DATA_0                   = 7'h70,
+    ADDR_OUTDATA_DATA_1                   = 7'h74,
+    ADDR_OUTDATA_CTRL                     = 7'h78,
+    WRIDLE                                = 2'd0,
+    WRDATA                                = 2'd1,
+    WRRESP                                = 2'd2,
+    WRRESET                               = 2'd3,
+    RDIDLE                                = 2'd0,
+    RDDATA                                = 2'd1,
+    RDRESET                               = 2'd2,
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -130,6 +187,13 @@ localparam
     reg  [1:0]                    int_isr = 2'b0;
     reg  [31:0]                   int_infile_size = 'b0;
     reg  [63:0]                   int_infiledata = 'b0;
+    reg  [31:0]                   int_chanmap_fNAPAs = 'b0;
+    reg  [31:0]                   int_chanmap_fNChans = 'b0;
+    reg  [63:0]                   int_chanmap_fAPANameFromCrate = 'b0;
+    reg  [63:0]                   int_chanmap_fUprightFromCrate = 'b0;
+    reg  [63:0]                   int_chanmap_fCrateFromTPCSet = 'b0;
+    reg  [63:0]                   int_chanmap_fTPCSetFromCrate = 'b0;
+    reg  [63:0]                   int_chanmap_DetToChanInfo = 'b0;
     reg  [63:0]                   int_outdata = 'b0;
 
 //------------------------Instantiation------------------
@@ -250,6 +314,42 @@ always @(posedge ACLK) begin
                 ADDR_INFILEDATA_DATA_1: begin
                     rdata <= int_infiledata[63:32];
                 end
+                ADDR_CHANMAP_FNAPAS_DATA_0: begin
+                    rdata <= int_chanmap_fNAPAs[31:0];
+                end
+                ADDR_CHANMAP_FNCHANS_DATA_0: begin
+                    rdata <= int_chanmap_fNChans[31:0];
+                end
+                ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0: begin
+                    rdata <= int_chanmap_fAPANameFromCrate[31:0];
+                end
+                ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1: begin
+                    rdata <= int_chanmap_fAPANameFromCrate[63:32];
+                end
+                ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0: begin
+                    rdata <= int_chanmap_fUprightFromCrate[31:0];
+                end
+                ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1: begin
+                    rdata <= int_chanmap_fUprightFromCrate[63:32];
+                end
+                ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0: begin
+                    rdata <= int_chanmap_fCrateFromTPCSet[31:0];
+                end
+                ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1: begin
+                    rdata <= int_chanmap_fCrateFromTPCSet[63:32];
+                end
+                ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0: begin
+                    rdata <= int_chanmap_fTPCSetFromCrate[31:0];
+                end
+                ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1: begin
+                    rdata <= int_chanmap_fTPCSetFromCrate[63:32];
+                end
+                ADDR_CHANMAP_DETTOCHANINFO_DATA_0: begin
+                    rdata <= int_chanmap_DetToChanInfo[31:0];
+                end
+                ADDR_CHANMAP_DETTOCHANINFO_DATA_1: begin
+                    rdata <= int_chanmap_DetToChanInfo[63:32];
+                end
                 ADDR_OUTDATA_DATA_0: begin
                     rdata <= int_outdata[31:0];
                 end
@@ -263,14 +363,21 @@ end
 
 
 //------------------------Register logic-----------------
-assign interrupt     = int_interrupt;
-assign ap_start      = int_ap_start;
-assign task_ap_done  = (ap_done && !auto_restart_status) || auto_restart_done;
-assign task_ap_ready = ap_ready && !int_auto_restart;
-assign ap_continue   = int_ap_continue || auto_restart_status;
-assign infile_size   = int_infile_size;
-assign infiledata    = int_infiledata;
-assign outdata       = int_outdata;
+assign interrupt                 = int_interrupt;
+assign ap_start                  = int_ap_start;
+assign task_ap_done              = (ap_done && !auto_restart_status) || auto_restart_done;
+assign task_ap_ready             = ap_ready && !int_auto_restart;
+assign ap_continue               = int_ap_continue || auto_restart_status;
+assign infile_size               = int_infile_size;
+assign infiledata                = int_infiledata;
+assign chanmap_fNAPAs            = int_chanmap_fNAPAs;
+assign chanmap_fNChans           = int_chanmap_fNChans;
+assign chanmap_fAPANameFromCrate = int_chanmap_fAPANameFromCrate;
+assign chanmap_fUprightFromCrate = int_chanmap_fUprightFromCrate;
+assign chanmap_fCrateFromTPCSet  = int_chanmap_fCrateFromTPCSet;
+assign chanmap_fTPCSetFromCrate  = int_chanmap_fTPCSetFromCrate;
+assign chanmap_DetToChanInfo     = int_chanmap_DetToChanInfo;
+assign outdata                   = int_outdata;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -451,6 +558,126 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_INFILEDATA_DATA_1)
             int_infiledata[63:32] <= (WDATA[31:0] & wmask) | (int_infiledata[63:32] & ~wmask);
+    end
+end
+
+// int_chanmap_fNAPAs[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fNAPAs[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FNAPAS_DATA_0)
+            int_chanmap_fNAPAs[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fNAPAs[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fNChans[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fNChans[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FNCHANS_DATA_0)
+            int_chanmap_fNChans[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fNChans[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fAPANameFromCrate[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fAPANameFromCrate[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_0)
+            int_chanmap_fAPANameFromCrate[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fAPANameFromCrate[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fAPANameFromCrate[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fAPANameFromCrate[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FAPANAMEFROMCRATE_DATA_1)
+            int_chanmap_fAPANameFromCrate[63:32] <= (WDATA[31:0] & wmask) | (int_chanmap_fAPANameFromCrate[63:32] & ~wmask);
+    end
+end
+
+// int_chanmap_fUprightFromCrate[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fUprightFromCrate[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_0)
+            int_chanmap_fUprightFromCrate[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fUprightFromCrate[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fUprightFromCrate[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fUprightFromCrate[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FUPRIGHTFROMCRATE_DATA_1)
+            int_chanmap_fUprightFromCrate[63:32] <= (WDATA[31:0] & wmask) | (int_chanmap_fUprightFromCrate[63:32] & ~wmask);
+    end
+end
+
+// int_chanmap_fCrateFromTPCSet[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fCrateFromTPCSet[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_0)
+            int_chanmap_fCrateFromTPCSet[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fCrateFromTPCSet[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fCrateFromTPCSet[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fCrateFromTPCSet[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FCRATEFROMTPCSET_DATA_1)
+            int_chanmap_fCrateFromTPCSet[63:32] <= (WDATA[31:0] & wmask) | (int_chanmap_fCrateFromTPCSet[63:32] & ~wmask);
+    end
+end
+
+// int_chanmap_fTPCSetFromCrate[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fTPCSetFromCrate[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_0)
+            int_chanmap_fTPCSetFromCrate[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_fTPCSetFromCrate[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_fTPCSetFromCrate[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_fTPCSetFromCrate[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_FTPCSETFROMCRATE_DATA_1)
+            int_chanmap_fTPCSetFromCrate[63:32] <= (WDATA[31:0] & wmask) | (int_chanmap_fTPCSetFromCrate[63:32] & ~wmask);
+    end
+end
+
+// int_chanmap_DetToChanInfo[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_DetToChanInfo[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_DETTOCHANINFO_DATA_0)
+            int_chanmap_DetToChanInfo[31:0] <= (WDATA[31:0] & wmask) | (int_chanmap_DetToChanInfo[31:0] & ~wmask);
+    end
+end
+
+// int_chanmap_DetToChanInfo[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_chanmap_DetToChanInfo[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CHANMAP_DETTOCHANINFO_DATA_1)
+            int_chanmap_DetToChanInfo[63:32] <= (WDATA[31:0] & wmask) | (int_chanmap_DetToChanInfo[63:32] & ~wmask);
     end
 end
 

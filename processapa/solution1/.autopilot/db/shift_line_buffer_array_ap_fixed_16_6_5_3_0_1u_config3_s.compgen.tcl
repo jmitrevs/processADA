@@ -15,7 +15,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 43 \
     name in_elem_0_0_0_0_0_val \
     type other \
     dir I \
@@ -30,7 +30,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 10 \
+    id 44 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 \
     type other \
     dir IO \
@@ -45,7 +45,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 11 \
+    id 45 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 \
     type other \
     dir IO \
@@ -60,7 +60,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 12 \
+    id 46 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 \
     type other \
     dir IO \
@@ -75,7 +75,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 13 \
+    id 47 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 \
     type other \
     dir IO \
@@ -90,7 +90,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 14 \
+    id 48 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 \
     type other \
     dir IO \
@@ -105,7 +105,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 15 \
+    id 49 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 \
     type other \
     dir IO \
@@ -120,7 +120,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 50 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 \
     type other \
     dir O \
@@ -135,7 +135,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 51 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 \
     type other \
     dir O \
@@ -150,7 +150,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 52 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 \
     type other \
     dir O \

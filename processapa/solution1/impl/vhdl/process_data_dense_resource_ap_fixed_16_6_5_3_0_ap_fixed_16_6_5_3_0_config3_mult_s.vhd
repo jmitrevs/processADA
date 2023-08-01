@@ -359,14 +359,14 @@ attribute shreg_extract : string;
     signal a_fu_4486_p11 : STD_LOGIC_VECTOR (15 downto 0);
     signal mul_ln138_fu_4526_p2 : STD_LOGIC_VECTOR (25 downto 0);
     signal tmp_i_fu_4542_p18 : STD_LOGIC_VECTOR (15 downto 0);
-    signal trunc_ln7_fu_4532_p4 : STD_LOGIC_VECTOR (15 downto 0);
+    signal trunc_ln_fu_4532_p4 : STD_LOGIC_VECTOR (15 downto 0);
     signal sext_ln138_fu_4580_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal sext_ln138_1_fu_4584_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal sub_ln138_fu_4588_p2 : STD_LOGIC_VECTOR (16 downto 0);
     signal tmp_fu_4622_p4 : STD_LOGIC_VECTOR (8 downto 0);
     signal mul_ln138_1_fu_4636_p2 : STD_LOGIC_VECTOR (24 downto 0);
     signal trunc_ln138_1_fu_4642_p4 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_i_88_fu_4656_p18 : STD_LOGIC_VECTOR (15 downto 0);
+    signal tmp_i_110_fu_4656_p18 : STD_LOGIC_VECTOR (15 downto 0);
     signal sext_ln138_2_fu_4694_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal sext_ln138_3_fu_4698_p1 : STD_LOGIC_VECTOR (16 downto 0);
     signal sub_ln138_1_fu_4702_p2 : STD_LOGIC_VECTOR (16 downto 0);
@@ -571,7 +571,7 @@ begin
         ce0 => w3_ce0,
         q0 => w3_q0);
 
-    mux_9_4_16_1_1_U19 : component process_data_mux_9_4_16_1_1
+    mux_9_4_16_1_1_U53 : component process_data_mux_9_4_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -599,7 +599,7 @@ begin
         din9 => a_fu_4486_p10,
         dout => a_fu_4486_p11);
 
-    mul_16s_16s_26_1_1_U20 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U54 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -611,7 +611,7 @@ begin
         din1 => a_fu_4486_p11,
         dout => mul_ln138_fu_4526_p2);
 
-    mux_16_4_16_1_1_U21 : component process_data_mux_16_4_16_1_1
+    mux_16_4_16_1_1_U55 : component process_data_mux_16_4_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -653,7 +653,7 @@ begin
         din16 => outidx_q0,
         dout => tmp_i_fu_4542_p18);
 
-    mul_16s_9s_25_1_1_U22 : component process_data_mul_16s_9s_25_1_1
+    mul_16s_9s_25_1_1_U56 : component process_data_mul_16s_9s_25_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -665,7 +665,7 @@ begin
         din1 => tmp_fu_4622_p4,
         dout => mul_ln138_1_fu_4636_p2);
 
-    mux_16_4_16_1_1_U23 : component process_data_mux_16_4_16_1_1
+    mux_16_4_16_1_1_U57 : component process_data_mux_16_4_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -705,7 +705,7 @@ begin
         din14 => acc_3012_reg_772,
         din15 => acc_3110_reg_786,
         din16 => outidx_q0,
-        dout => tmp_i_88_fu_4656_p18);
+        dout => tmp_i_110_fu_4656_p18);
 
 
 
@@ -1743,8 +1743,8 @@ begin
         end case;
     end process;
     a_fu_4486_p10 <= in_index74_reg_338(4 - 1 downto 0);
-    acc_48_fu_4600_p2 <= std_logic_vector(signed(trunc_ln7_fu_4532_p4) + signed(tmp_i_fu_4542_p18));
-    acc_65_fu_4714_p2 <= std_logic_vector(signed(sext_ln138_6_fu_4652_p1) + signed(tmp_i_88_fu_4656_p18));
+    acc_48_fu_4600_p2 <= std_logic_vector(signed(trunc_ln_fu_4532_p4) + signed(tmp_i_fu_4542_p18));
+    acc_65_fu_4714_p2 <= std_logic_vector(signed(sext_ln138_6_fu_4652_p1) + signed(tmp_i_110_fu_4656_p18));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(1);
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
@@ -3170,9 +3170,9 @@ begin
         end if; 
     end process;
 
-        sext_ln138_1_fu_4584_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln7_fu_4532_p4),17));
+        sext_ln138_1_fu_4584_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_4532_p4),17));
 
-        sext_ln138_2_fu_4694_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_i_88_fu_4656_p18),17));
+        sext_ln138_2_fu_4694_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_i_110_fu_4656_p18),17));
 
         sext_ln138_3_fu_4698_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln138_1_fu_4642_p4),17));
 
@@ -3184,7 +3184,7 @@ begin
     sub_ln138_fu_4588_p2 <= std_logic_vector(unsigned(ap_const_lv17_0) - unsigned(sext_ln138_fu_4580_p1));
     tmp_fu_4622_p4 <= w3_q0(24 downto 16);
     trunc_ln138_1_fu_4642_p4 <= mul_ln138_1_fu_4636_p2(24 downto 10);
-    trunc_ln7_fu_4532_p4 <= mul_ln138_fu_4526_p2(25 downto 10);
+    trunc_ln_fu_4532_p4 <= mul_ln138_fu_4526_p2(25 downto 10);
     w3_address0 <= zext_ln129_fu_4464_p1(8 - 1 downto 0);
 
     w3_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)

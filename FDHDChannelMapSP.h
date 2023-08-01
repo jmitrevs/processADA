@@ -10,6 +10,7 @@
 // DUNE Far Detector Module 1 Horizontal Drift APA wire to offline channel map
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 #ifndef FDHDChannelMapSP_H
 #define FDHDChannelMapSP_H
 
@@ -43,12 +44,16 @@ public:
     bool valid;          // true if valid, false if not
   } HDChanInfo_t;
 
+
   FDHDChannelMapSP();  // constructor
 
   // initialize:  read map from two files, one containing two APAs worth of channel mapping (inverted and upright),
   // and the other containing a crate and APA name listing.
 
   void ReadMapFromFiles(const std::string &chanlist, const std::string &cratelist);
+
+  //works until here
+
 
   // TPC channel map accessors
 
@@ -61,14 +66,23 @@ public:
    unsigned int link,
    unsigned int wibframechan);
 
+  //works until here
+
   //HDChanInfo_t GetChanInfoFromOfflChan(unsigned int offlchan) const;
 
+
+
   unsigned int getNChans() { return fNChans; }
+
+
 
 private:
 
   const unsigned int fNAPAs = 150;
   const unsigned int fNChans = 2560*fNAPAs;
+  //works untill here
+
+
 
   // maps of crate numbers and APAs.  These are maps so we do not have to assume that
   // crates are numbered consecutively or the numbering scheme may start at an unusual number.
@@ -80,12 +94,19 @@ private:
       unsigned int key;
       unsigned int value;
   };
+  //works until here
 
-  std::string APAval[150];
+
+
+  //std::string APAval[150]; // this one breaks it
+
+
 
   KeyValuePair fUprightFromCrate[150];
   KeyValuePair fCrateFromTPCSet[150];
   KeyValuePair fTPCSetFromCrate[150];
+
+
 
   // map of crate, slot, link, femb_on_link, plane, chan to channel info struct
   // This is only for two APAs, one upright, and one inverted
@@ -97,6 +118,7 @@ private:
     std::unordered_map<unsigned int, // wibframechan
     HDChanInfo_t > > > > DetToChanInfo;
     */
+
   struct HDChanInfoStruct {
       unsigned int upright;
       unsigned int wib;
@@ -125,4 +147,7 @@ private:
 };
 
 
+
 #endif
+
+

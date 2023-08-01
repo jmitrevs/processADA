@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690842549689">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690914383617">
   <ports id="1" name="zero_padding2d_input" type="PortType" coreId="641609760" bitwidth="15" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -31,20 +31,20 @@
       <dataOutputObjs>layer2_out</dataOutputObjs>
       <constName>zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="empty_67" coreId="539767593" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="empty_68" coreId="539767593" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="empty_87" coreId="539767593" bitwidth="32" opcode="wait" nodeLabel="2.0" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="empty_88" coreId="539767593" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1"/>
     <node_objs xsi:type="cdfg:CdfgNode" id="9" name="_ln0" rtlName="grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain_fu_28" coreId="539767593" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>zero_padding2d_input</dataInputObjs>
       <dataOutputObjs>layer2_out</dataOutputObjs>
       <constName>zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty_69" coreId="539770485" bitwidth="32" opcode="wait" nodeLabel="5.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="empty_70" coreId="539770485" bitwidth="32" opcode="wait" nodeLabel="6.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln0" rtlName="grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth_fu_36" coreId="3478097824" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty_89" coreId="539770485" bitwidth="32" opcode="wait" nodeLabel="5.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="empty_90" coreId="539770485" bitwidth="32" opcode="wait" nodeLabel="6.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln0" rtlName="grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth_fu_36" coreId="523061408" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataOutputObjs>layer2_out</dataOutputObjs>
       <constName>zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln81" lineNumber="81" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="3476546128" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln81" lineNumber="81" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="517380352" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_padding_stream.h" linenumber="81" fileDirectory="/home/brenton/kernel/processAPA" functionName="zeropad2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;15, 15, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config2&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_padding_stream.h">

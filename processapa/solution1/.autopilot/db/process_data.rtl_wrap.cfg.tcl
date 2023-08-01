@@ -28,6 +28,90 @@ set Interface "wire"
 set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
+set PortName "chanmap_fNAPAs"
+set BitWidth "32"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_fNChans"
+set BitWidth "32"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_fAPANameFromCrate"
+set BitWidth "64"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_fUprightFromCrate"
+set BitWidth "64"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_fCrateFromTPCSet"
+set BitWidth "64"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_fTPCSetFromCrate"
+set BitWidth "64"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
+set PortName "chanmap_DetToChanInfo"
+set BitWidth "64"
+set ArrayOpt ""
+set Const "0"
+set Volatile "1"
+set Pointer "1"
+set Reference "0"
+set Dims [list 0]
+set Interface "wire"
+set DataType "void"
+set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
+lappend PortList $Port
 set PortName "outdata"
 set BitWidth "64"
 set ArrayOpt ""

@@ -41576,7 +41576,7 @@ for.body13.split.i.i:895 %data_895_val896918_phi = phi i16 %data_895_val896_read
 
 <Node id="3604" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_9
+for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_21
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln44"/></StgValue>
@@ -41606,7 +41606,7 @@ for.body13.split.i.i:898 %speclooptripcount_ln46 = speclooptripcount void @_ssdm
 
 <Node id="3606" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body13.split.i.i:899 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18
+for.body13.split.i.i:899 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln43"/></StgValue>
@@ -41711,10 +41711,10 @@ for.body13.split.i.i:906 %mul_ln55 = mul i26 %sext_ln73, i26 %sext_ln73_4
 
 <Node id="3614" bw="16" op_0_bw="16" op_1_bw="26" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body13.split.i.i:907 %trunc_ln6 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln55, i32 10, i32 25
+for.body13.split.i.i:907 %trunc_ln = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %mul_ln55, i32 10, i32 25
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln6"/></StgValue>
+<StgValue><ssdm name="trunc_ln"/></StgValue>
 </operation>
 
 <operation id="2723" st_id="3" stage="1" lat="1">
@@ -42296,7 +42296,7 @@ for.body13.split.i.i:945 %add_ln55 = add i16 %trunc_ln55_3, i16 %trunc_ln55_4
 
 <Node id="3653" bw="16" op_0_bw="16" op_1_bw="16">
 <![CDATA[
-for.body13.split.i.i:946 %add_ln55_3 = add i16 %add_ln55, i16 %trunc_ln6
+for.body13.split.i.i:946 %add_ln55_3 = add i16 %add_ln55, i16 %trunc_ln
 
 ]]></Node>
 <StgValue><ssdm name="add_ln55_3"/></StgValue>

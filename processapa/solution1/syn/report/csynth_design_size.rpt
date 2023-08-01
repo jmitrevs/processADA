@@ -6,11 +6,12 @@
 +--------------------------------------------+------------------------------+------------------+---------------------+----------------------+--------------------+
 | Function                                   | Location                     | Compile/Link     | Unroll/Inline       | Performance/Pipeline | Optimizations      |
 +--------------------------------------------+------------------------------+------------------+---------------------+----------------------+--------------------+
-| + process_data                             | kernel.cpp:10                | 19,700           | 108,426 *           | 39,318               | 37,248             |
+| + process_data                             | kernel.cpp:10                | 19,837           | 108,712 *           | 39,494               | 37,516             |
 |    Fragment                                | Fragment.hpp:281             |     44           |                     |                      |                    |
 |  + get_data                                | Fragment.hpp:230             |      8           |       6             |                      |                    |
 |     header_                                | Fragment.hpp:241             |      4           |       2             |                      |                    |
 |    get_adc                                 | WIB2Frame.hpp:94             |     56           |      50             |                      |                    |
+|    GetChanInfoFromWIBElements              | FDHDChannelMapSP.cxx:152     |    124           |     128             |                      |                    |
 |    ~Fragment                               | Fragment.hpp:299             |      8           |       5             |                      |                    |
 |    array                                   | nnet_types.h:11              |     18           |                     |                      |                    |
 |    operator[]                              | nnet_types.h:17              |      9 (3 calls) |       6 (3 calls)   |                      |                    |

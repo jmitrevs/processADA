@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth'
 ================================================================
-* Date:           Mon Jul 31 18:28:20 2023
+* Date:           Tue Aug  1 14:25:30 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -86,7 +86,7 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.45>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 5 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_19, i32 0, i32 0, void @empty_9, i32 0, i32 0, void @empty_9, void @empty_9, void @empty_9, i32 0, i32 0, i32 0, i32 0, void @empty_9, void @empty_9, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.46ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i12 %indvar_flatten" [./nnet_utils/nnet_padding_stream.h:51]   --->   Operation 9 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>

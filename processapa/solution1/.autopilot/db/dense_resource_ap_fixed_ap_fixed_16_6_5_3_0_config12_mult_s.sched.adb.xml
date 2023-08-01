@@ -27201,7 +27201,7 @@ for.body13.split.i.i:575 %void_compute_output_buffer_2d_array_const_ap_shift_reg
 
 <Node id="2347" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body13.split.i.i:577 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_9
+for.body13.split.i.i:577 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_21
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln44"/></StgValue>
@@ -27231,7 +27231,7 @@ for.body13.split.i.i:578 %speclooptripcount_ln46 = speclooptripcount void @_ssdm
 
 <Node id="2349" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body13.split.i.i:579 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18
+for.body13.split.i.i:579 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln43"/></StgValue>

@@ -158,7 +158,7 @@ extern "C" {
 # 1 "FDHDChannelMapSP.cxx" 2
 # 14 "FDHDChannelMapSP.cxx"
 # 1 "./FDHDChannelMapSP.h" 1
-# 16 "./FDHDChannelMapSP.h"
+# 17 "./FDHDChannelMapSP.h"
 # 1 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 1 3
 # 37 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 3
 
@@ -19561,7 +19561,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 54 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/string" 2 3
-# 17 "./FDHDChannelMapSP.h" 2
+# 18 "./FDHDChannelMapSP.h" 2
 
 namespace dune {
   class FDHDChannelMapSP;
@@ -19591,18 +19591,14 @@ public:
     bool valid;
   } HDChanInfo_t;
 
+
   FDHDChannelMapSP();
 
 
 
 
   void ReadMapFromFiles(const std::string &chanlist, const std::string &cratelist);
-
-
-
-
-
-
+# 63 "./FDHDChannelMapSP.h"
   HDChanInfo_t GetChanInfoFromWIBElements(
    unsigned int crate,
    unsigned int slot,
@@ -19611,30 +19607,30 @@ public:
 
 
 
+
+
+
+
   unsigned int getNChans() { return fNChans; }
+
+
 
 private:
 
   const unsigned int fNAPAs = 150;
   const unsigned int fNChans = 2560*fNAPAs;
-
-
-
-
-
+# 91 "./FDHDChannelMapSP.h"
   unsigned int fAPANameFromCrate[150];
 
   struct KeyValuePair {
       unsigned int key;
       unsigned int value;
   };
-
-  std::string APAval[150];
-
+# 105 "./FDHDChannelMapSP.h"
   KeyValuePair fUprightFromCrate[150];
   KeyValuePair fCrateFromTPCSet[150];
   KeyValuePair fTPCSetFromCrate[150];
-# 100 "./FDHDChannelMapSP.h"
+# 122 "./FDHDChannelMapSP.h"
   struct HDChanInfoStruct {
       unsigned int upright;
       unsigned int wib;
@@ -19644,7 +19640,7 @@ private:
   };
 
   HDChanInfoStruct DetToChanInfo[5120];
-# 117 "./FDHDChannelMapSP.h"
+# 139 "./FDHDChannelMapSP.h"
   void check_offline_channel(unsigned int offlineChannel) const
   {
   if (offlineChannel >= fNChans)
@@ -31678,7 +31674,7 @@ dune::FDHDChannelMapSP::FDHDChannelMapSP()
 
 void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, const std::string &cratemapfile)
 {
-
+  std::string APAval[150];
   std::ifstream inFile(chanmapfile, std::ios::in);
   std::string line;
 
