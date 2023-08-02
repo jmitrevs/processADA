@@ -5,6 +5,11 @@
                 <option name="name" value="process_data"/>
             </pragma>
         </directive>
+        <directive functionName="process_data" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="process_data"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

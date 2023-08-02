@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690914384733">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690927382188">
   <ports id="1" name="layer2_out" type="PortType" coreName="FIFO" coreId="641609760" bitwidth="16" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -118,20 +118,20 @@
       <dataInputObjs>layer2_out</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln87" lineNumber="87" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="grp_compute_output_buffer_2d_array_array_ap_fixed_16_6_5_3_0_32u_config3_s_fu_80" coreId="521066032" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln87" lineNumber="87" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." rtlName="grp_compute_output_buffer_2d_array_array_ap_fixed_16_6_5_3_0_32u_config3_s_fu_80" coreId="2529416960" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="87" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_buffer_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="103" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>layer3_out</dataOutputObjs>
       <constName>compute_output_buffer_2d_array_array_ap_fixed_16_6_5_3_0_32u_config3_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="indvar_flatten_write_ln81" lineNumber="81" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="531523408" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="indvar_flatten_write_ln81" lineNumber="81" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="2533751584" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="81" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_buffer_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="103" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln81" lineNumber="81" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="531523408" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln81" lineNumber="81" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="2533751584" contextFuncName="conv_2d_buffer_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="81" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_buffer_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="103" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <controlInputObjs>for.inc.i</controlInputObjs>
@@ -145,7 +145,7 @@
   <blocks id="40" name="_ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEENS1_IS5_Lj32EEE7config3EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE.exit" type="BlockType">
     <controlInputObjs>for.inc.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln109" lineNumber="109" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="3989124698" contextFuncName="conv_2d_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="_ln109" lineNumber="109" fileName="./nnet_utils/nnet_conv2d_stream.h" fileDirectory="../." coreId="2533751232" contextFuncName="conv_2d_cl_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv2d_stream.h" linenumber="109" fileDirectory="/home/brenton/kernel/processAPA" functionName="conv_2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_conv2d_stream.h">

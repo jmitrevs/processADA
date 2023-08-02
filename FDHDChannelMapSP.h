@@ -52,7 +52,6 @@ public:
 
   void ReadMapFromFiles(const std::string &chanlist, const std::string &cratelist);
 
-  //works until here
 
 
   // TPC channel map accessors
@@ -66,11 +65,6 @@ public:
    unsigned int link,
    unsigned int wibframechan);
 
-  //works until here
-
-  //HDChanInfo_t GetChanInfoFromOfflChan(unsigned int offlchan) const;
-
-
 
   unsigned int getNChans() { return fNChans; }
 
@@ -80,8 +74,6 @@ private:
 
   const unsigned int fNAPAs = 150;
   const unsigned int fNChans = 2560*fNAPAs;
-  //works untill here
-
 
 
   // maps of crate numbers and APAs.  These are maps so we do not have to assume that
@@ -94,11 +86,9 @@ private:
       unsigned int key;
       unsigned int value;
   };
-  //works until here
 
 
-
-  //std::string APAval[150]; // this one breaks it
+ // std::string APAval[150]; // this one breaks it
 
 
 

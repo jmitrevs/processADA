@@ -15,6 +15,6 @@
 #include "myproject.h"
 
 
-void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, int outdata[3]);
+void process_data(const int infile_size, char infiledata[], dune::FDHDChannelMapSP& chanmap, int outdata[276]);
 
 #endif

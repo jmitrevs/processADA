@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'process_data'
 ================================================================
 + General Information: 
-    * Date:           Tue Aug  1 14:27:59 2023
+    * Date:           Tue Aug  1 18:04:41 2023
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        processapa
     * Solution:       solution1 (Vitis Kernel Flow Target)
@@ -20,8 +20,8 @@
     |                                       & Loops                                       | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|    BRAM     |    DSP   |      FF     |      LUT     | URAM|
     +-------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-------------+----------+-------------+--------------+-----+
     |+ process_data                                                                       |     -|  0.00|        -|          -|         -|        -|      -|        no|  6342 (157%)|  391 (4%)|  191889 (7%)|  165937 (12%)|    -|
-    | + process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5                           |     -|  3.90|    61445|  6.144e+05|         -|    61445|      -|        no|            -|   1 (~0%)|     59 (~0%)|     177 (~0%)|    -|
-    |  o VITIS_LOOP_160_4_VITIS_LOOP_162_5                                                |     -|  7.30|    61443|  6.144e+05|         5|        1|  61440|       yes|            -|         -|            -|             -|    -|
+    | + process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5                           |     -|  3.90|    61445|  6.144e+05|         -|    61445|      -|        no|            -|   1 (~0%)|     59 (~0%)|     177 (~0%)|    -|
+    |  o VITIS_LOOP_319_4_VITIS_LOOP_321_5                                                |     -|  7.30|    61443|  6.144e+05|         5|        1|  61440|       yes|            -|         -|            -|             -|    -|
     | + myproject*                                                                        |     -|  0.09|  9830568|  9.831e+07|         -|  9830402|      -|  dataflow|   2599 (64%)|  382 (4%)|  178468 (6%)|  131815 (10%)|    -|
     |  + zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s            |     -|  3.47|    65549|  6.555e+05|         -|    65549|      -|        no|            -|         -|     62 (~0%)|     394 (~0%)|    -|
     |   + zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth        |     -|  5.57|     2050|  2.050e+04|         -|     2050|      -|        no|            -|         -|     15 (~0%)|      88 (~0%)|    -|
@@ -72,8 +72,8 @@
     |    o ReuseLoop                                                                      |     -|  7.30|        8|     80.000|         2|        1|      8|       yes|            -|         -|            -|             -|    -|
     |  + softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s                    |     -|  0.87|        6|     60.000|         -|        6|      -|        no|      3 (~0%)|   1 (~0%)|    149 (~0%)|     475 (~0%)|    -|
     |   + softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s            |     -|  0.87|        5|     50.000|         -|        5|      -|        no|      3 (~0%)|   1 (~0%)|    145 (~0%)|     432 (~0%)|    -|
-    | + process_data_Pipeline_VITIS_LOOP_181_6                                            |     -|  0.00|       74|    740.000|         -|       74|      -|        no|            -|         -|    779 (~0%)|    2566 (~0%)|    -|
-    |  o VITIS_LOOP_181_6                                                                 |     -|  7.30|       72|    720.000|        71|        1|      3|       yes|            -|         -|            -|             -|    -|
+    | + process_data_Pipeline_VITIS_LOOP_340_6                                            |     -|  0.00|       74|    740.000|         -|       74|      -|        no|            -|         -|    779 (~0%)|    2566 (~0%)|    -|
+    |  o VITIS_LOOP_340_6                                                                 |     -|  7.30|       72|    720.000|        71|        1|      3|       yes|            -|         -|            -|             -|    -|
     | o link_loop                                                                         |     -|  7.30|        -|          -|         -|        -|      -|        no|            -|         -|            -|             -|    -|
     |  + process_data_Pipeline_first_chan_loop_first_chan_frame_loop                      |     -|  0.56|    25605|  2.560e+05|         -|    25605|      -|        no|            -|   3 (~0%)|    278 (~0%)|     378 (~0%)|    -|
     |   o first_chan_loop_first_chan_frame_loop                                           |     -|  7.30|    25603|  2.560e+05|         5|        1|  25600|       yes|            -|         -|            -|             -|    -|
@@ -85,8 +85,8 @@
     |    o VITIS_LOOP_169_1                                                               |     -|  7.30|      222|  2.220e+03|        74|        1|    150|       yes|            -|         -|            -|             -|    -|
     |   + process_data_Pipeline_4                                                         |     -|  0.00|        -|          -|         -|        -|      -|        no|            -|         -|   2721 (~0%)|   10563 (~0%)|    -|
     |    o Loop 1                                                                         |    II|  7.30|        -|          -|       221|      221|      -|       yes|            -|         -|            -|             -|    -|
-    |   + process_data_Pipeline_VITIS_LOOP_99_1                                           |     -|  3.65|     6002|  6.002e+04|         -|     6002|      -|        no|            -|         -|     43 (~0%)|     157 (~0%)|    -|
-    |    o VITIS_LOOP_99_1                                                                |     -|  7.30|     6000|  6.000e+04|         2|        1|   6000|       yes|            -|         -|            -|             -|    -|
+    |   + process_data_Pipeline_VITIS_LOOP_285_1                                          |     -|  3.65|     6002|  6.002e+04|         -|     6002|      -|        no|            -|         -|     43 (~0%)|     157 (~0%)|    -|
+    |    o VITIS_LOOP_285_1                                                               |     -|  7.30|     6000|  6.000e+04|         2|        1|   6000|       yes|            -|         -|            -|             -|    -|
     +-------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-------------+----------+-------------+--------------+-----+
 
 
@@ -195,14 +195,14 @@
 | HW Interface | Variable                  | Access Location             | Direction | Burst Status | Length | Loop             | Loop Location               | Resolution | Problem                                                                      |
 +--------------+---------------------------+-----------------------------+-----------+--------------+--------+------------------+-----------------------------+------------+------------------------------------------------------------------------------+
 | m_axi_gmem   | chanmap_fUprightFromCrate | FDHDChannelMapSP.cxx:171:28 | read      | Widened      | 75     | VITIS_LOOP_169_1 | FDHDChannelMapSP.cxx:169:21 |            |                                                                              |
-| m_axi_gmem   | chanmap_fUprightFromCrate | FDHDChannelMapSP.cxx:171:28 | read      | Fail         |        | second_chan_loop | kernel.cpp:77:9             | 214-229    | Could not analyze pattern                                                    |
+| m_axi_gmem   | chanmap_fUprightFromCrate | FDHDChannelMapSP.cxx:171:28 | read      | Fail         |        | second_chan_loop | kernel.cpp:263:9            | 214-229    | Could not analyze pattern                                                    |
 | m_axi_gmem   | chanmap_fUprightFromCrate | FDHDChannelMapSP.cxx:171:28 | read      | Inferred     | 150    | VITIS_LOOP_169_1 | FDHDChannelMapSP.cxx:169:21 |            |                                                                              |
-| m_axi_gmem   | chanmap_DetToChanInfo     | FDHDChannelMapSP.cxx:210:21 | read      | Fail         |        | second_chan_loop | kernel.cpp:77:9             | 214-229    | Could not analyze pattern                                                    |
-| m_axi_gmem   | infiledata                | WIB2Frame.hpp:106:20        | read      | Fail         |        | frame_chan_loop  | kernel.cpp:54:13            | 214-229    | Could not analyze pattern                                                    |
-| m_axi_gmem   | infiledata                | WIB2Frame.hpp:110:14        | read      | Fail         |        | frame_chan_loop  | kernel.cpp:54:13            | 214-232    | Access load is in the conditional branch                                     |
-| m_axi_gmem   | infiledata                | kernel.cpp:49:39            | read      | Fail         |        |                  |                             | 214-228    | Alignment is insufficient, current alignment is 4 byte(s) but 32 is required |
-| m_axi_gmem   | outdata                   | kernel.cpp:183:33           | write     | Widen Fail   |        | VITIS_LOOP_181_6 | kernel.cpp:181:39           | 214-234    | Sequential access length is not divisible by 2                               |
-| m_axi_gmem   | outdata                   | kernel.cpp:183:33           | write     | Inferred     | 3      | VITIS_LOOP_181_6 | kernel.cpp:181:39           |            |                                                                              |
+| m_axi_gmem   | chanmap_DetToChanInfo     | FDHDChannelMapSP.cxx:210:21 | read      | Fail         |        | second_chan_loop | kernel.cpp:263:9            | 214-229    | Could not analyze pattern                                                    |
+| m_axi_gmem   | infiledata                | WIB2Frame.hpp:106:20        | read      | Fail         |        | frame_chan_loop  | kernel.cpp:240:13           | 214-229    | Could not analyze pattern                                                    |
+| m_axi_gmem   | infiledata                | WIB2Frame.hpp:110:14        | read      | Fail         |        | frame_chan_loop  | kernel.cpp:240:13           | 214-232    | Access load is in the conditional branch                                     |
+| m_axi_gmem   | infiledata                | kernel.cpp:235:39           | read      | Fail         |        |                  |                             | 214-228    | Alignment is insufficient, current alignment is 4 byte(s) but 32 is required |
+| m_axi_gmem   | outdata                   | kernel.cpp:342:33           | write     | Widen Fail   |        | VITIS_LOOP_340_6 | kernel.cpp:340:39           | 214-234    | Sequential access length is not divisible by 2                               |
+| m_axi_gmem   | outdata                   | kernel.cpp:342:33           | write     | Inferred     | 3      | VITIS_LOOP_340_6 | kernel.cpp:340:39           |            |                                                                              |
 +--------------+---------------------------+-----------------------------+-----------+--------------+--------+------------------+-----------------------------+------------+------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
@@ -214,44 +214,44 @@
 | Name                                                                                | DSP | Pragma | Variable     | Op  | Impl   | Latency |
 +-------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
 | + process_data                                                                      | 391 |        |              |     |        |         |
-|   mul_32ns_34ns_65_1_1_U5547                                                        | 4   |        | mul_ln28     | mul | auto   | 0       |
+|   mul_32ns_34ns_65_1_1_U5547                                                        | 4   |        | mul_ln214    | mul | auto   | 0       |
 |   link_2_fu_11753_p2                                                                | -   |        | link_2       | add | fabric | 0       |
-|   mul_29ns_4ns_32_1_1_U5549                                                         | -   |        | mul_ln38     | mul | auto   | 0       |
+|   mul_29ns_4ns_32_1_1_U5549                                                         | -   |        | mul_ln224    | mul | auto   | 0       |
 |   add_ln233_1_fu_11768_p2                                                           | -   |        | add_ln233_1  | add | fabric | 0       |
 |   add_ln233_fu_11782_p2                                                             | -   |        | add_ln233    | add | fabric | 0       |
-|   add_ln46_fu_11787_p2                                                              | -   |        | add_ln46     | add | fabric | 0       |
-|   add_ln42_fu_11792_p2                                                              | -   |        | add_ln42     | add | fabric | 0       |
+|   add_ln232_fu_11787_p2                                                             | -   |        | add_ln232    | add | fabric | 0       |
+|   add_ln228_fu_11792_p2                                                             | -   |        | add_ln228    | add | fabric | 0       |
 |   iFrame_1_fu_11804_p2                                                              | -   |        | iFrame_1     | add | fabric | 0       |
 |   frame_fu_11818_p2                                                                 | -   |        | frame        | add | fabric | 0       |
-|   add_ln49_fu_11829_p2                                                              | -   |        | add_ln49     | add | fabric | 0       |
+|   add_ln235_fu_11829_p2                                                             | -   |        | add_ln235    | add | fabric | 0       |
 |   add_ln106_fu_11934_p2                                                             | -   |        | add_ln106    | add | fabric | 0       |
 |   wib_fu_11948_p2                                                                   | -   |        | wib          | add | fabric | 0       |
-|   add_ln77_fu_11954_p2                                                              | -   |        | add_ln77     | add | fabric | 0       |
+|   add_ln263_fu_11954_p2                                                             | -   |        | add_ln263    | add | fabric | 0       |
 |   iChan_fu_11966_p2                                                                 | -   |        | iChan        | add | fabric | 0       |
 |   add_ln210_fu_11988_p2                                                             | -   |        | add_ln210    | add | fabric | 0       |
 |   add_ln210_2_fu_12043_p2                                                           | -   |        | add_ln210_2  | add | fabric | 0       |
 |   add_ln210_1_fu_12004_p2                                                           | -   |        | add_ln210_1  | add | fabric | 0       |
 |   add_ln210_3_fu_12075_p2                                                           | -   |        | add_ln210_3  | add | fabric | 0       |
-|   add_ln97_fu_12107_p2                                                              | -   |        | add_ln97     | add | fabric | 0       |
-|   mul_9ns_14ns_22_1_1_U5550                                                         | 1   |        | mul_ln103    | mul | auto   | 0       |
-|  + process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5                          | 1   |        |              |     |        |         |
-|    add_ln160_1_fu_109_p2                                                            | -   |        | add_ln160_1  | add | fabric | 0       |
-|    add_ln160_fu_121_p2                                                              | -   |        | add_ln160    | add | fabric | 0       |
-|    mac_muladd_9ns_13ns_8ns_22_4_1_U32                                               | 1   |        | mul_ln165    | mul | dsp48  | 3       |
-|    mac_muladd_9ns_13ns_8ns_22_4_1_U32                                               | 1   |        | add_ln165    | add | dsp48  | 3       |
-|    add_ln162_fu_153_p2                                                              | -   |        | add_ln162    | add | fabric | 0       |
+|   add_ln283_fu_12107_p2                                                             | -   |        | add_ln283    | add | fabric | 0       |
+|   mul_9ns_14ns_22_1_1_U5550                                                         | 1   |        | mul_ln289    | mul | auto   | 0       |
+|  + process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5                          | 1   |        |              |     |        |         |
+|    add_ln319_1_fu_109_p2                                                            | -   |        | add_ln319_1  | add | fabric | 0       |
+|    add_ln319_fu_121_p2                                                              | -   |        | add_ln319    | add | fabric | 0       |
+|    mac_muladd_9ns_13ns_8ns_22_4_1_U32                                               | 1   |        | mul_ln324    | mul | dsp48  | 3       |
+|    mac_muladd_9ns_13ns_8ns_22_4_1_U32                                               | 1   |        | add_ln324    | add | dsp48  | 3       |
+|    add_ln321_fu_153_p2                                                              | -   |        | add_ln321    | add | fabric | 0       |
 |  + process_data_Pipeline_first_chan_loop_first_chan_frame_loop                      | 3   |        |              |     |        |         |
-|    add_ln63_fu_130_p2                                                               | -   |        | add_ln63     | add | fabric | 0       |
+|    add_ln249_fu_130_p2                                                              | -   |        | add_ln249    | add | fabric | 0       |
 |    iChan_3_fu_142_p2                                                                | -   |        | iChan_3      | add | fabric | 0       |
-|    mac_muladd_9ns_13ns_7ns_21_4_1_U8                                                | 1   |        | mul_ln71     | mul | dsp48  | 3       |
-|    mac_muladd_9ns_13ns_7ns_21_4_1_U8                                                | 1   |        | add_ln71     | add | dsp48  | 3       |
+|    mac_muladd_9ns_13ns_7ns_21_4_1_U8                                                | 1   |        | mul_ln257    | mul | dsp48  | 3       |
+|    mac_muladd_9ns_13ns_7ns_21_4_1_U8                                                | 1   |        | add_ln257    | add | dsp48  | 3       |
 |    sum_1_fu_226_p2                                                                  | -   |        | sum_1        | add | fabric | 0       |
-|    add_ln69_fu_174_p2                                                               | -   |        | add_ln69     | add | fabric | 0       |
-|    mul_21ns_23ns_43_1_1_U7                                                          | 2   |        | mul_ln73     | mul | auto   | 0       |
+|    add_ln255_fu_174_p2                                                              | -   |        | add_ln255    | add | fabric | 0       |
+|    mul_21ns_23ns_43_1_1_U7                                                          | 2   |        | mul_ln259    | mul | auto   | 0       |
 |  + process_data_Pipeline_frame_chan_loop                                            | 0   |        |              |     |        |         |
 |    iChan_2_fu_220_p2                                                                | -   |        | iChan_2      | add | fabric | 0       |
-|    add_ln58_1_fu_560_p2                                                             | -   |        | add_ln58_1   | add | fabric | 0       |
-|    add_ln58_fu_566_p2                                                               | -   |        | add_ln58     | add | fabric | 0       |
+|    add_ln244_1_fu_560_p2                                                            | -   |        | add_ln244_1  | add | fabric | 0       |
+|    add_ln244_fu_566_p2                                                              | -   |        | add_ln244    | add | fabric | 0       |
 |    sub_ln100_fu_252_p2                                                              | -   |        | sub_ln100    | sub | fabric | 0       |
 |    sub_ln100_1_fu_266_p2                                                            | -   |        | sub_ln100_1  | sub | fabric | 0       |
 |    sub_ln100_2_fu_290_p2                                                            | -   |        | sub_ln100_2  | sub | fabric | 0       |
@@ -275,11 +275,11 @@
 |    add_ln203_2_fu_386_p2                                                            | -   |        | add_ln203_2  | add | fabric | 0       |
 |    add_ln203_1_fu_417_p2                                                            | -   |        | add_ln203_1  | add | fabric | 0       |
 |    add_ln203_3_fu_442_p2                                                            | -   |        | add_ln203_3  | add | fabric | 0       |
-|  + process_data_Pipeline_VITIS_LOOP_99_1                                            | 0   |        |              |     |        |         |
-|    add_ln99_fu_108_p2                                                               | -   |        | add_ln99     | add | fabric | 0       |
-|    add_ln103_fu_118_p2                                                              | -   |        | add_ln103    | add | fabric | 0       |
-|    add_ln103_1_fu_137_p2                                                            | -   |        | add_ln103_1  | add | fabric | 0       |
-|    planes_d0                                                                        | -   |        | sub_ln103    | sub | fabric | 0       |
+|  + process_data_Pipeline_VITIS_LOOP_285_1                                           | 0   |        |              |     |        |         |
+|    add_ln285_fu_108_p2                                                              | -   |        | add_ln285    | add | fabric | 0       |
+|    add_ln289_fu_118_p2                                                              | -   |        | add_ln289    | add | fabric | 0       |
+|    add_ln289_1_fu_137_p2                                                            | -   |        | add_ln289_1  | add | fabric | 0       |
+|    planes_d0                                                                        | -   |        | sub_ln289    | sub | fabric | 0       |
 |  + myproject                                                                        | 382 |        |              |     |        |         |
 |   + zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s           | 0   |        |              |     |        |         |
 |    + zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth       | 0   |        |              |     |        |         |
@@ -1468,11 +1468,11 @@
 |      mul_18s_17ns_26_1_1_U5511                                                      | 1   |        | mul_ln244    | mul | auto   | 0       |
 |      mul_18s_17ns_26_1_1_U5511                                                      | 1   |        | mul_ln244_1  | mul | auto   | 0       |
 |      mul_18s_17ns_26_1_1_U5511                                                      | 1   |        | mul_ln244_2  | mul | auto   | 0       |
-|  + process_data_Pipeline_VITIS_LOOP_181_6                                           | 0   |        |              |     |        |         |
-|    add_ln181_fu_144_p2                                                              | -   |        | add_ln181    | add | fabric | 0       |
-|    add_ln183_fu_216_p2                                                              | -   |        | add_ln183    | add | fabric | 0       |
-|    add_ln183_1_fu_167_p2                                                            | -   |        | add_ln183_1  | add | fabric | 0       |
-|    add_ln183_2_fu_249_p2                                                            | -   |        | add_ln183_2  | add | fabric | 0       |
+|  + process_data_Pipeline_VITIS_LOOP_340_6                                           | 0   |        |              |     |        |         |
+|    add_ln340_fu_144_p2                                                              | -   |        | add_ln340    | add | fabric | 0       |
+|    add_ln342_fu_216_p2                                                              | -   |        | add_ln342    | add | fabric | 0       |
+|    add_ln342_1_fu_167_p2                                                            | -   |        | add_ln342_1  | add | fabric | 0       |
+|    add_ln342_2_fu_249_p2                                                            | -   |        | add_ln342_2  | add | fabric | 0       |
 +-------------------------------------------------------------------------------------+-----+--------+--------------+-----+--------+---------+
 
 

@@ -19598,17 +19598,12 @@ public:
 
 
   void ReadMapFromFiles(const std::string &chanlist, const std::string &cratelist);
-# 63 "./FDHDChannelMapSP.h"
+# 62 "./FDHDChannelMapSP.h"
   HDChanInfo_t GetChanInfoFromWIBElements(
    unsigned int crate,
    unsigned int slot,
    unsigned int link,
    unsigned int wibframechan);
-
-
-
-
-
 
 
   unsigned int getNChans() { return fNChans; }
@@ -19619,18 +19614,28 @@ private:
 
   const unsigned int fNAPAs = 150;
   const unsigned int fNChans = 2560*fNAPAs;
-# 91 "./FDHDChannelMapSP.h"
+
+
+
+
+
+
   unsigned int fAPANameFromCrate[150];
 
   struct KeyValuePair {
       unsigned int key;
       unsigned int value;
   };
-# 105 "./FDHDChannelMapSP.h"
+
+
+
+
+
+
   KeyValuePair fUprightFromCrate[150];
   KeyValuePair fCrateFromTPCSet[150];
   KeyValuePair fTPCSetFromCrate[150];
-# 122 "./FDHDChannelMapSP.h"
+# 112 "./FDHDChannelMapSP.h"
   struct HDChanInfoStruct {
       unsigned int upright;
       unsigned int wib;
@@ -19640,7 +19645,7 @@ private:
   };
 
   HDChanInfoStruct DetToChanInfo[5120];
-# 139 "./FDHDChannelMapSP.h"
+# 129 "./FDHDChannelMapSP.h"
   void check_offline_channel(unsigned int offlineChannel) const
   {
   if (offlineChannel >= fNChans)

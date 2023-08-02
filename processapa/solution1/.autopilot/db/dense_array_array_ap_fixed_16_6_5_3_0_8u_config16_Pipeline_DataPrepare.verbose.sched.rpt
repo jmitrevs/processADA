@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare'
 ================================================================
-* Date:           Tue Aug  1 14:26:00 2023
+* Date:           Tue Aug  1 18:02:38 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -3764,7 +3764,7 @@ The critical path consists of the following:
  <State 2>: 1.729ns
 The critical path consists of the following:
 	fifo read operation ('layer14_out_read', ./nnet_utils/nnet_dense_stream.h:40) on port 'layer14_out' (./nnet_utils/nnet_dense_stream.h:40) [1807]  (1.729 ns)
-	'store' operation ('store_ln44', ./nnet_utils/nnet_dense_stream.h:44) of variable 'trunc_ln40_1', ./nnet_utils/nnet_dense_stream.h:40 on local variable 'p_0_31_0_0_01599' [2658]  (0.000 ns)
+	'store' operation ('store_ln44', ./nnet_utils/nnet_dense_stream.h:44) of variable 'trunc_ln40_1', ./nnet_utils/nnet_dense_stream.h:40 on local variable 'p_0_31_0_0_01471' [2590]  (0.000 ns)
 
 
 ============================================================

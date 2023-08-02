@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s'" level="0">
-<item name = "Date">Tue Aug  1 14:27:38 2023
+<item name = "Date">Tue Aug  1 18:04:19 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>

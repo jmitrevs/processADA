@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_frame_chan_loop'" level="0">
-<item name = "Date">Tue Aug  1 14:26:21 2023
+<item name = "Date">Tue Aug  1 18:02:58 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -87,8 +87,8 @@
 <column name="add_ln110_1_fu_452_p2">+, 0, 0, 71, 64, 64</column>
 <column name="add_ln110_2_fu_551_p2">+, 0, 0, 13, 6, 6</column>
 <column name="add_ln110_fu_430_p2">+, 0, 0, 36, 29, 1</column>
-<column name="add_ln58_1_fu_560_p2">+, 0, 0, 28, 21, 13</column>
-<column name="add_ln58_fu_566_p2">+, 0, 0, 28, 21, 21</column>
+<column name="add_ln244_1_fu_560_p2">+, 0, 0, 28, 21, 13</column>
+<column name="add_ln244_fu_566_p2">+, 0, 0, 28, 21, 21</column>
 <column name="iChan_2_fu_220_p2">+, 0, 0, 16, 9, 1</column>
 <column name="sub_ln100_1_fu_266_p2">-, 0, 0, 20, 1, 13</column>
 <column name="sub_ln100_2_fu_290_p2">-, 0, 0, 35, 1, 28</column>
@@ -103,7 +103,7 @@
 <column name="ap_predicate_op142_readreq_state3">and, 0, 0, 2, 1, 1</column>
 <column name="ap_predicate_op297_read_state74">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln200_fu_414_p2">icmp, 0, 0, 13, 6, 4</column>
-<column name="icmp_ln54_fu_214_p2">icmp, 0, 0, 17, 9, 10</column>
+<column name="icmp_ln240_fu_214_p2">icmp, 0, 0, 17, 9, 10</column>
 <column name="lshr_ln106_1_fu_534_p2">lshr, 0, 0, 100, 32, 32</column>
 <column name="lshr_ln106_fu_525_p2">lshr, 0, 0, 2171, 512, 512</column>
 <column name="lshr_ln110_fu_590_p2">lshr, 0, 0, 2171, 512, 512</column>
@@ -294,7 +294,7 @@
 <column name="iChan_2_reg_662">9, 0, 9, 0</column>
 <column name="iChan_fu_122">9, 0, 9, 0</column>
 <column name="icmp_ln200_reg_707">1, 0, 1, 0</column>
-<column name="icmp_ln54_reg_658">1, 0, 1, 0</column>
+<column name="icmp_ln240_reg_658">1, 0, 1, 0</column>
 <column name="phi_mul_fu_118">21, 0, 21, 0</column>
 <column name="tmp_reg_667">1, 0, 1, 0</column>
 <column name="trunc_ln103_1_reg_682">4, 0, 5, 1</column>
@@ -305,10 +305,10 @@
 <column name="trunc_ln110_reg_718">4, 0, 4, 0</column>
 <column name="trunc_ln200_reg_702">3, 0, 4, 1</column>
 <column name="word_index_reg_672">28, 0, 28, 0</column>
-<column name="zext_ln42_cast_reg_653">13, 0, 21, 8</column>
+<column name="zext_ln228_cast_reg_653">13, 0, 21, 8</column>
 <column name="first_bit_position_reg_697">64, 32, 7, 1</column>
 <column name="icmp_ln200_reg_707">64, 32, 1, 0</column>
-<column name="icmp_ln54_reg_658">64, 32, 1, 0</column>
+<column name="icmp_ln240_reg_658">64, 32, 1, 0</column>
 <column name="trunc_ln106_reg_687">64, 32, 4, 0</column>
 <column name="trunc_ln110_reg_718">64, 32, 4, 0</column>
 <column name="trunc_ln200_reg_702">64, 32, 4, 1</column>
@@ -373,9 +373,9 @@
 <column name="m_axi_gmem_BRESP">in, 2, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_BUSER">in, 1, m_axi, gmem, pointer</column>
-<column name="zext_ln42">in, 13, ap_none, zext_ln42, scalar</column>
+<column name="zext_ln228">in, 13, ap_none, zext_ln228, scalar</column>
 <column name="trunc_ln6">in, 6, ap_none, trunc_ln6, scalar</column>
-<column name="add_ln46">in, 6, ap_none, add_ln46, scalar</column>
+<column name="add_ln232">in, 6, ap_none, add_ln232, scalar</column>
 <column name="add_ln106">in, 64, ap_none, add_ln106, scalar</column>
 <column name="adc_vectors_address0">out, 21, ap_memory, adc_vectors, array</column>
 <column name="adc_vectors_ce0">out, 1, ap_memory, adc_vectors, array</column>

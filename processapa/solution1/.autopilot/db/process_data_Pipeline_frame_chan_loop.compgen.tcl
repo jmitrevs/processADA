@@ -45,14 +45,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 2 \
-    name zext_ln42 \
+    name zext_ln228 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln42 \
+    corename dc_zext_ln228 \
     op interface \
-    ports { zext_ln42 { I 13 vector } } \
+    ports { zext_ln228 { I 13 vector } } \
 } "
 }
 
@@ -75,14 +75,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4 \
-    name add_ln46 \
+    name add_ln232 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln46 \
+    corename dc_add_ln232 \
     op interface \
-    ports { add_ln46 { I 6 vector } } \
+    ports { add_ln232 { I 6 vector } } \
 } "
 }
 

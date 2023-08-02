@@ -37,7 +37,7 @@ int main()
     }
     fclose(infile);
 
-    int outdata[3];
+    int outdata[276];
     
     std::cout << "here" << std::endl;
 

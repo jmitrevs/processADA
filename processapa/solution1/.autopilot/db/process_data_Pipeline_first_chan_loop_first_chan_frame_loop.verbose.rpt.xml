@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_first_chan_loop_first_chan_frame_loop'" level="0">
-<item name = "Date">Tue Aug  1 14:26:21 2023
+<item name = "Date">Tue Aug  1 18:02:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -82,16 +82,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln63_fu_130_p2">+, 0, 0, 22, 15, 1</column>
-<column name="add_ln69_fu_174_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln249_fu_130_p2">+, 0, 0, 22, 15, 1</column>
+<column name="add_ln255_fu_174_p2">+, 0, 0, 14, 7, 1</column>
 <column name="iChan_3_fu_142_p2">+, 0, 0, 16, 9, 1</column>
 <column name="sum_1_fu_226_p2">+, 0, 0, 28, 21, 21</column>
-<column name="icmp_ln63_fu_124_p2">icmp, 0, 0, 22, 15, 14</column>
-<column name="icmp_ln69_fu_148_p2">icmp, 0, 0, 14, 7, 6</column>
+<column name="icmp_ln249_fu_124_p2">icmp, 0, 0, 22, 15, 14</column>
+<column name="icmp_ln255_fu_148_p2">icmp, 0, 0, 14, 7, 6</column>
 <column name="ifzero_fu_180_p2">icmp, 0, 0, 14, 7, 6</column>
-<column name="select_ln63_1_fu_211_p3">select, 0, 0, 21, 1, 1</column>
-<column name="select_ln63_2_fu_162_p3">select, 0, 0, 9, 1, 9</column>
-<column name="select_ln63_fu_154_p3">select, 0, 0, 7, 1, 1</column>
+<column name="select_ln249_1_fu_211_p3">select, 0, 0, 21, 1, 1</column>
+<column name="select_ln249_2_fu_162_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln249_fu_154_p3">select, 0, 0, 7, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -121,16 +121,16 @@
 <column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
 <column name="iChan_fu_62">9, 0, 9, 0</column>
 <column name="i_fu_58">7, 0, 7, 0</column>
-<column name="icmp_ln69_reg_294">1, 0, 1, 0</column>
+<column name="icmp_ln255_reg_294">1, 0, 1, 0</column>
 <column name="ifzero_reg_314">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_66">15, 0, 15, 0</column>
-<column name="select_ln63_2_reg_304">9, 0, 9, 0</column>
-<column name="select_ln63_reg_299">7, 0, 7, 0</column>
-<column name="select_ln63_reg_299_pp0_iter1_reg">7, 0, 7, 0</column>
+<column name="select_ln249_2_reg_304">9, 0, 9, 0</column>
+<column name="select_ln249_reg_299">7, 0, 7, 0</column>
+<column name="select_ln249_reg_299_pp0_iter1_reg">7, 0, 7, 0</column>
 <column name="sum_fu_54">21, 0, 21, 0</column>
-<column name="icmp_ln69_reg_294">64, 32, 1, 0</column>
+<column name="icmp_ln255_reg_294">64, 32, 1, 0</column>
 <column name="ifzero_reg_314">64, 32, 1, 0</column>
-<column name="select_ln63_2_reg_304">64, 32, 9, 0</column>
+<column name="select_ln249_2_reg_304">64, 32, 9, 0</column>
 </table>
 </item>
 </section>

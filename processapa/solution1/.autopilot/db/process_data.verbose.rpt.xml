@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data'" level="0">
-<item name = "Date">Tue Aug  1 14:27:54 2023
+<item name = "Date">Tue Aug  1 18:04:35 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -31,14 +31,14 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5_fu_6063">process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5, 61445, 61445, 0.614 ms, 0.614 ms, 61445, 61445, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5_fu_6063">process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5, 61445, 61445, 0.614 ms, 0.614 ms, 61445, 61445, no</column>
 <column name="grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6070">process_data_Pipeline_first_chan_loop_first_chan_frame_loop, 25605, 25605, 0.256 ms, 0.256 ms, 25605, 25605, no</column>
 <column name="grp_process_data_Pipeline_frame_chan_loop_fu_6077">process_data_Pipeline_frame_chan_loop, 586, 586, 5.860 us, 5.860 us, 586, 586, no</column>
 <column name="grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6090">process_data_Pipeline_VITIS_LOOP_169_1, 224, 224, 2.240 us, 2.240 us, 224, 224, no</column>
 <column name="grp_process_data_Pipeline_4_fu_6101">process_data_Pipeline_4, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_99_1_fu_6116">process_data_Pipeline_VITIS_LOOP_99_1, 6002, 6002, 60.020 us, 60.020 us, 6002, 6002, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_285_1_fu_6116">process_data_Pipeline_VITIS_LOOP_285_1, 6002, 6002, 60.020 us, 60.020 us, 6002, 6002, no</column>
 <column name="grp_myproject_fu_6129">myproject, 9830280, 9830568, 98.303 ms, 98.306 ms, 262146, 9830402, dataflow</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_181_6_fu_11679">process_data_Pipeline_VITIS_LOOP_181_6, 74, 74, 0.740 us, 0.740 us, 74, 74, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_340_6_fu_11679">process_data_Pipeline_VITIS_LOOP_340_6, 74, 74, 0.740 us, 0.740 us, 74, 74, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -81,10 +81,10 @@
 <column name="mul_9ns_14ns_22_1_1_U5550">mul_9ns_14ns_22_1_1, 0, 1, 0, 5, 0</column>
 <column name="grp_myproject_fu_6129">myproject, 2599, 382, 178468, 131815, 0</column>
 <column name="grp_process_data_Pipeline_4_fu_6101">process_data_Pipeline_4, 0, 0, 2721, 10563, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5_fu_6063">process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5, 0, 1, 59, 177, 0</column>
 <column name="grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6090">process_data_Pipeline_VITIS_LOOP_169_1, 0, 0, 1017, 2543, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_181_6_fu_11679">process_data_Pipeline_VITIS_LOOP_181_6, 0, 0, 779, 2566, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_99_1_fu_6116">process_data_Pipeline_VITIS_LOOP_99_1, 0, 0, 43, 157, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_285_1_fu_6116">process_data_Pipeline_VITIS_LOOP_285_1, 0, 0, 43, 157, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5_fu_6063">process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5, 0, 1, 59, 177, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_340_6_fu_11679">process_data_Pipeline_VITIS_LOOP_340_6, 0, 0, 779, 2566, 0</column>
 <column name="grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6070">process_data_Pipeline_first_chan_loop_first_chan_frame_loop, 0, 3, 278, 378, 0</column>
 <column name="grp_process_data_Pipeline_frame_chan_loop_fu_6077">process_data_Pipeline_frame_chan_loop, 0, 0, 2250, 5625, 0</column>
 <column name="urem_32ns_5ns_4_36_seq_1_U5548">urem_32ns_5ns_4_36_seq_1, 0, 0, 394, 238, 0</column>
@@ -115,36 +115,36 @@
 <column name="add_ln210_2_fu_12043_p2">+, 0, 0, 13, 6, 5</column>
 <column name="add_ln210_3_fu_12075_p2">+, 0, 0, 13, 6, 6</column>
 <column name="add_ln210_fu_11988_p2">+, 0, 0, 71, 64, 5</column>
+<column name="add_ln228_fu_11792_p2">+, 0, 0, 29, 22, 9</column>
+<column name="add_ln232_fu_11787_p2">+, 0, 0, 13, 6, 6</column>
 <column name="add_ln233_1_fu_11768_p2">+, 0, 0, 39, 32, 7</column>
 <column name="add_ln233_fu_11782_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln42_fu_11792_p2">+, 0, 0, 29, 22, 9</column>
-<column name="add_ln46_fu_11787_p2">+, 0, 0, 13, 6, 6</column>
-<column name="add_ln49_fu_11829_p2">+, 0, 0, 13, 6, 6</column>
-<column name="add_ln77_fu_11954_p2">+, 0, 0, 28, 21, 13</column>
-<column name="add_ln97_fu_12107_p2">+, 0, 0, 39, 32, 12</column>
+<column name="add_ln235_fu_11829_p2">+, 0, 0, 13, 6, 6</column>
+<column name="add_ln263_fu_11954_p2">+, 0, 0, 28, 21, 13</column>
+<column name="add_ln283_fu_12107_p2">+, 0, 0, 39, 32, 12</column>
 <column name="frame_fu_11818_p2">+, 0, 0, 71, 64, 64</column>
 <column name="iChan_fu_11966_p2">+, 0, 0, 16, 9, 1</column>
 <column name="iFrame_1_fu_11804_p2">+, 0, 0, 20, 13, 1</column>
 <column name="link_2_fu_11753_p2">+, 0, 0, 12, 4, 1</column>
 <column name="wib_fu_11948_p2">+, 0, 0, 12, 4, 1</column>
-<column name="and_ln97_fu_12118_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln283_fu_12118_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state196_on_subcall_done">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state203_on_subcall_done">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln22_fu_11703_p2">icmp, 0, 0, 12, 4, 1</column>
-<column name="icmp_ln33_fu_11747_p2">icmp, 0, 0, 12, 4, 4</column>
-<column name="icmp_ln42_fu_11798_p2">icmp, 0, 0, 20, 13, 13</column>
-<column name="icmp_ln47_fu_11823_p2">icmp, 0, 0, 20, 13, 1</column>
-<column name="icmp_ln49_fu_11834_p2">icmp, 0, 0, 13, 6, 6</column>
-<column name="icmp_ln77_fu_11960_p2">icmp, 0, 0, 17, 9, 10</column>
-<column name="icmp_ln97_1_fu_12112_p2">icmp, 0, 0, 39, 32, 9</column>
-<column name="icmp_ln97_fu_12101_p2">icmp, 0, 0, 39, 32, 2</column>
+<column name="icmp_ln208_fu_11703_p2">icmp, 0, 0, 12, 4, 1</column>
+<column name="icmp_ln219_fu_11747_p2">icmp, 0, 0, 12, 4, 4</column>
+<column name="icmp_ln228_fu_11798_p2">icmp, 0, 0, 20, 13, 13</column>
+<column name="icmp_ln233_fu_11823_p2">icmp, 0, 0, 20, 13, 1</column>
+<column name="icmp_ln235_fu_11834_p2">icmp, 0, 0, 13, 6, 6</column>
+<column name="icmp_ln263_fu_11960_p2">icmp, 0, 0, 17, 9, 10</column>
+<column name="icmp_ln283_1_fu_12112_p2">icmp, 0, 0, 39, 32, 9</column>
+<column name="icmp_ln283_fu_12101_p2">icmp, 0, 0, 39, 32, 2</column>
 <column name="lshr_ln210_1_fu_12092_p2">lshr, 0, 0, 2171, 512, 512</column>
 <column name="lshr_ln210_fu_12061_p2">lshr, 0, 0, 2171, 512, 512</column>
-<column name="lshr_ln49_fu_11886_p2">lshr, 0, 0, 2171, 1024, 1024</column>
+<column name="lshr_ln235_fu_11886_p2">lshr, 0, 0, 2171, 1024, 1024</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_grp_myproject_fu_6129_ap_done">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_grp_myproject_fu_6129_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln49_fu_11840_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln235_fu_11840_p3">select, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -191,12 +191,12 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="add_ln106_reg_12348">64, 0, 64, 0</column>
+<column name="add_ln228_reg_12275">22, 0, 22, 0</column>
+<column name="add_ln232_reg_12269">6, 0, 6, 0</column>
 <column name="add_ln233_reg_12264">64, 0, 64, 0</column>
-<column name="add_ln42_reg_12275">22, 0, 22, 0</column>
-<column name="add_ln46_reg_12269">6, 0, 6, 0</column>
-<column name="add_ln49_reg_12303">6, 0, 6, 0</column>
-<column name="add_ln77_reg_12358">21, 0, 21, 0</column>
-<column name="and_ln97_reg_12419">1, 0, 1, 0</column>
+<column name="add_ln235_reg_12303">6, 0, 6, 0</column>
+<column name="add_ln263_reg_12358">21, 0, 21, 0</column>
+<column name="and_ln283_reg_12419">1, 0, 1, 0</column>
 <column name="ap_CS_fsm">203, 0, 203, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_rst_n_inv">1, 0, 1, 0</column>
@@ -217,39 +217,39 @@
 <column name="gmem_addr_read_reg_12323">512, 0, 512, 0</column>
 <column name="grp_myproject_fu_6129_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_process_data_Pipeline_4_fu_6101_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_160_4_VITIS_LOOP_162_5_fu_6063_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6090_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_181_6_fu_11679_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_99_1_fu_6116_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_285_1_fu_6116_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5_fu_6063_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_340_6_fu_11679_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6070_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_process_data_Pipeline_frame_chan_loop_fu_6077_ap_start_reg">1, 0, 1, 0</column>
 <column name="iChan_1_reg_6039">9, 0, 9, 0</column>
 <column name="iChan_reg_12366">9, 0, 9, 0</column>
 <column name="iFrame_1_reg_12283">13, 0, 13, 0</column>
 <column name="iFrame_reg_5969">13, 0, 13, 0</column>
-<column name="icmp_ln22_reg_12225">1, 0, 1, 0</column>
-<column name="icmp_ln47_reg_12299">1, 0, 1, 0</column>
-<column name="icmp_ln49_reg_12308">1, 0, 1, 0</column>
+<column name="icmp_ln208_reg_12225">1, 0, 1, 0</column>
+<column name="icmp_ln233_reg_12299">1, 0, 1, 0</column>
+<column name="icmp_ln235_reg_12308">1, 0, 1, 0</column>
 <column name="link_2_reg_12259">4, 0, 4, 0</column>
 <column name="link_from_frameheader_2_reg_6015">32, 0, 32, 0</column>
 <column name="link_from_frameheader_reg_5945">32, 0, 32, 0</column>
 <column name="link_fu_5814">4, 0, 4, 0</column>
-<column name="mul_ln103_reg_12433">22, 0, 22, 0</column>
+<column name="mul_ln289_reg_12433">22, 0, 22, 0</column>
 <column name="outdata_read_reg_12204">64, 0, 64, 0</column>
 <column name="outputinfo_offlchan_reg_12409">32, 0, 32, 0</column>
 <column name="phi_mul18_reg_5981">22, 0, 22, 0</column>
 <column name="phi_mul23_reg_6051">21, 0, 21, 0</column>
-<column name="select_ln49_reg_12312">2, 0, 32, 30</column>
+<column name="select_ln235_reg_12312">2, 0, 32, 30</column>
 <column name="slot_1_reg_6027">32, 0, 32, 0</column>
 <column name="slot_reg_5933">32, 0, 32, 0</column>
-<column name="trunc_ln103_reg_12428">9, 0, 9, 0</column>
 <column name="trunc_ln171_reg_12241">6, 0, 6, 0</column>
-<column name="trunc_ln179_2_reg_12443">16, 0, 16, 0</column>
-<column name="trunc_ln183_reg_12448">6, 0, 6, 0</column>
 <column name="trunc_ln202_reg_12246">6, 0, 6, 0</column>
 <column name="trunc_ln210_2_reg_12384">58, 0, 58, 0</column>
+<column name="trunc_ln232_reg_12288">6, 0, 6, 0</column>
 <column name="trunc_ln233_reg_12251">6, 0, 6, 0</column>
-<column name="trunc_ln46_reg_12288">6, 0, 6, 0</column>
+<column name="trunc_ln289_reg_12428">9, 0, 9, 0</column>
+<column name="trunc_ln338_2_reg_12443">16, 0, 16, 0</column>
+<column name="trunc_ln342_reg_12448">6, 0, 6, 0</column>
 <column name="trunc_ln_reg_12379">58, 0, 58, 0</column>
 <column name="wib_reg_12353">4, 0, 4, 0</column>
 <column name="wibframechan_reg_12374">8, 0, 8, 0</column>

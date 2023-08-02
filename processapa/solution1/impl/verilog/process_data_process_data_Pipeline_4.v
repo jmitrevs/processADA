@@ -61,10 +61,10 @@ module process_data_process_data_Pipeline_4 (
         m_axi_gmem_BUSER,
         chanmap_DetToChanInfo,
         trunc_ln202_4,
-        zext_ln85,
+        zext_ln271,
         upri_reload,
         link_from_frameheader,
-        zext_ln77,
+        zext_ln263,
         add_ln202_out,
         add_ln202_out_ap_vld,
         add_ln202_3_out,
@@ -347,10 +347,10 @@ input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
 input  [63:0] chanmap_DetToChanInfo;
 input  [5:0] trunc_ln202_4;
-input  [7:0] zext_ln85;
+input  [7:0] zext_ln271;
 input  [31:0] upri_reload;
 input  [31:0] link_from_frameheader;
-input  [3:0] zext_ln77;
+input  [3:0] zext_ln263;
 output  [63:0] add_ln202_out;
 output   add_ln202_out_ap_vld;
 output  [5:0] add_ln202_3_out;
@@ -384,10 +384,10 @@ wire    ap_CS_fsm_state147;
 wire    ap_CS_fsm_state149;
 wire    ap_CS_fsm_state220;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire   [31:0] zext_ln77_cast_fu_196_p1;
-reg   [31:0] zext_ln77_cast_reg_494;
-wire   [31:0] zext_ln85_cast_fu_200_p1;
-reg   [31:0] zext_ln85_cast_reg_499;
+wire   [31:0] zext_ln263_cast_fu_196_p1;
+reg   [31:0] zext_ln263_cast_reg_494;
+wire   [31:0] zext_ln271_cast_fu_200_p1;
+reg   [31:0] zext_ln271_cast_reg_499;
 reg   [63:0] i_3_reg_504;
 wire   [63:0] add_ln202_fu_242_p2;
 reg   [63:0] add_ln202_reg_509;
@@ -957,8 +957,8 @@ always @ (posedge ap_clk) begin
         add_ln202_reg_509 <= add_ln202_fu_242_p2;
         i_3_reg_504 <= ap_sig_allocacmp_i_3;
         trunc_ln202_5_reg_526 <= {{add_ln202_1_fu_254_p2[63:6]}};
-        zext_ln77_cast_reg_494[3 : 0] <= zext_ln77_cast_fu_196_p1[3 : 0];
-        zext_ln85_cast_reg_499[7 : 0] <= zext_ln85_cast_fu_200_p1[7 : 0];
+        zext_ln263_cast_reg_494[3 : 0] <= zext_ln263_cast_fu_196_p1[3 : 0];
+        zext_ln271_cast_reg_499[7 : 0] <= zext_ln271_cast_fu_200_p1[7 : 0];
     end
 end
 
@@ -2834,9 +2834,9 @@ end
 
 assign icmp_ln202_1_fu_381_p2 = ((trunc_ln202_3_fu_377_p1 == upri_reload) ? 1'b1 : 1'b0);
 
-assign icmp_ln202_fu_306_p2 = ((trunc_ln202_1_fu_302_p1 == zext_ln85_cast_reg_499) ? 1'b1 : 1'b0);
+assign icmp_ln202_fu_306_p2 = ((trunc_ln202_1_fu_302_p1 == zext_ln271_cast_reg_499) ? 1'b1 : 1'b0);
 
-assign icmp_ln203_1_fu_468_p2 = ((trunc_ln203_1_fu_464_p1 == zext_ln77_cast_reg_494) ? 1'b1 : 1'b0);
+assign icmp_ln203_1_fu_468_p2 = ((trunc_ln203_1_fu_464_p1 == zext_ln263_cast_reg_494) ? 1'b1 : 1'b0);
 
 assign icmp_ln203_fu_412_p2 = ((trunc_ln203_fu_408_p1 == link_from_frameheader) ? 1'b1 : 1'b0);
 
@@ -2948,13 +2948,13 @@ assign zext_ln203_1_fu_455_p1 = shl_ln203_1_fu_447_p3;
 
 assign zext_ln203_fu_399_p1 = shl_ln6_fu_391_p3;
 
-assign zext_ln77_cast_fu_196_p1 = zext_ln77;
+assign zext_ln263_cast_fu_196_p1 = zext_ln263;
 
-assign zext_ln85_cast_fu_200_p1 = zext_ln85;
+assign zext_ln271_cast_fu_200_p1 = zext_ln271;
 
 always @ (posedge ap_clk) begin
-    zext_ln77_cast_reg_494[31:4] <= 28'b0000000000000000000000000000;
-    zext_ln85_cast_reg_499[31:8] <= 24'b000000000000000000000000;
+    zext_ln263_cast_reg_494[31:4] <= 28'b0000000000000000000000000000;
+    zext_ln271_cast_reg_499[31:8] <= 24'b000000000000000000000000;
 end
 
 endmodule //process_data_process_data_Pipeline_4

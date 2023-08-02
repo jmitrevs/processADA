@@ -1354,10 +1354,10 @@ newFuncRoot:0 %i = alloca i32 1
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:1 %zext_ln77_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln77
+newFuncRoot:1 %zext_ln263_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln263
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln77_read"/></StgValue>
+<StgValue><ssdm name="zext_ln263_read"/></StgValue>
 </operation>
 
 <operation id="226" st_id="1" stage="1" lat="1">
@@ -1399,10 +1399,10 @@ newFuncRoot:3 %upri_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %upri
 
 <Node id="14" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:4 %zext_ln85_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln85
+newFuncRoot:4 %zext_ln271_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln271
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln85_read"/></StgValue>
+<StgValue><ssdm name="zext_ln271_read"/></StgValue>
 </operation>
 
 <operation id="229" st_id="1" stage="1" lat="1">
@@ -1444,10 +1444,10 @@ newFuncRoot:6 %chanmap_DetToChanInfo_read = read i64 @_ssdm_op_Read.ap_auto.i64,
 
 <Node id="17" bw="32" op_0_bw="4">
 <![CDATA[
-newFuncRoot:7 %zext_ln77_cast = zext i4 %zext_ln77_read
+newFuncRoot:7 %zext_ln263_cast = zext i4 %zext_ln263_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln77_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln263_cast"/></StgValue>
 </operation>
 
 <operation id="232" st_id="1" stage="1" lat="1">
@@ -1459,10 +1459,10 @@ newFuncRoot:7 %zext_ln77_cast = zext i4 %zext_ln77_read
 
 <Node id="18" bw="32" op_0_bw="8">
 <![CDATA[
-newFuncRoot:8 %zext_ln85_cast = zext i8 %zext_ln85_read
+newFuncRoot:8 %zext_ln271_cast = zext i8 %zext_ln271_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln85_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln271_cast"/></StgValue>
 </operation>
 
 <operation id="233" st_id="1" stage="1" lat="1">
@@ -3103,7 +3103,7 @@ for.body38.i:20 %trunc_ln202_1 = trunc i512 %lshr_ln202
 
 <Node id="44" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body38.i:21 %icmp_ln202 = icmp_eq  i32 %trunc_ln202_1, i32 %zext_ln85_cast
+for.body38.i:21 %icmp_ln202 = icmp_eq  i32 %trunc_ln202_1, i32 %zext_ln271_cast
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln202"/></StgValue>
@@ -7592,7 +7592,7 @@ land.lhs.true54.i:10 %trunc_ln203_1 = trunc i512 %lshr_ln203_1
 
 <Node id="85" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-land.lhs.true54.i:11 %icmp_ln203_1 = icmp_eq  i32 %trunc_ln203_1, i32 %zext_ln77_cast
+land.lhs.true54.i:11 %icmp_ln203_1 = icmp_eq  i32 %trunc_ln203_1, i32 %zext_ln263_cast
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln203_1"/></StgValue>

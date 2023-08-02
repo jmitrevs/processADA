@@ -6,12 +6,11 @@
 #include <ap_fixed.h>
 #include "defines3.h"
 
-
-void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapSP& chanmap ,int outdata[3])
+void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapSP& chanmap ,int outdata[276])
 {
+	//Create variables
 
 	constexpr unsigned int NUM_LINKS = 10;
-	const int total_channels = NUM_LINKS*dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels;
 	const int z_channels = 480;
 	const int n_frames = 6000;
 
@@ -41,8 +40,6 @@ void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapS
         frame_loop:
         for (size_t iFrame = 0; iFrame < n_frames; ++iFrame)
         {
-
-
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
             if (iFrame == 0)
             {
@@ -86,20 +83,10 @@ void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapS
             unsigned int offline_chan = hdchaninfo.offlchan;
             unsigned int offline_plane = hdchaninfo.plane;
 
-
-
-/*
-            unsigned int offline_chan = 2;
-            unsigned int offline_plane = iChan+ 1600;
-            */
-
-
             if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
             {
                 for (int i = 0; i < n_frames; i++)
                 {
-                	//std::cout << "offline chan" << offline_chan << std::endl;
-                	//std::cout << "pedestal: " << ave[iChan] << std::endl;
                     planes[offline_chan - CHAN_MIN][i] = adc_vectors[iChan][i]-ave[iChan];
                 }
             }
@@ -107,20 +94,12 @@ void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapS
             {
             	for (int i = 0; i < n_frames; i++)
             	{
-            		//std::cout << "pedestal: " << ave[iChan] << std::endl;
             		planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors[iChan][i]-ave[iChan];
             	}
             }
         }
     }
 
-    //check if planes is filled correctly
-/*
-    for(int i = 0; i <10; i++)
-    {
-    	std::cout<<planes[4][i] << std::endl;
-    }
-*/
     //Call 2D CNN
 
     const int TICK_SIZE = 128;
@@ -128,34 +107,79 @@ void process_data(const int infile_size, char infiledata[],dune::FDHDChannelMapS
     input_t pack;
     hls::stream<result_t> layer19_out;
 
-        for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
-        {
-            for(int j = 0; j < z_channels; j++) {
+    for (int i = 0; i < TICK_SIZE; i += TICK_SIZE)
+    {
+        for(int j = 0; j < z_channels; j++) {
 
-                for(int k = 0; k <TICK_SIZE; k++) {
-                   if(i+k < n_frames)
-                	{
-                	   int fill = planes[j][i+k];
-                	   pack[0] = typename input_t::value_type(fill);
-                	   zero_padding2d_input.write(pack);
-                    } else {
-                    	pack[0] = typename input_t::value_type(0);
-                    	zero_padding2d_input.write(pack);
-                    }
-
+            for(int k = 0; k <TICK_SIZE; k++) {
+               if(i+k < n_frames)
+            	{
+            	   int fill = planes[j][i+k];
+            	   pack[0] = typename input_t::value_type(fill);
+            	   zero_padding2d_input.write(pack);
+                } else {
+                	pack[0] = typename input_t::value_type(0);
+                	zero_padding2d_input.write(pack);
                 }
 
             }
 
-            myproject(zero_padding2d_input, layer19_out);
+        }
 
-                    auto cc_prob = layer19_out.read();
+        myproject(zero_padding2d_input, layer19_out);
 
-                    for (int i = 0; i < 3; i++)
+                auto cc_prob = layer19_out.read();
 
-                    	outdata[i] = cc_prob[i];
-                    }
+                for (int i = 0; i < 3; i++)
 
+                	outdata[i] = cc_prob[i];
+                }
+
+    //only does ticks by 128, there will be some ticks never processed
+
+	for (int i = 0; i < 128; i += TICK_SIZE)
+	{
+		for(int j = 0; j < z_channels; j++)
+		{
+			for(int k = 0; k <TICK_SIZE; k++)
+			{
+				   int fill = planes[j][i+k];
+				   pack[0] = typename input_t::value_type(fill);
+				   zero_padding2d_input.write(pack);
+			}
+		}
+
+		myproject(zero_padding2d_input, layer19_out);
+		auto cc_prob = layer19_out.read();
+		for (int z = 0; z < 3; z++)
+		{
+			outdata[z+(i/TICK_SIZE)*3] = cc_prob[z];
+
+		}
+	}
+
+
+	for (int i = 0; i < n_frames; i += TICK_SIZE)
+	{
+		for(int j = 0; j < z_channels; j++)
+		{
+			for(int k = 0; k <TICK_SIZE; k++)
+			{
+				   int fill = planes2[j][i+k];
+				   pack[0] = typename input_t::value_type(fill);
+				   zero_padding2d_input.write(pack);
+			}
+		}
+
+		myproject(zero_padding2d_input, layer19_out);
+		auto cc_prob = layer19_out.read();
+		int side1_data = 138;
+		for (int z = 0; z < 3; z++)
+		{
+			outdata[side1_data+z+(i/TICK_SIZE)*3] = cc_prob[z];
+		}
+	}
 
 
 }
+

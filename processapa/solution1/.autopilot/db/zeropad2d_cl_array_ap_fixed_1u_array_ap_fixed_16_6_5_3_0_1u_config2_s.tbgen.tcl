@@ -85,8 +85,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "3", "SubInstance" : "grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain_fu_28", "Port" : "zero_padding2d_input", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "layer2_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "65536", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth_fu_22", "Port" : "layer2_out", "Inst_start_state" : "1", "Inst_end_state" : "2"},
 					{"ID" : "5", "SubInstance" : "grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadBottom_PadBottomWidth_fu_36", "Port" : "layer2_out", "Inst_start_state" : "7", "Inst_end_state" : "8"},
+					{"ID" : "1", "SubInstance" : "grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth_fu_22", "Port" : "layer2_out", "Inst_start_state" : "1", "Inst_end_state" : "2"},
 					{"ID" : "3", "SubInstance" : "grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain_fu_28", "Port" : "layer2_out", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth_fu_22", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadTop_PadTopWidth",

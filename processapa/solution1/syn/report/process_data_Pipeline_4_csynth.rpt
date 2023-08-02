@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'process_data_Pipeline_4'
 ================================================================
-* Date:           Tue Aug  1 14:26:22 2023
+* Date:           Tue Aug  1 18:02:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -152,8 +152,8 @@
     |trunc_ln202_5_reg_526     |   58|   0|   58|          0|
     |trunc_ln203_2_reg_557     |   58|   0|   58|          0|
     |trunc_ln2_reg_586         |   58|   0|   58|          0|
-    |zext_ln77_cast_reg_494    |    4|   0|   32|         28|
-    |zext_ln85_cast_reg_499    |    8|   0|   32|         24|
+    |zext_ln263_cast_reg_494   |    4|   0|   32|         28|
+    |zext_ln271_cast_reg_499   |    8|   0|   32|         24|
     +--------------------------+-----+----+-----+-----------+
     |Total                     | 2721|   0| 2773|         52|
     +--------------------------+-----+----+-----+-----------+
@@ -221,10 +221,10 @@
 |m_axi_gmem_BUSER        |   in|    1|       m_axi|                     gmem|       pointer|
 |chanmap_DetToChanInfo   |   in|   64|     ap_none|    chanmap_DetToChanInfo|        scalar|
 |trunc_ln202_4           |   in|    6|     ap_none|            trunc_ln202_4|        scalar|
-|zext_ln85               |   in|    8|     ap_none|                zext_ln85|        scalar|
+|zext_ln271              |   in|    8|     ap_none|               zext_ln271|        scalar|
 |upri_reload             |   in|   32|     ap_none|              upri_reload|        scalar|
 |link_from_frameheader   |   in|   32|     ap_none|    link_from_frameheader|        scalar|
-|zext_ln77               |   in|    4|     ap_none|                zext_ln77|        scalar|
+|zext_ln263              |   in|    4|     ap_none|               zext_ln263|        scalar|
 |add_ln202_out           |  out|   64|      ap_vld|            add_ln202_out|       pointer|
 |add_ln202_out_ap_vld    |  out|    1|      ap_vld|            add_ln202_out|       pointer|
 |add_ln202_3_out         |  out|    6|      ap_vld|          add_ln202_3_out|       pointer|

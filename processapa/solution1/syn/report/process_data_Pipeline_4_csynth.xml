@@ -658,8 +658,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln85</name>
-<Object>zext_ln85</Object>
+<name>zext_ln271</name>
+<Object>zext_ln271</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -691,8 +691,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln77</name>
-<Object>zext_ln77</Object>
+<name>zext_ln263</name>
+<Object>zext_ln263</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

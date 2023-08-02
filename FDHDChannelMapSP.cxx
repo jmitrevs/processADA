@@ -26,7 +26,7 @@ dune::FDHDChannelMapSP::FDHDChannelMapSP()
 
 void dune::FDHDChannelMapSP::ReadMapFromFiles(const std::string &chanmapfile, const std::string &cratemapfile)
 {
-	 std::string APAval[150];
+  std::string APAval[150];
   std::ifstream inFile(chanmapfile, std::ios::in);
   std::string line;
 
