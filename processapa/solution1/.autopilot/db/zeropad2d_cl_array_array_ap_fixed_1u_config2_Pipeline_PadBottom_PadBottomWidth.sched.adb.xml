@@ -40,7 +40,7 @@ newFuncRoot:0 %indvar_flatten13 = alloca i32 1
 
 <Node id="3" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -240,7 +240,7 @@ for.inc53:2 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 42
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc53:3 %specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24
+for.inc53:3 %specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln77"/></StgValue>

@@ -1,19 +1,22 @@
 set SynModuleInfo {
   {SRCNAME process_data_Pipeline_frame_chan_loop MODELNAME process_data_Pipeline_frame_chan_loop RTLNAME process_data_process_data_Pipeline_frame_chan_loop
     SUBMODULES {
+      {MODELNAME process_data_process_data_Pipeline_frame_chan_loop_adc_words_RAM_AUTO_1R1W RTLNAME process_data_process_data_Pipeline_frame_chan_loop_adc_words_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME process_data_flow_control_loop_pipe_sequential_init RTLNAME process_data_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME process_data_flow_control_loop_pipe_sequential_init_U}
     }
   }
   {SRCNAME process_data_Pipeline_first_chan_loop_first_chan_frame_loop MODELNAME process_data_Pipeline_first_chan_loop_first_chan_frame_loop RTLNAME process_data_process_data_Pipeline_first_chan_loop_first_chan_frame_loop
     SUBMODULES {
       {MODELNAME process_data_mul_21ns_23ns_43_1_1 RTLNAME process_data_mul_21ns_23ns_43_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME process_data_mac_muladd_9ns_13ns_7ns_21_4_1 RTLNAME process_data_mac_muladd_9ns_13ns_7ns_21_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME process_data_mux_8_3_14_1_1 RTLNAME process_data_mux_8_3_14_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME process_data_mac_muladd_9ns_10ns_4ns_18_4_1 RTLNAME process_data_mac_muladd_9ns_10ns_4ns_18_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME process_data_Pipeline_VITIS_LOOP_169_1 MODELNAME process_data_Pipeline_VITIS_LOOP_169_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_169_1}
   {SRCNAME process_data_Pipeline_4 MODELNAME process_data_Pipeline_4 RTLNAME process_data_process_data_Pipeline_4}
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_285_1 MODELNAME process_data_Pipeline_VITIS_LOOP_285_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_285_1}
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5 MODELNAME process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_319_4_VITIS_LOOP_321_5
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_160_2 MODELNAME process_data_Pipeline_VITIS_LOOP_160_2 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_160_2}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_131_1 MODELNAME process_data_Pipeline_VITIS_LOOP_131_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_131_1}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_203_4_VITIS_LOOP_205_5 MODELNAME process_data_Pipeline_VITIS_LOOP_203_4_VITIS_LOOP_205_5 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_203_4_VITIS_LOOP_205_5
     SUBMODULES {
       {MODELNAME process_data_mac_muladd_9ns_13ns_8ns_22_4_1 RTLNAME process_data_mac_muladd_9ns_13ns_8ns_22_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
@@ -101,7 +104,6 @@ set SynModuleInfo {
       {MODELNAME process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b RTLNAME process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME dense<array,array<ap_fixed<16,6,5,3,0>,8u>,config16>_Pipeline_DataPrepare MODELNAME dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare RTLNAME process_data_dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare}
   {SRCNAME {dense_wrapper<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config16>} MODELNAME dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config16_s RTLNAME process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config16_s
     SUBMODULES {
       {MODELNAME process_data_mux_128_7_16_1_1 RTLNAME process_data_mux_128_7_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
@@ -151,20 +153,29 @@ set SynModuleInfo {
       {MODELNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 RTLNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0_U}
     }
   }
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_340_6 MODELNAME process_data_Pipeline_VITIS_LOOP_340_6 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_340_6}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_215_6 MODELNAME process_data_Pipeline_VITIS_LOOP_215_6 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_215_6}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_226_8_VITIS_LOOP_228_9 MODELNAME process_data_Pipeline_VITIS_LOOP_226_8_VITIS_LOOP_228_9 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_226_8_VITIS_LOOP_228_9
+    SUBMODULES {
+      {MODELNAME process_data_mac_muladd_9ns_13ns_13ns_22_4_1 RTLNAME process_data_mac_muladd_9ns_13ns_13ns_22_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_239_10 MODELNAME process_data_Pipeline_VITIS_LOOP_239_10 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_239_10}
   {SRCNAME process_data MODELNAME process_data RTLNAME process_data IS_TOP 1
     SUBMODULES {
       {MODELNAME process_data_mul_32ns_34ns_65_1_1 RTLNAME process_data_mul_32ns_34ns_65_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME process_data_urem_32ns_5ns_4_36_seq_1 RTLNAME process_data_urem_32ns_5ns_4_36_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 35 ALLOW_PRAGMA 1}
       {MODELNAME process_data_mul_29ns_4ns_32_1_1 RTLNAME process_data_mul_29ns_4ns_32_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME process_data_mul_22s_14ns_22_1_1 RTLNAME process_data_mul_22s_14ns_22_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME process_data_mul_9ns_14ns_22_1_1 RTLNAME process_data_mul_9ns_14ns_22_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME process_data_planes_RAM_AUTO_1R1W RTLNAME process_data_planes_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME process_data_adc_vectors_RAM_AUTO_1R1W RTLNAME process_data_adc_vectors_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME process_data_process_data_int_char_FDHDChannelMapSP_int_adc_vectors_RAM_AUTO_1R1W RTLNAME process_data_process_data_int_char_FDHDChannelMapSP_int_adc_vectors_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME process_data_ave_RAM_AUTO_1R1W RTLNAME process_data_ave_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME process_data_cc_prob_RAM_AUTO_1R1W RTLNAME process_data_cc_prob_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME process_data_fifo_w15_d2_S RTLNAME process_data_fifo_w15_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME zero_padding2d_input_U}
       {MODELNAME process_data_fifo_w48_d2_S RTLNAME process_data_fifo_w48_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME layer19_out_U}
       {MODELNAME process_data_gmem_m_axi RTLNAME process_data_gmem_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME process_data_gmem1_m_axi RTLNAME process_data_gmem1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME process_data_gmem4_m_axi RTLNAME process_data_gmem4_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME process_data_control_s_axi RTLNAME process_data_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
     }
   }

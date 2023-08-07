@@ -50,15 +50,15 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+    signal void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal sX_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal sY_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal pY_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
@@ -110,24 +110,24 @@ attribute shreg_extract : string;
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_ap_done : STD_LOGIC;
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_ap_idle : STD_LOGIC;
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_ap_ready : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o_ap_vld : STD_LOGIC;
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o : STD_LOGIC_VECTOR (15 downto 0);
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld : STD_LOGIC;
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o : STD_LOGIC_VECTOR (15 downto 0);
     signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_ap_vld : STD_LOGIC;
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 : STD_LOGIC_VECTOR (15 downto 0);
-    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_ap_vld : STD_LOGIC;
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : STD_LOGIC_VECTOR (15 downto 0);
+    signal call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_ap_vld : STD_LOGIC;
     signal grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_start : STD_LOGIC;
     signal grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_done : STD_LOGIC;
     signal grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_idle : STD_LOGIC;
@@ -174,8 +174,8 @@ attribute shreg_extract : string;
     signal select_ln328_fu_408_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln317_fu_433_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln313_fu_386_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_272_fu_177_p4 : STD_LOGIC_VECTOR (30 downto 0);
-    signal tmp_273_fu_193_p4 : STD_LOGIC_VECTOR (30 downto 0);
+    signal tmp_271_fu_177_p4 : STD_LOGIC_VECTOR (30 downto 0);
+    signal tmp_272_fu_193_p4 : STD_LOGIC_VECTOR (30 downto 0);
     signal icmp_ln289_8_fu_187_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal icmp_ln289_9_fu_203_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal and_ln289_fu_209_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -200,30 +200,30 @@ attribute shreg_extract : string;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         in_elem_0_0_0_0_0_val : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_i : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_i : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_i : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o_ap_vld : OUT STD_LOGIC;
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i : IN STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o : OUT STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld : OUT STD_LOGIC;
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_i : IN STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o : OUT STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_ap_vld : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 : OUT STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_ap_vld : OUT STD_LOGIC );
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_ap_vld : OUT STD_LOGIC;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : OUT STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_ap_vld : OUT STD_LOGIC );
     end component;
 
 
@@ -235,14 +235,14 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 : IN STD_LOGIC_VECTOR (15 downto 0);
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 : IN STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 : IN STD_LOGIC_VECTOR (15 downto 0);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 : IN STD_LOGIC_VECTOR (15 downto 0);
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 : IN STD_LOGIC_VECTOR (15 downto 0);
         ap_return_0 : OUT STD_LOGIC_VECTOR (15 downto 0);
         ap_return_1 : OUT STD_LOGIC_VECTOR (15 downto 0);
@@ -290,30 +290,30 @@ begin
         ap_idle => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_ap_idle,
         ap_ready => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_ap_ready,
         in_elem_0_0_0_0_0_val => in_elem_0_0_0_0_0_val,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o_ap_vld,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_ap_vld,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_i => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38_o_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_ap_vld,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_ap_vld);
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_ap_vld,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_ap_vld => call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_ap_vld);
 
     grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123 : component process_data_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s
     port map (
@@ -323,14 +323,14 @@ begin
         ap_done => grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_done,
         ap_idle => grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_idle,
         ap_ready => grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_ready,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32,
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36,
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37,
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 => void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38,
         ap_return_0 => grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_return_0,
         ap_return_1 => grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_return_1,
@@ -501,16 +501,16 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_o;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_o;
             end if;
         end if;
     end process;
@@ -525,16 +525,16 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_o;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_o;
             end if;
         end if;
     end process;
@@ -549,16 +549,16 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_o;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_ap_vld = ap_const_logic_1))) then
-                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37;
+            if (((ap_const_logic_1 = ap_CS_fsm_state1) and (call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o_ap_vld = ap_const_logic_1))) then
+                void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 <= call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95_void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_o;
             end if;
         end if;
     end process;
@@ -725,8 +725,8 @@ begin
 
     grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_start <= grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123_ap_start_reg;
     grp_fu_149_p2 <= "1" when (sY_2 = ap_const_lv32_2) else "0";
-    icmp_ln289_8_fu_187_p2 <= "1" when (signed(tmp_272_fu_177_p4) > signed(ap_const_lv31_0)) else "0";
-    icmp_ln289_9_fu_203_p2 <= "1" when (signed(tmp_273_fu_193_p4) > signed(ap_const_lv31_0)) else "0";
+    icmp_ln289_8_fu_187_p2 <= "1" when (signed(tmp_271_fu_177_p4) > signed(ap_const_lv31_0)) else "0";
+    icmp_ln289_9_fu_203_p2 <= "1" when (signed(tmp_272_fu_193_p4) > signed(ap_const_lv31_0)) else "0";
     icmp_ln289_fu_158_p2 <= "1" when (sX_2 = ap_const_lv32_2) else "0";
     icmp_ln313_fu_391_p2 <= "1" when (add_ln313_fu_386_p2 = ap_const_lv32_80) else "0";
     icmp_ln317_fu_438_p2 <= "1" when (add_ln317_fu_433_p2 = ap_const_lv32_200) else "0";
@@ -757,6 +757,6 @@ begin
     select_ln328_fu_408_p3 <= 
         ap_const_lv32_2 when (icmp_ln289_reg_479(0) = '1') else 
         add_ln328_fu_403_p2;
-    tmp_272_fu_177_p4 <= pY_2(31 downto 1);
-    tmp_273_fu_193_p4 <= pX_2(31 downto 1);
+    tmp_271_fu_177_p4 <= pY_2(31 downto 1);
+    tmp_272_fu_193_p4 <= pX_2(31 downto 1);
 end behav;

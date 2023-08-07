@@ -23,25 +23,9 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>./nnet_utils/nnet_helpers.h</string>
-      <key>line</key>
-      <integer>286</integer>
-      <key>column</key>
-      <integer>99</integer>
-      <key>message</key>
-      <string>unused parameter &apos;keep&apos;</string>
-      <key>ID</key>
-      <integer>5292</integer>
-      <key>WarningOption</key>
-      <string>unused-parameter</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
       <string>/home/brenton/kernel/processAPA/processapa/solution1/csynth.tcl</string>
       <key>line</key>
-      <integer>27</integer>
+      <integer>28</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -62,6 +46,54 @@
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=name=process_data_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>kernel.cpp</string>
+      <key>line</key>
+      <integer>7</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi depth=28320800 port=infiledata offset=slave bundle=gmem_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>kernel.cpp</string>
+      <key>line</key>
+      <integer>8</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi depth=276 port=outdata offset=slave bundle=gmem_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>kernel.cpp</string>
+      <key>line</key>
+      <integer>26</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=variable=adc_vectors type=cyclic factor=8 dim=2_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

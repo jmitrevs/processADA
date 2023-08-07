@@ -53,7 +53,7 @@ entry:0 %indvar_flatten = alloca i32 1
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer3_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0
+entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer3_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -68,7 +68,7 @@ entry:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %l
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_11, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0
+entry:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -193,7 +193,7 @@ for.inc13.i:3 %layer2_out_read = read i16 @_ssdm_op_Read.ap_fifo.volatile.i16P0A
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="512" op_3_bw="16" op_4_bw="16" op_5_bw="16" op_6_bw="16" op_7_bw="16" op_8_bw="16" op_9_bw="16" op_10_bw="16" op_11_bw="16" op_12_bw="16" op_13_bw="16" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="4" op_19_bw="25">
 <![CDATA[
-for.inc13.i:4 %call_ln87 = call void @compute_output_buffer_2d<array,array<ap_fixed<16,6,5,3,0>,32u>,config3>, i16 %layer2_out_read, i512 %layer3_out, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer, i32 %sX_2, i32 %sY_2, i32 %pY_2, i32 %pX_2, i4 %outidx, i25 %w3
+for.inc13.i:4 %call_ln87 = call void @compute_output_buffer_2d<array,array<ap_fixed<16,6,5,3,0>,32u>,config3>, i16 %layer2_out_read, i512 %layer3_out, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer, i32 %sX_2, i32 %sY_2, i32 %pY_2, i32 %pX_2, i4 %outidx, i25 %w3
 
 ]]></Node>
 <StgValue><ssdm name="call_ln87"/></StgValue>
@@ -273,7 +273,7 @@ for.inc13.i:1 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoop
 
 <Node id="33" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc13.i:2 %specloopname_ln81 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
+for.inc13.i:2 %specloopname_ln81 = specloopname void @_ssdm_op_SpecLoopName, void @empty_33
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln81"/></StgValue>
@@ -288,7 +288,7 @@ for.inc13.i:2 %specloopname_ln81 = specloopname void @_ssdm_op_SpecLoopName, voi
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="512" op_3_bw="16" op_4_bw="16" op_5_bw="16" op_6_bw="16" op_7_bw="16" op_8_bw="16" op_9_bw="16" op_10_bw="16" op_11_bw="16" op_12_bw="16" op_13_bw="16" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="4" op_19_bw="25">
 <![CDATA[
-for.inc13.i:4 %call_ln87 = call void @compute_output_buffer_2d<array,array<ap_fixed<16,6,5,3,0>,32u>,config3>, i16 %layer2_out_read, i512 %layer3_out, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer, i32 %sX_2, i32 %sY_2, i32 %pY_2, i32 %pX_2, i4 %outidx, i25 %w3
+for.inc13.i:4 %call_ln87 = call void @compute_output_buffer_2d<array,array<ap_fixed<16,6,5,3,0>,32u>,config3>, i16 %layer2_out_read, i512 %layer3_out, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer, i32 %sX_2, i32 %sY_2, i32 %pY_2, i32 %pX_2, i4 %outidx, i25 %w3
 
 ]]></Node>
 <StgValue><ssdm name="call_ln87"/></StgValue>

@@ -582,7 +582,7 @@ Args:
 --- !Passed
 Pass:            reflow-disaggr
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -590,7 +590,7 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 282, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -12900,21 +12900,6 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
-Function:        _ZNK7dunedaq14detdataformats4wib29WIB2Frame7get_adcEi
-Args:            
-  - String:          'Inlining function '''
-  - Callee:          'int const& std::min<int>(int const&, int const&)'
-    DebugLoc:        { File: '/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/bits/stl_algobase.h', 
-                       Line: 196, Column: 0 }
-  - String:          ''' into '''
-  - Caller:          'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const'
-    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
-  - String:          ''''
-...
---- !Passed
-Pass:            reflow-inliner
-Name:            AutoInline
 DebugLoc:        { File: ./nnet_utils/nnet_padding_stream.h, Line: 48, 
                    Column: 0 }
 Function:        _ZN4nnet12zeropad2d_clINS_5arrayI8ap_fixedILi15ELi15EL9ap_q_mode5EL9ap_o_mode3ELi0EELj1EEENS1_IS2_ILi16ELi6ELS3_5ELS4_3ELi0EELj1EEE7config2EEvRN3hls6streamIT_Li0EEERNSB_IT0_Li0EEE
@@ -13609,7 +13594,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13617,27 +13602,27 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 231, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
   - Callee:          'dunedaq::detdataformats::wib2::WIB2Frame::get_adc(int) const'
-    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 95, Column: 0 }
+    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 96, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13645,13 +13630,13 @@ Args:
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 156, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13659,13 +13644,13 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 300, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13673,13 +13658,13 @@ Args:
     DebugLoc:        { File: ./nnet_utils/nnet_types.h, Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13687,8 +13672,36 @@ Args:
     DebugLoc:        { File: ./nnet_utils/nnet_types.h, Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: kernel.cpp, Line: 73, Column: 44 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: kernel.cpp, Line: 19, Column: 0 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '8'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
 ...
 --- !Passed
 Pass:            reflow-array-partition
@@ -14632,7 +14645,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 313, Column: 26 }
+DebugLoc:        { File: kernel.cpp, Line: 194, Column: 26 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Aggregating '
@@ -14648,7 +14661,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 315, Column: 27 }
+DebugLoc:        { File: kernel.cpp, Line: 196, Column: 27 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Aggregating '
@@ -23478,17 +23491,17 @@ Args:
   - Length:          '150'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        chanmap_fUprightFromCrate2seq
+  - AccessID:        chanmap_fUprightFromCrate3seq
   - ArrayName:       chanmap_fUprightFromCrate
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem1
   - String:          ' '
   - LoopName:        VITIS_LOOP_169_1
   - String:          ' '
   - LoopLoc:         'FDHDChannelMapSP.cxx:169:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
@@ -23499,7 +23512,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Sequential '
@@ -23508,23 +23521,53 @@ Args:
   - Length:          '3'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        outdata3seq
+  - AccessID:        outdata4seq
   - ArrayName:       outdata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_340_6
+  - LoopName:        VITIS_LOOP_215_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:340:39'
+  - LoopLoc:         'kernel.cpp:215:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: kernel.cpp, Line: 342, Column: 33 }
+    DebugLoc:        { File: kernel.cpp, Line: 217, Column: 31 }
   - OrigDirection:   write
-  - OrigID:          for.inc153.store.4
+  - OrigID:          for.inc173.store.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       outdata
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_239_10
+  - String:          ' '
+  - LoopLoc:         'kernel.cpp:239:22'
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: kernel.cpp, Line: 241, Column: 42 }
+  - OrigDirection:   write
+  - OrigID:          for.inc223.store.6
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -23539,64 +23582,13 @@ Args:
   - LoopLoc:         'FDHDChannelMapSP.cxx:201:29'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: ./WIB2Frame.hpp, Line: 106, Column: 20 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          Could not analyze pattern
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 106, Column: 20 }
-  - OrigDirection:   read
-  - OrigID:          if.end.i.load.14
-  - ArrayName:       infiledata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        frame_chan_loop
-  - String:          ' '
-  - LoopLoc:         'kernel.cpp:240:13'
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            AccessInCondBranch
-DebugLoc:        { File: ./WIB2Frame.hpp, Line: 110, Column: 14 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Access '
-  - Access:          load
-    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 110, Column: 14 }
-  - String:          ' is in the conditional branch'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      load
-    DebugLoc:        { File: ./WIB2Frame.hpp, Line: 110, Column: 14 }
-  - OrigDirection:   read
-  - OrigID:          if.then6.i.load.6
-  - ArrayName:       infiledata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        frame_chan_loop
-  - String:          ' '
-  - LoopLoc:         'kernel.cpp:240:13'
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            InsufficientAlignment
-DebugLoc:        { File: kernel.cpp, Line: 235, Column: 39 }
+DebugLoc:        { File: kernel.cpp, Line: 59, Column: 39 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Alignment is insufficient, current alignment is '
@@ -23606,15 +23598,15 @@ Args:
   - String:          ' is required'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: kernel.cpp, Line: 235, Column: 39 }
+    DebugLoc:        { File: kernel.cpp, Line: 59, Column: 39 }
   - OrigDirection:   read
-  - OrigID:          if.then12.load.1
+  - OrigID:          if.then8.load.1
   - ArrayName:       infiledata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23631,14 +23623,14 @@ Args:
   - OrigID:          _ZN4dune16FDHDChannelMapSP26GetChanInfoFromWIBElementsEjjjj.exit.load.2
   - ArrayName:       chanmap_DetToChanInfo
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem4
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:263:9'
+  - LoopLoc:         'kernel.cpp:118:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23655,14 +23647,14 @@ Args:
   - OrigID:          _ZN4dune16FDHDChannelMapSP26GetChanInfoFromWIBElementsEjjjj.exit.load.4
   - ArrayName:       chanmap_DetToChanInfo
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem4
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:263:9'
+  - LoopLoc:         'kernel.cpp:118:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23676,41 +23668,91 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
   - OrigDirection:   read
-  - OrigID:          chanmap_fUprightFromCrate2seq
+  - OrigID:          chanmap_fUprightFromCrate3seq
   - ArrayName:       chanmap_fUprightFromCrate
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem1
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:263:9'
+  - LoopLoc:         'kernel.cpp:118:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: kernel.cpp, Line: 236, Column: 3 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       outdata
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       outdata
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_239_10
+  - String:          ' '
+  - LoopLoc:         'kernel.cpp:239:22'
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            BadAccessLen
-DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          Sequential access length is not divisible by 2
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
   - OrigDirection:   write
-  - OrigID:          outdata3seq
+  - OrigID:          outdata4seq
   - ArrayName:       outdata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_340_6
+  - LoopName:        VITIS_LOOP_215_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:340:39'
+  - LoopLoc:         'kernel.cpp:215:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -23736,43 +23778,71 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
   - OrigDirection:   read
-  - OrigID:          chanmap_fUprightFromCrate2seq
+  - OrigID:          chanmap_fUprightFromCrate3seq
   - String:          ' _XLX_SEP_ '
   - AccessID:        wseq
   - ArrayName:       chanmap_fUprightFromCrate
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem1
   - String:          ' '
   - LoopName:        VITIS_LOOP_169_1
   - String:          ' '
   - LoopLoc:         'FDHDChannelMapSP.cxx:169:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       outdata
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_239_10
+  - String:          ' '
+  - LoopLoc:         'kernel.cpp:239:22'
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            BadAccessLen
-DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          Sequential access length is not divisible by 2
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
   - OrigDirection:   write
-  - OrigID:          outdata3seq
+  - OrigID:          outdata4seq
   - ArrayName:       outdata
   - String:          ' '
   - BundleName:      gmem
   - String:          ' '
-  - LoopName:        VITIS_LOOP_340_6
+  - LoopName:        VITIS_LOOP_215_6
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:340:39'
+  - LoopLoc:         'kernel.cpp:215:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
 ...
 --- !Failure
@@ -23824,40 +23894,6 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=ref.tmp'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
-  - String:          ' '
-  - VarName:         ref.tmp
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            ref.tmp
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
 Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEENS1_IS5_Lj32EEE8config12EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
 Args:            
   - PragmaType:      array_partition
@@ -23875,6 +23911,40 @@ Args:
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
 Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEENS1_IS5_Lj32EEE8config12EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            ref.tmp
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=complete  variable=ref.tmp'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
+  - String:          ' '
+  - VarName:         ref.tmp
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -23943,7 +24013,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -23956,7 +24026,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -23969,7 +24039,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -23982,7 +24052,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -23995,7 +24065,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24005,56 +24075,84 @@ Args:
   - Name:            chanmap_DetToChanInfo
   - String:          ''' since this interface mode only supports scalar types'
 ...
---- !Failure
-Pass:            reflow-interface-check
-Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Cannot apply interface mode '''
-  - String:          ap_none
-  - String:          ''' '
-  - String:          'on function argument '''
-  - Name:            outdata
-  - String:          ''' since this interface mode only supports scalar types'
-...
 --- !Missed
 Pass:            reflow-supported-subset
 Name:            MismatchPortAndBurstAccessWidth
-DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
+DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
-  - OrigDirection:   read
-  - OrigID:          wseq
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      chanmap_fUprightFromCrate
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-supported-subset
-Name:            MismatchPortAndBurstAccessWidth
-DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 340, Column: 39 }
+    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
   - OrigDirection:   write
-  - OrigID:          outdata3seq
+  - OrigID:          outdata4seq
   - ArrayName:       ''
   - String:          ' '
   - BundleName:      outdata
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 197, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
   - String:          ' '
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      outdata
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '75'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '75'
+  - String:          ' and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

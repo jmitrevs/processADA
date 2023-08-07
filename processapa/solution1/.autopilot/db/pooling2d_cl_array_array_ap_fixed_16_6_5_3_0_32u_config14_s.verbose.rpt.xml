@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s'" level="0">
-<item name = "Date">Tue Aug  1 18:04:23 2023
+<item name = "Date">Mon Aug  7 11:51:51 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -73,6 +73,8 @@
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
+<column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
+<column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
@@ -80,8 +82,6 @@
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
-<column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
-<column name="void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>
 <column name="p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_U">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b, 0, 64, 32, 0, 4, 16, 1, 64</column>

@@ -41576,7 +41576,7 @@ for.body13.split.i.i:895 %data_895_val896918_phi = phi i16 %data_895_val896_read
 
 <Node id="3604" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_21
+for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_35
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln44"/></StgValue>
@@ -41606,7 +41606,7 @@ for.body13.split.i.i:898 %speclooptripcount_ln46 = speclooptripcount void @_ssdm
 
 <Node id="3606" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body13.split.i.i:899 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14
+for.body13.split.i.i:899 %specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln43"/></StgValue>

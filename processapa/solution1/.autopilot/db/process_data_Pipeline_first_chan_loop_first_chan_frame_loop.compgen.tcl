@@ -6,8 +6,75 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 8
-set name process_data_mac_muladd_9ns_13ns_7ns_21_4_1
+set id 12
+set name process_data_mux_8_3_14_1_1
+set corename simcore_mux
+set op mux
+set stage_num 1
+set din0_width 14
+set din0_signed 0
+set din1_width 14
+set din1_signed 0
+set din2_width 14
+set din2_signed 0
+set din3_width 14
+set din3_signed 0
+set din4_width 14
+set din4_signed 0
+set din5_width 14
+set din5_signed 0
+set din6_width 14
+set din6_signed 0
+set din7_width 14
+set din7_signed 0
+set din8_width 3
+set din8_signed 0
+set dout_width 14
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mux} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set op mux
+set corename Multiplexer
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipemux] == "::AESL_LIB_VIRTEX::xil_gen_pipemux"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_pipemux { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${stage_num} \
+    din0_width ${din0_width} \
+    din0_signed ${din0_signed} \
+    din1_width ${din1_width} \
+    din1_signed ${din1_signed} \
+    din2_width ${din2_width} \
+    din2_signed ${din2_signed} \
+    din3_width ${din3_width} \
+    din3_signed ${din3_signed} \
+    din4_width ${din4_width} \
+    din4_signed ${din4_signed} \
+    din5_width ${din5_width} \
+    din5_signed ${din5_signed} \
+    din6_width ${din6_width} \
+    din6_signed ${din6_signed} \
+    din7_width ${din7_width} \
+    din7_signed ${din7_signed} \
+    din8_width ${din8_width} \
+    din8_signed ${din8_signed} \
+    dout_width ${dout_width} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your platform lib"
+}
+}
+
+
+set id 13
+set name process_data_mac_muladd_9ns_10ns_4ns_18_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
@@ -17,14 +84,14 @@ set reset_width 1
 set reset_signed 0
 set in0_width 9
 set in0_signed 0
-set in1_width 13
+set in1_width 10
 set in1_signed 0
-set in2_width 7
+set in2_width 4
 set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 21
-set arg_lists {i0 {9 0 +} i1 {13 0 +} m {21 1 +} i2 {7 0 +} p {21 0 +} c_reg {1} rnd {0} acc {0} }
+set out_width 18
+set arg_lists {i0 {9 0 +} i1 {10 0 +} m {18 1 +} i2 {4 0 +} p {18 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -76,7 +143,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 11 \
+    id 17 \
     name ave \
     reset_level 1 \
     sync_rst true \
@@ -95,17 +162,150 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 12 \
-    name adc_vectors \
+    id 18 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename adc_vectors \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors \
     op interface \
-    ports { adc_vectors_address0 { O 21 vector } adc_vectors_ce0 { O 1 bit } adc_vectors_q0 { I 14 vector } } \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_q0 { I 14 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'adc_vectors'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 19 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 20 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 21 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 22 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 23 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 24 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 25 \
+    name process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8 \
+    op interface \
+    ports { process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_address0 { O 18 vector } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_ce0 { O 1 bit } process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_q0 { I 14 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8'"
 }
 }
 

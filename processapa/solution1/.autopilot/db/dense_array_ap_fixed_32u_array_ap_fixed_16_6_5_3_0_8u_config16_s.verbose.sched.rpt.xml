@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s'" level="0">
-<item name = "Date">Tue Aug  1 18:02:45 2023
+<item name = "Date">Mon Aug  7 11:50:18 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">162, 163, 1.620 us, 1.630 us, 162, 163, no</column>
+<column name="">187, 188, 1.870 us, 1.880 us, 187, 188, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- DataPrepare">56, 56, 2, -, -, 28, no</column>
 </table>
 </item>
 </section>

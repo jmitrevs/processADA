@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_first_chan_loop_first_chan_frame_loop'" level="0">
-<item name = "Date">Tue Aug  1 18:02:02 2023
+<item name = "Date">Mon Aug  7 11:49:38 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.735 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.151 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">25605, 25605, 0.256 ms, 0.256 ms, 25605, 25605, no</column>
+<column name="">25606, 25606, 0.256 ms, 0.256 ms, 25606, 25606, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- first_chan_loop_first_chan_frame_loop">25603, 25603, 5, 1, 1, 25600, yes</column>
+<column name="- first_chan_loop_first_chan_frame_loop">25604, 25604, 6, 1, 1, 25600, yes</column>
 </table>
 </item>
 </section>

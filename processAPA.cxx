@@ -19,7 +19,7 @@ int main()
     std::ifstream inputFile(infilename);
     if (!inputFile) {
         std::cout << "Error opening input file.\n";
-        return 1;  // Terminate the program
+        return 0;  // Terminate the program
     }
 
     dune::FDHDChannelMapSP chanmap;

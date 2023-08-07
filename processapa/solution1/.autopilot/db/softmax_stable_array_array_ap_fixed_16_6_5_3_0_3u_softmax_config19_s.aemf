@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690927470002">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691423516797">
   <ports id="1" name="layer18_out" type="PortType" coreName="FIFO_SRL" coreId="641609760" bitwidth="48" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -204,12 +204,12 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sext_ln215" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_fu_236_p1" coreId="1848057966" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="sext_ln215" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_fu_236_p1" coreId="3970707632" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sext_ln215_1" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_1_fu_240_p1" coreId="826041445" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="sext_ln215_1" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_1_fu_240_p1" coreId="1848057966" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -224,14 +224,14 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_4" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_4_fu_250_p3" coreId="4294967295" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="tmp_4" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_4_fu_250_p3" coreId="3991476992" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_5" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_5_fu_258_p3" coreId="2252434880" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="tmp_5" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_5_fu_258_p3" coreId="334202532" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -256,7 +256,7 @@
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln215_2" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_2_fu_284_p1" coreId="1717924464" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln215_2" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_2_fu_284_p1" coreId="3968645664" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -269,14 +269,14 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_6" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_6_fu_294_p3" coreId="2265292800" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="tmp_6" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_6_fu_294_p3" coreId="1936942413" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_7" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_7_fu_302_p3" coreId="1819113532" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp_7" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_7_fu_302_p3" coreId="303606231" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -301,7 +301,7 @@
       <dataInputObjs>bitselect</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sext_ln215_3" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_3_fu_328_p1" coreId="4294967295" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sext_ln215_3" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln215_3_fu_328_p1" coreId="3968645664" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="17" opcode="sext" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -314,14 +314,14 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_8" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_8_fu_338_p3" coreId="2251879952" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="tmp_8" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_8_fu_338_p3" coreId="1852383273" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_9" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_9_fu_346_p3" coreId="2270953712" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="tmp_9" lineNumber="215" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="tmp_9_fu_346_p3" coreId="3968645664" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="215" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
@@ -352,7 +352,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_fu_380_p4" coreId="2265204816" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="34" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="tmp" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_fu_380_p4" coreId="1702258035" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="34" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation.h" linenumber="145" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_idx_from_real_val&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="224" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
@@ -366,12 +366,12 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln225" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_fu_450_p1" coreId="2284065792" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="zext_ln225" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_fu_450_p1" coreId="333323405" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="exp_table_addr" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="2294091392" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="exp_table_addr" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="1702258035" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -384,7 +384,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="exp_table_load_cast1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_cast1_fu_462_p1" coreId="2254647504" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="exp_table_load_cast1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_cast1_fu_462_p1" coreId="25" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -395,7 +395,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_1" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_1_fu_406_p4" coreId="1904096308" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="37" m_clusterGroupNumber="4">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_1" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_1_fu_406_p4" coreId="78" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="37" m_clusterGroupNumber="4">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation.h" linenumber="145" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_idx_from_real_val&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="224" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
@@ -409,12 +409,12 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln225_1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_1_fu_454_p1" coreId="2120169107" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln225_1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_1_fu_454_p1" coreId="3979489392" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="exp_table_addr_1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="2265453856" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="exp_table_addr_1" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="3979489728" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -427,7 +427,7 @@
       <dataOutputObjs>add</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="exp_table_load_1_cast2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_1_cast2_fu_466_p1" coreId="2270956288" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="exp_table_load_1_cast2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_1_cast2_fu_466_p1" coreId="3971305600" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -438,7 +438,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp_2" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_2_fu_432_p4" coreId="6775156" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="40" m_clusterGroupNumber="5">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp_2" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_2_fu_432_p4" coreId="3962045056" contextFuncName="softmax_idx_from_real_val_ap_fixed_16_6_AP_TRN_AP_WRAP_0_softmax_config19_s" bitwidth="10" opcode="partselect" m_display="0" m_topoIndex="40" m_clusterGroupNumber="5">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation.h" linenumber="145" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_idx_from_real_val&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="224" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sub</dataInputObjs>
@@ -452,12 +452,12 @@
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="zext_ln225_2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_2_fu_458_p1" coreId="2329136000" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="zext_ln225_2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln225_2_fu_458_p1" coreId="3980527072" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="exp_table_addr_2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="2252087896" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="exp_table_addr_2" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="176" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -469,7 +469,7 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="exp_table_load_2_cast3" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_2_cast3_fu_470_p1" coreId="2234366432" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="exp_table_load_2_cast3" lineNumber="225" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="exp_table_load_2_cast3_fu_470_p1" coreId="320909991" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="225" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -492,7 +492,7 @@
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_10" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="tmp_10_fu_486_p3" coreId="0" contextFuncName="operator_s" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="tmp_10" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="tmp_10_fu_486_p3" coreId="3971466240" contextFuncName="operator_s" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="232" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="50" fileDirectory="/home/brenton/kernel/processAPA" functionName="operator()"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="43" fileDirectory="/home/brenton/kernel/processAPA" functionName="reduce&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt;, 2, nnet::Op_add&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt; &amp;gt; &amp;gt;"/>
@@ -511,7 +511,7 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="zext_ln50" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="zext_ln50_fu_502_p1" coreId="2264934672" contextFuncName="operator_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="6">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="zext_ln50" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="zext_ln50_fu_502_p1" coreId="308715863" contextFuncName="operator_s" bitwidth="18" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="6">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="232" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="50" fileDirectory="/home/brenton/kernel/processAPA" functionName="operator()"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="45" fileDirectory="/home/brenton/kernel/processAPA" functionName="reduce&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt;, 3, nnet::Op_add&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt; &amp;gt; &amp;gt;"/>
@@ -527,7 +527,7 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_11" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="tmp_11_fu_512_p3" coreId="2261997504" contextFuncName="operator_s" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_11" lineNumber="50" fileName="./nnet_utils/nnet_common.h" fileDirectory="../." rtlName="tmp_11_fu_512_p3" coreId="3979645632" contextFuncName="operator_s" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="232" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="50" fileDirectory="/home/brenton/kernel/processAPA" functionName="operator()"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_common.h" linenumber="45" fileDirectory="/home/brenton/kernel/processAPA" functionName="reduce&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt;, 3, nnet::Op_add&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt; &amp;gt; &amp;gt;"/>
@@ -535,7 +535,7 @@
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_3" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_3_fu_520_p4" coreId="4294967295" contextFuncName="softmax_idx_from_real_val_ap_fixed_18_8_AP_RND_AP_SAT_0_softmax_config19_s" bitwidth="10" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="tmp_3" lineNumber="145" fileName="./nnet_utils/nnet_activation.h" fileDirectory="../." rtlName="tmp_3_fu_520_p4" coreId="6775156" contextFuncName="softmax_idx_from_real_val_ap_fixed_18_8_AP_RND_AP_SAT_0_softmax_config19_s" bitwidth="10" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation.h" linenumber="145" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_idx_from_real_val&amp;lt;ap_fixed&amp;lt;18, 8, AP_RND, AP_SAT, 0&amp;gt;, softmax_config19&amp;gt;"/>
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="235" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
@@ -551,12 +551,12 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln235" lineNumber="235" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln235_fu_538_p1" coreId="2284709712" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="zext_ln235" lineNumber="235" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln235_fu_538_p1" coreId="3967802800" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="235" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="invert_table_addr" lineNumber="235" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="2294202080" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="invert_table_addr" lineNumber="235" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="3970757168" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="10" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="235" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -567,65 +567,65 @@
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln244_fu_543_p1" coreId="2329136000" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="sext_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="sext_ln244_fu_543_p1" coreId="320880415" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="zext_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_fu_548_p1" coreId="1869833586" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="zext_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_fu_548_p1" coreId="3967295104" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="mul_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U5511" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="2.62" m_topoIndex="68" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="mul_ln244" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U4647" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="3.0" m_display="0" m_delay="2.62" m_topoIndex="68" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="trunc_ln2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="2333350144" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="trunc_ln2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="333187276" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="zext_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_1_fu_552_p1" coreId="2250270672" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="zext_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_1_fu_552_p1" coreId="1702258035" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="mul_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U5511" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="4.0" m_display="0" m_delay="2.62" m_topoIndex="71" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="mul_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U4647" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="4.0" m_display="0" m_delay="2.62" m_topoIndex="71" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="trunc_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="2119977692" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="trunc_ln244_1" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="3980505328" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="4.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="zext_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_2_fu_556_p1" coreId="2329136000" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="zext_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="zext_ln244_2_fu_556_p1" coreId="1397508187" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="zext" nodeLabel="5.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="mul_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U5511" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="5.0" m_display="0" m_delay="2.62" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="mul_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="mul_18s_17ns_26_1_1_U4647" coreName="Multiplier" implIndex="auto" control="no" opType="mul" coreId="3" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="26" opcode="mul" nodeLabel="5.0" m_display="0" m_delay="2.62" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="trunc_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="2329136000" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="88" name="trunc_ln244_2" lineNumber="244" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="trunc_ln2_reg_624" coreId="1869833586" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="16" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="244" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>mul</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="p_s" lineNumber="246" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="layer19_out_din" coreId="0" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="48" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="p_s" lineNumber="246" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." rtlName="layer19_out_din" coreId="323621389" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" bitwidth="48" opcode="bitconcatenate" nodeLabel="5.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="246" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>partselect</dataInputObjs>
@@ -637,7 +637,7 @@
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>layer19_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln248" lineNumber="248" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="2238336336" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln248" lineNumber="248" fileName="./nnet_utils/nnet_activation_stream.h" fileDirectory="../." coreId="976909413" contextFuncName="softmax_stable_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_softmax_config19_s" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_activation_stream.h" linenumber="248" fileDirectory="/home/brenton/kernel/processAPA" functionName="softmax_stable&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, softmax_config19&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_activation_stream.h">

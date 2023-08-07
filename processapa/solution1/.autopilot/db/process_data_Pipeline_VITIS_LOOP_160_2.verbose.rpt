@@ -1,0 +1,1622 @@
+
+
+================================================================
+== Vitis HLS Report for 'process_data_Pipeline_VITIS_LOOP_160_2'
+================================================================
+* Date:           Mon Aug  7 11:50:34 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        processapa
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.365 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     6002|     6002|  60.020 us|  60.020 us|  6002|  6002|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_160_2  |     6000|     6000|         2|          1|          1|  6000|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      118|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       43|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       36|    -|
+|Register             |        -|     -|       43|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       43|      197|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3072|   864000|   432000|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9216|  2592000|  1296000|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+----------------+---------+----+---+----+-----+
+    |      Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------+----------------+---------+----+---+----+-----+
+    |mux_8_3_14_1_1_U39  |mux_8_3_14_1_1  |        0|   0|  0|  43|    0|
+    +--------------------+----------------+---------+----+---+----+-----+
+    |Total               |                |        0|   0|  0|  43|    0|
+    +--------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln160_fu_221_p2    |         +|   0|  0|  20|          13|           1|
+    |add_ln163_1_fu_241_p2  |         +|   0|  0|  25|          18|          18|
+    |add_ln163_fu_267_p2    |         +|   0|  0|  29|          22|          22|
+    |planes2_d0             |         -|   0|  0|  22|          15|          15|
+    |icmp_ln160_fu_215_p2   |      icmp|   0|  0|  20|          13|          13|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 118|          82|          71|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2     |   9|          2|   13|         26|
+    |i_fu_64                  |   9|          2|   13|         26|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   28|         56|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+----+----+-----+-----------+
+    |            Name           | FF | LUT| Bits| Const Bits|
+    +---------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                  |   1|   0|    1|          0|
+    |ap_done_reg                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1    |   1|   0|    1|          0|
+    |i_2_reg_329                |  13|   0|   13|          0|
+    |i_fu_64                    |  13|   0|   13|          0|
+    |zext_ln160_1_cast_reg_324  |  14|   0|   15|          1|
+    +---------------------------+----+----+-----+-----------+
+    |Total                      |  43|   0|   44|          1|
+    +---------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+|                             RTL Ports                             | Dir | Bits|  Protocol  |                       Source Object                      |    C Type    |
++-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+|ap_clk                                                             |   in|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|ap_rst                                                             |   in|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|ap_start                                                           |   in|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|ap_done                                                            |  out|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|ap_idle                                                            |  out|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|ap_ready                                                           |  out|    1|  ap_ctrl_hs|                    process_data_Pipeline_VITIS_LOOP_160_2|  return value|
+|mul_ln163                                                          |   in|   22|     ap_none|                                                 mul_ln163|        scalar|
+|phi_mul24                                                          |   in|   18|     ap_none|                                                 phi_mul24|        scalar|
+|zext_ln160_1                                                       |   in|   14|     ap_none|                                              zext_ln160_1|        scalar|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_address0    |  out|   18|   ap_memory|    process_data_int_char_FDHDChannelMapSP_int_adc_vectors|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_ce0         |  out|    1|   ap_memory|    process_data_int_char_FDHDChannelMapSP_int_adc_vectors|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_q0          |   in|   14|   ap_memory|    process_data_int_char_FDHDChannelMapSP_int_adc_vectors|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_address0  |  out|   18|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_ce0       |  out|    1|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8|         array|
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_q0        |   in|   14|   ap_memory|  process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8|         array|
+|planes2_address0                                                   |  out|   22|   ap_memory|                                                   planes2|         array|
+|planes2_ce0                                                        |  out|    1|   ap_memory|                                                   planes2|         array|
+|planes2_we0                                                        |  out|    1|   ap_memory|                                                   planes2|         array|
+|planes2_d0                                                         |  out|   15|   ap_memory|                                                   planes2|         array|
++-------------------------------------------------------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.42>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%zext_ln160_1_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %zext_ln160_1"   --->   Operation 6 'read' 'zext_ln160_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%phi_mul24_read = read i18 @_ssdm_op_Read.ap_auto.i18, i18 %phi_mul24"   --->   Operation 7 'read' 'phi_mul24_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mul_ln163_read = read i22 @_ssdm_op_Read.ap_auto.i22, i22 %mul_ln163"   --->   Operation 8 'read' 'mul_ln163_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln160_1_cast = zext i14 %zext_ln160_1_read"   --->   Operation 9 'zext' 'zext_ln160_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.46ns)   --->   "%store_ln0 = store i13 0, i13 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body99"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_2 = load i13 %i"   --->   Operation 12 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 13 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.02ns)   --->   "%icmp_ln160 = icmp_eq  i13 %i_2, i13 6000" [kernel.cpp:160]   --->   Operation 14 'icmp' 'icmp_ln160' <Predicate = true> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.02ns)   --->   "%add_ln160 = add i13 %i_2, i13 1" [kernel.cpp:160]   --->   Operation 15 'add' 'add_ln160' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln160 = br i1 %icmp_ln160, void %for.body99.split, void %if.end128.loopexit.exitStub" [kernel.cpp:160]   --->   Operation 16 'br' 'br_ln160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lshr_ln3 = partselect i10 @_ssdm_op_PartSelect.i10.i13.i32.i32, i13 %i_2, i32 3, i32 12" [kernel.cpp:160]   --->   Operation 17 'partselect' 'lshr_ln3' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln163_3 = zext i10 %lshr_ln3" [kernel.cpp:163]   --->   Operation 18 'zext' 'zext_ln163_3' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.12ns)   --->   "%add_ln163_1 = add i18 %phi_mul24_read, i18 %zext_ln163_3" [kernel.cpp:163]   --->   Operation 19 'add' 'add_ln163_1' <Predicate = (!icmp_ln160)> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln163_4 = zext i18 %add_ln163_1" [kernel.cpp:163]   --->   Operation 20 'zext' 'zext_ln163_4' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 21 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 22 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 23 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 24 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 25 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 26 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 27 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr = getelementptr i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8, i64 0, i64 %zext_ln163_4" [kernel.cpp:163]   --->   Operation 28 'getelementptr' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr' <Predicate = (!icmp_ln160)> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr" [kernel.cpp:163]   --->   Operation 29 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 30 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr" [kernel.cpp:163]   --->   Operation 30 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 31 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr" [kernel.cpp:163]   --->   Operation 31 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 32 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr" [kernel.cpp:163]   --->   Operation 32 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 33 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr" [kernel.cpp:163]   --->   Operation 33 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 34 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr" [kernel.cpp:163]   --->   Operation 34 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 35 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr" [kernel.cpp:163]   --->   Operation 35 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 36 [2/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr" [kernel.cpp:163]   --->   Operation 36 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load' <Predicate = (!icmp_ln160)> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_1 : Operation 37 [1/1] (0.46ns)   --->   "%store_ln160 = store i13 %add_ln160, i13 %i" [kernel.cpp:160]   --->   Operation 37 'store' 'store_ln160' <Predicate = (!icmp_ln160)> <Delay = 0.46>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 58 'ret' 'ret_ln0' <Predicate = (icmp_ln160)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.36>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln163_1 = zext i13 %i_2" [kernel.cpp:163]   --->   Operation 38 'zext' 'zext_ln163_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.12ns)   --->   "%add_ln163 = add i22 %mul_ln163_read, i22 %zext_ln163_1" [kernel.cpp:163]   --->   Operation 39 'add' 'add_ln163' <Predicate = true> <Delay = 1.12> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln163_2 = zext i22 %add_ln163" [kernel.cpp:163]   --->   Operation 40 'zext' 'zext_ln163_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%planes2_addr = getelementptr i15 %planes2, i64 0, i64 %zext_ln163_2" [kernel.cpp:163]   --->   Operation 41 'getelementptr' 'planes2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%empty = trunc i13 %i_2"   --->   Operation 42 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%speclooptripcount_ln160 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 6000, i64 6000, i64 6000" [kernel.cpp:160]   --->   Operation 43 'speclooptripcount' 'speclooptripcount_ln160' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%specloopname_ln160 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [kernel.cpp:160]   --->   Operation 44 'specloopname' 'specloopname_ln160' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr" [kernel.cpp:163]   --->   Operation 45 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 46 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr" [kernel.cpp:163]   --->   Operation 46 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 47 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr" [kernel.cpp:163]   --->   Operation 47 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 48 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr" [kernel.cpp:163]   --->   Operation 48 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 49 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr" [kernel.cpp:163]   --->   Operation 49 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 50 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr" [kernel.cpp:163]   --->   Operation 50 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 51 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr" [kernel.cpp:163]   --->   Operation 51 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 52 [1/2] (1.29ns)   --->   "%process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load = load i18 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr" [kernel.cpp:163]   --->   Operation 52 'load' 'process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 192000> <RAM>
+ST_2 : Operation 53 [1/1] (0.71ns)   --->   "%tmp_1 = mux i14 @_ssdm_op_Mux.ap_auto.8i14.i3, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load, i14 %process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load, i3 %empty" [kernel.cpp:163]   --->   Operation 53 'mux' 'tmp_1' <Predicate = true> <Delay = 0.71> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln163 = zext i14 %tmp_1" [kernel.cpp:163]   --->   Operation 54 'zext' 'zext_ln163' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.05ns)   --->   "%sub_ln163 = sub i15 %zext_ln163, i15 %zext_ln160_1_cast" [kernel.cpp:163]   --->   Operation 55 'sub' 'sub_ln163' <Predicate = true> <Delay = 1.05> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (1.29ns)   --->   "%store_ln163 = store i15 %sub_ln163, i22 %planes2_addr" [kernel.cpp:163]   --->   Operation 56 'store' 'store_ln163' <Predicate = true> <Delay = 1.29> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.29> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 15> <Depth = 2880000> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln160 = br void %for.body99" [kernel.cpp:160]   --->   Operation 57 'br' 'br_ln160' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ mul_ln163]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ phi_mul24]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ zext_ln160_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ planes2]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+i                                                             (alloca           ) [ 010]
+zext_ln160_1_read                                             (read             ) [ 000]
+phi_mul24_read                                                (read             ) [ 000]
+mul_ln163_read                                                (read             ) [ 011]
+zext_ln160_1_cast                                             (zext             ) [ 011]
+store_ln0                                                     (store            ) [ 000]
+br_ln0                                                        (br               ) [ 000]
+i_2                                                           (load             ) [ 011]
+specpipeline_ln0                                              (specpipeline     ) [ 000]
+icmp_ln160                                                    (icmp             ) [ 010]
+add_ln160                                                     (add              ) [ 000]
+br_ln160                                                      (br               ) [ 000]
+lshr_ln3                                                      (partselect       ) [ 000]
+zext_ln163_3                                                  (zext             ) [ 000]
+add_ln163_1                                                   (add              ) [ 000]
+zext_ln163_4                                                  (zext             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr   (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr (getelementptr    ) [ 011]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr (getelementptr    ) [ 011]
+store_ln160                                                   (store            ) [ 000]
+zext_ln163_1                                                  (zext             ) [ 000]
+add_ln163                                                     (add              ) [ 000]
+zext_ln163_2                                                  (zext             ) [ 000]
+planes2_addr                                                  (getelementptr    ) [ 000]
+empty                                                         (trunc            ) [ 000]
+speclooptripcount_ln160                                       (speclooptripcount) [ 000]
+specloopname_ln160                                            (specloopname     ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load   (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load (load             ) [ 000]
+process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load (load             ) [ 000]
+tmp_1                                                         (mux              ) [ 000]
+zext_ln163                                                    (zext             ) [ 000]
+sub_ln163                                                     (sub              ) [ 000]
+store_ln163                                                   (store            ) [ 000]
+br_ln160                                                      (br               ) [ 000]
+ret_ln0                                                       (ret              ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="mul_ln163">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mul_ln163"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="phi_mul24">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="phi_mul24"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="zext_ln160_1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="zext_ln160_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="planes2">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="planes2"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i18"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i22"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i10.i13.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_34"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Mux.ap_auto.8i14.i3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="i_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="1" slack="0"/>
+<pin id="66" dir="1" index="1" bw="13" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="i/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="zext_ln160_1_read_read_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="14" slack="0"/>
+<pin id="70" dir="0" index="1" bw="14" slack="0"/>
+<pin id="71" dir="1" index="2" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="zext_ln160_1_read/1 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="phi_mul24_read_read_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="18" slack="0"/>
+<pin id="76" dir="0" index="1" bw="18" slack="0"/>
+<pin id="77" dir="1" index="2" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="phi_mul24_read/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="mul_ln163_read_read_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="22" slack="0"/>
+<pin id="82" dir="0" index="1" bw="22" slack="0"/>
+<pin id="83" dir="1" index="2" bw="22" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="mul_ln163_read/1 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr_gep_fu_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="14" slack="0"/>
+<pin id="88" dir="0" index="1" bw="1" slack="0"/>
+<pin id="89" dir="0" index="2" bw="18" slack="0"/>
+<pin id="90" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="93" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr_gep_fu_93">
+<pin_list>
+<pin id="94" dir="0" index="0" bw="14" slack="0"/>
+<pin id="95" dir="0" index="1" bw="1" slack="0"/>
+<pin id="96" dir="0" index="2" bw="18" slack="0"/>
+<pin id="97" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr_gep_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="14" slack="0"/>
+<pin id="102" dir="0" index="1" bw="1" slack="0"/>
+<pin id="103" dir="0" index="2" bw="18" slack="0"/>
+<pin id="104" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="107" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr_gep_fu_107">
+<pin_list>
+<pin id="108" dir="0" index="0" bw="14" slack="0"/>
+<pin id="109" dir="0" index="1" bw="1" slack="0"/>
+<pin id="110" dir="0" index="2" bw="18" slack="0"/>
+<pin id="111" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="114" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr_gep_fu_114">
+<pin_list>
+<pin id="115" dir="0" index="0" bw="14" slack="0"/>
+<pin id="116" dir="0" index="1" bw="1" slack="0"/>
+<pin id="117" dir="0" index="2" bw="18" slack="0"/>
+<pin id="118" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="121" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr_gep_fu_121">
+<pin_list>
+<pin id="122" dir="0" index="0" bw="14" slack="0"/>
+<pin id="123" dir="0" index="1" bw="1" slack="0"/>
+<pin id="124" dir="0" index="2" bw="18" slack="0"/>
+<pin id="125" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="128" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr_gep_fu_128">
+<pin_list>
+<pin id="129" dir="0" index="0" bw="14" slack="0"/>
+<pin id="130" dir="0" index="1" bw="1" slack="0"/>
+<pin id="131" dir="0" index="2" bw="18" slack="0"/>
+<pin id="132" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="135" class="1004" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr_gep_fu_135">
+<pin_list>
+<pin id="136" dir="0" index="0" bw="14" slack="0"/>
+<pin id="137" dir="0" index="1" bw="1" slack="0"/>
+<pin id="138" dir="0" index="2" bw="18" slack="0"/>
+<pin id="139" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="142" class="1004" name="grp_access_fu_142">
+<pin_list>
+<pin id="143" dir="0" index="0" bw="18" slack="0"/>
+<pin id="144" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="145" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="146" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load/1 "/>
+</bind>
+</comp>
+
+<comp id="148" class="1004" name="grp_access_fu_148">
+<pin_list>
+<pin id="149" dir="0" index="0" bw="18" slack="0"/>
+<pin id="150" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="151" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="152" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load/1 "/>
+</bind>
+</comp>
+
+<comp id="154" class="1004" name="grp_access_fu_154">
+<pin_list>
+<pin id="155" dir="0" index="0" bw="18" slack="0"/>
+<pin id="156" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="157" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="158" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load/1 "/>
+</bind>
+</comp>
+
+<comp id="160" class="1004" name="grp_access_fu_160">
+<pin_list>
+<pin id="161" dir="0" index="0" bw="18" slack="0"/>
+<pin id="162" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="163" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="164" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load/1 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1004" name="grp_access_fu_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="18" slack="0"/>
+<pin id="168" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="169" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="170" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load/1 "/>
+</bind>
+</comp>
+
+<comp id="172" class="1004" name="grp_access_fu_172">
+<pin_list>
+<pin id="173" dir="0" index="0" bw="18" slack="0"/>
+<pin id="174" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="175" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="176" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load/1 "/>
+</bind>
+</comp>
+
+<comp id="178" class="1004" name="grp_access_fu_178">
+<pin_list>
+<pin id="179" dir="0" index="0" bw="18" slack="0"/>
+<pin id="180" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="181" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="182" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load/1 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="grp_access_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="18" slack="0"/>
+<pin id="186" dir="0" index="1" bw="14" slack="2147483647"/>
+<pin id="187" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="188" dir="1" index="3" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load/1 "/>
+</bind>
+</comp>
+
+<comp id="190" class="1004" name="planes2_addr_gep_fu_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="15" slack="0"/>
+<pin id="192" dir="0" index="1" bw="1" slack="0"/>
+<pin id="193" dir="0" index="2" bw="22" slack="0"/>
+<pin id="194" dir="1" index="3" bw="22" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="planes2_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="197" class="1004" name="store_ln163_access_fu_197">
+<pin_list>
+<pin id="198" dir="0" index="0" bw="22" slack="0"/>
+<pin id="199" dir="0" index="1" bw="15" slack="0"/>
+<pin id="200" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="201" dir="1" index="3" bw="15" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln163/2 "/>
+</bind>
+</comp>
+
+<comp id="203" class="1004" name="zext_ln160_1_cast_fu_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="14" slack="0"/>
+<pin id="205" dir="1" index="1" bw="15" slack="1"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln160_1_cast/1 "/>
+</bind>
+</comp>
+
+<comp id="207" class="1004" name="store_ln0_store_fu_207">
+<pin_list>
+<pin id="208" dir="0" index="0" bw="1" slack="0"/>
+<pin id="209" dir="0" index="1" bw="13" slack="0"/>
+<pin id="210" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="212" class="1004" name="i_2_load_fu_212">
+<pin_list>
+<pin id="213" dir="0" index="0" bw="13" slack="0"/>
+<pin id="214" dir="1" index="1" bw="13" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="i_2/1 "/>
+</bind>
+</comp>
+
+<comp id="215" class="1004" name="icmp_ln160_fu_215">
+<pin_list>
+<pin id="216" dir="0" index="0" bw="13" slack="0"/>
+<pin id="217" dir="0" index="1" bw="13" slack="0"/>
+<pin id="218" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln160/1 "/>
+</bind>
+</comp>
+
+<comp id="221" class="1004" name="add_ln160_fu_221">
+<pin_list>
+<pin id="222" dir="0" index="0" bw="13" slack="0"/>
+<pin id="223" dir="0" index="1" bw="1" slack="0"/>
+<pin id="224" dir="1" index="2" bw="13" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln160/1 "/>
+</bind>
+</comp>
+
+<comp id="227" class="1004" name="lshr_ln3_fu_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="10" slack="0"/>
+<pin id="229" dir="0" index="1" bw="13" slack="0"/>
+<pin id="230" dir="0" index="2" bw="3" slack="0"/>
+<pin id="231" dir="0" index="3" bw="5" slack="0"/>
+<pin id="232" dir="1" index="4" bw="10" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="lshr_ln3/1 "/>
+</bind>
+</comp>
+
+<comp id="237" class="1004" name="zext_ln163_3_fu_237">
+<pin_list>
+<pin id="238" dir="0" index="0" bw="10" slack="0"/>
+<pin id="239" dir="1" index="1" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln163_3/1 "/>
+</bind>
+</comp>
+
+<comp id="241" class="1004" name="add_ln163_1_fu_241">
+<pin_list>
+<pin id="242" dir="0" index="0" bw="18" slack="0"/>
+<pin id="243" dir="0" index="1" bw="10" slack="0"/>
+<pin id="244" dir="1" index="2" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln163_1/1 "/>
+</bind>
+</comp>
+
+<comp id="247" class="1004" name="zext_ln163_4_fu_247">
+<pin_list>
+<pin id="248" dir="0" index="0" bw="18" slack="0"/>
+<pin id="249" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln163_4/1 "/>
+</bind>
+</comp>
+
+<comp id="259" class="1004" name="store_ln160_store_fu_259">
+<pin_list>
+<pin id="260" dir="0" index="0" bw="13" slack="0"/>
+<pin id="261" dir="0" index="1" bw="13" slack="0"/>
+<pin id="262" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln160/1 "/>
+</bind>
+</comp>
+
+<comp id="264" class="1004" name="zext_ln163_1_fu_264">
+<pin_list>
+<pin id="265" dir="0" index="0" bw="13" slack="1"/>
+<pin id="266" dir="1" index="1" bw="22" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln163_1/2 "/>
+</bind>
+</comp>
+
+<comp id="267" class="1004" name="add_ln163_fu_267">
+<pin_list>
+<pin id="268" dir="0" index="0" bw="22" slack="1"/>
+<pin id="269" dir="0" index="1" bw="13" slack="0"/>
+<pin id="270" dir="1" index="2" bw="22" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln163/2 "/>
+</bind>
+</comp>
+
+<comp id="272" class="1004" name="zext_ln163_2_fu_272">
+<pin_list>
+<pin id="273" dir="0" index="0" bw="22" slack="0"/>
+<pin id="274" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln163_2/2 "/>
+</bind>
+</comp>
+
+<comp id="277" class="1004" name="empty_fu_277">
+<pin_list>
+<pin id="278" dir="0" index="0" bw="13" slack="1"/>
+<pin id="279" dir="1" index="1" bw="3" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="empty/2 "/>
+</bind>
+</comp>
+
+<comp id="280" class="1004" name="tmp_1_fu_280">
+<pin_list>
+<pin id="281" dir="0" index="0" bw="14" slack="0"/>
+<pin id="282" dir="0" index="1" bw="14" slack="0"/>
+<pin id="283" dir="0" index="2" bw="14" slack="0"/>
+<pin id="284" dir="0" index="3" bw="14" slack="0"/>
+<pin id="285" dir="0" index="4" bw="14" slack="0"/>
+<pin id="286" dir="0" index="5" bw="14" slack="0"/>
+<pin id="287" dir="0" index="6" bw="14" slack="0"/>
+<pin id="288" dir="0" index="7" bw="14" slack="0"/>
+<pin id="289" dir="0" index="8" bw="14" slack="0"/>
+<pin id="290" dir="0" index="9" bw="3" slack="0"/>
+<pin id="291" dir="1" index="10" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="mux(1196) " fcode="mux"/>
+<opset="tmp_1/2 "/>
+</bind>
+</comp>
+
+<comp id="302" class="1004" name="zext_ln163_fu_302">
+<pin_list>
+<pin id="303" dir="0" index="0" bw="14" slack="0"/>
+<pin id="304" dir="1" index="1" bw="15" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln163/2 "/>
+</bind>
+</comp>
+
+<comp id="306" class="1004" name="sub_ln163_fu_306">
+<pin_list>
+<pin id="307" dir="0" index="0" bw="14" slack="0"/>
+<pin id="308" dir="0" index="1" bw="14" slack="1"/>
+<pin id="309" dir="1" index="2" bw="15" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_ln163/2 "/>
+</bind>
+</comp>
+
+<comp id="312" class="1005" name="i_reg_312">
+<pin_list>
+<pin id="313" dir="0" index="0" bw="13" slack="0"/>
+<pin id="314" dir="1" index="1" bw="13" slack="0"/>
+</pin_list>
+<bind>
+<opset="i "/>
+</bind>
+</comp>
+
+<comp id="319" class="1005" name="mul_ln163_read_reg_319">
+<pin_list>
+<pin id="320" dir="0" index="0" bw="22" slack="1"/>
+<pin id="321" dir="1" index="1" bw="22" slack="1"/>
+</pin_list>
+<bind>
+<opset="mul_ln163_read "/>
+</bind>
+</comp>
+
+<comp id="324" class="1005" name="zext_ln160_1_cast_reg_324">
+<pin_list>
+<pin id="325" dir="0" index="0" bw="15" slack="1"/>
+<pin id="326" dir="1" index="1" bw="15" slack="1"/>
+</pin_list>
+<bind>
+<opset="zext_ln160_1_cast "/>
+</bind>
+</comp>
+
+<comp id="329" class="1005" name="i_2_reg_329">
+<pin_list>
+<pin id="330" dir="0" index="0" bw="13" slack="1"/>
+<pin id="331" dir="1" index="1" bw="13" slack="1"/>
+</pin_list>
+<bind>
+<opset="i_2 "/>
+</bind>
+</comp>
+
+<comp id="338" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr_reg_338">
+<pin_list>
+<pin id="339" dir="0" index="0" bw="18" slack="1"/>
+<pin id="340" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr "/>
+</bind>
+</comp>
+
+<comp id="343" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr_reg_343">
+<pin_list>
+<pin id="344" dir="0" index="0" bw="18" slack="1"/>
+<pin id="345" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr "/>
+</bind>
+</comp>
+
+<comp id="348" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr_reg_348">
+<pin_list>
+<pin id="349" dir="0" index="0" bw="18" slack="1"/>
+<pin id="350" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr "/>
+</bind>
+</comp>
+
+<comp id="353" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr_reg_353">
+<pin_list>
+<pin id="354" dir="0" index="0" bw="18" slack="1"/>
+<pin id="355" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr "/>
+</bind>
+</comp>
+
+<comp id="358" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr_reg_358">
+<pin_list>
+<pin id="359" dir="0" index="0" bw="18" slack="1"/>
+<pin id="360" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr "/>
+</bind>
+</comp>
+
+<comp id="363" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr_reg_363">
+<pin_list>
+<pin id="364" dir="0" index="0" bw="18" slack="1"/>
+<pin id="365" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr "/>
+</bind>
+</comp>
+
+<comp id="368" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr_reg_368">
+<pin_list>
+<pin id="369" dir="0" index="0" bw="18" slack="1"/>
+<pin id="370" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr "/>
+</bind>
+</comp>
+
+<comp id="373" class="1005" name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr_reg_373">
+<pin_list>
+<pin id="374" dir="0" index="0" bw="18" slack="1"/>
+<pin id="375" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="67"><net_src comp="24" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="72"><net_src comp="26" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="73"><net_src comp="4" pin="0"/><net_sink comp="68" pin=1"/></net>
+
+<net id="78"><net_src comp="28" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="79"><net_src comp="2" pin="0"/><net_sink comp="74" pin=1"/></net>
+
+<net id="84"><net_src comp="30" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="85"><net_src comp="0" pin="0"/><net_sink comp="80" pin=1"/></net>
+
+<net id="91"><net_src comp="6" pin="0"/><net_sink comp="86" pin=0"/></net>
+
+<net id="92"><net_src comp="52" pin="0"/><net_sink comp="86" pin=1"/></net>
+
+<net id="98"><net_src comp="8" pin="0"/><net_sink comp="93" pin=0"/></net>
+
+<net id="99"><net_src comp="52" pin="0"/><net_sink comp="93" pin=1"/></net>
+
+<net id="105"><net_src comp="10" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="106"><net_src comp="52" pin="0"/><net_sink comp="100" pin=1"/></net>
+
+<net id="112"><net_src comp="12" pin="0"/><net_sink comp="107" pin=0"/></net>
+
+<net id="113"><net_src comp="52" pin="0"/><net_sink comp="107" pin=1"/></net>
+
+<net id="119"><net_src comp="14" pin="0"/><net_sink comp="114" pin=0"/></net>
+
+<net id="120"><net_src comp="52" pin="0"/><net_sink comp="114" pin=1"/></net>
+
+<net id="126"><net_src comp="16" pin="0"/><net_sink comp="121" pin=0"/></net>
+
+<net id="127"><net_src comp="52" pin="0"/><net_sink comp="121" pin=1"/></net>
+
+<net id="133"><net_src comp="18" pin="0"/><net_sink comp="128" pin=0"/></net>
+
+<net id="134"><net_src comp="52" pin="0"/><net_sink comp="128" pin=1"/></net>
+
+<net id="140"><net_src comp="20" pin="0"/><net_sink comp="135" pin=0"/></net>
+
+<net id="141"><net_src comp="52" pin="0"/><net_sink comp="135" pin=1"/></net>
+
+<net id="147"><net_src comp="86" pin="3"/><net_sink comp="142" pin=0"/></net>
+
+<net id="153"><net_src comp="93" pin="3"/><net_sink comp="148" pin=0"/></net>
+
+<net id="159"><net_src comp="100" pin="3"/><net_sink comp="154" pin=0"/></net>
+
+<net id="165"><net_src comp="107" pin="3"/><net_sink comp="160" pin=0"/></net>
+
+<net id="171"><net_src comp="114" pin="3"/><net_sink comp="166" pin=0"/></net>
+
+<net id="177"><net_src comp="121" pin="3"/><net_sink comp="172" pin=0"/></net>
+
+<net id="183"><net_src comp="128" pin="3"/><net_sink comp="178" pin=0"/></net>
+
+<net id="189"><net_src comp="135" pin="3"/><net_sink comp="184" pin=0"/></net>
+
+<net id="195"><net_src comp="22" pin="0"/><net_sink comp="190" pin=0"/></net>
+
+<net id="196"><net_src comp="52" pin="0"/><net_sink comp="190" pin=1"/></net>
+
+<net id="202"><net_src comp="190" pin="3"/><net_sink comp="197" pin=0"/></net>
+
+<net id="206"><net_src comp="68" pin="2"/><net_sink comp="203" pin=0"/></net>
+
+<net id="211"><net_src comp="32" pin="0"/><net_sink comp="207" pin=0"/></net>
+
+<net id="219"><net_src comp="212" pin="1"/><net_sink comp="215" pin=0"/></net>
+
+<net id="220"><net_src comp="42" pin="0"/><net_sink comp="215" pin=1"/></net>
+
+<net id="225"><net_src comp="212" pin="1"/><net_sink comp="221" pin=0"/></net>
+
+<net id="226"><net_src comp="44" pin="0"/><net_sink comp="221" pin=1"/></net>
+
+<net id="233"><net_src comp="46" pin="0"/><net_sink comp="227" pin=0"/></net>
+
+<net id="234"><net_src comp="212" pin="1"/><net_sink comp="227" pin=1"/></net>
+
+<net id="235"><net_src comp="48" pin="0"/><net_sink comp="227" pin=2"/></net>
+
+<net id="236"><net_src comp="50" pin="0"/><net_sink comp="227" pin=3"/></net>
+
+<net id="240"><net_src comp="227" pin="4"/><net_sink comp="237" pin=0"/></net>
+
+<net id="245"><net_src comp="74" pin="2"/><net_sink comp="241" pin=0"/></net>
+
+<net id="246"><net_src comp="237" pin="1"/><net_sink comp="241" pin=1"/></net>
+
+<net id="250"><net_src comp="241" pin="2"/><net_sink comp="247" pin=0"/></net>
+
+<net id="251"><net_src comp="247" pin="1"/><net_sink comp="86" pin=2"/></net>
+
+<net id="252"><net_src comp="247" pin="1"/><net_sink comp="93" pin=2"/></net>
+
+<net id="253"><net_src comp="247" pin="1"/><net_sink comp="100" pin=2"/></net>
+
+<net id="254"><net_src comp="247" pin="1"/><net_sink comp="107" pin=2"/></net>
+
+<net id="255"><net_src comp="247" pin="1"/><net_sink comp="114" pin=2"/></net>
+
+<net id="256"><net_src comp="247" pin="1"/><net_sink comp="121" pin=2"/></net>
+
+<net id="257"><net_src comp="247" pin="1"/><net_sink comp="128" pin=2"/></net>
+
+<net id="258"><net_src comp="247" pin="1"/><net_sink comp="135" pin=2"/></net>
+
+<net id="263"><net_src comp="221" pin="2"/><net_sink comp="259" pin=0"/></net>
+
+<net id="271"><net_src comp="264" pin="1"/><net_sink comp="267" pin=1"/></net>
+
+<net id="275"><net_src comp="267" pin="2"/><net_sink comp="272" pin=0"/></net>
+
+<net id="276"><net_src comp="272" pin="1"/><net_sink comp="190" pin=2"/></net>
+
+<net id="292"><net_src comp="62" pin="0"/><net_sink comp="280" pin=0"/></net>
+
+<net id="293"><net_src comp="142" pin="3"/><net_sink comp="280" pin=1"/></net>
+
+<net id="294"><net_src comp="148" pin="3"/><net_sink comp="280" pin=2"/></net>
+
+<net id="295"><net_src comp="154" pin="3"/><net_sink comp="280" pin=3"/></net>
+
+<net id="296"><net_src comp="160" pin="3"/><net_sink comp="280" pin=4"/></net>
+
+<net id="297"><net_src comp="166" pin="3"/><net_sink comp="280" pin=5"/></net>
+
+<net id="298"><net_src comp="172" pin="3"/><net_sink comp="280" pin=6"/></net>
+
+<net id="299"><net_src comp="178" pin="3"/><net_sink comp="280" pin=7"/></net>
+
+<net id="300"><net_src comp="184" pin="3"/><net_sink comp="280" pin=8"/></net>
+
+<net id="301"><net_src comp="277" pin="1"/><net_sink comp="280" pin=9"/></net>
+
+<net id="305"><net_src comp="280" pin="10"/><net_sink comp="302" pin=0"/></net>
+
+<net id="310"><net_src comp="302" pin="1"/><net_sink comp="306" pin=0"/></net>
+
+<net id="311"><net_src comp="306" pin="2"/><net_sink comp="197" pin=1"/></net>
+
+<net id="315"><net_src comp="64" pin="1"/><net_sink comp="312" pin=0"/></net>
+
+<net id="316"><net_src comp="312" pin="1"/><net_sink comp="207" pin=1"/></net>
+
+<net id="317"><net_src comp="312" pin="1"/><net_sink comp="212" pin=0"/></net>
+
+<net id="318"><net_src comp="312" pin="1"/><net_sink comp="259" pin=1"/></net>
+
+<net id="322"><net_src comp="80" pin="2"/><net_sink comp="319" pin=0"/></net>
+
+<net id="323"><net_src comp="319" pin="1"/><net_sink comp="267" pin=0"/></net>
+
+<net id="327"><net_src comp="203" pin="1"/><net_sink comp="324" pin=0"/></net>
+
+<net id="328"><net_src comp="324" pin="1"/><net_sink comp="306" pin=1"/></net>
+
+<net id="332"><net_src comp="212" pin="1"/><net_sink comp="329" pin=0"/></net>
+
+<net id="333"><net_src comp="329" pin="1"/><net_sink comp="264" pin=0"/></net>
+
+<net id="334"><net_src comp="329" pin="1"/><net_sink comp="277" pin=0"/></net>
+
+<net id="341"><net_src comp="86" pin="3"/><net_sink comp="338" pin=0"/></net>
+
+<net id="342"><net_src comp="338" pin="1"/><net_sink comp="142" pin=0"/></net>
+
+<net id="346"><net_src comp="93" pin="3"/><net_sink comp="343" pin=0"/></net>
+
+<net id="347"><net_src comp="343" pin="1"/><net_sink comp="148" pin=0"/></net>
+
+<net id="351"><net_src comp="100" pin="3"/><net_sink comp="348" pin=0"/></net>
+
+<net id="352"><net_src comp="348" pin="1"/><net_sink comp="154" pin=0"/></net>
+
+<net id="356"><net_src comp="107" pin="3"/><net_sink comp="353" pin=0"/></net>
+
+<net id="357"><net_src comp="353" pin="1"/><net_sink comp="160" pin=0"/></net>
+
+<net id="361"><net_src comp="114" pin="3"/><net_sink comp="358" pin=0"/></net>
+
+<net id="362"><net_src comp="358" pin="1"/><net_sink comp="166" pin=0"/></net>
+
+<net id="366"><net_src comp="121" pin="3"/><net_sink comp="363" pin=0"/></net>
+
+<net id="367"><net_src comp="363" pin="1"/><net_sink comp="172" pin=0"/></net>
+
+<net id="371"><net_src comp="128" pin="3"/><net_sink comp="368" pin=0"/></net>
+
+<net id="372"><net_src comp="368" pin="1"/><net_sink comp="178" pin=0"/></net>
+
+<net id="376"><net_src comp="135" pin="3"/><net_sink comp="373" pin=0"/></net>
+
+<net id="377"><net_src comp="373" pin="1"/><net_sink comp="184" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7 | {}
+	Port: process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8 | {}
+	Port: planes2 | {2 }
+ - Input state : 
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : mul_ln163 | {1 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : phi_mul24 | {1 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : zext_ln160_1 | {1 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8 | {1 2 }
+	Port: process_data_Pipeline_VITIS_LOOP_160_2 : planes2 | {}
+  - Chain level:
+	State 1
+		store_ln0 : 1
+		i_2 : 1
+		icmp_ln160 : 2
+		add_ln160 : 2
+		br_ln160 : 3
+		lshr_ln3 : 2
+		zext_ln163_3 : 3
+		add_ln163_1 : 4
+		zext_ln163_4 : 5
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr : 6
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load : 7
+		process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load : 7
+		store_ln160 : 3
+	State 2
+		add_ln163 : 1
+		zext_ln163_2 : 2
+		planes2_addr : 3
+		tmp_1 : 1
+		zext_ln163 : 2
+		sub_ln163 : 3
+		store_ln163 : 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|
+| Operation|        Functional Unit       |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|
+|          |       add_ln160_fu_221       |    0    |    20   |
+|    add   |      add_ln163_1_fu_241      |    0    |    25   |
+|          |       add_ln163_fu_267       |    0    |    29   |
+|----------|------------------------------|---------|---------|
+|    mux   |         tmp_1_fu_280         |    0    |    43   |
+|----------|------------------------------|---------|---------|
+|    sub   |       sub_ln163_fu_306       |    0    |    21   |
+|----------|------------------------------|---------|---------|
+|   icmp   |       icmp_ln160_fu_215      |    0    |    20   |
+|----------|------------------------------|---------|---------|
+|          | zext_ln160_1_read_read_fu_68 |    0    |    0    |
+|   read   |   phi_mul24_read_read_fu_74  |    0    |    0    |
+|          |   mul_ln163_read_read_fu_80  |    0    |    0    |
+|----------|------------------------------|---------|---------|
+|          |   zext_ln160_1_cast_fu_203   |    0    |    0    |
+|          |      zext_ln163_3_fu_237     |    0    |    0    |
+|   zext   |      zext_ln163_4_fu_247     |    0    |    0    |
+|          |      zext_ln163_1_fu_264     |    0    |    0    |
+|          |      zext_ln163_2_fu_272     |    0    |    0    |
+|          |       zext_ln163_fu_302      |    0    |    0    |
+|----------|------------------------------|---------|---------|
+|partselect|        lshr_ln3_fu_227       |    0    |    0    |
+|----------|------------------------------|---------|---------|
+|   trunc  |         empty_fu_277         |    0    |    0    |
+|----------|------------------------------|---------|---------|
+|   Total  |                              |    0    |   158   |
+|----------|------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++---------------------------------------------------------------------+--------+
+|                                                                     |   FF   |
++---------------------------------------------------------------------+--------+
+|                             i_2_reg_329                             |   13   |
+|                              i_reg_312                              |   13   |
+|                        mul_ln163_read_reg_319                       |   22   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr_reg_343|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr_reg_348|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr_reg_353|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr_reg_358|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr_reg_363|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr_reg_368|   18   |
+|process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr_reg_373|   18   |
+| process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr_reg_338 |   18   |
+|                      zext_ln160_1_cast_reg_324                      |   15   |
++---------------------------------------------------------------------+--------+
+|                                Total                                |   207  |
++---------------------------------------------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_142 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_148 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_154 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_160 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_166 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_172 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_178 |  p0  |   2  |  18  |   36   ||    9    |
+| grp_access_fu_184 |  p0  |   2  |  18  |   36   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   288  ||   3.68  ||    72   |
+|-------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |    0   |   158  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    3   |    -   |   72   |
+|  Register |    -   |   207  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    3   |   207  |   230  |
++-----------+--------+--------+--------+

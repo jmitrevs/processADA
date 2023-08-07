@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 5494
+set id 4630
 set name process_data_mux_8_3_16_1_1
 set corename simcore_mux
 set op mux
@@ -88,7 +88,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5501 \
+    id 4637 \
     name data_0_val1 \
     type other \
     dir I \
@@ -103,7 +103,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5502 \
+    id 4638 \
     name data_1_val2 \
     type other \
     dir I \
@@ -118,7 +118,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5503 \
+    id 4639 \
     name data_2_val3 \
     type other \
     dir I \
@@ -133,7 +133,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5504 \
+    id 4640 \
     name data_3_val4 \
     type other \
     dir I \
@@ -148,7 +148,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5505 \
+    id 4641 \
     name data_4_val5 \
     type other \
     dir I \
@@ -163,7 +163,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5506 \
+    id 4642 \
     name data_5_val6 \
     type other \
     dir I \
@@ -178,7 +178,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5507 \
+    id 4643 \
     name data_6_val7 \
     type other \
     dir I \
@@ -193,7 +193,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5508 \
+    id 4644 \
     name data_7_val8 \
     type other \
     dir I \

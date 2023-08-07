@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s'" level="0">
-<item name = "Date">Tue Aug  1 18:03:01 2023
+<item name = "Date">Mon Aug  7 11:50:36 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -64,11 +64,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_16s_26_1_1_U54">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_9s_25_1_1_U56">mul_16s_9s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_16_4_16_1_1_U55">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_16_4_16_1_1_U57">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_9_4_16_1_1_U53">mux_9_4_16_1_1, 0, 0, 0, 49, 0</column>
+<column name="mul_16s_16s_26_1_1_U87">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_9s_25_1_1_U89">mul_16s_9s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mux_16_4_16_1_1_U88">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_16_4_16_1_1_U90">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_9_4_16_1_1_U86">mux_9_4_16_1_1, 0, 0, 0, 49, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -397,14 +397,14 @@
 <column name="ap_return_29">out, 16, ap_ctrl_hs, dense_resource&lt;ap_fixed&lt;16, 6, 5, 3, 0&gt;, ap_fixed&lt;16, 6, 5, 3, 0&gt;, config3_mult&gt;, return value</column>
 <column name="ap_return_30">out, 16, ap_ctrl_hs, dense_resource&lt;ap_fixed&lt;16, 6, 5, 3, 0&gt;, ap_fixed&lt;16, 6, 5, 3, 0&gt;, config3_mult&gt;, return value</column>
 <column name="ap_return_31">out, 16, ap_ctrl_hs, dense_resource&lt;ap_fixed&lt;16, 6, 5, 3, 0&gt;, ap_fixed&lt;16, 6, 5, 3, 0&gt;, config3_mult&gt;, return value</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, pointer</column>
-<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, pointer</column>
 <column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, pointer</column>
+<column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, pointer</column>
 <column name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38">in, 16, ap_none, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, pointer</column>
 </table>
 </item>

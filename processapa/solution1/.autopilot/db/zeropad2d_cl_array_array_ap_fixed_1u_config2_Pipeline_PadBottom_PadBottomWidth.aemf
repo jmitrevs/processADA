@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690927380949">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691423435579">
   <ports id="1" name="layer2_out" type="PortType" coreName="FIFO" coreId="641609760" bitwidth="16" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
@@ -41,7 +41,7 @@
   <blocks id="22" name="for.end55.exitStub" type="BlockType">
     <controlInputObjs>for.inc50</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln0" coreId="2533065792" opcode="ret" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln0" coreId="4288875536" opcode="ret" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="72" pipe_depth="2" RegionName="PadBottom_PadBottomWidth">
     <basic_blocks id="12" name="for.inc50" type="BlockType">
@@ -89,12 +89,12 @@
         <dataOutputObjs>layer2_out</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="indvar_flatten13_write_ln77" lineNumber="77" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="2534168144" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="indvar_flatten13_write_ln77" lineNumber="77" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="4285240992" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="./nnet_utils/nnet_padding_stream.h" linenumber="77" fileDirectory="/home/brenton/kernel/processAPA" functionName="zeropad2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;15, 15, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config2&amp;gt;"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln77" lineNumber="77" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="2529403456" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln77" lineNumber="77" fileName="./nnet_utils/nnet_padding_stream.h" fileDirectory="../." coreId="4288133680" contextFuncName="zeropad2d_cl_nnet_array_ap_fixed_15_15_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config2_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="./nnet_utils/nnet_padding_stream.h" linenumber="77" fileDirectory="/home/brenton/kernel/processAPA" functionName="zeropad2d_cl&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;15, 15, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config2&amp;gt;"/>
         <controlInputObjs>for.inc50</controlInputObjs>
       </node_objs>

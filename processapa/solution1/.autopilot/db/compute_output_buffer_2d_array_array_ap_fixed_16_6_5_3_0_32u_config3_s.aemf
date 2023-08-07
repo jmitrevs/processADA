@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1690927382038">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691423436660">
   <ports id="1" name="in_elem_0_0_0_0_0_val" type="PortType" coreId="641609760" bitwidth="16">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -215,7 +215,7 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln289" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2526523456" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln289" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4290444672" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="289" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>if.end</controlInputObjs>
@@ -237,7 +237,7 @@
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="tmp_272" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="tmp_272_fu_177_p4" coreId="2536287024" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="31" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="tmp_271" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="tmp_271_fu_177_p4" coreId="4290590832" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="31" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="289" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -249,7 +249,7 @@
       <dataOutputObjs>and</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_273" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="tmp_273_fu_193_p4" coreId="3398513488" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="31" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp_272" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="tmp_272_fu_193_p4" coreId="976909413" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="31" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="289" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
@@ -273,7 +273,7 @@
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln289" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1626003365" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln289" lineNumber="289" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283605040" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="289" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>if.end</controlInputObjs>
@@ -287,7 +287,7 @@
     <controlInputObjs>land.lhs.true</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp" lineNumber="297" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123" coreId="1632290486" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="512" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tmp" lineNumber="297" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_fu_123" coreId="4281688672" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="512" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <dataOutputObjs>extractvalue</dataOutputObjs>
@@ -323,167 +323,167 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="res_out" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1619921205" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="res_out" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4282162544" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="res_out_152" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1632692271" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="res_out_152" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4287547584" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="res_out_153" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="3398513488" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="res_out_153" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4291753888" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="res_out_154" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="res_out_154" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="15009716" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="res_out_4" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="res_out_4" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4291767192" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="res_out_5" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4294967295" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="res_out_5" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1770606" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="res_out_6" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1702258035" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="res_out_6" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="16520382" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="res_out_7" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2534603664" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="res_out_7" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="16434787" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="res_out_8" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2538227568" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="res_out_8" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2287665" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="res_out_9" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2537814912" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="res_out_9" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="15352219" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="res_out_130" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1635699163" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="res_out_130" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="8852382" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="res_out_131" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="3398513488" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="res_out_131" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="13928087" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="res_out_132" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2530562112" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="res_out_132" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4282874496" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="res_out_133" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2531593920" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="res_out_133" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4280490496" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="res_out_134" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="640" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="res_out_134" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="0" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="res_out_135" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1868767276" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="res_out_135" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="6488719" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="res_out_136" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1717924464" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="res_out_136" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4289791888" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="res_out_137" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2526423376" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="res_out_137" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="res_out_138" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1819113532" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="res_out_138" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283229152" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="res_out_139" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="7955819" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="res_out_139" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4291961808" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="res_out_140" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1717924464" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="res_out_140" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="3270625" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="res_out_141" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1630456587" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="res_out_141" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="res_out_142" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1717924464" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="res_out_142" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="res_out_143" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1936942413" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="res_out_143" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="res_out_144" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1685024095" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="res_out_144" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4287911248" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="res_out_145" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2537579728" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="res_out_145" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="3469520" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="res_out_146" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2536148736" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="res_out_146" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4287451056" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="res_out_147" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="539456101" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="res_out_147" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="res_out_148" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1819113532" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="res_out_148" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283550656" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="res_out_149" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1819113532" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="res_out_149" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4280219056" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="res_out_150" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2532926000" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="res_out_150" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4288933024" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="res_out_151" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2536424848" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="res_out_151" lineNumber="297" originalName="res_out" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4292406320" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="16" opcode="extractvalue" nodeLabel="2.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="297" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="p_0" lineNumber="309" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="layer3_out_din" coreId="1632764583" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="512" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="p_0" lineNumber="309" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." rtlName="layer3_out_din" coreId="826041445" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="512" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="309" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -524,7 +524,7 @@
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>layer3_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln310" lineNumber="310" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1633598300" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="br_ln310" lineNumber="310" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="848989952" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="310" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <controlInputObjs>if.end</controlInputObjs>
     </node_objs>
@@ -556,7 +556,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="br_ln313" lineNumber="313" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2531926864" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="br_ln313" lineNumber="313" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="9086837" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="313" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>if.else28</controlInputObjs>
@@ -570,7 +570,7 @@
     <controlInputObjs>if.end</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end39</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="pX_2_write_ln326" lineNumber="326" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2531926864" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="56" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="pX_2_write_ln326" lineNumber="326" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1819113532" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="56" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="326" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
     </node_objs>
@@ -587,11 +587,11 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="sX_2_write_ln328" lineNumber="328" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="826041445" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="59" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="sX_2_write_ln328" lineNumber="328" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="7955712" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="59" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="328" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="br_ln0" coreId="2531998736" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="br_ln0" coreId="6775156" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
       <controlInputObjs>if.end39</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_conv_stream.h">
@@ -604,11 +604,11 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.then20</controlOutputObjs>
     <controlOutputObjs>if.else</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="pX_2_write_ln315" lineNumber="315" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2530545792" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="61" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="pX_2_write_ln315" lineNumber="315" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1330007625" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="61" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="315" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="sX_2_write_ln316" lineNumber="316" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2526412816" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="62" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="sX_2_write_ln316" lineNumber="316" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4280616704" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="62" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="316" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <constName>empty</constName>
     </node_objs>
@@ -625,7 +625,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln317" lineNumber="317" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2530304160" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="br_ln317" lineNumber="317" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="13619730" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="317" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>if.else</controlInputObjs>
@@ -642,7 +642,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>if.end27</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="pY_2_write_ln321" lineNumber="321" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1621583840" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="66" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="pY_2_write_ln321" lineNumber="321" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4283325856" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="66" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="321" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>add</dataInputObjs>
     </node_objs>
@@ -665,7 +665,7 @@
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln0" coreId="336" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="70" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="br_ln0" coreId="1701999731" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="70" m_clusterGroupNumber="-1">
       <controlInputObjs>if.end27</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_conv_stream.h">
@@ -678,11 +678,11 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>if.end27</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="pY_2_write_ln318" lineNumber="318" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2532809952" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="71" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="98" name="pY_2_write_ln318" lineNumber="318" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4289664528" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="71" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="318" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="br_ln320" lineNumber="320" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1619980729" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="72" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="br_ln320" lineNumber="320" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="62" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_delay="0.46" m_topoIndex="72" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="320" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <controlInputObjs>if.end27</controlInputObjs>
     </node_objs>
@@ -697,7 +697,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>if.end39</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="storemerge" lineNumber="323" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2533726928" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="32" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="storemerge" lineNumber="323" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="4287224912" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" bitwidth="32" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="323" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -705,11 +705,11 @@
       <controlInputObjs>if.then20</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sY_2_write_ln319" lineNumber="319" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1702258035" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="sY_2_write_ln319" lineNumber="319" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1819113532" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="store" nodeLabel="3.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="319" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <dataInputObjs>phi</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="br_ln325" lineNumber="325" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="6775156" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="br_ln325" lineNumber="325" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2296604913" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="325" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
       <controlInputObjs>if.end39</controlInputObjs>
     </node_objs>
@@ -724,7 +724,7 @@
     <controlInputObjs>if.end27</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln330" lineNumber="330" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="2535725056" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="_ln330" lineNumber="330" fileName="./nnet_utils/nnet_conv_stream.h" fileDirectory="../." coreId="1397508187" contextFuncName="compute_output_buffer_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_32_config3_s" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_conv_stream.h" linenumber="330" fileDirectory="/home/brenton/kernel/processAPA" functionName="compute_output_buffer_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 32&amp;gt;, config3&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_conv_stream.h">
@@ -901,6 +901,9 @@
   <expressionNodes realName="select_ln328_fu_408">
     <nodeIds>82</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="tmp_272_fu_193">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="res_out_136_fu_285">
     <nodeIds>56</nodeIds>
   </expressionNodes>
@@ -912,6 +915,9 @@
   </expressionNodes>
   <expressionNodes realName="res_out_131_fu_265">
     <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_271_fu_177">
+    <nodeIds>31</nodeIds>
   </expressionNodes>
   <expressionNodes realName="res_out_151_fu_345">
     <nodeIds>71</nodeIds>
@@ -979,17 +985,11 @@
   <expressionNodes realName="res_out_4_fu_237">
     <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_273_fu_193">
-    <nodeIds>33</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="res_out_137_fu_289">
     <nodeIds>57</nodeIds>
   </expressionNodes>
   <expressionNodes realName="res_out_132_fu_269">
     <nodeIds>52</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_272_fu_177">
-    <nodeIds>31</nodeIds>
   </expressionNodes>
   <moduleNodes realName="call_ln286_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_fu_95">
     <nodeIds>22</nodeIds>

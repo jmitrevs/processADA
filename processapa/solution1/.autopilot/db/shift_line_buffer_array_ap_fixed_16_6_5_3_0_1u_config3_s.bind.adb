@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -88,7 +88,7 @@
 					<Obj>
 						<type>1</type>
 						<id>3</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -124,7 +124,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -160,7 +160,7 @@
 					<Obj>
 						<type>1</type>
 						<id>5</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -196,7 +196,7 @@
 					<Obj>
 						<type>1</type>
 						<id>6</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2537235952</coreId>
+						<coreId>4288967424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2528397568</coreId>
+						<coreId>4292397888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -268,7 +268,7 @@
 					<Obj>
 						<type>1</type>
 						<id>8</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2537784752</coreId>
+						<coreId>4292014544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -304,7 +304,7 @@
 					<Obj>
 						<type>1</type>
 						<id>9</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2527730336</coreId>
+						<coreId>4286666704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -340,7 +340,7 @@
 					<Obj>
 						<type>1</type>
 						<id>10</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31</name>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2525839888</coreId>
+						<coreId>4282360320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -846,7 +846,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2533605888</coreId>
+						<coreId>4285365920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -909,7 +909,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>4291383568</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -933,328 +933,6 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_write_ln201</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>201</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>201</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2536218112</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>57</item>
-					<item>58</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>10</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_21">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>22</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_write_ln201</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>201</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>201</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2536218112</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>59</item>
-					<item>60</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>11</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_22">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>23</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_write_ln201</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>201</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>201</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2536218112</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>61</item>
-					<item>62</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>12</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_23">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>24</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_write_ln201</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>201</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>201</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>63</item>
-					<item>64</item>
-					<item>90</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>13</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_24">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>25</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_write_ln201</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>201</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>201</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>2527730432</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>65</item>
-					<item>66</item>
-					<item>89</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>14</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_25">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>26</id>
 						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30_write_ln201</name>
 						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
@@ -1294,7 +972,329 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2536882688</coreId>
+						<coreId>3775093</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>57</item>
+					<item>58</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>10</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_21">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>22</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33_write_ln201</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>201</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>201</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4282213120</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>59</item>
+					<item>60</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>11</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_22">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>23</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36_write_ln201</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>201</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>201</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4290452064</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>61</item>
+					<item>62</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>12</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_23">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>24</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31_write_ln201</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>201</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>201</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4286372656</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>63</item>
+					<item>64</item>
+					<item>90</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>13</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_24">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>25</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34_write_ln201</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>201</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>201</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>6446209</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>65</item>
+					<item>66</item>
+					<item>89</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>14</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_25">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>26</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37_write_ln201</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>201</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>201</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4287372032</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1320,71 +1320,6 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_write_ln214</name>
-						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
-						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>214</lineNumber>
-						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
-						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/brenton/kernel/processAPA</first>
-								<second>
-									<count>2</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>214</second>
-									</item>
-									<item>
-										<first>
-											<first>./nnet_utils/nnet_conv_stream.h</first>
-											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
-										</first>
-										<second>252</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1622470400</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>69</item>
-					<item>70</item>
-					<item>87</item>
-				</oprand_edges>
-				<opcode>store</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>16</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_27">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>28</id>
 						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_write_ln214</name>
 						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
@@ -1424,7 +1359,72 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>15447191</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>69</item>
+					<item>70</item>
+					<item>87</item>
+				</oprand_edges>
+				<opcode>store</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>16</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_27">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>28</id>
+						<name>void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_write_ln214</name>
+						<fileName>./nnet_utils/nnet_conv_stream.h</fileName>
+						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
+						<lineNumber>214</lineNumber>
+						<contextFuncName>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</contextFuncName>
+						<contextNormFuncName>kernel_shift_2d_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_1_config3_s</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/brenton/kernel/processAPA</first>
+								<second>
+									<count>2</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>kernel_shift_2d&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>214</second>
+									</item>
+									<item>
+										<first>
+											<first>./nnet_utils/nnet_conv_stream.h</first>
+											<second>shift_line_buffer&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 1&amp;gt;, config3&amp;gt;</second>
+										</first>
+										<second>252</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4291160528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1489,7 +1489,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>4282229824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1547,7 +1547,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2529401088</coreId>
+						<coreId>4291894144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1592,7 +1592,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2529401088</coreId>
+						<coreId>4286666704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
@@ -1623,7 +1623,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>4286666704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1654,7 +1654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1634451456</coreId>
+						<coreId>4284479626</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>16</bitwidth>
