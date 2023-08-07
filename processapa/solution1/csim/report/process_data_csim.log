@@ -5,5 +5,8 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../kernel.cpp in debug mode
    Compiling ../../../../myproject.cpp in debug mode
    Generating csim.exe
-INFO: [SIM 1] CSim file generation done with 0 errors.
+started running
+here
+after
+INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -582,7 +582,7 @@ Args:
 --- !Passed
 Pass:            reflow-disaggr
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -590,7 +590,7 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 282, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
@@ -13594,7 +13594,7 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13602,13 +13602,13 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 231, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13616,13 +13616,13 @@ Args:
     DebugLoc:        { File: ./WIB2Frame.hpp, Line: 96, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13630,13 +13630,13 @@ Args:
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 156, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13644,13 +13644,13 @@ Args:
     DebugLoc:        { File: ./Fragment.hpp, Line: 300, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13658,13 +13658,13 @@ Args:
     DebugLoc:        { File: ./nnet_utils/nnet_types.h, Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Inlining function '''
@@ -13672,21 +13672,13 @@ Args:
     DebugLoc:        { File: ./nnet_utils/nnet_types.h, Line: 17, Column: 0 }
   - String:          ''' into '''
   - Caller:          'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ''''
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: kernel.cpp, Line: 73, Column: 44 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          The program may have out of bound array access
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: kernel.cpp, Line: 19, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 21, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Applying '
@@ -13695,10 +13687,10 @@ Args:
   - UOName:          _ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors
   - String:          ''':'
   - String:          ' '
-  - Mode:            Cyclic
+  - Mode:            Block
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '60'
   - String:          ' on dimension '
   - Dim:             '2'
   - String:          .
@@ -14645,7 +14637,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 194, Column: 26 }
+DebugLoc:        { File: kernel.cpp, Line: 919, Column: 26 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Aggregating '
@@ -14661,7 +14653,7 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: kernel.cpp, Line: 196, Column: 27 }
+DebugLoc:        { File: kernel.cpp, Line: 921, Column: 27 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Aggregating '
@@ -23491,7 +23483,7 @@ Args:
   - Length:          '150'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        chanmap_fUprightFromCrate3seq
+  - AccessID:        chanmap_fUprightFromCrate2seq
   - ArrayName:       chanmap_fUprightFromCrate
   - String:          ' '
   - BundleName:      gmem1
@@ -23501,7 +23493,7 @@ Args:
   - LoopLoc:         'FDHDChannelMapSP.cxx:169:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
@@ -23512,7 +23504,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Sequential '
@@ -23521,53 +23513,23 @@ Args:
   - Length:          '3'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        outdata4seq
+  - AccessID:        outdata3seq
   - ArrayName:       outdata
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem5
   - String:          ' '
-  - LoopName:        VITIS_LOOP_215_6
+  - LoopName:        VITIS_LOOP_940_5
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:215:21'
+  - LoopLoc:         'kernel.cpp:940:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: kernel.cpp, Line: 217, Column: 31 }
+    DebugLoc:        { File: kernel.cpp, Line: 942, Column: 31 }
   - OrigDirection:   write
-  - OrigID:          for.inc173.store.4
-...
---- !Passed
-Pass:            reflow-burst-inference
-Name:            BurstInferred
-DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Sequential '
-  - Direction:       write
-  - String:          ' of length '
-  - Length:          '3'
-  - String:          ' has been inferred'
-  - String:          ' _XLX_SEP_ '
-  - AccessID:        scevgepseq
-  - ArrayName:       outdata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_239_10
-  - String:          ' '
-  - LoopLoc:         'kernel.cpp:239:22'
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      store
-    DebugLoc:        { File: kernel.cpp, Line: 241, Column: 42 }
-  - OrigDirection:   write
-  - OrigID:          for.inc223.store.6
+  - OrigID:          for.inc1366.store.4
 ...
 --- !Missed
 Pass:            reflow-burst-inference
@@ -23582,13 +23544,13 @@ Args:
   - LoopLoc:         'FDHDChannelMapSP.cxx:201:29'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            InsufficientAlignment
-DebugLoc:        { File: kernel.cpp, Line: 59, Column: 39 }
+DebugLoc:        { File: kernel.cpp, Line: 117, Column: 39 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Alignment is insufficient, current alignment is '
@@ -23598,15 +23560,15 @@ Args:
   - String:          ' is required'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: kernel.cpp, Line: 59, Column: 39 }
+    DebugLoc:        { File: kernel.cpp, Line: 117, Column: 39 }
   - OrigDirection:   read
   - OrigID:          if.then8.load.1
   - ArrayName:       infiledata
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem0
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23627,10 +23589,10 @@ Args:
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:118:9'
+  - LoopLoc:         'kernel.cpp:395:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23651,10 +23613,10 @@ Args:
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:118:9'
+  - LoopLoc:         'kernel.cpp:395:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
@@ -23668,91 +23630,41 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
   - OrigDirection:   read
-  - OrigID:          chanmap_fUprightFromCrate3seq
+  - OrigID:          chanmap_fUprightFromCrate2seq
   - ArrayName:       chanmap_fUprightFromCrate
   - String:          ' '
   - BundleName:      gmem1
   - String:          ' '
   - LoopName:        second_chan_loop
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:118:9'
+  - LoopLoc:         'kernel.cpp:395:9'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            AccessClobbered
-DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Access is clobbered by '
-  - ClobberedBy:     call
-    DebugLoc:        { File: kernel.cpp, Line: 236, Column: 3 }
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-  - OrigDirection:   write
-  - OrigID:          scevgepseq
-  - ArrayName:       outdata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to alignment '
-  - Alignment:       '4'
-  - String:          '(bytes)'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-  - OrigDirection:   write
-  - OrigID:          scevgepseq
-  - ArrayName:       outdata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_239_10
-  - String:          ' '
-  - LoopLoc:         'kernel.cpp:239:22'
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            BadAccessLen
-DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          Sequential access length is not divisible by 2
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+    DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
   - OrigDirection:   write
-  - OrigID:          outdata4seq
+  - OrigID:          outdata3seq
   - ArrayName:       outdata
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem5
   - String:          ' '
-  - LoopName:        VITIS_LOOP_215_6
+  - LoopName:        VITIS_LOOP_940_5
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:215:21'
+  - LoopLoc:         'kernel.cpp:940:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -23778,7 +23690,7 @@ Args:
   - OrigAccess:      call
     DebugLoc:        { File: FDHDChannelMapSP.cxx, Line: 169, Column: 21 }
   - OrigDirection:   read
-  - OrigID:          chanmap_fUprightFromCrate3seq
+  - OrigID:          chanmap_fUprightFromCrate2seq
   - String:          ' _XLX_SEP_ '
   - AccessID:        wseq
   - ArrayName:       chanmap_fUprightFromCrate
@@ -23790,59 +23702,31 @@ Args:
   - LoopLoc:         'FDHDChannelMapSP.cxx:169:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-widen
-Name:            GreaterOrEqualAlignment
-DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
-Args:            
-  - String:          'Could not widen since type '
-  - Type:            i32
-  - String:          ' size is greater than or equal to alignment '
-  - Alignment:       '4'
-  - String:          '(bytes)'
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-  - OrigDirection:   write
-  - OrigID:          scevgepseq
-  - ArrayName:       outdata
-  - String:          ' '
-  - BundleName:      gmem
-  - String:          ' '
-  - LoopName:        VITIS_LOOP_239_10
-  - String:          ' '
-  - LoopLoc:         'kernel.cpp:239:22'
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            BadAccessLen
-DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          Sequential access length is not divisible by 2
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+    DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
   - OrigDirection:   write
-  - OrigID:          outdata4seq
+  - OrigID:          outdata3seq
   - ArrayName:       outdata
   - String:          ' '
-  - BundleName:      gmem
+  - BundleName:      gmem5
   - String:          ' '
-  - LoopName:        VITIS_LOOP_215_6
+  - LoopName:        VITIS_LOOP_940_5
   - String:          ' '
-  - LoopLoc:         'kernel.cpp:215:21'
+  - LoopLoc:         'kernel.cpp:940:21'
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Failure
@@ -23860,7 +23744,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
@@ -23868,7 +23752,7 @@ Args:
   - String:          ' '
   - PragmaIsAuto:    '1'
   - String:          ' '
-  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config9>'
+  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
   - String:          ' '
   - VarName:         ref.tmp
   - String:          ' '
@@ -23876,7 +23760,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -23928,7 +23812,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
@@ -23936,7 +23820,7 @@ Args:
   - String:          ' '
   - PragmaIsAuto:    '1'
   - String:          ' '
-  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config6>'
+  - PragmaFunction:  'nnet::conv_2d_buffer_cl<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 64u>, config9>'
   - String:          ' '
   - VarName:         ref.tmp
   - String:          ' '
@@ -23944,7 +23828,7 @@ Args:
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEENS1_IS5_Lj64EEE7config6EEvRN3hls6streamIT_Li0EEERNSA_IT0_Li0EEEPNT1_8weight_tEPNSH_6bias_tE
+Function:        _ZN4nnet17conv_2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj64EEES6_7config9EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEPNT1_8weight_tEPNSG_6bias_tE
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -24013,7 +23897,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24026,7 +23910,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24039,7 +23923,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24052,7 +23936,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24065,7 +23949,7 @@ Args:
 --- !Failure
 Pass:            reflow-interface-check
 Name:            UnspportedNonScalarType
-DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
   - String:          'Cannot apply interface mode '''
@@ -24075,45 +23959,1458 @@ Args:
   - Name:            chanmap_DetToChanInfo
   - String:          ''' since this interface mode only supports scalar types'
 ...
---- !Missed
-Pass:            reflow-supported-subset
-Name:            MismatchPortAndBurstAccessWidth
-DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
+--- !Failure
+Pass:            reflow-interface-check
+Name:            UnspportedNonScalarType
+DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
-  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 215, Column: 21 }
-  - OrigDirection:   write
-  - OrigID:          outdata4seq
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      outdata
-  - String:          ' '
-  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
+  - String:          'Cannot apply interface mode '''
+  - String:          ap_none
+  - String:          ''' '
+  - String:          'on function argument '''
+  - Name:            outdata
+  - String:          ''' since this interface mode only supports scalar types'
 ...
---- !Missed
-Pass:            reflow-supported-subset
-Name:            MismatchPortAndBurstAccessWidth
-DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
 Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
 Args:            
-  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
-  - String:          ' _XLX_SEP_ '
-  - OrigAccess:      call
-    DebugLoc:        { File: kernel.cpp, Line: 239, Column: 22 }
-  - OrigDirection:   write
-  - OrigID:          scevgepseq
-  - ArrayName:       ''
-  - String:          ' '
-  - BundleName:      outdata
-  - String:          ' '
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
-  - String:          ' '
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 82, Column: 9 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-interface-encoding-change
+Name:            InterfaceForGlobalVariable
+DebugLoc:        { File: kernel.cpp, Line: 90, Column: 7 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Cannot apply INTERFACE pragma on a global variable. '
+  - String:          'In function '''
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-burst-summary
@@ -24136,7 +25433,7 @@ Args:
   - BundleName:      gmem1
   - String:          ' '
   - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
-    DebugLoc:        { File: kernel.cpp, Line: 6, Column: 0 }
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -24153,6 +25450,56 @@ Args:
   - Width:           '128'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem5
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_940_5
+  - String:          ' '
+  - LoopLoc:         'kernel.cpp:940:21'
+  - String:          ' '
+  - Function:        'process_data(int, char*, dune::FDHDChannelMapSP&, int*)'
+    DebugLoc:        { File: kernel.cpp, Line: 8, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: kernel.cpp, Line: 940, Column: 21 }
+Function:        _Z12process_dataiPcRN4dune16FDHDChannelMapSPEPi
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_940_5
+  - String:          '''('
+  - LoopLoc:         'kernel.cpp:940:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem5
   - String:          '''.'
   - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

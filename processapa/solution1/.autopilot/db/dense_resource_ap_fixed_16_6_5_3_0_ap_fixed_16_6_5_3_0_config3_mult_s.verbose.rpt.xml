@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s'" level="0">
-<item name = "Date">Mon Aug  7 11:50:36 2023
+<item name = "Date">Mon Aug  7 16:46:52 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -64,11 +64,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_16s_26_1_1_U87">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_9s_25_1_1_U89">mul_16s_9s_25_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_16_4_16_1_1_U88">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_16_4_16_1_1_U90">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
-<column name="mux_9_4_16_1_1_U86">mux_9_4_16_1_1, 0, 0, 0, 49, 0</column>
+<column name="mul_16s_16s_26_1_1_U379">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_9s_25_1_1_U381">mul_16s_9s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mux_16_4_16_1_1_U380">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_16_4_16_1_1_U382">mux_16_4_16_1_1, 0, 0, 0, 65, 0</column>
+<column name="mux_9_4_16_1_1_U378">mux_9_4_16_1_1, 0, 0, 0, 49, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -77,8 +77,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="outidx_U">dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_outidx_dEe, 0, 4, 9, 0, 144, 4, 1, 576</column>
-<column name="w3_U">dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_w3_ROM_eOg, 1, 0, 0, 0, 144, 25, 1, 3600</column>
+<column name="outidx_U">dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_outidx_ncg, 0, 4, 9, 0, 144, 4, 1, 576</column>
+<column name="w3_U">dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_w3_ROM_ocq, 1, 0, 0, 0, 144, 25, 1, 3600</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

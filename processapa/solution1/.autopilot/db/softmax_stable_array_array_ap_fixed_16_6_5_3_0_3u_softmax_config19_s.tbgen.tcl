@@ -82,7 +82,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "invert_table", "Type" : "Memory", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.exp_table_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.invert_table_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_18s_17ns_26_1_1_U4647", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_18s_17ns_26_1_1_U5836", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

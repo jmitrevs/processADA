@@ -74,93 +74,48 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_27_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_131_1:  '
-    FileOffset:      131
+    Message:         'Added loop label VITIS_LOOP_408_1:  '
+    FileOffset:      408
     FilePath:        kernel.cpp
     Replacements:    
       - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2268886
+        Offset:          2276821
         Length:          0
-        ReplacementText: 'VITIS_LOOP_131_1: '
+        ReplacementText: 'VITIS_LOOP_408_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_160_2:  '
-    FileOffset:      160
+    Message:         'Added loop label VITIS_LOOP_926_2:  '
+    FileOffset:      926
     FilePath:        kernel.cpp
     Replacements:    
       - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2269344
+        Offset:          2286827
         Length:          0
-        ReplacementText: 'VITIS_LOOP_160_2: '
+        ReplacementText: 'VITIS_LOOP_926_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_201_3:  '
-    FileOffset:      201
+    Message:         'Added loop label VITIS_LOOP_928_3:  '
+    FileOffset:      928
     FilePath:        kernel.cpp
     Replacements:    
       - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2269842
+        Offset:          2286873
         Length:          0
-        ReplacementText: 'VITIS_LOOP_201_3: '
+        ReplacementText: 'VITIS_LOOP_928_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_203_4:  '
-    FileOffset:      203
+    Message:         'Added loop label VITIS_LOOP_930_4:  '
+    FileOffset:      930
     FilePath:        kernel.cpp
     Replacements:    
       - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2269888
+        Offset:          2286916
         Length:          0
-        ReplacementText: 'VITIS_LOOP_203_4: '
+        ReplacementText: 'VITIS_LOOP_930_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_205_5:  '
-    FileOffset:      205
+    Message:         'Added loop label VITIS_LOOP_940_5:  '
+    FileOffset:      940
     FilePath:        kernel.cpp
     Replacements:    
       - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2269931
+        Offset:          2287180
         Length:          0
-        ReplacementText: 'VITIS_LOOP_205_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_215_6:  '
-    FileOffset:      215
-    FilePath:        kernel.cpp
-    Replacements:    
-      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2270195
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_215_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_224_7:  '
-    FileOffset:      224
-    FilePath:        kernel.cpp
-    Replacements:    
-      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2270285
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_224_7: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_226_8:  '
-    FileOffset:      226
-    FilePath:        kernel.cpp
-    Replacements:    
-      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2270336
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_226_8: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_228_9:  '
-    FileOffset:      228
-    FilePath:        kernel.cpp
-    Replacements:    
-      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2270379
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_228_9: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_239_10:  '
-    FileOffset:      239
-    FilePath:        kernel.cpp
-    Replacements:    
-      - FilePath:        /home/brenton/kernel/processAPA/processapa/solution1/.autopilot/db/kernel.pp.0.cpp
-        Offset:          2270668
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_239_10: '
+        ReplacementText: 'VITIS_LOOP_940_5: '
 ...

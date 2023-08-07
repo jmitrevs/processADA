@@ -7,7 +7,7 @@
 // ==============================================================
 #ifndef __process_data_mac_muladd_9ns_13ns_8ns_22_4_1__HH__
 #define __process_data_mac_muladd_9ns_13ns_8ns_22_4_1__HH__
-#include "process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1.h"
+#include "process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0.h"
 
 template<
     int ID,
@@ -27,16 +27,16 @@ SC_MODULE(process_data_mac_muladd_9ns_13ns_8ns_22_4_1) {
 
 
 
-    process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1 process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U;
+    process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0 process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U;
 
-    SC_CTOR(process_data_mac_muladd_9ns_13ns_8ns_22_4_1):  process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U ("process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U") {
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.clk(clk);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.rst(reset);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.ce(ce);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.in0(din0);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.in1(din1);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.in2(din2);
-        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U.dout(dout);
+    SC_CTOR(process_data_mac_muladd_9ns_13ns_8ns_22_4_1):  process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U ("process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U") {
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.clk(clk);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.rst(reset);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.ce(ce);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.in0(din0);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.in1(din1);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.in2(din2);
+        process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U.dout(dout);
 
     }
 

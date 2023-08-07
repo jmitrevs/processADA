@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s'" level="0">
-<item name = "Date">Mon Aug  7 11:51:56 2023
+<item name = "Date">Mon Aug  7 16:48:16 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_18s_17ns_26_1_1_U4647">mul_18s_17ns_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_18s_17ns_26_1_1_U5836">mul_18s_17ns_26_1_1, 0, 1, 0, 5, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -72,8 +72,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="exp_table_U">softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljBb, 2, 0, 0, 0, 1024, 17, 1, 17408</column>
-<column name="invert_table_U">softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjCb, 1, 0, 0, 0, 1024, 18, 1, 18432</column>
+<column name="exp_table_U">softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljLb, 2, 0, 0, 0, 1024, 17, 1, 17408</column>
+<column name="invert_table_U">softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjMb, 1, 0, 0, 0, 1024, 18, 1, 18432</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

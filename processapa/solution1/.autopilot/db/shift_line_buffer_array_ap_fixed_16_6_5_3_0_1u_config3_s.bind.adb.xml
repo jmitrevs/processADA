@@ -19,7 +19,7 @@
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-entry:0 %specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_35
+entry:0 %specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln241"/></StgValue>
@@ -344,12 +344,12 @@ entry:19 %ret_ln241 = ret
 <port id="32" name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36"/></StgValue>
 </port>
-<port id="33" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="33" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="34" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="34" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
@@ -366,7 +366,7 @@ entry:19 %ret_ln241 = ret
 </dataflow>
 <dataflow id="42" from="StgValue_39" to="specpipeline_ln241" fromId="39" toId="2">
 </dataflow>
-<dataflow id="44" from="empty_35" to="specpipeline_ln241" fromId="43" toId="2">
+<dataflow id="44" from="empty_8" to="specpipeline_ln241" fromId="43" toId="2">
 </dataflow>
 <dataflow id="46" from="_ssdm_op_Read.ap_auto.i16" to="in_elem_0_0_0_0_0_val_read" fromId="45" toId="3">
 </dataflow>

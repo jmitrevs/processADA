@@ -132,10 +132,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1", "Type" : "Memory", "Direction" : "X"},
-			{"Name" : "void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer", "Type" : "Memory", "Direction" : "X"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_U", "Parent" : "0"}]}
+			{"Name" : "void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1", "Type" : "Memory", "Direction" : "X"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -150,8 +150,8 @@ set ArgLastReadFirstWriteLatency {
 		void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 {Type O LastRead -1 FirstWrite 0}
 		void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 {Type O LastRead -1 FirstWrite 0}
 		void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 {Type O LastRead -1 FirstWrite 0}
-		void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 {Type X LastRead -1 FirstWrite -1}
-		void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer {Type X LastRead -1 FirstWrite -1}}}
+		void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer {Type X LastRead -1 FirstWrite -1}
+		void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 {Type X LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

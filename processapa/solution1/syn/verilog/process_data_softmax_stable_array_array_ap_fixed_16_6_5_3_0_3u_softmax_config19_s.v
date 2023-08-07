@@ -160,7 +160,7 @@ initial begin
 #0 ap_CS_fsm = 6'd1;
 end
 
-process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljBb #(
+process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljLb #(
     .DataWidth( 17 ),
     .AddressRange( 1024 ),
     .AddressWidth( 10 ))
@@ -178,7 +178,7 @@ exp_table_U(
     .q2(exp_table_q2)
 );
 
-process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjCb #(
+process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjMb #(
     .DataWidth( 18 ),
     .AddressRange( 1024 ),
     .AddressWidth( 10 ))
@@ -196,7 +196,7 @@ process_data_mul_18s_17ns_26_1_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 17 ),
     .dout_WIDTH( 26 ))
-mul_18s_17ns_26_1_1_U4647(
+mul_18s_17ns_26_1_1_U5836(
     .din0(grp_fu_145_p0),
     .din1(grp_fu_145_p1),
     .dout(grp_fu_145_p2)

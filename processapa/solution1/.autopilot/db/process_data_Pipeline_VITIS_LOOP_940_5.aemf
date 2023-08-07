@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691441300808">
+  <ports id="1" name="gmem5" type="PortType" coreId="641609760" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="sext_ln940" type="PortType" coreId="641609760" bitwidth="62">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="cc_prob" type="PortType" coreName="RAM" coreId="0" bitwidth="16" iftype="IfTypeRegister" arraysize="3">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <edges id="43" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="44" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="47" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="48" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="49" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="50" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="58" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="59" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="61" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="62" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="100" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="155" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="156" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="157" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <blocks id="10" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.body1357</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="z" originalName="z" coreId="807414835" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="sext_ln940_read" coreId="539767593" bitwidth="62" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext_ln940</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sext_ln940_cast" coreId="539767593" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="z_write_ln0" coreId="539767593" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="539767593" opcode="br" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.body1357</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="38" name="for.inc1369.exitStub" type="BlockType">
+    <controlInputObjs>for.body1357</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln0" coreId="1162163815" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="139" pipe_depth="3" RegionName="VITIS_LOOP_940_5">
+    <basic_blocks id="18" name="for.body1357" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.body1357.split_ifconv</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc1369.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.body1357.split_ifconv</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="z_1" lineNumber="940" originalName="z" fileName="kernel.cpp" fileDirectory="../." coreId="539770485" contextFuncName="process_data" bitwidth="2" opcode="load" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="gmem5_addr" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." coreId="539770485" contextFuncName="process_data" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>gmem5</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln940" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." rtlName="icmp_ln940_fu_109_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="process_data" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.62" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="add_ln940" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." rtlName="add_ln940_fu_115_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="process_data" bitwidth="2" opcode="add" m_display="0" m_delay="0.62" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="br_ln940" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." coreId="316690424" contextFuncName="process_data" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body1357.split_ifconv</controlInputObjs>
+        <controlInputObjs>for.inc1369.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="kernel.cpp">
+        <validLinenumbers>940</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="36" name="for.body1357.split_ifconv" type="BlockType">
+      <controlInputObjs>for.body1357</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body1357</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="z_cast" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." rtlName="z_cast_fu_121_p1" coreId="329719552" contextFuncName="process_data" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="cc_prob_addr" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." coreId="339437920" contextFuncName="process_data" bitwidth="2" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>cc_prob</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="cc_prob_load" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="process_data" bitwidth="16" opcode="load" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>bitselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="tmp_fu_136_p4" coreId="1397508187" contextFuncName="process_data" bitwidth="6" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="sext_ln942_fu_146_p1" coreId="339465808" contextFuncName="process_data" bitwidth="7" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_12" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="tmp_12_fu_150_p3" coreId="3951853558" contextFuncName="process_data" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="trunc_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="trunc_ln942_fu_158_p1" coreId="3952059610" contextFuncName="process_data" bitwidth="10" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="icmp_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="icmp_ln942_fu_162_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="process_data" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.93" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="add_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="add_ln942_fu_168_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="process_data" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.84" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="select_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="select_ln942_fu_174_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="process_data" bitwidth="7" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="select_ln942_1" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="select_ln942_1_fu_182_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="process_data" bitwidth="7" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.37" m_topoIndex="22" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>bitselect</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sext_ln942_1" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." rtlName="m_axi_gmem5_WDATA" coreId="3921851001" contextFuncName="process_data" bitwidth="32" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="gmem5_addr_write_ln942" lineNumber="942" fileName="kernel.cpp" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="process_data" opcode="write" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="942" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="z_write_ln940" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." coreId="294756064" contextFuncName="process_data" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln940" lineNumber="940" fileName="kernel.cpp" fileDirectory="../." coreId="294756064" contextFuncName="process_data" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="kernel.cpp" linenumber="940" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <controlInputObjs>for.body1357</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="kernel.cpp">
+        <validLinenumbers>940</validLinenumbers>
+        <validLinenumbers>942</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="select_ln942_1_reg_220">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="cc_prob_addr_reg_210">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln940_reg_206">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="gmem5_addr_reg_215">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln940_cast_reg_201">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="z_reg_194">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <expressionNodes realName="gmem5_addr_fu_131">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln942_fu_168">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln942_fu_158">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="z_fu_66">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln940_cast_fu_97">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_136">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln940_fu_115">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cc_prob_addr_gep_fu_84">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln940_fu_109">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln942_1_fu_190">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln942_1_fu_182">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_fu_150">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="z_cast_fu_121">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln942_fu_162">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln942_fu_146">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln942_fu_174">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_101">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln940_store_fu_126">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln942_write_fu_76">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sext_ln940_read_read_fu_70">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="z_1_load_fu_106">
+    <nodeIds>11</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="cc_prob">
+    <nodeIds>23</nodeIds>
+  </memoryPorts>
+  <ioPorts name="cc_prob(p0)">
+    <contents name="load">
+      <nodeIds>23</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem5">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sext_ln940">
+    <contents name="read">
+      <nodeIds>5</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="2" latency="2"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="2"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="process_data_Pipeline_VITIS_LOOP_940_5" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="6" mMaxLatency="6">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>10</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_940_5" mII="1" mDepth="3" mMinTripCount="3" mMaxTripCount="3" mMinLatency="4" mMaxLatency="4" mType="1">
+      <basicBlocks>18</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

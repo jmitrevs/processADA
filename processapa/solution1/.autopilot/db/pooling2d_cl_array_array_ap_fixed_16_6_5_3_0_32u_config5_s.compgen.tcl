@@ -1,12 +1,12 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config5_s_p_ZZN4nnet19poolinfYi BINDTYPE {storage} TYPE {shiftreg} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config5_s_p_ZZN4nnet19poolinpcA BINDTYPE {storage} TYPE {shiftreg} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
 # FIFO definition:
-set ID 111
+set ID 403
 set FifoName process_data_frp_fifoout
 set InstName process_data_frp_fifoout_U
 set CoreName ap_simcore_frp_fifoout
@@ -45,7 +45,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 112 \
+    id 404 \
     name layer3_out \
     type fifo \
     dir I \
@@ -60,7 +60,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 113 \
+    id 405 \
     name layer5_out \
     type fifo \
     dir O \

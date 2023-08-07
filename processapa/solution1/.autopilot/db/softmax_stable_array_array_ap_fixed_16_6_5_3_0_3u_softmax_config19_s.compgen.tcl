@@ -7,12 +7,12 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljBb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljLb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjCb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjMb BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -26,7 +26,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 4651 \
+    id 5840 \
     name layer18_out \
     type fifo \
     dir I \
@@ -41,7 +41,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 4652 \
+    id 5841 \
     name layer19_out \
     type fifo \
     dir O \

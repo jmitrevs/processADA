@@ -95,12 +95,12 @@ reg void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0;
-reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0;
-wire   [15:0] void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
 reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_ce0;
 reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_we0;
 wire   [15:0] void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0;
+reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0;
+reg    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0;
+wire   [15:0] void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
 reg   [0:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ce_reg;
@@ -110,21 +110,7 @@ initial begin
 #0 ap_CS_fsm = 1'd1;
 end
 
-process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_bkb #(
-    .DataWidth( 16 ),
-    .AddressRange( 128 ),
-    .AddressWidth( 7 ))
-void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(7'd127),
-    .ce0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0),
-    .we0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0),
-    .d0(in_elem_0_0_0_0_0_val),
-    .q0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0)
-);
-
-process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_bkb #(
+process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_lbW #(
     .DataWidth( 16 ),
     .AddressRange( 128 ),
     .AddressWidth( 7 ))
@@ -134,8 +120,22 @@ void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_U(
     .address0(7'd127),
     .ce0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_ce0),
     .we0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_we0),
-    .d0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0),
+    .d0(in_elem_0_0_0_0_0_val),
     .q0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0)
+);
+
+process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_lbW #(
+    .DataWidth( 16 ),
+    .AddressRange( 128 ),
+    .AddressWidth( 7 ))
+void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .address0(7'd127),
+    .ce0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0),
+    .we0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0),
+    .d0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0),
+    .q0(void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0)
 );
 
 always @ (posedge ap_clk) begin
@@ -204,7 +204,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o = void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o = void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
     end else begin
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o = void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i;
     end
@@ -244,7 +244,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o = void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
+        void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o = void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0;
     end else begin
         void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o = void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i;
     end

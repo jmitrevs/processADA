@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1 is
+entity process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -21,7 +21,7 @@ port (
 
 end entity;
 
-architecture behav of process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1 is
+architecture behav of process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0 is
     signal a       : signed(27-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -75,7 +75,7 @@ entity process_data_mac_muladd_9ns_13ns_8ns_22_4_1 is
 end entity;
 
 architecture arch of process_data_mac_muladd_9ns_13ns_8ns_22_4_1 is
-    component process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1 is
+    component process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -89,7 +89,7 @@ architecture arch of process_data_mac_muladd_9ns_13ns_8ns_22_4_1 is
 
 
 begin
-    process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1_U :  component process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_1
+    process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0_U :  component process_data_mac_muladd_9ns_13ns_8ns_22_4_1_DSP48_0
     port map (
         clk => clk,
         rst => reset,

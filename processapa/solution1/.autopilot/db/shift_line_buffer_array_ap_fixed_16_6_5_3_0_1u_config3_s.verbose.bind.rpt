@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s'
 ================================================================
-* Date:           Mon Aug  7 11:49:43 2023
+* Date:           Mon Aug  7 16:45:57 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -79,7 +79,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.50>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_35" [./nnet_utils/nnet_conv_stream.h:241]   --->   Operation 2 'specpipeline' 'specpipeline_ln241' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specpipeline_ln241 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_8" [./nnet_utils/nnet_conv_stream.h:241]   --->   Operation 2 'specpipeline' 'specpipeline_ln241' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%in_elem_0_0_0_0_0_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %in_elem_0_0_0_0_0_val" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 3 'read' 'in_elem_0_0_0_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 4 [1/1] (0.75ns)   --->   "%p_03_i = memshiftread i16 @_ssdm_op_MemShiftRead.[128 x i16]P0A, i16 127, i16 %in_elem_0_0_0_0_0_val_read, i1 1" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 4 'memshiftread' 'p_03_i' <Predicate = true> <Delay = 0.75> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.75> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 16> <Depth = 128> <ShiftMem>
 ST_1 : Operation 5 [1/1] (0.75ns)   --->   "%p_0_i = memshiftread i16 @_ssdm_op_MemShiftRead.[128 x i16]P0A, i16 127, i16 %p_03_i, i1 1" [./nnet_utils/nnet_conv_stream.h:246]   --->   Operation 5 'memshiftread' 'p_0_i' <Predicate = true> <Delay = 0.75> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.75> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 16> <Depth = 128> <ShiftMem>
@@ -122,8 +122,8 @@ Port [ void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig
 Port [ void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
 Port [ void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36]:  wired=1; compound=0; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
 Port [ void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -245,22 +245,22 @@ ret_ln241                                                                    (re
 </bind>
 </comp>
 
-<comp id="20" class="1000" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1">
+<comp id="20" class="1000" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer">
 <pin_list>
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="22" class="1000" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer">
+<comp id="22" class="1000" name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1">
 <pin_list>
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -297,7 +297,7 @@ ret_ln241                                                                    (re
 <pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_35"/></StgValue>
+<StgValue><ssdm name="empty_8"/></StgValue>
 </bind>
 </comp>
 
@@ -647,8 +647,8 @@ ret_ln241                                                                    (re
 	Port: void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 | {1 }
 	Port: void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 | {1 }
 	Port: void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 | {1 }
-	Port: void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 | {1 }
 	Port: void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer | {1 }
+	Port: void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 | {1 }
  - Input state : 
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : in_elem_0_0_0_0_0_val | {1 }
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 | {1 }
@@ -657,8 +657,8 @@ ret_ln241                                                                    (re
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 | {1 }
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 | {1 }
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 | {1 }
-	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 | {1 }
 	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer | {1 }
+	Port: shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3> : void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1 | {1 }
   - Chain level:
 	State 1
 		p_0_i : 1

@@ -11,13 +11,19 @@ In file included from ./defines3.h:6:
 /home/brenton/kernel/processAPA/processapa/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=name=process_data_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=process_data
         ^
-kernel.cpp:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi depth=28320800 port=infiledata offset=slave bundle=gmem_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi depth=28320800 port=infiledata offset=slave bundle=gmem
+kernel.cpp:9:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi port=infiledata depth=28320800_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=infiledata depth=28320800
         ^
-kernel.cpp:8:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi depth=276 port=outdata offset=slave bundle=gmem_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi depth=276 port=outdata offset=slave bundle=gmem
+kernel.cpp:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi port=infiledata depth=276_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=infiledata depth=276
         ^
-kernel.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=variable=adc_vectors type=cyclic factor=8 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS ARRAY_PARTITION variable=adc_vectors type=cyclic factor=8 dim=2
+kernel.cpp:82:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=m_axi depth=1536000 port=adc_vectors offset=slave bundle=gmem_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=1536000 port=adc_vectors offset=slave bundle=gmem
         ^
-6 warnings generated.
+kernel.cpp:83:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=variable=adc_vectors type=block factor=60 dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=adc_vectors type=block factor=60 dim=2
+        ^
+kernel.cpp:126:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=process_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline
+        ^
+8 warnings generated.

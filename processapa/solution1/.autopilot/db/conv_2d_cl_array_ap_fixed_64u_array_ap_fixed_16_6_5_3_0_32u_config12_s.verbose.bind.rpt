@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s'
 ================================================================
-* Date:           Mon Aug  7 11:50:09 2023
+* Date:           Mon Aug  7 16:46:23 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -88,8 +88,8 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 0.46>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 4 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer12_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %layer11_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer12_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %layer11_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.46ns)   --->   "%store_ln79 = store i8 0, i8 %indvar_flatten" [./nnet_utils/nnet_conv2d_stream.h:79->./nnet_utils/nnet_conv2d_stream.h:103]   --->   Operation 7 'store' 'store_ln79' <Predicate = true> <Delay = 0.46>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln79 = br void %for.inc.i" [./nnet_utils/nnet_conv2d_stream.h:79->./nnet_utils/nnet_conv2d_stream.h:103]   --->   Operation 8 'br' 'br_ln79' <Predicate = true> <Delay = 0.00>
 
@@ -7540,7 +7540,7 @@ br_ln81               (br               ) [ 0000]
 <pin id="1427" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_38"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 
@@ -7558,7 +7558,7 @@ br_ln81               (br               ) [ 0000]
 <pin id="1431" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_35"/></StgValue>
+<StgValue><ssdm name="empty_8"/></StgValue>
 </bind>
 </comp>
 

@@ -214,10 +214,6 @@ attribute shreg_extract : string;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_ce0 : STD_LOGIC;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_we0 : STD_LOGIC;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_ce0 : STD_LOGIC;
-    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_we0 : STD_LOGIC;
-    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_ce0 : STD_LOGIC;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_we0 : STD_LOGIC;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_d0 : STD_LOGIC_VECTOR (15 downto 0);
@@ -250,6 +246,10 @@ attribute shreg_extract : string;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_we0 : STD_LOGIC;
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_d0 : STD_LOGIC_VECTOR (15 downto 0);
     signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_ce0 : STD_LOGIC;
+    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_we0 : STD_LOGIC;
+    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_ce0 : STD_LOGIC;
     signal p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_we0 : STD_LOGIC;
     signal p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_d0 : STD_LOGIC_VECTOR (15 downto 0);
@@ -473,7 +473,7 @@ attribute shreg_extract : string;
     signal zext_ln25_224_fu_1959_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_s_fu_1963_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_318_fu_1979_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_235_fu_1935_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_236_fu_1935_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_318_fu_1973_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_fu_1983_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_867_fu_2001_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -485,7 +485,7 @@ attribute shreg_extract : string;
     signal zext_ln25_225_fu_2041_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_158_fu_2045_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_320_fu_2061_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_236_fu_2017_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_237_fu_2017_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_320_fu_2055_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_286_fu_2065_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_870_fu_2083_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -497,7 +497,7 @@ attribute shreg_extract : string;
     signal zext_ln25_226_fu_2123_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_159_fu_2127_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_322_fu_2143_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_237_fu_2099_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_238_fu_2099_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_322_fu_2137_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_287_fu_2147_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_873_fu_2165_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -509,7 +509,7 @@ attribute shreg_extract : string;
     signal zext_ln25_227_fu_2205_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_160_fu_2209_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_324_fu_2225_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_238_fu_2181_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_239_fu_2181_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_324_fu_2219_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_288_fu_2229_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_876_fu_2247_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -521,7 +521,7 @@ attribute shreg_extract : string;
     signal zext_ln25_228_fu_2287_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_161_fu_2291_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_326_fu_2307_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_239_fu_2263_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_240_fu_2263_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_326_fu_2301_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_289_fu_2311_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_879_fu_2329_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -533,7 +533,7 @@ attribute shreg_extract : string;
     signal zext_ln25_229_fu_2369_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_162_fu_2373_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_328_fu_2389_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_240_fu_2345_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_241_fu_2345_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_328_fu_2383_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_290_fu_2393_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_882_fu_2411_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -545,7 +545,7 @@ attribute shreg_extract : string;
     signal zext_ln25_230_fu_2451_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_163_fu_2455_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_330_fu_2471_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_241_fu_2427_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_242_fu_2427_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_330_fu_2465_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_291_fu_2475_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_885_fu_2493_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -557,7 +557,7 @@ attribute shreg_extract : string;
     signal zext_ln25_231_fu_2533_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_164_fu_2537_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_332_fu_2553_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_242_fu_2509_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_243_fu_2509_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_332_fu_2547_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_292_fu_2557_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_888_fu_2575_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -569,7 +569,7 @@ attribute shreg_extract : string;
     signal zext_ln25_232_fu_2615_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_165_fu_2619_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_334_fu_2635_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_243_fu_2591_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_244_fu_2591_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_334_fu_2629_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_293_fu_2639_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_891_fu_2657_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -581,7 +581,7 @@ attribute shreg_extract : string;
     signal zext_ln25_233_fu_2697_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_166_fu_2701_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_336_fu_2717_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_244_fu_2673_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_245_fu_2673_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_336_fu_2711_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_294_fu_2721_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_894_fu_2739_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -593,7 +593,7 @@ attribute shreg_extract : string;
     signal zext_ln25_234_fu_2779_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_167_fu_2783_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_338_fu_2799_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_245_fu_2755_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_246_fu_2755_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_338_fu_2793_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_295_fu_2803_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_897_fu_2821_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -605,7 +605,7 @@ attribute shreg_extract : string;
     signal zext_ln25_235_fu_2861_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_168_fu_2865_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_340_fu_2881_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_246_fu_2837_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_247_fu_2837_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_340_fu_2875_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_296_fu_2885_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_900_fu_2903_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -617,7 +617,7 @@ attribute shreg_extract : string;
     signal zext_ln25_236_fu_2943_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_169_fu_2947_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_342_fu_2963_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_247_fu_2919_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_248_fu_2919_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_342_fu_2957_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_297_fu_2967_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_903_fu_2985_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -629,7 +629,7 @@ attribute shreg_extract : string;
     signal zext_ln25_237_fu_3025_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_170_fu_3029_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_344_fu_3045_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_248_fu_3001_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_249_fu_3001_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_344_fu_3039_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_298_fu_3049_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_906_fu_3067_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -641,7 +641,7 @@ attribute shreg_extract : string;
     signal zext_ln25_238_fu_3107_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_171_fu_3111_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_346_fu_3127_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_249_fu_3083_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_250_fu_3083_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_346_fu_3121_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_299_fu_3131_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_909_fu_3149_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -653,7 +653,7 @@ attribute shreg_extract : string;
     signal zext_ln25_239_fu_3189_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_172_fu_3193_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_348_fu_3209_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_250_fu_3165_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_251_fu_3165_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_348_fu_3203_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_300_fu_3213_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_912_fu_3231_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -665,7 +665,7 @@ attribute shreg_extract : string;
     signal zext_ln25_240_fu_3271_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_173_fu_3275_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_350_fu_3291_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_251_fu_3247_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_252_fu_3247_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_350_fu_3285_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_301_fu_3295_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_915_fu_3313_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -677,7 +677,7 @@ attribute shreg_extract : string;
     signal zext_ln25_241_fu_3353_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_174_fu_3357_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_352_fu_3373_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_252_fu_3329_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_253_fu_3329_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_352_fu_3367_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_302_fu_3377_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_918_fu_3395_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -689,7 +689,7 @@ attribute shreg_extract : string;
     signal zext_ln25_242_fu_3435_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_175_fu_3439_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_354_fu_3455_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_253_fu_3411_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_254_fu_3411_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_354_fu_3449_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_303_fu_3459_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_921_fu_3477_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -701,7 +701,7 @@ attribute shreg_extract : string;
     signal zext_ln25_243_fu_3517_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_176_fu_3521_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_356_fu_3537_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_254_fu_3493_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_255_fu_3493_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_356_fu_3531_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_304_fu_3541_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_924_fu_3559_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -713,7 +713,7 @@ attribute shreg_extract : string;
     signal zext_ln25_244_fu_3599_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_177_fu_3603_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_358_fu_3619_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_255_fu_3575_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_256_fu_3575_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_358_fu_3613_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_305_fu_3623_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_927_fu_3641_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -725,7 +725,7 @@ attribute shreg_extract : string;
     signal zext_ln25_245_fu_3681_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_178_fu_3685_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_360_fu_3701_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_256_fu_3657_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_257_fu_3657_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_360_fu_3695_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_306_fu_3705_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_930_fu_3723_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -737,7 +737,7 @@ attribute shreg_extract : string;
     signal zext_ln25_246_fu_3763_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_179_fu_3767_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_362_fu_3783_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_257_fu_3739_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_258_fu_3739_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_362_fu_3777_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_307_fu_3787_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_933_fu_3805_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -749,7 +749,7 @@ attribute shreg_extract : string;
     signal zext_ln25_247_fu_3845_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_180_fu_3849_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_364_fu_3865_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_258_fu_3821_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_259_fu_3821_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_364_fu_3859_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_308_fu_3869_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_936_fu_3887_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -761,7 +761,7 @@ attribute shreg_extract : string;
     signal zext_ln25_248_fu_3927_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_181_fu_3931_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_366_fu_3947_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_259_fu_3903_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_260_fu_3903_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_366_fu_3941_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_309_fu_3951_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_939_fu_3969_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -773,7 +773,7 @@ attribute shreg_extract : string;
     signal zext_ln25_249_fu_4009_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_182_fu_4013_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_368_fu_4029_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_260_fu_3985_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_261_fu_3985_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_368_fu_4023_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_310_fu_4033_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_942_fu_4051_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -785,7 +785,7 @@ attribute shreg_extract : string;
     signal zext_ln25_250_fu_4091_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_183_fu_4095_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_370_fu_4111_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_261_fu_4067_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_262_fu_4067_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_370_fu_4105_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_311_fu_4115_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_945_fu_4133_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -797,7 +797,7 @@ attribute shreg_extract : string;
     signal zext_ln25_251_fu_4173_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_184_fu_4177_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_372_fu_4193_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_262_fu_4149_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_263_fu_4149_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_372_fu_4187_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_312_fu_4197_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_948_fu_4215_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -809,7 +809,7 @@ attribute shreg_extract : string;
     signal zext_ln25_252_fu_4255_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_185_fu_4259_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_374_fu_4275_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_263_fu_4231_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_264_fu_4231_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_374_fu_4269_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_313_fu_4279_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_951_fu_4297_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -821,7 +821,7 @@ attribute shreg_extract : string;
     signal zext_ln25_253_fu_4337_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_186_fu_4341_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_376_fu_4357_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_264_fu_4313_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_265_fu_4313_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_376_fu_4351_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_314_fu_4361_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_954_fu_4379_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -833,7 +833,7 @@ attribute shreg_extract : string;
     signal zext_ln25_254_fu_4419_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_187_fu_4423_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_378_fu_4439_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_265_fu_4395_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_266_fu_4395_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_378_fu_4433_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_315_fu_4443_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal add_ln50_957_fu_4461_p2 : STD_LOGIC_VECTOR (15 downto 0);
@@ -845,7 +845,7 @@ attribute shreg_extract : string;
     signal zext_ln25_255_fu_4501_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal trunc_ln25_188_fu_4505_p4 : STD_LOGIC_VECTOR (13 downto 0);
     signal sext_ln25_380_fu_4521_p1 : STD_LOGIC_VECTOR (14 downto 0);
-    signal tmp_266_fu_4477_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_267_fu_4477_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal sub_ln25_380_fu_4515_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal zext_ln25_316_fu_4525_p1 : STD_LOGIC_VECTOR (15 downto 0);
     signal icmp_ln222_fu_4541_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -862,7 +862,7 @@ attribute shreg_extract : string;
     signal ap_condition_576 : BOOLEAN;
     signal ap_ce_reg : STD_LOGIC;
 
-    component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b IS
+    component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -898,7 +898,7 @@ attribute shreg_extract : string;
 
 
 begin
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -912,21 +912,7 @@ begin
         d0 => pool_window_1011_fu_619_p1,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
-    generic map (
-        DataWidth => 16,
-        AddressRange => 4,
-        AddressWidth => 2)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        address0 => ap_const_lv2_3,
-        ce0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_ce0,
-        we0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_we0,
-        d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0,
-        q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0);
-
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -940,7 +926,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -954,7 +940,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -968,7 +954,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -982,7 +968,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -996,7 +982,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1010,7 +996,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1024,7 +1010,7 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_q0);
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1038,7 +1024,21 @@ begin
         d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_d0,
         q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
+    generic map (
+        DataWidth => 16,
+        AddressRange => 4,
+        AddressWidth => 2)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => ap_const_lv2_3,
+        ce0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_ce0,
+        we0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_we0,
+        d0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0,
+        q0 => void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0);
+
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1052,7 +1052,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1066,7 +1066,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1080,7 +1080,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_324_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_324_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1094,7 +1094,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_324_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_324_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_325_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_325_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1108,7 +1108,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_325_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_325_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_326_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_326_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1122,7 +1122,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_326_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_326_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_327_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_327_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1136,7 +1136,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_327_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_327_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_328_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_328_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1150,7 +1150,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_328_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_328_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_329_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_329_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1164,7 +1164,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_329_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_329_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_330_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_330_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1178,7 +1178,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_330_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_330_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_331_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_331_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1192,7 +1192,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_331_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_331_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_332_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_332_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1206,7 +1206,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_332_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_332_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_333_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_333_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1220,7 +1220,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_333_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_333_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_334_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_334_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1234,7 +1234,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_334_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_334_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_335_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_335_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1248,7 +1248,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_335_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_335_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_336_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_336_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1262,7 +1262,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_336_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_336_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_337_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_337_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1276,7 +1276,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_337_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_337_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_338_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_338_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1290,7 +1290,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_338_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_338_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_339_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_339_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1304,7 +1304,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_339_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_339_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_340_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_340_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1318,7 +1318,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_340_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_340_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_341_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_341_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1332,7 +1332,7 @@ begin
         d0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_341_d0,
         q0 => p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_341_q0);
 
-    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_342_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bui3b
+    p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_342_U : component process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb
     generic map (
         DataWidth => 16,
         AddressRange => 4,
@@ -1581,15 +1581,15 @@ begin
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1113 <= layer12_out_dout(495 downto 480);
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1114 <= layer12_out_dout(511 downto 496);
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1115 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1116 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1117 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1118 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1119 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1120 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1121 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1122 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1123 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_q0;
-                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1124 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1116 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1117 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1118 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1119 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1120 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1121 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1122 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1123 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0;
+                p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1124 <= void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0;
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1125 <= p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_q0;
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1126 <= p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_q0;
                 p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1127 <= p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_q0;
@@ -1683,23 +1683,23 @@ begin
     add_ln241_fu_500_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_indvar_flatten_load) + unsigned(ap_const_lv7_1));
     add_ln50_864_fu_1919_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_q0) + unsigned(pool_window_1011_fu_619_p1));
     add_ln50_866_fu_1995_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1116) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1148));
-    add_ln50_867_fu_2001_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0) + unsigned(pool_window_537_fu_643_p4));
+    add_ln50_867_fu_2001_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_q0) + unsigned(pool_window_537_fu_643_p4));
     add_ln50_869_fu_2077_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1117) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1149));
-    add_ln50_870_fu_2083_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_q0) + unsigned(pool_window_475_fu_653_p4));
+    add_ln50_870_fu_2083_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_q0) + unsigned(pool_window_475_fu_653_p4));
     add_ln50_872_fu_2159_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1118) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1150));
-    add_ln50_873_fu_2165_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_q0) + unsigned(pool_window_476_fu_663_p4));
+    add_ln50_873_fu_2165_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_q0) + unsigned(pool_window_476_fu_663_p4));
     add_ln50_875_fu_2241_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1119) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1087));
-    add_ln50_876_fu_2247_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_q0) + unsigned(pool_window_477_fu_673_p4));
+    add_ln50_876_fu_2247_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_q0) + unsigned(pool_window_477_fu_673_p4));
     add_ln50_878_fu_2323_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1120) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1088));
-    add_ln50_879_fu_2329_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_q0) + unsigned(pool_window_478_fu_683_p4));
+    add_ln50_879_fu_2329_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_q0) + unsigned(pool_window_478_fu_683_p4));
     add_ln50_881_fu_2405_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1121) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1089));
-    add_ln50_882_fu_2411_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_q0) + unsigned(pool_window_479_fu_693_p4));
+    add_ln50_882_fu_2411_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_q0) + unsigned(pool_window_479_fu_693_p4));
     add_ln50_884_fu_2487_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1122) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1090));
-    add_ln50_885_fu_2493_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_q0) + unsigned(pool_window_480_fu_703_p4));
+    add_ln50_885_fu_2493_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_q0) + unsigned(pool_window_480_fu_703_p4));
     add_ln50_887_fu_2569_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1123) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1091));
-    add_ln50_888_fu_2575_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_q0) + unsigned(pool_window_481_fu_713_p4));
+    add_ln50_888_fu_2575_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0) + unsigned(pool_window_481_fu_713_p4));
     add_ln50_890_fu_2651_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1124) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1092));
-    add_ln50_891_fu_2657_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_q0) + unsigned(pool_window_482_fu_723_p4));
+    add_ln50_891_fu_2657_p2 <= std_logic_vector(unsigned(void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_q0) + unsigned(pool_window_482_fu_723_p4));
     add_ln50_893_fu_2733_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1125) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1093));
     add_ln50_894_fu_2739_p2 <= std_logic_vector(unsigned(p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_q0) + unsigned(pool_window_483_fu_733_p4));
     add_ln50_896_fu_2815_p2 <= std_logic_vector(unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1126) + unsigned(p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1094));
@@ -2450,100 +2450,100 @@ begin
         ap_const_lv32_FFFFFFFF when (icmp_ln191_fu_510_p2(0) = '1') else 
         ap_const_lv32_1;
     select_ln25_146_fu_2069_p3 <= 
-        sub_ln25_320_fu_2055_p2 when (tmp_236_fu_2017_p3(0) = '1') else 
+        sub_ln25_320_fu_2055_p2 when (tmp_237_fu_2017_p3(0) = '1') else 
         zext_ln25_286_fu_2065_p1;
     select_ln25_147_fu_2151_p3 <= 
-        sub_ln25_322_fu_2137_p2 when (tmp_237_fu_2099_p3(0) = '1') else 
+        sub_ln25_322_fu_2137_p2 when (tmp_238_fu_2099_p3(0) = '1') else 
         zext_ln25_287_fu_2147_p1;
     select_ln25_148_fu_2233_p3 <= 
-        sub_ln25_324_fu_2219_p2 when (tmp_238_fu_2181_p3(0) = '1') else 
+        sub_ln25_324_fu_2219_p2 when (tmp_239_fu_2181_p3(0) = '1') else 
         zext_ln25_288_fu_2229_p1;
     select_ln25_149_fu_2315_p3 <= 
-        sub_ln25_326_fu_2301_p2 when (tmp_239_fu_2263_p3(0) = '1') else 
+        sub_ln25_326_fu_2301_p2 when (tmp_240_fu_2263_p3(0) = '1') else 
         zext_ln25_289_fu_2311_p1;
     select_ln25_150_fu_2397_p3 <= 
-        sub_ln25_328_fu_2383_p2 when (tmp_240_fu_2345_p3(0) = '1') else 
+        sub_ln25_328_fu_2383_p2 when (tmp_241_fu_2345_p3(0) = '1') else 
         zext_ln25_290_fu_2393_p1;
     select_ln25_151_fu_2479_p3 <= 
-        sub_ln25_330_fu_2465_p2 when (tmp_241_fu_2427_p3(0) = '1') else 
+        sub_ln25_330_fu_2465_p2 when (tmp_242_fu_2427_p3(0) = '1') else 
         zext_ln25_291_fu_2475_p1;
     select_ln25_152_fu_2561_p3 <= 
-        sub_ln25_332_fu_2547_p2 when (tmp_242_fu_2509_p3(0) = '1') else 
+        sub_ln25_332_fu_2547_p2 when (tmp_243_fu_2509_p3(0) = '1') else 
         zext_ln25_292_fu_2557_p1;
     select_ln25_153_fu_2643_p3 <= 
-        sub_ln25_334_fu_2629_p2 when (tmp_243_fu_2591_p3(0) = '1') else 
+        sub_ln25_334_fu_2629_p2 when (tmp_244_fu_2591_p3(0) = '1') else 
         zext_ln25_293_fu_2639_p1;
     select_ln25_154_fu_2725_p3 <= 
-        sub_ln25_336_fu_2711_p2 when (tmp_244_fu_2673_p3(0) = '1') else 
+        sub_ln25_336_fu_2711_p2 when (tmp_245_fu_2673_p3(0) = '1') else 
         zext_ln25_294_fu_2721_p1;
     select_ln25_155_fu_2807_p3 <= 
-        sub_ln25_338_fu_2793_p2 when (tmp_245_fu_2755_p3(0) = '1') else 
+        sub_ln25_338_fu_2793_p2 when (tmp_246_fu_2755_p3(0) = '1') else 
         zext_ln25_295_fu_2803_p1;
     select_ln25_156_fu_2889_p3 <= 
-        sub_ln25_340_fu_2875_p2 when (tmp_246_fu_2837_p3(0) = '1') else 
+        sub_ln25_340_fu_2875_p2 when (tmp_247_fu_2837_p3(0) = '1') else 
         zext_ln25_296_fu_2885_p1;
     select_ln25_157_fu_2971_p3 <= 
-        sub_ln25_342_fu_2957_p2 when (tmp_247_fu_2919_p3(0) = '1') else 
+        sub_ln25_342_fu_2957_p2 when (tmp_248_fu_2919_p3(0) = '1') else 
         zext_ln25_297_fu_2967_p1;
     select_ln25_158_fu_3053_p3 <= 
-        sub_ln25_344_fu_3039_p2 when (tmp_248_fu_3001_p3(0) = '1') else 
+        sub_ln25_344_fu_3039_p2 when (tmp_249_fu_3001_p3(0) = '1') else 
         zext_ln25_298_fu_3049_p1;
     select_ln25_159_fu_3135_p3 <= 
-        sub_ln25_346_fu_3121_p2 when (tmp_249_fu_3083_p3(0) = '1') else 
+        sub_ln25_346_fu_3121_p2 when (tmp_250_fu_3083_p3(0) = '1') else 
         zext_ln25_299_fu_3131_p1;
     select_ln25_160_fu_3217_p3 <= 
-        sub_ln25_348_fu_3203_p2 when (tmp_250_fu_3165_p3(0) = '1') else 
+        sub_ln25_348_fu_3203_p2 when (tmp_251_fu_3165_p3(0) = '1') else 
         zext_ln25_300_fu_3213_p1;
     select_ln25_161_fu_3299_p3 <= 
-        sub_ln25_350_fu_3285_p2 when (tmp_251_fu_3247_p3(0) = '1') else 
+        sub_ln25_350_fu_3285_p2 when (tmp_252_fu_3247_p3(0) = '1') else 
         zext_ln25_301_fu_3295_p1;
     select_ln25_162_fu_3381_p3 <= 
-        sub_ln25_352_fu_3367_p2 when (tmp_252_fu_3329_p3(0) = '1') else 
+        sub_ln25_352_fu_3367_p2 when (tmp_253_fu_3329_p3(0) = '1') else 
         zext_ln25_302_fu_3377_p1;
     select_ln25_163_fu_3463_p3 <= 
-        sub_ln25_354_fu_3449_p2 when (tmp_253_fu_3411_p3(0) = '1') else 
+        sub_ln25_354_fu_3449_p2 when (tmp_254_fu_3411_p3(0) = '1') else 
         zext_ln25_303_fu_3459_p1;
     select_ln25_164_fu_3545_p3 <= 
-        sub_ln25_356_fu_3531_p2 when (tmp_254_fu_3493_p3(0) = '1') else 
+        sub_ln25_356_fu_3531_p2 when (tmp_255_fu_3493_p3(0) = '1') else 
         zext_ln25_304_fu_3541_p1;
     select_ln25_165_fu_3627_p3 <= 
-        sub_ln25_358_fu_3613_p2 when (tmp_255_fu_3575_p3(0) = '1') else 
+        sub_ln25_358_fu_3613_p2 when (tmp_256_fu_3575_p3(0) = '1') else 
         zext_ln25_305_fu_3623_p1;
     select_ln25_166_fu_3709_p3 <= 
-        sub_ln25_360_fu_3695_p2 when (tmp_256_fu_3657_p3(0) = '1') else 
+        sub_ln25_360_fu_3695_p2 when (tmp_257_fu_3657_p3(0) = '1') else 
         zext_ln25_306_fu_3705_p1;
     select_ln25_167_fu_3791_p3 <= 
-        sub_ln25_362_fu_3777_p2 when (tmp_257_fu_3739_p3(0) = '1') else 
+        sub_ln25_362_fu_3777_p2 when (tmp_258_fu_3739_p3(0) = '1') else 
         zext_ln25_307_fu_3787_p1;
     select_ln25_168_fu_3873_p3 <= 
-        sub_ln25_364_fu_3859_p2 when (tmp_258_fu_3821_p3(0) = '1') else 
+        sub_ln25_364_fu_3859_p2 when (tmp_259_fu_3821_p3(0) = '1') else 
         zext_ln25_308_fu_3869_p1;
     select_ln25_169_fu_3955_p3 <= 
-        sub_ln25_366_fu_3941_p2 when (tmp_259_fu_3903_p3(0) = '1') else 
+        sub_ln25_366_fu_3941_p2 when (tmp_260_fu_3903_p3(0) = '1') else 
         zext_ln25_309_fu_3951_p1;
     select_ln25_170_fu_4037_p3 <= 
-        sub_ln25_368_fu_4023_p2 when (tmp_260_fu_3985_p3(0) = '1') else 
+        sub_ln25_368_fu_4023_p2 when (tmp_261_fu_3985_p3(0) = '1') else 
         zext_ln25_310_fu_4033_p1;
     select_ln25_171_fu_4119_p3 <= 
-        sub_ln25_370_fu_4105_p2 when (tmp_261_fu_4067_p3(0) = '1') else 
+        sub_ln25_370_fu_4105_p2 when (tmp_262_fu_4067_p3(0) = '1') else 
         zext_ln25_311_fu_4115_p1;
     select_ln25_172_fu_4201_p3 <= 
-        sub_ln25_372_fu_4187_p2 when (tmp_262_fu_4149_p3(0) = '1') else 
+        sub_ln25_372_fu_4187_p2 when (tmp_263_fu_4149_p3(0) = '1') else 
         zext_ln25_312_fu_4197_p1;
     select_ln25_173_fu_4283_p3 <= 
-        sub_ln25_374_fu_4269_p2 when (tmp_263_fu_4231_p3(0) = '1') else 
+        sub_ln25_374_fu_4269_p2 when (tmp_264_fu_4231_p3(0) = '1') else 
         zext_ln25_313_fu_4279_p1;
     select_ln25_174_fu_4365_p3 <= 
-        sub_ln25_376_fu_4351_p2 when (tmp_264_fu_4313_p3(0) = '1') else 
+        sub_ln25_376_fu_4351_p2 when (tmp_265_fu_4313_p3(0) = '1') else 
         zext_ln25_314_fu_4361_p1;
     select_ln25_175_fu_4447_p3 <= 
-        sub_ln25_378_fu_4433_p2 when (tmp_265_fu_4395_p3(0) = '1') else 
+        sub_ln25_378_fu_4433_p2 when (tmp_266_fu_4395_p3(0) = '1') else 
         zext_ln25_315_fu_4443_p1;
     select_ln25_176_fu_4529_p3 <= 
-        sub_ln25_380_fu_4515_p2 when (tmp_266_fu_4477_p3(0) = '1') else 
+        sub_ln25_380_fu_4515_p2 when (tmp_267_fu_4477_p3(0) = '1') else 
         zext_ln25_316_fu_4525_p1;
     select_ln25_fu_1987_p3 <= 
-        sub_ln25_318_fu_1973_p2 when (tmp_235_fu_1935_p3(0) = '1') else 
+        sub_ln25_318_fu_1973_p2 when (tmp_236_fu_1935_p3(0) = '1') else 
         zext_ln25_fu_1983_p1;
         sext_ln25_318_fu_1979_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln25_s_fu_1963_p4),15));
 
@@ -2810,38 +2810,38 @@ begin
     tmp_182_fu_4327_p4 <= sub_ln25_375_fu_4321_p2(16 downto 2);
     tmp_183_fu_4409_p4 <= sub_ln25_377_fu_4403_p2(16 downto 2);
     tmp_184_fu_4491_p4 <= sub_ln25_379_fu_4485_p2(16 downto 2);
-    tmp_235_fu_1935_p3 <= sum_fu_1925_p2(15 downto 15);
-    tmp_236_fu_2017_p3 <= sum_159_fu_2007_p2(15 downto 15);
-    tmp_237_fu_2099_p3 <= sum_160_fu_2089_p2(15 downto 15);
-    tmp_238_fu_2181_p3 <= sum_161_fu_2171_p2(15 downto 15);
-    tmp_239_fu_2263_p3 <= sum_162_fu_2253_p2(15 downto 15);
-    tmp_240_fu_2345_p3 <= sum_163_fu_2335_p2(15 downto 15);
-    tmp_241_fu_2427_p3 <= sum_164_fu_2417_p2(15 downto 15);
-    tmp_242_fu_2509_p3 <= sum_165_fu_2499_p2(15 downto 15);
-    tmp_243_fu_2591_p3 <= sum_166_fu_2581_p2(15 downto 15);
-    tmp_244_fu_2673_p3 <= sum_167_fu_2663_p2(15 downto 15);
-    tmp_245_fu_2755_p3 <= sum_168_fu_2745_p2(15 downto 15);
-    tmp_246_fu_2837_p3 <= sum_169_fu_2827_p2(15 downto 15);
-    tmp_247_fu_2919_p3 <= sum_170_fu_2909_p2(15 downto 15);
-    tmp_248_fu_3001_p3 <= sum_171_fu_2991_p2(15 downto 15);
-    tmp_249_fu_3083_p3 <= sum_172_fu_3073_p2(15 downto 15);
-    tmp_250_fu_3165_p3 <= sum_173_fu_3155_p2(15 downto 15);
-    tmp_251_fu_3247_p3 <= sum_174_fu_3237_p2(15 downto 15);
-    tmp_252_fu_3329_p3 <= sum_175_fu_3319_p2(15 downto 15);
-    tmp_253_fu_3411_p3 <= sum_176_fu_3401_p2(15 downto 15);
-    tmp_254_fu_3493_p3 <= sum_177_fu_3483_p2(15 downto 15);
-    tmp_255_fu_3575_p3 <= sum_178_fu_3565_p2(15 downto 15);
-    tmp_256_fu_3657_p3 <= sum_179_fu_3647_p2(15 downto 15);
-    tmp_257_fu_3739_p3 <= sum_180_fu_3729_p2(15 downto 15);
-    tmp_258_fu_3821_p3 <= sum_181_fu_3811_p2(15 downto 15);
-    tmp_259_fu_3903_p3 <= sum_182_fu_3893_p2(15 downto 15);
-    tmp_260_fu_3985_p3 <= sum_183_fu_3975_p2(15 downto 15);
-    tmp_261_fu_4067_p3 <= sum_184_fu_4057_p2(15 downto 15);
-    tmp_262_fu_4149_p3 <= sum_185_fu_4139_p2(15 downto 15);
-    tmp_263_fu_4231_p3 <= sum_186_fu_4221_p2(15 downto 15);
-    tmp_264_fu_4313_p3 <= sum_187_fu_4303_p2(15 downto 15);
-    tmp_265_fu_4395_p3 <= sum_188_fu_4385_p2(15 downto 15);
-    tmp_266_fu_4477_p3 <= sum_189_fu_4467_p2(15 downto 15);
+    tmp_236_fu_1935_p3 <= sum_fu_1925_p2(15 downto 15);
+    tmp_237_fu_2017_p3 <= sum_159_fu_2007_p2(15 downto 15);
+    tmp_238_fu_2099_p3 <= sum_160_fu_2089_p2(15 downto 15);
+    tmp_239_fu_2181_p3 <= sum_161_fu_2171_p2(15 downto 15);
+    tmp_240_fu_2263_p3 <= sum_162_fu_2253_p2(15 downto 15);
+    tmp_241_fu_2345_p3 <= sum_163_fu_2335_p2(15 downto 15);
+    tmp_242_fu_2427_p3 <= sum_164_fu_2417_p2(15 downto 15);
+    tmp_243_fu_2509_p3 <= sum_165_fu_2499_p2(15 downto 15);
+    tmp_244_fu_2591_p3 <= sum_166_fu_2581_p2(15 downto 15);
+    tmp_245_fu_2673_p3 <= sum_167_fu_2663_p2(15 downto 15);
+    tmp_246_fu_2755_p3 <= sum_168_fu_2745_p2(15 downto 15);
+    tmp_247_fu_2837_p3 <= sum_169_fu_2827_p2(15 downto 15);
+    tmp_248_fu_2919_p3 <= sum_170_fu_2909_p2(15 downto 15);
+    tmp_249_fu_3001_p3 <= sum_171_fu_2991_p2(15 downto 15);
+    tmp_250_fu_3083_p3 <= sum_172_fu_3073_p2(15 downto 15);
+    tmp_251_fu_3165_p3 <= sum_173_fu_3155_p2(15 downto 15);
+    tmp_252_fu_3247_p3 <= sum_174_fu_3237_p2(15 downto 15);
+    tmp_253_fu_3329_p3 <= sum_175_fu_3319_p2(15 downto 15);
+    tmp_254_fu_3411_p3 <= sum_176_fu_3401_p2(15 downto 15);
+    tmp_255_fu_3493_p3 <= sum_177_fu_3483_p2(15 downto 15);
+    tmp_256_fu_3575_p3 <= sum_178_fu_3565_p2(15 downto 15);
+    tmp_257_fu_3657_p3 <= sum_179_fu_3647_p2(15 downto 15);
+    tmp_258_fu_3739_p3 <= sum_180_fu_3729_p2(15 downto 15);
+    tmp_259_fu_3821_p3 <= sum_181_fu_3811_p2(15 downto 15);
+    tmp_260_fu_3903_p3 <= sum_182_fu_3893_p2(15 downto 15);
+    tmp_261_fu_3985_p3 <= sum_183_fu_3975_p2(15 downto 15);
+    tmp_262_fu_4067_p3 <= sum_184_fu_4057_p2(15 downto 15);
+    tmp_263_fu_4149_p3 <= sum_185_fu_4139_p2(15 downto 15);
+    tmp_264_fu_4231_p3 <= sum_186_fu_4221_p2(15 downto 15);
+    tmp_265_fu_4313_p3 <= sum_187_fu_4303_p2(15 downto 15);
+    tmp_266_fu_4395_p3 <= sum_188_fu_4385_p2(15 downto 15);
+    tmp_267_fu_4477_p3 <= sum_189_fu_4467_p2(15 downto 15);
     tmp_fu_1949_p4 <= sub_ln25_fu_1943_p2(16 downto 2);
     tmp_s_fu_2031_p4 <= sub_ln25_319_fu_2025_p2(16 downto 2);
     trunc_ln25_158_fu_2045_p4 <= sum_159_fu_2007_p2(15 downto 2);
@@ -2886,7 +2886,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_d0 <= layer12_out_dout(159 downto 144);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_d0 <= layer12_out_dout(143 downto 128);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -2907,7 +2907,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_d0 <= layer12_out_dout(143 downto 128);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_d0 <= layer12_out_dout(127 downto 112);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -2928,7 +2928,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_d0 <= layer12_out_dout(127 downto 112);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_d0 <= layer12_out_dout(111 downto 96);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -2949,7 +2949,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_d0 <= layer12_out_dout(111 downto 96);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_d0 <= layer12_out_dout(95 downto 80);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -2970,7 +2970,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_d0 <= layer12_out_dout(95 downto 80);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_d0 <= layer12_out_dout(79 downto 64);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -2991,7 +2991,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_d0 <= layer12_out_dout(79 downto 64);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_d0 <= layer12_out_dout(63 downto 48);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -3012,7 +3012,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_d0 <= layer12_out_dout(63 downto 48);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_d0 <= layer12_out_dout(47 downto 32);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -3033,7 +3033,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_d0 <= layer12_out_dout(47 downto 32);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_d0 <= layer12_out_dout(31 downto 16);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin
@@ -3074,7 +3074,7 @@ begin
         end if; 
     end process;
 
-    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0 <= layer12_out_dout(31 downto 16);
+    void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_d0 <= layer12_out_dout(159 downto 144);
 
     void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_we0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin

@@ -18,10 +18,10 @@ set C_modelArgList {
 	{ gmem4 int 512 regular {axi_master 0}  }
 	{ chanmap_DetToChanInfo int 64 regular  }
 	{ trunc_ln202_4 int 6 regular  }
-	{ zext_ln125 int 8 regular  }
+	{ zext_ln402 int 8 regular  }
 	{ upri_reload int 32 regular  }
 	{ link_from_frameheader int 32 regular  }
-	{ zext_ln118 int 4 regular  }
+	{ zext_ln395 int 4 regular  }
 	{ add_ln202_out int 64 regular {pointer 1}  }
 	{ add_ln202_3_out int 6 regular {pointer 1}  }
 }
@@ -30,10 +30,10 @@ set C_modelArgMapList {[
 	{ "Name" : "gmem4", "interface" : "axi_master", "bitwidth" : 512, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "chanmap_DetToChanInfo","offset": { "type": "dynamic","port_name": "chanmap_DetToChanInfo","bundle": "control"},"direction": "READONLY"}]}]} , 
  	{ "Name" : "chanmap_DetToChanInfo", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} , 
  	{ "Name" : "trunc_ln202_4", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln125", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln402", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "upri_reload", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "link_from_frameheader", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln118", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln395", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
  	{ "Name" : "add_ln202_out", "interface" : "wire", "bitwidth" : 64, "direction" : "WRITEONLY"} , 
  	{ "Name" : "add_ln202_3_out", "interface" : "wire", "bitwidth" : 6, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -93,10 +93,10 @@ set portList {
 	{ m_axi_gmem4_BUSER sc_in sc_lv 1 signal 0 } 
 	{ chanmap_DetToChanInfo sc_in sc_lv 64 signal 1 } 
 	{ trunc_ln202_4 sc_in sc_lv 6 signal 2 } 
-	{ zext_ln125 sc_in sc_lv 8 signal 3 } 
+	{ zext_ln402 sc_in sc_lv 8 signal 3 } 
 	{ upri_reload sc_in sc_lv 32 signal 4 } 
 	{ link_from_frameheader sc_in sc_lv 32 signal 5 } 
-	{ zext_ln118 sc_in sc_lv 4 signal 6 } 
+	{ zext_ln395 sc_in sc_lv 4 signal 6 } 
 	{ add_ln202_out sc_out sc_lv 64 signal 7 } 
 	{ add_ln202_out_ap_vld sc_out sc_logic 1 outvld 7 } 
 	{ add_ln202_3_out sc_out sc_lv 6 signal 8 } 
@@ -157,10 +157,10 @@ set NewPortList {[
  	{ "name": "m_axi_gmem4_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem4", "role": "BUSER" }} , 
  	{ "name": "chanmap_DetToChanInfo", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "chanmap_DetToChanInfo", "role": "default" }} , 
  	{ "name": "trunc_ln202_4", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "trunc_ln202_4", "role": "default" }} , 
- 	{ "name": "zext_ln125", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln125", "role": "default" }} , 
+ 	{ "name": "zext_ln402", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln402", "role": "default" }} , 
  	{ "name": "upri_reload", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "upri_reload", "role": "default" }} , 
  	{ "name": "link_from_frameheader", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "link_from_frameheader", "role": "default" }} , 
- 	{ "name": "zext_ln118", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "zext_ln118", "role": "default" }} , 
+ 	{ "name": "zext_ln395", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "zext_ln395", "role": "default" }} , 
  	{ "name": "add_ln202_out", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "add_ln202_out", "role": "default" }} , 
  	{ "name": "add_ln202_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "add_ln202_out", "role": "ap_vld" }} , 
  	{ "name": "add_ln202_3_out", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "add_ln202_3_out", "role": "default" }} , 
@@ -188,10 +188,10 @@ set RtlHierarchyInfo {[
 					{"Name" : "gmem4_blk_n_R", "Type" : "RtlSignal"}]},
 			{"Name" : "chanmap_DetToChanInfo", "Type" : "None", "Direction" : "I"},
 			{"Name" : "trunc_ln202_4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln125", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln402", "Type" : "None", "Direction" : "I"},
 			{"Name" : "upri_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "link_from_frameheader", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln118", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln395", "Type" : "None", "Direction" : "I"},
 			{"Name" : "add_ln202_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "add_ln202_3_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
@@ -205,10 +205,10 @@ set ArgLastReadFirstWriteLatency {
 		gmem4 {Type I LastRead 219 FirstWrite -1}
 		chanmap_DetToChanInfo {Type I LastRead 0 FirstWrite -1}
 		trunc_ln202_4 {Type I LastRead 0 FirstWrite -1}
-		zext_ln125 {Type I LastRead 0 FirstWrite -1}
+		zext_ln402 {Type I LastRead 0 FirstWrite -1}
 		upri_reload {Type I LastRead 0 FirstWrite -1}
 		link_from_frameheader {Type I LastRead 0 FirstWrite -1}
-		zext_ln118 {Type I LastRead 0 FirstWrite -1}
+		zext_ln395 {Type I LastRead 0 FirstWrite -1}
 		add_ln202_out {Type O LastRead -1 FirstWrite 220}
 		add_ln202_3_out {Type O LastRead -1 FirstWrite 220}}}
 
@@ -226,10 +226,10 @@ set Spec2ImplPortList {
 	 { m_axi {  { m_axi_gmem4_AWVALID VALID 1 1 }  { m_axi_gmem4_AWREADY READY 0 1 }  { m_axi_gmem4_AWADDR ADDR 1 64 }  { m_axi_gmem4_AWID ID 1 1 }  { m_axi_gmem4_AWLEN SIZE 1 32 }  { m_axi_gmem4_AWSIZE BURST 1 3 }  { m_axi_gmem4_AWBURST LOCK 1 2 }  { m_axi_gmem4_AWLOCK CACHE 1 2 }  { m_axi_gmem4_AWCACHE PROT 1 4 }  { m_axi_gmem4_AWPROT QOS 1 3 }  { m_axi_gmem4_AWQOS REGION 1 4 }  { m_axi_gmem4_AWREGION USER 1 4 }  { m_axi_gmem4_AWUSER DATA 1 1 }  { m_axi_gmem4_WVALID VALID 1 1 }  { m_axi_gmem4_WREADY READY 0 1 }  { m_axi_gmem4_WDATA FIFONUM 1 512 }  { m_axi_gmem4_WSTRB STRB 1 64 }  { m_axi_gmem4_WLAST LAST 1 1 }  { m_axi_gmem4_WID ID 1 1 }  { m_axi_gmem4_WUSER DATA 1 1 }  { m_axi_gmem4_ARVALID VALID 1 1 }  { m_axi_gmem4_ARREADY READY 0 1 }  { m_axi_gmem4_ARADDR ADDR 1 64 }  { m_axi_gmem4_ARID ID 1 1 }  { m_axi_gmem4_ARLEN SIZE 1 32 }  { m_axi_gmem4_ARSIZE BURST 1 3 }  { m_axi_gmem4_ARBURST LOCK 1 2 }  { m_axi_gmem4_ARLOCK CACHE 1 2 }  { m_axi_gmem4_ARCACHE PROT 1 4 }  { m_axi_gmem4_ARPROT QOS 1 3 }  { m_axi_gmem4_ARQOS REGION 1 4 }  { m_axi_gmem4_ARREGION USER 1 4 }  { m_axi_gmem4_ARUSER DATA 1 1 }  { m_axi_gmem4_RVALID VALID 0 1 }  { m_axi_gmem4_RREADY READY 1 1 }  { m_axi_gmem4_RDATA FIFONUM 0 512 }  { m_axi_gmem4_RLAST LAST 0 1 }  { m_axi_gmem4_RID ID 0 1 }  { m_axi_gmem4_RFIFONUM LEN 0 9 }  { m_axi_gmem4_RUSER DATA 0 1 }  { m_axi_gmem4_RRESP RESP 0 2 }  { m_axi_gmem4_BVALID VALID 0 1 }  { m_axi_gmem4_BREADY READY 1 1 }  { m_axi_gmem4_BRESP RESP 0 2 }  { m_axi_gmem4_BID ID 0 1 }  { m_axi_gmem4_BUSER DATA 0 1 } } }
 	chanmap_DetToChanInfo { ap_none {  { chanmap_DetToChanInfo in_data 0 64 } } }
 	trunc_ln202_4 { ap_none {  { trunc_ln202_4 in_data 0 6 } } }
-	zext_ln125 { ap_none {  { zext_ln125 in_data 0 8 } } }
+	zext_ln402 { ap_none {  { zext_ln402 in_data 0 8 } } }
 	upri_reload { ap_none {  { upri_reload in_data 0 32 } } }
 	link_from_frameheader { ap_none {  { link_from_frameheader in_data 0 32 } } }
-	zext_ln118 { ap_none {  { zext_ln118 in_data 0 4 } } }
+	zext_ln395 { ap_none {  { zext_ln395 in_data 0 4 } } }
 	add_ln202_out { ap_vld {  { add_ln202_out out_data 1 64 }  { add_ln202_out_ap_vld out_vld 1 1 } } }
 	add_ln202_3_out { ap_vld {  { add_ln202_3_out out_data 1 6 }  { add_ln202_3_out_ap_vld out_vld 1 1 } } }
 }

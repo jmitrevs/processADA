@@ -13,8 +13,8 @@ module process_data_process_data_int_char_FDHDChannelMapSP_int_adc_vectors_RAM_A
     reset, clk);
 
 parameter DataWidth = 14;
-parameter AddressWidth = 18;
-parameter AddressRange = 192000;
+parameter AddressWidth = 9;
+parameter AddressRange = 512;
  
 input[AddressWidth-1:0] address0;
 input ce0;

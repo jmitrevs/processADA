@@ -203,7 +203,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjAb IS
+    component process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjKb IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -219,7 +219,7 @@ attribute shreg_extract : string;
 
 
 begin
-    w18_U : component process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjAb
+    w18_U : component process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjKb
     generic map (
         DataWidth => 43,
         AddressRange => 8,
@@ -231,7 +231,7 @@ begin
         ce0 => w18_ce0,
         q0 => w18_q0);
 
-    mux_8_3_16_1_1_U4630 : component process_data_mux_8_3_16_1_1
+    mux_8_3_16_1_1_U5819 : component process_data_mux_8_3_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -257,7 +257,7 @@ begin
         din8 => w_index3_reg_161,
         dout => a_fu_443_p10);
 
-    mul_16s_16s_26_1_1_U4631 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5820 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -269,7 +269,7 @@ begin
         din1 => mul_ln55_fu_477_p1,
         dout => mul_ln55_fu_477_p2);
 
-    mul_16s_16s_26_1_1_U4632 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5821 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -281,7 +281,7 @@ begin
         din1 => mul_ln55_1_fu_513_p1,
         dout => mul_ln55_1_fu_513_p2);
 
-    mul_16s_11s_26_1_1_U4633 : component process_data_mul_16s_11s_26_1_1
+    mul_16s_11s_26_1_1_U5822 : component process_data_mul_16s_11s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

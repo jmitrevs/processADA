@@ -38,7 +38,7 @@ int main()
     fclose(infile);
 
     int outdata[276];
-    
+
     std::cout << "here" << std::endl;
 
     process_data(infile_size,infiledata, chanmap, outdata);

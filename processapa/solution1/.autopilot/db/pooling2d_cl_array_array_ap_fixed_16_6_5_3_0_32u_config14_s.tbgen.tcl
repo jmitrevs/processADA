@@ -159,7 +159,6 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1113", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1114", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9", "Type" : "Memory", "Direction" : "X"},
-			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6", "Type" : "Memory", "Direction" : "X"},
@@ -168,6 +167,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322", "Type" : "Memory", "Direction" : "X"},
 			{"Name" : "p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323", "Type" : "Memory", "Direction" : "X"},
@@ -194,15 +194,15 @@ set RtlHierarchyInfo {[
 			{"Name" : "ReadInputHeight_ReadInputWidth", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_5_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_4_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3_U", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2_U", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1_U", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_U", "Parent" : "0"},
 	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321_U", "Parent" : "0"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322_U", "Parent" : "0"},
 	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323_U", "Parent" : "0"},
@@ -301,7 +301,6 @@ set ArgLastReadFirstWriteLatency {
 		p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1113 {Type IO LastRead -1 FirstWrite -1}
 		p_ZZN4nnet22compute_pool_buffer_2dINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_1114 {Type IO LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_9 {Type X LastRead -1 FirstWrite -1}
-		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer {Type X LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_8 {Type X LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_7 {Type X LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_6 {Type X LastRead -1 FirstWrite -1}
@@ -310,6 +309,7 @@ set ArgLastReadFirstWriteLatency {
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_3 {Type X LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_2 {Type X LastRead -1 FirstWrite -1}
 		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer_1 {Type X LastRead -1 FirstWrite -1}
+		void_pooling2d_buffer_cl_stream_stream_array_ap_fixed_32u_0_line_buffer {Type X LastRead -1 FirstWrite -1}
 		p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_321 {Type X LastRead -1 FirstWrite -1}
 		p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_322 {Type X LastRead -1 FirstWrite -1}
 		p_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_323 {Type X LastRead -1 FirstWrite -1}

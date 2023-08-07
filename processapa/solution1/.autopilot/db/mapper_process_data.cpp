@@ -353,31 +353,23 @@ using hls::sim::Byte;
 struct __cosim_s32__ { char data[32]; };
 struct __cosim_s16__ { char data[16]; };
 struct __cosim_s64__ { char data[64]; };
-extern "C" void process_data(Byte<32>*, Byte<4>*, Byte<16>*, Byte<8>*, Byte<8>*, Byte<64>*, int, int, volatile void *, volatile void *, int, int, int, int, int, int);
+extern "C" void process_data(Byte<32>*, Byte<16>*, Byte<8>*, Byte<8>*, Byte<64>*, Byte<4>*, int, int, volatile void *, volatile void *, int, int, int, int, int, int);
 extern "C" void apatb_process_data_hw(int __xlx_apatb_param_infile_size, volatile void * __xlx_apatb_param_infiledata, volatile void * __xlx_apatb_param_chanmap_fNAPAs, volatile void * __xlx_apatb_param_chanmap_fNChans, volatile void * __xlx_apatb_param_chanmap_fAPANameFromCrate, volatile void * __xlx_apatb_param_chanmap_fUprightFromCrate, volatile void * __xlx_apatb_param_chanmap_fCrateFromTPCSet, volatile void * __xlx_apatb_param_chanmap_fTPCSetFromCrate, volatile void * __xlx_apatb_param_chanmap_DetToChanInfo, volatile void * __xlx_apatb_param_outdata) {
 using hls::sim::createStream;
-  // Collect __xlx_infiledata_outdata__tmp_vec
-std::vector<Byte<32>> __xlx_infiledata_outdata__tmp_vec;
+  // Collect __xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec
+std::vector<Byte<32>> __xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec;
 for (size_t i = 0; i < 885025; ++i){
-__xlx_infiledata_outdata__tmp_vec.push_back(((Byte<32>*)__xlx_apatb_param_infiledata)[i]);
+__xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec.push_back(((Byte<32>*)__xlx_apatb_param_infiledata)[i]);
 }
   int __xlx_size_param_infiledata = 885025;
   int __xlx_offset_param_infiledata = 0;
   int __xlx_offset_byte_param_infiledata = 0*32;
-for (size_t i = 0; i < 35; ++i){
-__xlx_infiledata_outdata__tmp_vec.push_back(((Byte<32>*)__xlx_apatb_param_outdata)[i]);
+for (size_t i = 0; i < 19; ++i){
+__xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec.push_back(((Byte<32>*)__xlx_apatb_param_chanmap_fAPANameFromCrate)[i]);
 }
-  int __xlx_size_param_outdata = 35;
-  int __xlx_offset_param_outdata = 885025;
-  int __xlx_offset_byte_param_outdata = 885025*32;
-  // Collect __xlx_chanmap_fAPANameFromCrate__tmp_vec
-std::vector<Byte<4>> __xlx_chanmap_fAPANameFromCrate__tmp_vec;
-for (size_t i = 0; i < 150; ++i){
-__xlx_chanmap_fAPANameFromCrate__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_chanmap_fAPANameFromCrate)[i]);
-}
-  int __xlx_size_param_chanmap_fAPANameFromCrate = 150;
-  int __xlx_offset_param_chanmap_fAPANameFromCrate = 0;
-  int __xlx_offset_byte_param_chanmap_fAPANameFromCrate = 0*4;
+  int __xlx_size_param_chanmap_fAPANameFromCrate = 19;
+  int __xlx_offset_param_chanmap_fAPANameFromCrate = 885025;
+  int __xlx_offset_byte_param_chanmap_fAPANameFromCrate = 885025*32;
   // Collect __xlx_chanmap_fUprightFromCrate__tmp_vec
 std::vector<Byte<16>> __xlx_chanmap_fUprightFromCrate__tmp_vec;
 for (size_t i = 0; i < 75; ++i){
@@ -410,19 +402,23 @@ __xlx_chanmap_DetToChanInfo__tmp_vec.push_back(((Byte<64>*)__xlx_apatb_param_cha
   int __xlx_size_param_chanmap_DetToChanInfo = 5760;
   int __xlx_offset_param_chanmap_DetToChanInfo = 0;
   int __xlx_offset_byte_param_chanmap_DetToChanInfo = 0*64;
+  // Collect __xlx_outdata__tmp_vec
+std::vector<Byte<4>> __xlx_outdata__tmp_vec;
+for (size_t i = 0; i < 276; ++i){
+__xlx_outdata__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_outdata)[i]);
+}
+  int __xlx_size_param_outdata = 276;
+  int __xlx_offset_param_outdata = 0;
+  int __xlx_offset_byte_param_outdata = 0*4;
   // DUT call
-  process_data(__xlx_infiledata_outdata__tmp_vec.data(), __xlx_chanmap_fAPANameFromCrate__tmp_vec.data(), __xlx_chanmap_fUprightFromCrate__tmp_vec.data(), __xlx_chanmap_fCrateFromTPCSet__tmp_vec.data(), __xlx_chanmap_fTPCSetFromCrate__tmp_vec.data(), __xlx_chanmap_DetToChanInfo__tmp_vec.data(), __xlx_apatb_param_infile_size, __xlx_offset_byte_param_infiledata, __xlx_apatb_param_chanmap_fNAPAs, __xlx_apatb_param_chanmap_fNChans, __xlx_offset_byte_param_chanmap_fAPANameFromCrate, __xlx_offset_byte_param_chanmap_fUprightFromCrate, __xlx_offset_byte_param_chanmap_fCrateFromTPCSet, __xlx_offset_byte_param_chanmap_fTPCSetFromCrate, __xlx_offset_byte_param_chanmap_DetToChanInfo, __xlx_offset_byte_param_outdata);
+  process_data(__xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec.data(), __xlx_chanmap_fUprightFromCrate__tmp_vec.data(), __xlx_chanmap_fCrateFromTPCSet__tmp_vec.data(), __xlx_chanmap_fTPCSetFromCrate__tmp_vec.data(), __xlx_chanmap_DetToChanInfo__tmp_vec.data(), __xlx_outdata__tmp_vec.data(), __xlx_apatb_param_infile_size, __xlx_offset_byte_param_infiledata, __xlx_apatb_param_chanmap_fNAPAs, __xlx_apatb_param_chanmap_fNChans, __xlx_offset_byte_param_chanmap_fAPANameFromCrate, __xlx_offset_byte_param_chanmap_fUprightFromCrate, __xlx_offset_byte_param_chanmap_fCrateFromTPCSet, __xlx_offset_byte_param_chanmap_fTPCSetFromCrate, __xlx_offset_byte_param_chanmap_DetToChanInfo, __xlx_offset_byte_param_outdata);
 // print __xlx_apatb_param_infiledata
 for (size_t i = 0; i < __xlx_size_param_infiledata; ++i) {
-((Byte<32>*)__xlx_apatb_param_infiledata)[i] = __xlx_infiledata_outdata__tmp_vec[__xlx_offset_param_infiledata+i];
-}
-// print __xlx_apatb_param_outdata
-for (size_t i = 0; i < __xlx_size_param_outdata; ++i) {
-((Byte<32>*)__xlx_apatb_param_outdata)[i] = __xlx_infiledata_outdata__tmp_vec[__xlx_offset_param_outdata+i];
+((Byte<32>*)__xlx_apatb_param_infiledata)[i] = __xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec[__xlx_offset_param_infiledata+i];
 }
 // print __xlx_apatb_param_chanmap_fAPANameFromCrate
 for (size_t i = 0; i < __xlx_size_param_chanmap_fAPANameFromCrate; ++i) {
-((Byte<4>*)__xlx_apatb_param_chanmap_fAPANameFromCrate)[i] = __xlx_chanmap_fAPANameFromCrate__tmp_vec[__xlx_offset_param_chanmap_fAPANameFromCrate+i];
+((Byte<32>*)__xlx_apatb_param_chanmap_fAPANameFromCrate)[i] = __xlx_infiledata_chanmap_fAPANameFromCrate__tmp_vec[__xlx_offset_param_chanmap_fAPANameFromCrate+i];
 }
 // print __xlx_apatb_param_chanmap_fUprightFromCrate
 for (size_t i = 0; i < __xlx_size_param_chanmap_fUprightFromCrate; ++i) {
@@ -439,5 +435,9 @@ for (size_t i = 0; i < __xlx_size_param_chanmap_fTPCSetFromCrate; ++i) {
 // print __xlx_apatb_param_chanmap_DetToChanInfo
 for (size_t i = 0; i < __xlx_size_param_chanmap_DetToChanInfo; ++i) {
 ((Byte<64>*)__xlx_apatb_param_chanmap_DetToChanInfo)[i] = __xlx_chanmap_DetToChanInfo__tmp_vec[__xlx_offset_param_chanmap_DetToChanInfo+i];
+}
+// print __xlx_apatb_param_outdata
+for (size_t i = 0; i < __xlx_size_param_outdata; ++i) {
+((Byte<4>*)__xlx_apatb_param_outdata)[i] = __xlx_outdata__tmp_vec[__xlx_offset_param_outdata+i];
 }
 }

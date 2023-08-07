@@ -59,17 +59,17 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0 : STD_LOGIC;
-    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0 : STD_LOGIC;
-    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_ce0 : STD_LOGIC;
     signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_we0 : STD_LOGIC;
     signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0 : STD_LOGIC;
+    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0 : STD_LOGIC;
+    signal void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_bkb IS
+    component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_lbW IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -87,21 +87,7 @@ attribute shreg_extract : string;
 
 
 begin
-    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U : component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_bkb
-    generic map (
-        DataWidth => 16,
-        AddressRange => 128,
-        AddressWidth => 7)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        address0 => ap_const_lv7_7F,
-        ce0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0,
-        we0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0,
-        d0 => in_elem_0_0_0_0_0_val,
-        q0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0);
-
-    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_U : component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_bkb
+    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_U : component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_lbW
     generic map (
         DataWidth => 16,
         AddressRange => 128,
@@ -112,8 +98,22 @@ begin
         address0 => ap_const_lv7_7F,
         ce0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_ce0,
         we0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_we0,
-        d0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0,
+        d0 => in_elem_0_0_0_0_0_val,
         q0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0);
+
+    void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_U : component process_data_shift_line_buffer_array_ap_fixed_16_6_5_3_0_1u_config3_s_void_conv_2d_buffer_lbW
+    generic map (
+        DataWidth => 16,
+        AddressRange => 128,
+        AddressWidth => 7)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => ap_const_lv7_7F,
+        ce0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_ce0,
+        we0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_we0,
+        d0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0,
+        q0 => void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0);
 
 
 
@@ -213,10 +213,10 @@ begin
     end process;
 
 
-    void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_assign_proc : process(ap_CS_fsm_state1, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i, void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0)
+    void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o_assign_proc : process(ap_CS_fsm_state1, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i, void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
-            void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o <= void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0;
+            void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o <= void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
         else 
             void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_o <= void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32_i;
         end if; 
@@ -264,10 +264,10 @@ begin
     end process;
 
 
-    void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_assign_proc : process(ap_CS_fsm_state1, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i, void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0)
+    void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o_assign_proc : process(ap_CS_fsm_state1, void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i, void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state1)) then 
-            void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o <= void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1_q0;
+            void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o <= void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_q0;
         else 
             void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_o <= void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35_i;
         end if; 

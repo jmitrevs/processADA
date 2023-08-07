@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691423434737">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691441210148">
   <ports id="1" name="gmem4" type="PortType" coreId="62" bitwidth="512" iftype="IfTypeFifo">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -12,22 +12,22 @@
   <ports id="3" name="trunc_ln202_4" type="PortType" coreId="641609760" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="zext_ln125" type="PortType" coreId="641609760" bitwidth="8">
+  <ports id="4" name="zext_ln402" type="PortType" coreId="641609760" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="upri_reload" type="PortType" coreId="4281524592" bitwidth="32">
+  <ports id="5" name="upri_reload" type="PortType" coreId="608638736" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="6" name="link_from_frameheader" type="PortType" coreId="641609760" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="zext_ln118" type="PortType" coreId="641609760" bitwidth="4">
+  <ports id="7" name="zext_ln395" type="PortType" coreId="641609760" bitwidth="4">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="add_ln202_out" type="PortType" coreId="1330007625" bitwidth="64" direction="DirOut">
+  <ports id="8" name="add_ln202_out" type="PortType" coreId="1338520112" bitwidth="64" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="9" name="add_ln202_3_out" type="PortType" coreId="4287891200" bitwidth="6" direction="DirOut">
+  <ports id="9" name="add_ln202_3_out" type="PortType" coreId="607202704" bitwidth="6" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="99" source_obj="//@ports.6" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -179,14 +179,14 @@
   <edges id="2147483647" source_obj="//@regions.0/@basic_blocks.3/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
   <blocks id="22" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body38.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_3" originalName="i" coreId="807414835" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i" originalName="i" coreId="807414835" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="zext_ln118_read" coreId="539767593" bitwidth="4" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <dataInputObjs>zext_ln118</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="zext_ln395_read" coreId="539767593" bitwidth="4" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext_ln395</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="12" name="link_from_frameheader_read" coreId="539767593" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
@@ -197,8 +197,8 @@
       <dataInputObjs>upri_reload</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln125_read" coreId="539767593" bitwidth="8" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <dataInputObjs>zext_ln125</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln402_read" coreId="539767593" bitwidth="8" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext_ln402</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="15" name="trunc_ln202_4_read" coreId="539770485" bitwidth="6" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
@@ -209,40 +209,40 @@
       <dataInputObjs>chanmap_DetToChanInfo</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="zext_ln118_cast" rtlName="zext_ln118_cast_fu_196_p1" coreId="2952879" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="zext_ln395_cast" rtlName="zext_ln395_cast_fu_196_p1" coreId="620609392" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln125_cast" rtlName="zext_ln125_cast_fu_200_p1" coreId="4285486544" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln402_cast" rtlName="zext_ln402_cast_fu_200_p1" coreId="826041445" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i_3_write_ln0" coreId="4286993984" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i_write_ln0" coreId="826041445" opcode="store" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln0" coreId="1064209" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln0" coreId="611914192" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body38.i</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="94" name="_ZN4dune16FDHDChannelMapSP26GetChanInfoFromWIBElementsEjjjj.exit.exitStub" type="BlockType">
     <controlInputObjs>land.lhs.true54.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="add_ln202_out_write_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="1701519394" contextFuncName="GetChanInfoFromWIBElements" opcode="write" nodeLabel="220.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="add_ln202_out_write_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="611619968" contextFuncName="GetChanInfoFromWIBElements" opcode="write" nodeLabel="220.0" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-      <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+      <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add_ln202_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="add_ln202_3_out_write_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4283964224" contextFuncName="GetChanInfoFromWIBElements" opcode="write" nodeLabel="220.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="92" name="add_ln202_3_out_write_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="3732134553" contextFuncName="GetChanInfoFromWIBElements" opcode="write" nodeLabel="220.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-      <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+      <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>add_ln202_3_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln0" coreId="4283875792" opcode="ret" nodeLabel="220.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="_ln0" coreId="0" opcode="ret" nodeLabel="220.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1"/>
     <fileValidLineNumbers fileName="kernel.cpp">
-      <validLinenumbers>125</validLinenumbers>
+      <validLinenumbers>402</validLinenumbers>
     </fileValidLineNumbers>
     <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
       <validLinenumbers>202</validLinenumbers>
@@ -256,9 +256,9 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>land.lhs.true.i</controlOutputObjs>
       <controlOutputObjs>for.inc65.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i" lineNumber="202" originalName="i" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4285725696" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="load" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i_2" lineNumber="202" originalName="i" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="611914192" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="load" m_display="1" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>icmp</dataInputObjs>
@@ -275,43 +275,43 @@
         <dataOutputObjs>trunc</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="shl_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_fu_212_p2" coreId="4287109024" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="shl" m_display="1" m_isLCDNode="true" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="shl_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_fu_212_p2" coreId="608071776" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="shl" m_display="1" m_isLCDNode="true" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="shl_ln202_2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_2_fu_218_p2" coreId="4286940032" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="shl" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="shl_ln202_2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_2_fu_218_p2" coreId="608963584" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="shl" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="trunc_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_fu_224_p1" coreId="2007514" contextFuncName="GetChanInfoFromWIBElements" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="trunc_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_fu_224_p1" coreId="605205152" contextFuncName="GetChanInfoFromWIBElements" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln202_2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_2_fu_228_p3" coreId="4283418000" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="bitconcatenate" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="trunc_ln202_2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_2_fu_228_p3" coreId="1397508187" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="bitconcatenate" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="30" name="add_ln202_2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln202_2_fu_236_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>shl</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="31" name="add_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln202_fu_242_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" m_display="1" m_delay="1.05" m_isLCDNode="true" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>shl</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -323,7 +323,7 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add_ln202_3" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln202_3_fu_248_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="add" m_display="0" m_delay="0.84" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
@@ -334,27 +334,27 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln202_1_fu_254_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" m_display="0" m_delay="1.36" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="trunc_ln202_5" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_5_reg_526" coreId="14041921" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="trunc_ln202_5" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_5_reg_526" coreId="612748592" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sext_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln202_fu_270_p1" coreId="4281363472" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="sext_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln202_fu_270_p1" coreId="542329928" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="gmem4_addr" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4284945200" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="gmem4_addr" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="602331760" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>gmem4</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
@@ -362,74 +362,74 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="37" name="gmem4_load_req" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="readreq" nodeLabel="1.0" nodeLatency="70" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="38" name="gmem4_addr_read" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="read" nodeLabel="72.0" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="39" name="add_ln202_4" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln202_4_fu_280_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="add" nodeLabel="73.0" m_display="0" m_delay="0.84" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="shl_ln4" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln4_fu_285_p3" coreId="4287214896" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="73.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="shl_ln2" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln2_fu_285_p3" coreId="3729594933" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="73.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln202_fu_293_p1" coreId="4285668160" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="73.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln202_fu_293_p1" coreId="606638624" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="73.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="42" name="lshr_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="lshr_ln202_fu_297_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="lshr" nodeLabel="73.0" m_display="1" m_delay="1.72" m_isLCDNode="true" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="trunc_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_1_fu_302_p1" coreId="3696357" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="73.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="trunc_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_1_fu_302_p1" coreId="613315776" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="73.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>lshr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="icmp_ln202_fu_306_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="icmp" nodeLabel="73.0" m_display="0" m_delay="1.14" m_topoIndex="31" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="45" name="add_ln201" lineNumber="201" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln201_fu_311_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" nodeLabel="73.0" m_display="0" m_delay="1.36" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="201" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4287891200" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="73.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="612563360" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="73.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc65.i</controlInputObjs>
         <controlInputObjs>land.lhs.true.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="kernel.cpp">
-        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>402</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
         <validLinenumbers>202</validLinenumbers>
@@ -441,22 +441,22 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>land.lhs.true48.i</controlOutputObjs>
       <controlOutputObjs>for.inc65.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="trunc_ln" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln_fu_316_p4" coreId="4280239888" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="74.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="trunc_ln" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln_fu_316_p4" coreId="604921360" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="74.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln202_1_fu_325_p1" coreId="4281362160" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="74.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="sext_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln202_1_fu_325_p1" coreId="613133312" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="74.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="gmem4_addr_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4287891200" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="74.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="gmem4_addr_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="3730521831" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="74.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>gmem4</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
@@ -464,59 +464,59 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="51" name="gmem4_load_1_req" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="readreq" nodeLabel="74.0" nodeLatency="70" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="37" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataInputObjs>lshr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="52" name="gmem4_addr_1_read" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="read" nodeLabel="145.0" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="43" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="shl_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_1_fu_361_p3" coreId="4287891200" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="146.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="shl_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln202_1_fu_361_p3" coreId="1330007625" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="146.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln202_1_fu_368_p1" coreId="14354095" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="146.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln202_1_fu_368_p1" coreId="609843600" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="146.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="55" name="lshr_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="lshr_ln202_1_fu_372_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="lshr" nodeLabel="146.0" m_display="0" m_delay="1.72" m_topoIndex="46" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln202_3" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_3_fu_377_p1" coreId="4287891200" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="146.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="trunc_ln202_3" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln202_3_fu_377_p1" coreId="611764944" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="146.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>lshr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="57" name="icmp_ln202_1" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="icmp_ln202_1_fu_381_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="icmp" nodeLabel="146.0" m_display="0" m_delay="1.14" m_topoIndex="48" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="0" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="146.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="3740669941" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="146.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc65.i</controlInputObjs>
         <controlInputObjs>land.lhs.true48.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="kernel.cpp">
-        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>402</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
         <validLinenumbers>202</validLinenumbers>
@@ -528,29 +528,29 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>land.lhs.true54.i</controlOutputObjs>
       <controlOutputObjs>for.inc65.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_1_fu_336_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" nodeLabel="74.0" m_display="0" m_delay="1.36" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="add_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_fu_336_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" nodeLabel="74.0" m_display="0" m_delay="1.36" m_topoIndex="38" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln203_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_2_reg_557" coreId="0" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="74.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="trunc_ln203_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_2_reg_557" coreId="620529616" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="74.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="sext_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln203_fu_351_p1" coreId="0" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="75.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="sext_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln203_fu_351_p1" coreId="609989280" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="75.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="gmem4_addr_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="7007601" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="gmem4_addr_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="615298784" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="75.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>gmem4</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
@@ -558,66 +558,66 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="64" name="gmem4_load_2_req" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="readreq" nodeLabel="75.0" nodeLatency="70" m_display="0" m_delay="7.3" m_topoIndex="42" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="65" name="gmem4_addr_2_read" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="read" nodeLabel="146.0" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="50" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="add_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_fu_386_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="add" nodeLabel="147.0" m_display="0" m_delay="0.84" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="add_ln203_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_2_fu_386_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="add" nodeLabel="147.0" m_display="0" m_delay="0.84" m_topoIndex="51" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="shl_ln6" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln6_fu_391_p3" coreId="4287891200" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="147.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="shl_ln3" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln3_fu_391_p3" coreId="615298784" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="147.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="zext_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln203_fu_399_p1" coreId="578500864" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="147.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="zext_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln203_fu_399_p1" coreId="619995296" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="147.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="69" name="lshr_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="lshr_ln203_fu_403_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="lshr" nodeLabel="147.0" m_display="1" m_delay="1.72" m_isLCDNode="true" m_topoIndex="54" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="trunc_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_fu_408_p1" coreId="4280730856" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="147.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="trunc_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_fu_408_p1" coreId="3741238776" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="147.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>lshr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="71" name="icmp_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="icmp_ln203_fu_412_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="icmp" nodeLabel="147.0" m_display="0" m_delay="1.14" m_topoIndex="56" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4287685296" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="147.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="br_ln203" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="612664032" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="147.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc65.i</controlInputObjs>
         <controlInputObjs>land.lhs.true54.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="kernel.cpp">
-        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>402</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
         <validLinenumbers>203</validLinenumbers>
@@ -628,29 +628,29 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_ZN4dune16FDHDChannelMapSP26GetChanInfoFromWIBElementsEjjjj.exit.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc65.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="add_ln203_2" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_2_fu_417_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" nodeLabel="147.0" m_display="0" m_delay="1.36" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="add_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_1_fu_417_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="add" nodeLabel="147.0" m_display="0" m_delay="1.36" m_topoIndex="58" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="trunc_ln1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln1_reg_586" coreId="1819113532" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="147.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="trunc_ln1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln1_reg_586" coreId="304" contextFuncName="GetChanInfoFromWIBElements" bitwidth="58" opcode="partselect" nodeLabel="147.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="sext_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln203_1_fu_432_p1" coreId="4281344256" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="148.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="sext_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="sext_ln203_1_fu_432_p1" coreId="609030192" contextFuncName="GetChanInfoFromWIBElements" bitwidth="64" opcode="sext" nodeLabel="148.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem4_addr_3" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="1752440933" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="148.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="gmem4_addr_3" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="610469472" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="getelementptr" nodeLabel="148.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>gmem4</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>readreq</dataOutputObjs>
@@ -658,53 +658,53 @@
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="78" name="gmem4_load_3_req" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="readreq" nodeLabel="148.0" nodeLatency="70" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="62" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataInputObjs>lshr</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="79" name="gmem4_addr_3_read" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="read" nodeLabel="219.0" m_display="1" m_delay="7.3" m_isLCDNode="true" m_topoIndex="63" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="80" name="add_ln203_3" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="add_ln203_3_fu_442_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="GetChanInfoFromWIBElements" bitwidth="6" opcode="add" nodeLabel="220.0" m_display="0" m_delay="0.84" m_topoIndex="64" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="shl_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln203_1_fu_447_p3" coreId="3657970" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="220.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="shl_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="shl_ln203_1_fu_447_p3" coreId="3735826503" contextFuncName="GetChanInfoFromWIBElements" bitwidth="9" opcode="bitconcatenate" nodeLabel="220.0" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="zext_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln203_1_fu_455_p1" coreId="4282711712" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="220.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="zext_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="zext_ln203_1_fu_455_p1" coreId="3735828151" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="zext" nodeLabel="220.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>bitconcatenate</dataInputObjs>
         <dataOutputObjs>lshr</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="83" name="lshr_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="lshr_ln203_1_fu_459_p2" coreName="Shifter" implIndex="auto_pipe" control="no" opType="lshr" coreId="75" contextFuncName="GetChanInfoFromWIBElements" bitwidth="512" opcode="lshr" nodeLabel="220.0" m_display="1" m_delay="1.72" m_isLCDNode="true" m_topoIndex="67" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>trunc</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="trunc_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_1_fu_464_p1" coreId="4282966048" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="220.0" m_display="1" m_isLCDNode="true" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="trunc_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="trunc_ln203_1_fu_464_p1" coreId="612693840" contextFuncName="GetChanInfoFromWIBElements" bitwidth="32" opcode="trunc" nodeLabel="220.0" m_display="1" m_isLCDNode="true" m_topoIndex="68" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>lshr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
       </node_objs>
       <node_objs xsi:type="cdfg:CdfgNode" id="85" name="icmp_ln203_1" lineNumber="203" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." rtlName="icmp_ln203_1_fu_468_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="GetChanInfoFromWIBElements" bitwidth="1" opcode="icmp" nodeLabel="220.0" m_display="1" m_delay="1.14" m_isLCDNode="true" m_topoIndex="69" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="203" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
@@ -719,15 +719,15 @@
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>load</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4281360448" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="220.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="br_ln202" lineNumber="202" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="548762048" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="220.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="202" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc65.i</controlInputObjs>
         <controlInputObjs>_ZN4dune16FDHDChannelMapSP26GetChanInfoFromWIBElementsEjjjj.exit.exitStub</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="kernel.cpp">
-        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>402</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
         <validLinenumbers>203</validLinenumbers>
@@ -744,19 +744,19 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body38.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="i_3_write_ln201" lineNumber="201" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="0" contextFuncName="GetChanInfoFromWIBElements" opcode="store" nodeLabel="220.0" m_display="0" m_delay="0.46" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="i_write_ln201" lineNumber="201" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="3669457143" contextFuncName="GetChanInfoFromWIBElements" opcode="store" nodeLabel="220.0" m_display="0" m_delay="0.46" m_topoIndex="71" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="201" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln201" lineNumber="201" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="4282901904" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="220.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="br_ln201" lineNumber="201" fileName="FDHDChannelMapSP.cxx" fileDirectory="../." coreId="615413952" contextFuncName="GetChanInfoFromWIBElements" opcode="br" nodeLabel="220.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="FDHDChannelMapSP.cxx" linenumber="201" fileDirectory="/home/brenton/kernel/processAPA" functionName="GetChanInfoFromWIBElements"/>
-        <inlineStackInfo fileName="kernel.cpp" linenumber="125" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
+        <inlineStackInfo fileName="kernel.cpp" linenumber="402" fileDirectory="/home/brenton/kernel/processAPA" functionName="process_data"/>
         <controlInputObjs>for.body38.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="kernel.cpp">
-        <validLinenumbers>125</validLinenumbers>
+        <validLinenumbers>402</validLinenumbers>
       </fileValidLineNumbers>
       <fileValidLineNumbers fileName="FDHDChannelMapSP.cxx">
         <validLinenumbers>201</validLinenumbers>
@@ -984,14 +984,11 @@
   <ScheduleInfo time="218"/>
   <ScheduleInfo time="219"/>
   <ScheduleInfo time="220"/>
-  <regnodes realName="i_reg_504">
-    <nodeIds>23</nodeIds>
-  </regnodes>
   <regnodes realName="add_ln202_reg_509">
     <nodeIds>31</nodeIds>
   </regnodes>
-  <regnodes realName="zext_ln118_cast_reg_494">
-    <nodeIds>17</nodeIds>
+  <regnodes realName="zext_ln402_cast_reg_499">
+    <nodeIds>18</nodeIds>
   </regnodes>
   <regnodes realName="trunc_ln1_reg_586">
     <nodeIds>75</nodeIds>
@@ -1008,20 +1005,20 @@
   <regnodes realName="icmp_ln202_reg_542">
     <nodeIds>44</nodeIds>
   </regnodes>
+  <regnodes realName="zext_ln395_cast_reg_494">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_477">
+    <nodeIds>10</nodeIds>
+  </regnodes>
   <regnodes realName="icmp_ln202_1_reg_573">
     <nodeIds>57</nodeIds>
   </regnodes>
   <regnodes realName="link_from_frameheader_read_reg_484">
     <nodeIds>12</nodeIds>
   </regnodes>
-  <regnodes realName="zext_ln125_cast_reg_499">
-    <nodeIds>18</nodeIds>
-  </regnodes>
   <regnodes realName="gmem4_addr_1_reg_551">
     <nodeIds>50</nodeIds>
-  </regnodes>
-  <regnodes realName="i_3_reg_477">
-    <nodeIds>10</nodeIds>
   </regnodes>
   <regnodes realName="upri_reload_read_reg_489">
     <nodeIds>13</nodeIds>
@@ -1041,6 +1038,9 @@
   <regnodes realName="add_ln202_3_reg_517">
     <nodeIds>32</nodeIds>
   </regnodes>
+  <regnodes realName="i_2_reg_504">
+    <nodeIds>23</nodeIds>
+  </regnodes>
   <regnodes realName="trunc_ln203_2_reg_557">
     <nodeIds>61</nodeIds>
   </regnodes>
@@ -1053,6 +1053,9 @@
   <regnodes realName="gmem4_addr_3_read_reg_597">
     <nodeIds>79</nodeIds>
   </regnodes>
+  <expressionNodes realName="add_ln203_fu_336">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="shl_ln202_fu_212">
     <nodeIds>26</nodeIds>
   </expressionNodes>
@@ -1064,9 +1067,6 @@
   </expressionNodes>
   <expressionNodes realName="add_ln202_2_fu_236">
     <nodeIds>30</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln118_cast_fu_196">
-    <nodeIds>17</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln203_fu_351">
     <nodeIds>62</nodeIds>
@@ -1101,14 +1101,17 @@
   <expressionNodes realName="lshr_ln202_1_fu_372">
     <nodeIds>55</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="shl_ln3_fu_391">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="trunc_ln203_fu_408">
     <nodeIds>70</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln203_fu_386">
-    <nodeIds>66</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="gmem4_addr_3_fu_435">
     <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln395_cast_fu_196">
+    <nodeIds>17</nodeIds>
   </expressionNodes>
   <expressionNodes realName="add_ln202_fu_242">
     <nodeIds>31</nodeIds>
@@ -1116,20 +1119,17 @@
   <expressionNodes realName="add_ln202_4_fu_280">
     <nodeIds>39</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln125_cast_fu_200">
-    <nodeIds>18</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="shl_ln203_1_fu_447">
     <nodeIds>81</nodeIds>
   </expressionNodes>
   <expressionNodes realName="zext_ln203_1_fu_455">
     <nodeIds>82</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="i_3_fu_94">
-    <nodeIds>10</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="lshr_ln203_1_fu_459">
     <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln203_2_fu_386">
+    <nodeIds>66</nodeIds>
   </expressionNodes>
   <expressionNodes realName="lshr_ln203_fu_403">
     <nodeIds>69</nodeIds>
@@ -1137,7 +1137,7 @@
   <expressionNodes realName="zext_ln202_1_fu_368">
     <nodeIds>54</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="shl_ln4_fu_285">
+  <expressionNodes realName="shl_ln2_fu_285">
     <nodeIds>40</nodeIds>
   </expressionNodes>
   <expressionNodes realName="zext_ln202_fu_293">
@@ -1155,14 +1155,11 @@
   <expressionNodes realName="trunc_ln202_3_fu_377">
     <nodeIds>56</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln203_2_fu_417">
+  <expressionNodes realName="add_ln203_1_fu_417">
     <nodeIds>74</nodeIds>
   </expressionNodes>
   <expressionNodes realName="add_ln201_fu_311">
     <nodeIds>45</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="shl_ln6_fu_391">
-    <nodeIds>67</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln202_1_fu_302">
     <nodeIds>43</nodeIds>
@@ -1176,14 +1173,17 @@
   <expressionNodes realName="icmp_ln203_1_fu_468">
     <nodeIds>85</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln203_1_fu_336">
-    <nodeIds>60</nodeIds>
+  <expressionNodes realName="i_fu_94">
+    <nodeIds>10</nodeIds>
   </expressionNodes>
   <expressionNodes realName="trunc_ln203_1_fu_464">
     <nodeIds>84</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln203_fu_412">
     <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln402_cast_fu_200">
+    <nodeIds>18</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln202_1_fu_325">
     <nodeIds>49</nodeIds>
@@ -1208,6 +1208,12 @@
   </ioNodes>
   <ioNodes realName="gmem4_addr_2_read_read_fu_165">
     <nodeIds>65</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_2_load_fu_209">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="zext_ln395_read_read_fu_98">
+    <nodeIds>11</nodeIds>
   </ioNodes>
   <ioNodes realName="grp_readreq_fu_170">
     <nodeIds>78</nodeIds>
@@ -1236,14 +1242,8 @@
   <ioNodes realName="chanmap_DetToChanInfo_read_read_fu_128">
     <nodeIds>16</nodeIds>
   </ioNodes>
-  <ioNodes realName="i_load_fu_209">
-    <nodeIds>23</nodeIds>
-  </ioNodes>
   <ioNodes realName="grp_readreq_fu_153">
     <nodeIds>64</nodeIds>
-  </ioNodes>
-  <ioNodes realName="zext_ln118_read_read_fu_98">
-    <nodeIds>11</nodeIds>
   </ioNodes>
   <ioNodes realName="gmem4_addr_read_read_fu_141">
     <nodeIds>38</nodeIds>
@@ -1251,11 +1251,11 @@
   <ioNodes realName="grp_readreq_fu_146">
     <nodeIds>51</nodeIds>
   </ioNodes>
-  <ioNodes realName="zext_ln125_read_read_fu_116">
-    <nodeIds>14</nodeIds>
-  </ioNodes>
   <ioNodes realName="upri_reload_read_read_fu_110">
     <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="zext_ln402_read_read_fu_116">
+    <nodeIds>14</nodeIds>
   </ioNodes>
   <ioPorts name="add_ln202_3_out">
     <contents name="write">
@@ -1301,12 +1301,12 @@
       <nodeIds>13</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="zext_ln118">
+  <ioPorts name="zext_ln395">
     <contents name="read">
       <nodeIds>11</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="zext_ln125">
+  <ioPorts name="zext_ln402">
     <contents name="read">
       <nodeIds>14</nodeIds>
     </contents>

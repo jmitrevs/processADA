@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s'
 ================================================================
-* Date:           Mon Aug  7 11:50:35 2023
+* Date:           Mon Aug  7 16:46:51 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -211,25 +211,25 @@ State 2 <SV = 1> <Delay = 0.00>
 ST_2 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadTop_PadTopWidth, i16 %layer2_out"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%empty_98 = wait i32 @_ssdm_op_Wait"   --->   Operation 12 'wait' 'empty_98' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%empty_94 = wait i32 @_ssdm_op_Wait"   --->   Operation 12 'wait' 'empty_94' <Predicate = true> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%empty_99 = wait i32 @_ssdm_op_Wait"   --->   Operation 13 'wait' 'empty_99' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%empty_95 = wait i32 @_ssdm_op_Wait"   --->   Operation 13 'wait' 'empty_95' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 14 [2/2] (0.00ns)   --->   "%call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadMain_CopyMain, i15 %zero_padding2d_input, i16 %layer2_out"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
 ST_5 : Operation 15 [1/2] (0.00ns)   --->   "%call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadMain_CopyMain, i15 %zero_padding2d_input, i16 %layer2_out"   --->   Operation 15 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%empty_100 = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty_100' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "%empty_96 = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty_96' <Predicate = true> <Delay = 0.00>
 
 State 7 <SV = 6> <Delay = 0.00>
-ST_7 : Operation 17 [1/1] (0.00ns)   --->   "%empty_101 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_101' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 17 [1/1] (0.00ns)   --->   "%empty_97 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_97' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadBottom_PadBottomWidth, i16 %layer2_out"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln0 = call void @zeropad2d_cl<array,array<ap_fixed,1u>,config2>_Pipeline_PadBottom_PadBottomWidth, i16 %layer2_out"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_8 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln81 = ret" [./nnet_utils/nnet_padding_stream.h:81]   --->   Operation 22 'ret' 'ret_ln81' <Predicate = true> <Delay = 0.00>
 
@@ -255,11 +255,11 @@ Port [ layer2_out]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0;
 <method=bitvector/>
 empty             (wait         ) [ 000000000]
 call_ln0          (call         ) [ 000000000]
-empty_98          (wait         ) [ 000000000]
-empty_99          (wait         ) [ 000000000]
+empty_94          (wait         ) [ 000000000]
+empty_95          (wait         ) [ 000000000]
 call_ln0          (call         ) [ 000000000]
-empty_100         (wait         ) [ 000000000]
-empty_101         (wait         ) [ 000000000]
+empty_96          (wait         ) [ 000000000]
+empty_97          (wait         ) [ 000000000]
 specinterface_ln0 (specinterface) [ 000000000]
 specinterface_ln0 (specinterface) [ 000000000]
 call_ln0          (call         ) [ 000000000]
@@ -337,7 +337,7 @@ ret_ln81          (ret          ) [ 000000000]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_38"/></StgValue>
+<StgValue><ssdm name="empty_22"/></StgValue>
 </bind>
 </comp>
 
@@ -355,7 +355,7 @@ ret_ln81          (ret          ) [ 000000000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_35"/></StgValue>
+<StgValue><ssdm name="empty_8"/></StgValue>
 </bind>
 </comp>
 

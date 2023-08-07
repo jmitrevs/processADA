@@ -41576,7 +41576,7 @@ for.body13.split.i.i:895 %data_895_val896918_phi = phi i16 %data_895_val896_read
 
 <Node id="3604" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_35
+for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln44"/></StgValue>
@@ -90438,7 +90438,7 @@ nnet::dense_resource<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16
 </dataflow>
 <dataflow id="14780" from="StgValue_14777" to="specpipeline_ln44" fromId="14777" toId="2713">
 </dataflow>
-<dataflow id="14782" from="empty_35" to="specpipeline_ln44" fromId="14781" toId="2713">
+<dataflow id="14782" from="empty_8" to="specpipeline_ln44" fromId="14781" toId="2713">
 </dataflow>
 <dataflow id="14784" from="_ssdm_op_SpecLoopTripCount" to="speclooptripcount_ln46" fromId="14783" toId="2714">
 </dataflow>

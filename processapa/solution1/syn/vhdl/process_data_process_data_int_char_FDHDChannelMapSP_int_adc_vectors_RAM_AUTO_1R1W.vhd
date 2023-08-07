@@ -12,8 +12,8 @@ entity process_data_process_data_int_char_FDHDChannelMapSP_int_adc_vectors_RAM_A
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 14; 
-        AddressWidth    : integer   := 18;
-        AddressRange    : integer   := 192000
+        AddressWidth    : integer   := 9;
+        AddressRange    : integer   := 512
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

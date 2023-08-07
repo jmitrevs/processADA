@@ -185,7 +185,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljBb IS
+    component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljLb IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -205,7 +205,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjCb IS
+    component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjMb IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -221,7 +221,7 @@ attribute shreg_extract : string;
 
 
 begin
-    exp_table_U : component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljBb
+    exp_table_U : component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_exp_tabljLb
     generic map (
         DataWidth => 17,
         AddressRange => 1024,
@@ -239,7 +239,7 @@ begin
         ce2 => exp_table_ce2,
         q2 => exp_table_q2);
 
-    invert_table_U : component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjCb
+    invert_table_U : component process_data_softmax_stable_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_invert_tjMb
     generic map (
         DataWidth => 18,
         AddressRange => 1024,
@@ -251,7 +251,7 @@ begin
         ce0 => invert_table_ce0,
         q0 => invert_table_q0);
 
-    mul_18s_17ns_26_1_1_U4647 : component process_data_mul_18s_17ns_26_1_1
+    mul_18s_17ns_26_1_1_U5836 : component process_data_mul_18s_17ns_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

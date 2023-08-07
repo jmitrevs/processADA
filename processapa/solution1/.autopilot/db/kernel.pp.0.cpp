@@ -54090,18 +54090,48 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
 
 
+# 1 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iostream" 1 3
+# 37 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iostream" 3
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 60 "/data/Xilinx/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iostream" 3
+  extern istream cin;
+  extern ostream cout;
+  extern ostream cerr;
+  extern ostream clog;
+
+
+  extern wistream wcin;
+  extern wostream wcout;
+  extern wostream wcerr;
+  extern wostream wclog;
+
+
+
+
+  static ios_base::Init __ioinit;
+
+
+}
+# 6 "kernel.cpp" 2
+
 __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infile_size, char infiledata[28320800],dune::FDHDChannelMapSP& chanmap ,int outdata[276])
 {
 #line 28 "/home/brenton/kernel/processAPA/processapa/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=process_data
-# 6 "kernel.cpp"
+# 8 "kernel.cpp"
 
 #line 7 "/home/brenton/kernel/processAPA/processapa/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=process_data
-# 6 "kernel.cpp"
+# 8 "kernel.cpp"
 
-#pragma HLS INTERFACE m_axi depth=28320800 port=infiledata offset=slave bundle=gmem
-#pragma HLS INTERFACE m_axi depth=276 port=outdata offset=slave bundle=gmem
+#pragma HLS INTERFACE m_axi port=infiledata depth=28320800
+#pragma HLS INTERFACE m_axi port=infiledata depth=276
 
  int a;
 
@@ -54112,14 +54142,70 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
 
 
- static int adc_vectors[256][6000];
+ static int adc_vectors[256][100];
+ static int adc_vectors2[256][100];
+ static int adc_vectors3[256][100];
+ static int adc_vectors4[256][100];
+ static int adc_vectors5[256][100];
+ static int adc_vectors6[256][100];
+ static int adc_vectors7[256][100];
+ static int adc_vectors8[256][100];
+ static int adc_vectors9[256][100];
+ static int adc_vectors10[256][100];
+ static int adc_vectors11[256][100];
+ static int adc_vectors12[256][100];
+ static int adc_vectors13[256][100];
+ static int adc_vectors14[256][100];
+ static int adc_vectors15[256][100];
+ static int adc_vectors16[256][100];
+ static int adc_vectors17[256][100];
+ static int adc_vectors18[256][100];
+ static int adc_vectors19[256][100];
+ static int adc_vectors20[256][100];
+ static int adc_vectors21[256][100];
+ static int adc_vectors22[256][100];
+ static int adc_vectors23[256][100];
+ static int adc_vectors24[256][100];
+ static int adc_vectors25[256][100];
+ static int adc_vectors26[256][100];
+ static int adc_vectors27[256][100];
+ static int adc_vectors28[256][100];
+ static int adc_vectors29[256][100];
+ static int adc_vectors30[256][100];
+ static int adc_vectors31[256][100];
+ static int adc_vectors32[256][100];
+ static int adc_vectors33[256][100];
+ static int adc_vectors34[256][100];
+ static int adc_vectors35[256][100];
+ static int adc_vectors36[256][100];
+ static int adc_vectors37[256][100];
+ static int adc_vectors38[256][100];
+ static int adc_vectors39[256][100];
+ static int adc_vectors40[256][100];
+ static int adc_vectors41[256][100];
+ static int adc_vectors42[256][100];
+ static int adc_vectors43[256][100];
+ static int adc_vectors44[256][100];
+ static int adc_vectors45[256][100];
+ static int adc_vectors46[256][100];
+ static int adc_vectors47[256][100];
+ static int adc_vectors48[256][100];
+ static int adc_vectors49[256][100];
+ static int adc_vectors50[256][100];
+ static int adc_vectors51[256][100];
+ static int adc_vectors52[256][100];
+ static int adc_vectors53[256][100];
+ static int adc_vectors54[256][100];
+ static int adc_vectors55[256][100];
+ static int adc_vectors56[256][100];
+ static int adc_vectors57[256][100];
+ static int adc_vectors58[256][100];
+ static int adc_vectors59[256][100];
+ static int adc_vectors60[256][100];
 
+#pragma HLS INTERFACE m_axi depth=1536000 port=adc_vectors offset=slave bundle=gmem
+#pragma HLS ARRAY_PARTITION variable=adc_vectors type=block factor=60 dim=2
 
-
-
-
-
-#pragma HLS ARRAY_PARTITION variable=adc_vectors type=cyclic factor=8 dim=2
 
 
  static int planes[z_channels][n_frames];
@@ -54161,13 +54247,255 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
             frame_chan_loop:
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++)
             {
+#pragma HLS pipeline
+
+ auto adc = frame->get_adc(iChan);
 
 
-                auto adc = frame->get_adc(iChan);
+                 if(iFrame<100)
+                 {
+                  adc_vectors[iFrame][iChan] = adc;
+                 }
+
+                 else if(iFrame < 200)
+     {
+    adc_vectors2[iFrame][iChan] = adc;
+     }
+                 else if(iFrame < 300)
+    {
+     adc_vectors3[iFrame][iChan] = adc;
+    }
+                 else if(iFrame < 400)
+    {
+     adc_vectors4[iFrame][iChan] = adc;
+    }
+                 else if(iFrame < 500)
+    {
+     adc_vectors5[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 600)
+    {
+     adc_vectors6[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 700)
+    {
+        adc_vectors7[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 800)
+    {
+        adc_vectors8[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 900)
+    {
+        adc_vectors9[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1000)
+    {
+        adc_vectors10[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1100)
+    {
+        adc_vectors11[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1200)
+    {
+        adc_vectors12[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1300)
+    {
+        adc_vectors13[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1400)
+    {
+        adc_vectors14[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1500)
+    {
+        adc_vectors15[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1600)
+    {
+        adc_vectors16[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1700)
+    {
+        adc_vectors17[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1800)
+    {
+        adc_vectors18[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 1900)
+    {
+        adc_vectors19[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2000)
+    {
+        adc_vectors20[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2100)
+    {
+        adc_vectors21[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2200)
+    {
+        adc_vectors22[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2300)
+    {
+        adc_vectors23[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2400)
+    {
+        adc_vectors24[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2500)
+    {
+        adc_vectors25[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2600)
+    {
+        adc_vectors26[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2700)
+    {
+        adc_vectors27[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2800)
+    {
+        adc_vectors28[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 2900)
+    {
+        adc_vectors29[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3000)
+    {
+        adc_vectors30[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3100)
+    {
+        adc_vectors31[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3200)
+    {
+        adc_vectors32[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3300)
+    {
+        adc_vectors33[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3400)
+    {
+        adc_vectors34[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3500)
+    {
+        adc_vectors35[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3600)
+    {
+        adc_vectors36[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3700)
+    {
+        adc_vectors37[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3800)
+    {
+        adc_vectors38[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 3900)
+    {
+        adc_vectors39[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4000)
+    {
+        adc_vectors40[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4100)
+    {
+        adc_vectors41[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4200)
+    {
+        adc_vectors42[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4300)
+    {
+        adc_vectors43[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4400)
+    {
+        adc_vectors44[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4500)
+    {
+        adc_vectors45[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4600)
+    {
+        adc_vectors46[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4700)
+    {
+        adc_vectors47[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4800)
+    {
+        adc_vectors48[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 4900)
+    {
+        adc_vectors49[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5000)
+    {
+        adc_vectors50[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5100)
+    {
+        adc_vectors51[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5200)
+    {
+        adc_vectors52[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5300)
+    {
+        adc_vectors53[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5400)
+    {
+        adc_vectors54[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5500)
+    {
+        adc_vectors55[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5600)
+    {
+        adc_vectors56[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5700)
+    {
+        adc_vectors57[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5800)
+    {
+        adc_vectors58[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 5900)
+    {
+        adc_vectors59[iFrame][iChan] = adc;
+    }
+    else if(iFrame < 6000)
+    {
+        adc_vectors60[iFrame][iChan] = adc;
+    }
 
 
-                adc_vectors[iFrame][iChan] = adc;
-# 98 "kernel.cpp"
+
             }
 
         }
@@ -54200,63 +54528,256 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
             unsigned int offline_plane = hdchaninfo.plane;
 
             if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
-            {
-                VITIS_LOOP_131_1: for (int i = 0; i < n_frames; i++)
+                                         {
+                VITIS_LOOP_408_1: for (int i = 0; i < n_frames; i++)
                 {
 
+
+                 if(i<100)
+                 {
                   planes[offline_chan - CHAN_MIN][i] = adc_vectors[iChan][i]-ave[iChan];
+                 }
+                 else if(i<200)
+                 {
+                  planes[offline_chan - CHAN_MIN][i] = adc_vectors2[iChan][i]-ave[iChan];
+                 }
 
-                 if(i<2000)
+                 else if(i<300)
      {
-
+      planes[offline_chan - CHAN_MIN][i] = adc_vectors3[iChan][i]-ave[iChan];
      }
-                 if(i<3000)
+                 else if(i<400)
      {
-
+      planes[offline_chan - CHAN_MIN][i] = adc_vectors4[iChan][i]-ave[iChan];
      }
-                 if(i<4000)
+                 else if(i<500)
      {
-
+      planes[offline_chan - CHAN_MIN][i] = adc_vectors5[iChan][i]-ave[iChan];
      }
-                 if(i<5000)
+                 else if(i<600)
      {
-
+      planes[offline_chan - CHAN_MIN][i] = adc_vectors6[iChan][i]-ave[iChan];
      }
-                 if(i<6000)
-     {
+                 else if(i<700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors7[iChan][i]-ave[iChan];
+                 }
+                 else if(i<800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors8[iChan][i]-ave[iChan];
+                 }
+                 else if(i<900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors9[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors10[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1100)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors11[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1200)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors12[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1300)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors13[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1400)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors14[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1500)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors15[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1600)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors16[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors17[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors18[iChan][i]-ave[iChan];
+                 }
+                 else if(i<1900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors19[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors20[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2100)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors21[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2200)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors22[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2300)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors23[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2400)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors24[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2500)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors25[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2600)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors26[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors27[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors28[iChan][i]-ave[iChan];
+                 }
+                 else if(i<2900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors29[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors30[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3100)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors31[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3200)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors32[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3300)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors33[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3400)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors34[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3500)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors35[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3600)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors36[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors37[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors38[iChan][i]-ave[iChan];
+                 }
+                 else if(i<3900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors39[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors40[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4100)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors41[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4200)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors42[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4300)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors43[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4400)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors44[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4500)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors45[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4600)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors46[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors47[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors48[iChan][i]-ave[iChan];
+                 }
+                 else if(i<4900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors49[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors50[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5100)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors51[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5200)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors52[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5300)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors53[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5400)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors54[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5500)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors55[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5600)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors56[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5700)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors57[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5800)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors58[iChan][i]-ave[iChan];
+                 }
+                 else if(i<5900)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors59[iChan][i]-ave[iChan];
+                 }
+                 else if(i<6000)
+                 {
+                     planes[offline_chan - CHAN_MIN][i] = adc_vectors60[iChan][i]-ave[iChan];
+                 }
 
-     }
                 }
             }
-            else if(offline_plane == 2)
-            {
-             VITIS_LOOP_160_2: for (int i = 0; i < n_frames; i++)
-             {
-
-      planes2[offline_chan - CHAN_MIN][i] = adc_vectors[iChan][i]-ave[iChan];
-
-     if(i<2000)
-     {
-
-     }
-     if(i<3000)
-     {
-
-     }
-     if(i<4000)
-     {
-
-     }
-     if(i<5000)
-     {
-
-     }
-     if(i<6000)
-     {
-
-     }
-             }
-            }
+# 912 "kernel.cpp"
         }
     }
 
@@ -54271,11 +54792,11 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
 
 
- VITIS_LOOP_201_3: for (int i = 0; i < 128; i += TICK_SIZE)
+ VITIS_LOOP_926_2: for (int i = 0; i < 128; i += TICK_SIZE)
  {
-  VITIS_LOOP_203_4: for(int j = 0; j < z_channels; j++)
+  VITIS_LOOP_928_3: for(int j = 0; j < z_channels; j++)
   {
-   VITIS_LOOP_205_5: for(int k = 0; k <TICK_SIZE; k++)
+   VITIS_LOOP_930_4: for(int k = 0; k <TICK_SIZE; k++)
    {
        int fill = planes[j][i+k];
        pack[0] = typename input_t::value_type(fill);
@@ -54285,35 +54806,11 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
   myproject(zero_padding2d_input, layer19_out);
   auto cc_prob = layer19_out.read();
-  VITIS_LOOP_215_6: for (int z = 0; z < 3; z++)
+  VITIS_LOOP_940_5: for (int z = 0; z < 3; z++)
   {
    outdata[z+(i/TICK_SIZE)*3] = cc_prob[z]+a;
 
   }
  }
-
-
-
- VITIS_LOOP_224_7: for (int i = 0; i < n_frames; i += TICK_SIZE)
- {
-  VITIS_LOOP_226_8: for(int j = 0; j < z_channels; j++)
-  {
-   VITIS_LOOP_228_9: for(int k = 0; k <TICK_SIZE; k++)
-   {
-       int fill = planes2[j][i+k];
-       pack[0] = typename input_t::value_type(fill);
-       zero_padding2d_input.write(pack);
-   }
-  }
-
-  myproject(zero_padding2d_input, layer19_out);
-  auto cc_prob = layer19_out.read();
-  int side1_data = 138;
-  VITIS_LOOP_239_10: for (int z = 0; z < 3; z++)
-  {
-   outdata[side1_data+z+(i/TICK_SIZE)*3] = cc_prob[z];
-  }
- }
-
-
+# 972 "kernel.cpp"
 }

@@ -41576,7 +41576,7 @@ for.body13.split.i.i:895 %data_895_val896918_phi = phi i16 %data_895_val896_read
 
 <Node id="3604" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_35
+for.body13.split.i.i:897 %specpipeline_ln44 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln44"/></StgValue>

@@ -1039,8 +1039,8 @@ attribute shreg_extract : string;
     signal select_ln328_fu_2858_p3 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln317_fu_2883_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal add_ln313_fu_2836_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal tmp_269_fu_2403_p4 : STD_LOGIC_VECTOR (30 downto 0);
-    signal tmp_270_fu_2419_p4 : STD_LOGIC_VECTOR (30 downto 0);
+    signal tmp_270_fu_2403_p4 : STD_LOGIC_VECTOR (30 downto 0);
+    signal tmp_271_fu_2419_p4 : STD_LOGIC_VECTOR (30 downto 0);
     signal icmp_ln289_5_fu_2413_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal icmp_ln289_6_fu_2429_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal and_ln289_fu_2435_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -5945,8 +5945,8 @@ begin
 
     grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_mult_s_fu_1793_ap_start <= grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_mult_s_fu_1793_ap_start_reg;
     grp_fu_2375_p2 <= "1" when (sY_1 = ap_const_lv32_2) else "0";
-    icmp_ln289_5_fu_2413_p2 <= "1" when (signed(tmp_269_fu_2403_p4) > signed(ap_const_lv31_0)) else "0";
-    icmp_ln289_6_fu_2429_p2 <= "1" when (signed(tmp_270_fu_2419_p4) > signed(ap_const_lv31_0)) else "0";
+    icmp_ln289_5_fu_2413_p2 <= "1" when (signed(tmp_270_fu_2403_p4) > signed(ap_const_lv31_0)) else "0";
+    icmp_ln289_6_fu_2429_p2 <= "1" when (signed(tmp_271_fu_2419_p4) > signed(ap_const_lv31_0)) else "0";
     icmp_ln289_fu_2384_p2 <= "1" when (sX_1 = ap_const_lv32_2) else "0";
     icmp_ln313_fu_2841_p2 <= "1" when (add_ln313_fu_2836_p2 = ap_const_lv32_1F) else "0";
     icmp_ln317_fu_2888_p2 <= "1" when (add_ln317_fu_2883_p2 = ap_const_lv32_7F) else "0";
@@ -5982,6 +5982,6 @@ begin
     select_ln328_fu_2858_p3 <= 
         ap_const_lv32_2 when (icmp_ln289_reg_2929(0) = '1') else 
         add_ln328_fu_2853_p2;
-    tmp_269_fu_2403_p4 <= pY_1(31 downto 1);
-    tmp_270_fu_2419_p4 <= pX_1(31 downto 1);
+    tmp_270_fu_2403_p4 <= pY_1(31 downto 1);
+    tmp_271_fu_2419_p4 <= pX_1(31 downto 1);
 end behav;

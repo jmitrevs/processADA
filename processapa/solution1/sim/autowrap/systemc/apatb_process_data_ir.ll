@@ -15,7 +15,7 @@ declare void @free(i8* nocapture) local_unnamed_addr #0
 declare noalias i8* @malloc(i64) local_unnamed_addr #0
 
 ; Function Attrs: noinline
-define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nonnull "fpga.decayed.dim.hint"="28320800" "maxi" %infiledata, %"class.dune::FDHDChannelMapSP"* noalias nocapture nonnull readonly dereferenceable(372848) %chanmap, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="276" "maxi" %outdata) local_unnamed_addr #1 {
+define void @apatb_process_data_ir(i32 %infile_size, i8* noalias nonnull "fpga.decayed.dim.hint"="28320800" "maxi" %infiledata, %"class.dune::FDHDChannelMapSP"* noalias nocapture nonnull readonly dereferenceable(372848) %chanmap, i32* noalias nocapture nonnull "fpga.decayed.dim.hint"="276" %outdata) local_unnamed_addr #1 {
 entry:
   %malloccall = tail call i8* @malloc(i64 28320800)
   %infiledata_copy = bitcast i8* %malloccall to [28320800 x i8]*
@@ -123,7 +123,7 @@ copy:                                             ; preds = %entry
   %src.2 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 2
   call void @arraycpy_hls.p0a150i32([150 x i32]* %dst.23, [150 x i32]* %src.2, i64 150)
   %src.3 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 3
-  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.393"([150 x i64]* %dst.34, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.3, i64 150)
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.381"([150 x i64]* %dst.34, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.3, i64 150)
   %src.4 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 4
   call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.45, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.4, i64 150)
   %src.5 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %src, i64 0, i32 5
@@ -379,7 +379,7 @@ copy:                                             ; preds = %entry
   %dst.2 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 2
   call void @arraycpy_hls.p0a150i32([150 x i32]* %dst.2, [150 x i32]* %src.23, i64 150)
   %dst.3 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 3
-  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.398"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.3, [150 x i64]* %src.34, i64 150)
+  call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.386"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.3, [150 x i64]* %src.34, i64 150)
   %dst.4 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 4
   call void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst.4, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src.45, i64 150)
   %dst.5 = getelementptr %"class.dune::FDHDChannelMapSP", %"class.dune::FDHDChannelMapSP"* %dst, i64 0, i32 5
@@ -393,7 +393,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.393"([150 x i64]* %dst, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* readonly %src, i64 %num) local_unnamed_addr #4 {
+define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.381"([150 x i64]* %dst, [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* readonly %src, i64 %num) local_unnamed_addr #4 {
 entry:
   %0 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %src, null
   %1 = icmp eq [150 x i64]* %dst, null
@@ -435,7 +435,7 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.398"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, [150 x i64]* readonly %src, i64 %num) local_unnamed_addr #4 {
+define void @"arraycpy_hls.p0a150struct.dune::FDHDChannelMapSP::KeyValuePair.386"([150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, [150 x i64]* readonly %src, i64 %num) local_unnamed_addr #4 {
 entry:
   %0 = icmp eq [150 x i64]* %src, null
   %1 = icmp eq [150 x %"struct.dune::FDHDChannelMapSP::KeyValuePair"]* %dst, null

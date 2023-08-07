@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s'" level="0">
-<item name = "Date">Mon Aug  7 11:51:56 2023
+<item name = "Date">Mon Aug  7 16:48:15 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -64,10 +64,10 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_16s_11s_26_1_1_U4633">mul_16s_11s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4631">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mul_16s_16s_26_1_1_U4632">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
-<column name="mux_8_3_16_1_1_U4630">mux_8_3_16_1_1, 0, 0, 0, 43, 0</column>
+<column name="mul_16s_11s_26_1_1_U5822">mul_16s_11s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U5820">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_16s_26_1_1_U5821">mul_16s_16s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mux_8_3_16_1_1_U5819">mux_8_3_16_1_1, 0, 0, 0, 43, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -76,7 +76,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="w18_U">dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjAb, 0, 43, 6, 0, 8, 43, 1, 344</column>
+<column name="w18_U">dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjKb, 0, 43, 6, 0, 8, 43, 1, 344</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

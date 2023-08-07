@@ -62,7 +62,7 @@ entry:1 %in_elem_0_0_0_0_0_val_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="16" op_3_bw="16" op_4_bw="16" op_5_bw="16" op_6_bw="16" op_7_bw="16" op_8_bw="16" op_9_bw="16" op_10_bw="16" op_11_bw="16" op_12_bw="16">
 <![CDATA[
-entry:2 %call_ln286 = call void @shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3>, i16 %in_elem_0_0_0_0_0_val_read, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer
+entry:2 %call_ln286 = call void @shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0>, 1u>, config3>, i16 %in_elem_0_0_0_0_0_val_read, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33, i16 %void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer, i16 %void_conv_2d_buffer_cl_stream_stream_weight_t_bias_t_line_buffer_1
 
 ]]></Node>
 <StgValue><ssdm name="call_ln286"/></StgValue>
@@ -80,7 +80,7 @@ entry:2 %call_ln286 = call void @shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 0
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer3_out, void @empty_38, i32 0, i32 0, void @empty_35, i32 0, i32 0, void @empty_35, void @empty_35, void @empty_35, i32 0, i32 0, i32 0, i32 0, void @empty_35, void @empty_35, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer3_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -202,10 +202,10 @@ land.lhs.true:0 %icmp_ln289_7 = icmp_eq  i32 %sY_2_load, i32 2
 
 <Node id="31" bw="31" op_0_bw="31" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-land.lhs.true:1 %tmp_271 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pY_2_load, i32 1, i32 31
+land.lhs.true:1 %tmp_272 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pY_2_load, i32 1, i32 31
 
 ]]></Node>
-<StgValue><ssdm name="tmp_271"/></StgValue>
+<StgValue><ssdm name="tmp_272"/></StgValue>
 </operation>
 
 <operation id="16" st_id="2" stage="1" lat="1">
@@ -218,7 +218,7 @@ land.lhs.true:1 %tmp_271 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, 
 
 <Node id="32" bw="1" op_0_bw="31" op_1_bw="31">
 <![CDATA[
-land.lhs.true:2 %icmp_ln289_8 = icmp_sgt  i31 %tmp_271, i31 0
+land.lhs.true:2 %icmp_ln289_8 = icmp_sgt  i31 %tmp_272, i31 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln289_8"/></StgValue>
@@ -234,10 +234,10 @@ land.lhs.true:2 %icmp_ln289_8 = icmp_sgt  i31 %tmp_271, i31 0
 
 <Node id="33" bw="31" op_0_bw="31" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-land.lhs.true:3 %tmp_272 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pX_2_load, i32 1, i32 31
+land.lhs.true:3 %tmp_273 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pX_2_load, i32 1, i32 31
 
 ]]></Node>
-<StgValue><ssdm name="tmp_272"/></StgValue>
+<StgValue><ssdm name="tmp_273"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -250,7 +250,7 @@ land.lhs.true:3 %tmp_272 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, 
 
 <Node id="34" bw="1" op_0_bw="31" op_1_bw="31">
 <![CDATA[
-land.lhs.true:4 %icmp_ln289_9 = icmp_sgt  i31 %tmp_272, i31 0
+land.lhs.true:4 %icmp_ln289_9 = icmp_sgt  i31 %tmp_273, i31 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln289_9"/></StgValue>

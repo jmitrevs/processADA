@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Aug  7 16:57:12 2023
+# Process ID: 1062586
+# Current directory: /home/brenton/kernel/processAPA/processapa/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/process_data/xsim_script.tcl}
+# Log file: /home/brenton/kernel/processAPA/processapa/solution1/sim/verilog/xsim.log
+# Journal file: /home/brenton/kernel/processAPA/processapa/solution1/sim/verilog/xsim.jou
+# Running On: isc01.fnal.gov, OS: Linux, CPU Frequency: 3000.000 MHz, CPU Physical cores: 32, Host memory: 540344 MB
+#-----------------------------------------------------------
+source xsim.dir/process_data/xsim_script.tcl
+source process_data.tcl

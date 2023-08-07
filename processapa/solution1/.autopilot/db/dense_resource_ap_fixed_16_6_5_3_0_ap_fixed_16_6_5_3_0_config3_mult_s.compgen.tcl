@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 86
+set id 378
 set name process_data_mux_9_4_16_1_1
 set corename simcore_mux
 set op mux
@@ -77,7 +77,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 88
+set id 380
 set name process_data_mux_16_4_16_1_1
 set corename simcore_mux
 set op mux
@@ -183,12 +183,12 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler process_data_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_outidx_dEe BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler process_data_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_outidx_ncg BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler process_data_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_w3_ROM_eOg BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler process_data_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config3_mult_s_w3_ROM_ocq BINDTYPE {storage} TYPE {rom} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -202,7 +202,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 97 \
+    id 389 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_30 \
     type other \
     dir I \
@@ -217,7 +217,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 98 \
+    id 390 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_31 \
     type other \
     dir I \
@@ -232,7 +232,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 99 \
+    id 391 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_32 \
     type other \
     dir I \
@@ -247,7 +247,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 100 \
+    id 392 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_33 \
     type other \
     dir I \
@@ -262,7 +262,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 101 \
+    id 393 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_34 \
     type other \
     dir I \
@@ -277,7 +277,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 102 \
+    id 394 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_35 \
     type other \
     dir I \
@@ -292,7 +292,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 103 \
+    id 395 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_36 \
     type other \
     dir I \
@@ -307,7 +307,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 104 \
+    id 396 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_37 \
     type other \
     dir I \
@@ -322,7 +322,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 105 \
+    id 397 \
     name void_compute_output_buffer_2d_array_const_ap_shift_reg_n_chan_stream_weig_38 \
     type other \
     dir I \

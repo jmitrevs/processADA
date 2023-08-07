@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691423516379">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1691441295885">
   <ports id="1" name="layer16_out" type="PortType" coreName="FIFO_SRL" coreId="641609760" bitwidth="128" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -80,19 +80,19 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="data_4" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_4_reg_216" coreId="3967317072" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="data_4" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_4_reg_216" coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="data_5" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_5_reg_221" coreId="3980744544" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="data_5" lineNumber="40" originalName="data" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="data_5_reg_221" coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="partselect" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="40" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="call_ret" lineNumber="48" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="grp_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_fu_67" coreId="3967904320" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="call" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="call_ret" lineNumber="48" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="grp_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_fu_67" coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="call" nodeLatency="1" m_display="0" m_delay="0.46" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>partselect</dataInputObjs>
@@ -107,22 +107,22 @@
       <dataOutputObjs>extractvalue</dataOutputObjs>
       <constName>dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="res" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="103041523" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="res" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="res_1" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="4185574272" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="res_1" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="res_2" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="4185601872" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="res_2" lineNumber="48" originalName="res" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="16" opcode="extractvalue" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="48" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>call</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="p_s" lineNumber="62" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="layer18_out_din" coreId="4185609392" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="p_s" lineNumber="62" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." rtlName="layer18_out_din" coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" bitwidth="48" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="62" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
       <dataInputObjs>extractvalue</dataInputObjs>
       <dataInputObjs>extractvalue</dataInputObjs>
@@ -134,7 +134,7 @@
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>layer18_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln64" lineNumber="64" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="103184043" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="_ln64" lineNumber="64" fileName="./nnet_utils/nnet_dense_stream.h" fileDirectory="../." coreId="332327568" contextFuncName="dense_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_8_nnet_array_ap_fixed_16_6_AP_TRN_AP_WRAP_0_3_config18_s" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="./nnet_utils/nnet_dense_stream.h" linenumber="64" fileDirectory="/home/brenton/kernel/processAPA" functionName="dense&amp;lt;nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 8&amp;gt;, nnet::array&amp;lt;ap_fixed&amp;lt;16, 6, AP_TRN, AP_WRAP, 0&amp;gt;, 3&amp;gt;, config18&amp;gt;"/>
     </node_objs>
     <fileValidLineNumbers fileName="./nnet_utils/nnet_dense_stream.h">

@@ -42,6 +42,11 @@
 			<location>/home/brenton/kernel/processAPA/WIB2Frame.hpp</location>
 		</link>
 		<link>
+			<name>.reference/kernel.h</name>
+			<type>1</type>
+			<location>/home/brenton/kernel/processAPA/kernel.h</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>/home/brenton/kernel/processAPA/processapa/solution1/.tcls</location>

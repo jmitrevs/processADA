@@ -150,7 +150,7 @@ initial begin
 #0 ap_return_2_preg = 16'd0;
 end
 
-process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjAb #(
+process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config18_s_w18_ROM_AUTOjKb #(
     .DataWidth( 43 ),
     .AddressRange( 8 ),
     .AddressWidth( 3 ))
@@ -175,7 +175,7 @@ process_data_mux_8_3_16_1_1 #(
     .din7_WIDTH( 16 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 16 ))
-mux_8_3_16_1_1_U4630(
+mux_8_3_16_1_1_U5819(
     .din0(ap_phi_mux_data_0_val113_phi_phi_fu_334_p4),
     .din1(ap_phi_mux_data_1_val214_phi_phi_fu_346_p4),
     .din2(ap_phi_mux_data_2_val315_phi_phi_fu_358_p4),
@@ -194,7 +194,7 @@ process_data_mul_16s_16s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 26 ))
-mul_16s_16s_26_1_1_U4631(
+mul_16s_16s_26_1_1_U5820(
     .din0(w_fu_465_p1),
     .din1(mul_ln55_fu_477_p1),
     .dout(mul_ln55_fu_477_p2)
@@ -206,7 +206,7 @@ process_data_mul_16s_16s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 26 ))
-mul_16s_16s_26_1_1_U4632(
+mul_16s_16s_26_1_1_U5821(
     .din0(w_1_fu_499_p4),
     .din1(mul_ln55_1_fu_513_p1),
     .dout(mul_ln55_1_fu_513_p2)
@@ -218,7 +218,7 @@ process_data_mul_16s_11s_26_1_1 #(
     .din0_WIDTH( 16 ),
     .din1_WIDTH( 11 ),
     .dout_WIDTH( 26 ))
-mul_16s_11s_26_1_1_U4633(
+mul_16s_11s_26_1_1_U5822(
     .din0(mul_ln55_2_fu_549_p0),
     .din1(tmp_fu_535_p4),
     .dout(mul_ln55_2_fu_549_p2)

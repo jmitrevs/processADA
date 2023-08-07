@@ -1066,8 +1066,8 @@ reg    grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_mult_s
 wire   [31:0] select_ln328_fu_2858_p3;
 wire   [31:0] add_ln317_fu_2883_p2;
 wire   [31:0] add_ln313_fu_2836_p2;
-wire   [30:0] tmp_269_fu_2403_p4;
-wire   [30:0] tmp_270_fu_2419_p4;
+wire   [30:0] tmp_270_fu_2403_p4;
+wire   [30:0] tmp_271_fu_2419_p4;
 wire   [0:0] icmp_ln289_5_fu_2413_p2;
 wire   [0:0] icmp_ln289_6_fu_2429_p2;
 wire   [0:0] and_ln289_fu_2435_p2;
@@ -4497,9 +4497,9 @@ assign grp_dense_resource_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config6_mult_s
 
 assign grp_fu_2375_p2 = ((sY_1 == 32'd2) ? 1'b1 : 1'b0);
 
-assign icmp_ln289_5_fu_2413_p2 = (($signed(tmp_269_fu_2403_p4) > $signed(31'd0)) ? 1'b1 : 1'b0);
+assign icmp_ln289_5_fu_2413_p2 = (($signed(tmp_270_fu_2403_p4) > $signed(31'd0)) ? 1'b1 : 1'b0);
 
-assign icmp_ln289_6_fu_2429_p2 = (($signed(tmp_270_fu_2419_p4) > $signed(31'd0)) ? 1'b1 : 1'b0);
+assign icmp_ln289_6_fu_2429_p2 = (($signed(tmp_271_fu_2419_p4) > $signed(31'd0)) ? 1'b1 : 1'b0);
 
 assign icmp_ln289_fu_2384_p2 = ((sX_1 == 32'd2) ? 1'b1 : 1'b0);
 
@@ -4518,8 +4518,8 @@ assign select_ln323_fu_2905_p3 = ((grp_fu_2375_p2[0:0] == 1'b1) ? 32'd2 : add_ln
 
 assign select_ln328_fu_2858_p3 = ((icmp_ln289_reg_2929[0:0] == 1'b1) ? 32'd2 : add_ln328_fu_2853_p2);
 
-assign tmp_269_fu_2403_p4 = {{pY_1[31:1]}};
+assign tmp_270_fu_2403_p4 = {{pY_1[31:1]}};
 
-assign tmp_270_fu_2419_p4 = {{pX_1[31:1]}};
+assign tmp_271_fu_2419_p4 = {{pX_1[31:1]}};
 
 endmodule //process_data_compute_output_buffer_2d_array_array_ap_fixed_16_6_5_3_0_64u_config6_s
