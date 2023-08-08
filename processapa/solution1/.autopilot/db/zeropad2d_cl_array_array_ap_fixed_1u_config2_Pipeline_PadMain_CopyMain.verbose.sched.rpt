@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'zeropad2d_cl_array_array_ap_fixed_1u_config2_Pipeline_PadMain_CopyMain'
 ================================================================
-* Date:           Mon Aug  7 16:45:56 2023
+* Date:           Tue Aug  8 12:26:07 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -86,8 +86,8 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 1.58>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%indvar_flatten6 = alloca i32 1"   --->   Operation 5 'alloca' 'indvar_flatten6' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %zero_padding2d_input, void @empty, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %layer2_out, void @empty, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.46ns)   --->   "%store_ln0 = store i16 0, i16 %indvar_flatten6"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i37"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten6_load = load i16 %indvar_flatten6" [./nnet_utils/nnet_padding_stream.h:59]   --->   Operation 10 'load' 'indvar_flatten6_load' <Predicate = true> <Delay = 0.00>
@@ -102,7 +102,7 @@ State 2 <SV = 1> <Delay = 3.82>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @PadMain_CopyMain_str"   --->   Operation 16 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 61440, i64 61440, i64 61440"   --->   Operation 17 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 18 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [./nnet_utils/nnet_padding_stream.h:65]   --->   Operation 19 'specloopname' 'specloopname_ln65' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln65 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [./nnet_utils/nnet_padding_stream.h:65]   --->   Operation 19 'specloopname' 'specloopname_ln65' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 20 [1/1] (2.10ns)   --->   "%zero_padding2d_input_read = read i15 @_ssdm_op_Read.ap_fifo.volatile.i15P0A, i15 %zero_padding2d_input" [./nnet_utils/nnet_padding_stream.h:20->./nnet_utils/nnet_padding_stream.h:66]   --->   Operation 20 'read' 'zero_padding2d_input_read' <Predicate = true> <Delay = 2.10> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.10> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 15> <Depth = 2> <FIFO>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln24 = trunc i15 %zero_padding2d_input_read" [./nnet_utils/nnet_padding_stream.h:24->./nnet_utils/nnet_padding_stream.h:66]   --->   Operation 21 'trunc' 'trunc_ln24' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i6.i10, i6 %trunc_ln24, i10 0" [./nnet_utils/nnet_padding_stream.h:24->./nnet_utils/nnet_padding_stream.h:66]   --->   Operation 22 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>

@@ -1260,7 +1260,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln124_fu_2484_p2;
+wire   [0:0] icmp_ln119_fu_2484_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -1361,8 +1361,8 @@ reg   [4:0] first_bit_position_reg_3177;
 wire   [63:0] zext_ln108_fu_2552_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln111_fu_2563_p1;
-wire   [63:0] zext_ln170_1_fu_2581_p1;
-wire   [63:0] zext_ln133_fu_2654_p1;
+wire   [63:0] zext_ln163_1_fu_2581_p1;
+wire   [63:0] zext_ln127_fu_2654_p1;
 reg   [8:0] iChan_fu_534;
 wire   [8:0] iChan_2_fu_2490_p2;
 wire    ap_loop_init;
@@ -1376,10 +1376,10 @@ wire   [12:0] zext_ln102_1_fu_2528_p1;
 wire   [12:0] sub_ln102_fu_2532_p2;
 wire   [7:0] word_index_fu_2542_p4;
 wire   [7:0] add_ln111_fu_2557_p2;
-wire   [14:0] zext_ln170_fu_2573_p1;
-wire   [14:0] add_ln170_fu_2576_p2;
-wire   [0:0] trunc_ln124_fu_2644_p1;
-wire   [8:0] tmp_2_fu_2647_p3;
+wire   [14:0] zext_ln163_fu_2573_p1;
+wire   [14:0] add_ln163_fu_2576_p2;
+wire   [0:0] trunc_ln119_fu_2644_p1;
+wire   [8:0] tmp_6_fu_2647_p3;
 wire   [5:0] zext_ln104_1_fu_2721_p1;
 wire   [5:0] sub_ln106_fu_2724_p2;
 wire   [0:0] icmp_ln106_fu_2734_p2;
@@ -1587,7 +1587,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln124_fu_2484_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if (((icmp_ln119_fu_2484_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             iChan_fu_534 <= iChan_2_fu_2490_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             iChan_fu_534 <= 9'd0;
@@ -1596,7 +1596,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln124_fu_2484_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln119_fu_2484_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         first_bit_position_reg_3177[4 : 1] <= first_bit_position_fu_2538_p1[4 : 1];
         trunc_ln_reg_3173 <= {{ap_sig_allocacmp_iChan_1[6:1]}};
     end
@@ -2601,7 +2601,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln124_fu_2484_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln119_fu_2484_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -3623,239 +3623,239 @@ assign adc_1_fu_2786_p2 = (trunc_ln108_fu_2754_p1 | select_ln110_fu_2778_p3);
 
 assign adc_fu_2748_p2 = adc_words_q1 >> zext_ln104_fu_2718_p1;
 
-assign adc_vectors10_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors10_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors10_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors11_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors11_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors11_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors12_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors12_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors12_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors13_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors13_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors13_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors14_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors14_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors14_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors15_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors15_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors15_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors16_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors16_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors16_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors17_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors17_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors17_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors18_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors18_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors18_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors19_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors19_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors19_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors20_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors20_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors20_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors21_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors21_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors21_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors22_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors22_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors22_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors23_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors23_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors23_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors24_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors24_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors24_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors25_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors25_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors25_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors26_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors26_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors26_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors27_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors27_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors27_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors28_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors28_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors28_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors29_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors29_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors29_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors2_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors2_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors2_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors30_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors30_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors30_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors31_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors31_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors31_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors32_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors32_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors32_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors33_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors33_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors33_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors34_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors34_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors34_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors35_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors35_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors35_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors36_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors36_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors36_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors37_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors37_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors37_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors38_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors38_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors38_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors39_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors39_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors39_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors3_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors3_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors3_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors40_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors40_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors40_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors41_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors41_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors41_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors42_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors42_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors42_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors43_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors43_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors43_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors44_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors44_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors44_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors45_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors45_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors45_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors46_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors46_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors46_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors47_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors47_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors47_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors48_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors48_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors48_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors49_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors49_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors49_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors4_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors4_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors4_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors50_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors50_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors50_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors51_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors51_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors51_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors52_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors52_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors52_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors53_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors53_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors53_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors54_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors54_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors54_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors55_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors55_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors55_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors56_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors56_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors56_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors57_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors57_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors57_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors58_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors58_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors58_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors59_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors59_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors59_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors5_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors5_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors5_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors60_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors60_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors60_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors6_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors6_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors6_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors7_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors7_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors7_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors8_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors8_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors8_d0 = adc_1_fu_2786_p2;
 
-assign adc_vectors9_address0 = zext_ln170_1_fu_2581_p1;
+assign adc_vectors9_address0 = zext_ln163_1_fu_2581_p1;
 
 assign adc_vectors9_d0 = adc_1_fu_2786_p2;
 
@@ -3865,7 +3865,7 @@ assign adc_words_address1 = zext_ln108_fu_2552_p1;
 
 assign add_ln111_fu_2557_p2 = (word_index_fu_2542_p4 + 8'd1);
 
-assign add_ln170_fu_2576_p2 = (phi_mul + zext_ln170_fu_2573_p1);
+assign add_ln163_fu_2576_p2 = (phi_mul + zext_ln163_fu_2573_p1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -4017,225 +4017,225 @@ assign icmp_ln106_fu_2734_p2 = ((sub_ln106_fu_2724_p2 > 6'd14) ? 1'b1 : 1'b0);
 
 assign icmp_ln110_fu_2758_p2 = ((bits_from_first_word_fu_2740_p3 < 4'd14) ? 1'b1 : 1'b0);
 
-assign icmp_ln124_fu_2484_p2 = ((ap_sig_allocacmp_iChan_1 == 9'd256) ? 1'b1 : 1'b0);
+assign icmp_ln119_fu_2484_p2 = ((ap_sig_allocacmp_iChan_1 == 9'd256) ? 1'b1 : 1'b0);
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_10_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_10_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_10_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_11_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_11_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_11_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_12_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_12_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_12_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_13_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_13_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_13_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_14_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_14_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_14_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_15_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_15_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_15_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_16_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_16_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_16_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_17_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_17_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_17_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_18_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_18_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_18_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_19_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_19_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_19_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_20_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_20_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_20_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_21_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_21_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_21_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_22_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_22_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_22_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_23_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_23_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_23_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_24_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_24_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_24_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_25_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_25_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_25_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_26_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_26_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_26_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_27_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_27_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_27_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_28_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_28_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_28_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_29_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_29_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_29_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_30_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_30_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_30_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_31_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_31_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_31_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_32_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_32_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_32_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_33_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_33_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_33_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_34_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_34_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_34_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_35_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_35_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_35_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_36_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_36_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_36_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_37_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_37_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_37_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_38_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_38_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_38_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_39_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_39_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_39_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_40_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_40_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_40_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_41_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_41_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_41_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_42_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_42_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_42_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_43_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_43_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_43_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_44_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_44_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_44_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_45_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_45_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_45_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_46_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_46_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_46_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_47_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_47_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_47_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_48_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_48_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_48_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_49_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_49_address0 = zext_ln127_fu_2654_p1;
 
 assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_49_d0 = adc_1_fu_2786_p2;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_50_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_50_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_51_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_51_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_52_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_52_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_53_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_53_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_54_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_54_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_55_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_55_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_56_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_56_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_57_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_57_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_58_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_58_address0 = zext_ln127_fu_2654_p1;
 
-assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_59_address0 = zext_ln133_fu_2654_p1;
+assign p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_59_address0 = zext_ln127_fu_2654_p1;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_10_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_10_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_10_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_d0 = adc_1_fu_2786_p2;
 
-assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_address0 = zext_ln133_fu_2654_p1;
+assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_address0 = zext_ln127_fu_2654_p1;
 
 assign process_data_int_char_FDHDChannelMapSP_int_adc_vectors_d0 = adc_1_fu_2786_p2;
 
@@ -4251,7 +4251,7 @@ assign sub_ln102_fu_2532_p2 = (zext_ln102_fu_2518_p1 - zext_ln102_1_fu_2528_p1);
 
 assign sub_ln106_fu_2724_p2 = (6'd32 - zext_ln104_1_fu_2721_p1);
 
-assign tmp_2_fu_2647_p3 = {{iFrame}, {trunc_ln124_fu_2644_p1}};
+assign tmp_6_fu_2647_p3 = {{iFrame}, {trunc_ln119_fu_2644_p1}};
 
 assign trunc_ln102_fu_2506_p1 = ap_sig_allocacmp_iChan_1[7:0];
 
@@ -4259,7 +4259,7 @@ assign trunc_ln106_fu_2730_p1 = sub_ln106_fu_2724_p2[3:0];
 
 assign trunc_ln108_fu_2754_p1 = adc_fu_2748_p2[13:0];
 
-assign trunc_ln124_fu_2644_p1 = iChan_1_reg_3164[0:0];
+assign trunc_ln119_fu_2644_p1 = iChan_1_reg_3164[0:0];
 
 assign word_index_fu_2542_p4 = {{sub_ln102_fu_2532_p2[12:5]}};
 
@@ -4275,11 +4275,11 @@ assign zext_ln108_fu_2552_p1 = word_index_fu_2542_p4;
 
 assign zext_ln111_fu_2563_p1 = add_ln111_fu_2557_p2;
 
-assign zext_ln133_fu_2654_p1 = tmp_2_fu_2647_p3;
+assign zext_ln127_fu_2654_p1 = tmp_6_fu_2647_p3;
 
-assign zext_ln170_1_fu_2581_p1 = add_ln170_fu_2576_p2;
+assign zext_ln163_1_fu_2581_p1 = add_ln163_fu_2576_p2;
 
-assign zext_ln170_fu_2573_p1 = iChan_1_reg_3164;
+assign zext_ln163_fu_2573_p1 = iChan_1_reg_3164;
 
 always @ (posedge ap_clk) begin
     first_bit_position_reg_3177[0] <= 1'b0;

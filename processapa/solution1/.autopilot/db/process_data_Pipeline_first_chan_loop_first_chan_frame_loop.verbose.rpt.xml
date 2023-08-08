@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_first_chan_loop_first_chan_frame_loop'" level="0">
-<item name = "Date">Mon Aug  7 16:46:49 2023
+<item name = "Date">Tue Aug  8 12:26:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -82,16 +82,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln381_fu_871_p2">+, 0, 0, 22, 15, 1</column>
-<column name="add_ln387_fu_991_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln372_fu_871_p2">+, 0, 0, 22, 15, 1</column>
+<column name="add_ln378_fu_991_p2">+, 0, 0, 14, 7, 1</column>
 <column name="iChan_3_fu_883_p2">+, 0, 0, 16, 9, 1</column>
 <column name="sum_1_fu_1091_p2">+, 0, 0, 28, 21, 21</column>
-<column name="icmp_ln381_fu_865_p2">icmp, 0, 0, 22, 15, 14</column>
-<column name="icmp_ln387_fu_889_p2">icmp, 0, 0, 14, 7, 6</column>
+<column name="icmp_ln372_fu_865_p2">icmp, 0, 0, 22, 15, 14</column>
+<column name="icmp_ln378_fu_889_p2">icmp, 0, 0, 14, 7, 6</column>
 <column name="ifzero_fu_997_p2">icmp, 0, 0, 14, 7, 6</column>
-<column name="select_ln381_1_fu_1021_p3">select, 0, 0, 21, 1, 1</column>
-<column name="select_ln381_2_fu_903_p3">select, 0, 0, 9, 1, 9</column>
-<column name="select_ln381_fu_895_p3">select, 0, 0, 7, 1, 1</column>
+<column name="select_ln372_1_fu_1021_p3">select, 0, 0, 21, 1, 1</column>
+<column name="select_ln372_2_fu_903_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln372_fu_895_p3">select, 0, 0, 7, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -117,8 +117,8 @@
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="iChan_fu_166">9, 0, 9, 0</column>
 <column name="i_fu_162">7, 0, 7, 0</column>
-<column name="icmp_ln387_reg_1150">1, 0, 1, 0</column>
-<column name="icmp_ln387_reg_1150_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="icmp_ln378_reg_1150">1, 0, 1, 0</column>
+<column name="icmp_ln378_reg_1150_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="ifzero_reg_1415">1, 0, 1, 0</column>
 <column name="ifzero_reg_1415_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_170">15, 0, 15, 0</column>
@@ -152,28 +152,28 @@
 <column name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load_reg_1454">14, 0, 14, 0</column>
 <column name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_load_reg_1459">14, 0, 14, 0</column>
 <column name="process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load_reg_1419">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_105_reg_1474">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_106_reg_1479">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_107_reg_1484">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_108_reg_1489">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_109_reg_1494">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_110_reg_1524">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_111_reg_1529">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_112_reg_1534">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_113_reg_1539">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_114_reg_1544">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_115_reg_1574">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_116_reg_1579">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_117_reg_1584">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_118_reg_1589">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_119_reg_1594">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_120_reg_1624">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_121_reg_1629">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_122_reg_1634">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_123_reg_1639">14, 0, 14, 0</column>
-<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_124_reg_1644">14, 0, 14, 0</column>
-<column name="select_ln381_2_reg_1155">9, 0, 9, 0</column>
-<column name="select_ln381_2_reg_1155_pp0_iter1_reg">9, 0, 9, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_109_reg_1474">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_110_reg_1479">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_111_reg_1484">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_112_reg_1489">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_113_reg_1494">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_114_reg_1524">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_115_reg_1529">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_116_reg_1534">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_117_reg_1539">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_118_reg_1544">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_119_reg_1574">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_120_reg_1579">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_121_reg_1584">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_122_reg_1589">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_123_reg_1594">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_124_reg_1624">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_125_reg_1629">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_126_reg_1634">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_127_reg_1639">14, 0, 14, 0</column>
+<column name="process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_128_reg_1644">14, 0, 14, 0</column>
+<column name="select_ln372_2_reg_1155">9, 0, 9, 0</column>
+<column name="select_ln372_2_reg_1155_pp0_iter1_reg">9, 0, 9, 0</column>
 <column name="sum_fu_158">21, 0, 21, 0</column>
 <column name="trunc_ln9_reg_1410">6, 0, 6, 0</column>
 <column name="trunc_ln9_reg_1410_pp0_iter1_reg">6, 0, 6, 0</column>

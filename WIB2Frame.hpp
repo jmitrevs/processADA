@@ -99,11 +99,11 @@ public:
 	  if (i < 0 || i >= s_num_channels)
 	    return 0;
 
-	  int word_index = (s_bits_per_adc * i) >> 5; // instead of dividing by s_bits_per_word=32
+	  int word_index = (s_bits_per_adc * i) >> 5;
 
-	  int first_bit_position = (s_bits_per_adc * i) & 31; // instead of mod by s_bits_per_word=32
+	  int first_bit_position = (s_bits_per_adc * i) & 31;
 
-	  int bits_from_first_word = s_bits_per_adc < (s_bits_per_word - first_bit_position) ? s_bits_per_adc : (s_bits_per_word - first_bit_position); // replace std::min
+	  int bits_from_first_word = s_bits_per_adc < (s_bits_per_word - first_bit_position) ? s_bits_per_adc : (s_bits_per_word - first_bit_position);
 
 	  int adc = adc_words[word_index] >> first_bit_position;
 

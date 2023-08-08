@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1206817040</coreId>
+						<coreId>4288231376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607260224</coreId>
+						<coreId>3722494816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701735936</coreId>
+						<coreId>1633644623</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>646</coreId>
+						<coreId>1633644623</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1270923072</coreId>
+						<coreId>4212708451</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -322,7 +322,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>703</coreId>
+						<coreId>71955840</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -358,7 +358,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>3716034992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -394,7 +394,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607676176</coreId>
+						<coreId>3721653424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -430,7 +430,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609052960</coreId>
+						<coreId>3719867152</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -466,7 +466,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>569</coreId>
+						<coreId>3720576288</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -502,7 +502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>3729309440</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -538,7 +538,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609692144</coreId>
+						<coreId>3719818752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -574,7 +574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607697776</coreId>
+						<coreId>3717424128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -610,7 +610,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>703</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -646,7 +646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -682,7 +682,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605949536</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -718,7 +718,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>613376064</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -754,7 +754,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>501</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -790,7 +790,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -826,7 +826,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607681504</coreId>
+						<coreId>807414835</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -862,7 +862,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>616585952</coreId>
+						<coreId>807414835</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -898,7 +898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>523</coreId>
+						<coreId>539770485</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -934,7 +934,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>539770485</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -970,7 +970,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607678656</coreId>
+						<coreId>559035981</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1006,7 +1006,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605976720</coreId>
+						<coreId>553701350</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1042,7 +1042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>646</coreId>
+						<coreId>553699969</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1078,7 +1078,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>553703328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1114,7 +1114,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610271856</coreId>
+						<coreId>554438461</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1150,7 +1150,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610269936</coreId>
+						<coreId>561794267</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1186,7 +1186,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>646</coreId>
+						<coreId>561793625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1222,7 +1222,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>616614752</coreId>
+						<coreId>557714445</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1258,7 +1258,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>613139904</coreId>
+						<coreId>560013163</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1294,7 +1294,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>523</coreId>
+						<coreId>560012492</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1330,7 +1330,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>558208277</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1366,7 +1366,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>616586592</coreId>
+						<coreId>563335616</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1402,7 +1402,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>616607072</coreId>
+						<coreId>563562014</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1438,7 +1438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>530</coreId>
+						<coreId>563563961</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1474,7 +1474,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>558248302</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1510,7 +1510,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605659488</coreId>
+						<coreId>557405113</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1546,7 +1546,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885303909</coreId>
+						<coreId>553962515</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1582,7 +1582,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885303909</coreId>
+						<coreId>553962129</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1618,7 +1618,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>560015631</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1654,7 +1654,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608979264</coreId>
+						<coreId>559990770</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1690,7 +1690,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608979264</coreId>
+						<coreId>560031295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1726,7 +1726,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>569</coreId>
+						<coreId>560031051</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1762,7 +1762,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>560070530</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1798,7 +1798,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607542032</coreId>
+						<coreId>560341471</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1834,7 +1834,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539767593</coreId>
+						<coreId>560027730</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -1958,7 +1958,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612238416</coreId>
+						<coreId>807414835</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2000,7 +2000,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539770368</coreId>
+						<coreId>807414835</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -2042,7 +2042,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609216288</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2085,7 +2085,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1633644623</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2128,7 +2128,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539770485</coreId>
+						<coreId>539767593</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2171,7 +2171,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539767593</coreId>
+						<coreId>560027321</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2214,7 +2214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>564087721</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2241,7 +2241,7 @@
 						<name>indvar_flatten_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2257,7 +2257,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2270,7 +2270,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612700896</coreId>
+						<coreId>556304709</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -2295,10 +2295,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>icmp_ln381</name>
+						<name>icmp_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2314,7 +2314,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2327,7 +2327,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>151</coreId>
+						<coreId>3718433200</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2352,10 +2352,10 @@
 					<Obj>
 						<type>0</type>
 						<id>65</id>
-						<name>add_ln381</name>
+						<name>add_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2371,7 +2371,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2384,7 +2384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539770485</coreId>
+						<coreId>3718478624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -2409,10 +2409,10 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>br_ln381</name>
+						<name>br_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2428,7 +2428,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2441,7 +2441,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807414835</coreId>
+						<coreId>3718478624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2470,7 +2470,7 @@
 						<name>sum_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2486,7 +2486,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2499,7 +2499,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539767593</coreId>
+						<coreId>3718432960</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>21</bitwidth>
@@ -2527,7 +2527,7 @@
 						<name>i_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2543,7 +2543,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -2556,7 +2556,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>539767593</coreId>
+						<coreId>558800438</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -2584,7 +2584,7 @@
 						<name>iChan_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2600,7 +2600,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2613,7 +2613,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3726003200</coreId>
+						<coreId>3720906192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2641,7 +2641,7 @@
 						<name>iChan_3</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2657,7 +2657,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2670,7 +2670,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3720898672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2695,10 +2695,10 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>icmp_ln387</name>
+						<name>icmp_ln378</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2714,7 +2714,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -2727,7 +2727,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>3720897952</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2752,10 +2752,10 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>select_ln381</name>
+						<name>select_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2771,7 +2771,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2784,7 +2784,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612474368</coreId>
+						<coreId>3720347424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -2810,10 +2810,10 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>select_ln381_1</name>
+						<name>select_ln372_1</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2829,7 +2829,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2842,7 +2842,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612235520</coreId>
+						<coreId>556095953</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>21</bitwidth>
@@ -2868,10 +2868,10 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>select_ln381_2</name>
+						<name>select_ln372_2</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2887,7 +2887,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2900,7 +2900,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2926,10 +2926,10 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>trunc_ln381</name>
+						<name>trunc_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -2945,7 +2945,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -2958,7 +2958,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2982,10 +2982,10 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>zext_ln381</name>
+						<name>zext_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3001,7 +3001,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -3014,7 +3014,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612232704</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -3041,7 +3041,7 @@
 						<name>empty</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3057,7 +3057,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -3070,7 +3070,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3729051648</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -3094,10 +3094,10 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>tmp_1</name>
+						<name>tmp</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3113,7 +3113,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3126,7 +3126,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3152,10 +3152,10 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>zext_ln389_1</name>
+						<name>zext_ln380_1</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3171,7 +3171,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3184,7 +3184,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -3211,7 +3211,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_10_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3227,7 +3227,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3240,7 +3240,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612471552</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3269,7 +3269,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_11_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3285,7 +3285,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3298,7 +3298,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608350208</coreId>
+						<coreId>558486702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3327,7 +3327,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_12_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3343,7 +3343,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3356,7 +3356,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3385,7 +3385,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_13_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3401,7 +3401,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3414,7 +3414,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>1162167621</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3443,7 +3443,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_14_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3459,7 +3459,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3472,7 +3472,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604878080</coreId>
+						<coreId>562740998</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3501,7 +3501,7 @@
 						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3517,7 +3517,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3530,7 +3530,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>842688558</coreId>
+						<coreId>556311831</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3559,7 +3559,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_16_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3575,7 +3575,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3588,7 +3588,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605081424</coreId>
+						<coreId>557213996</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3617,7 +3617,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_17_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3633,7 +3633,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3646,7 +3646,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609231984</coreId>
+						<coreId>558617408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3675,7 +3675,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_18_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3691,7 +3691,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3704,7 +3704,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608896432</coreId>
+						<coreId>561749812</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3733,7 +3733,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_19_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3749,7 +3749,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3762,7 +3762,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609298096</coreId>
+						<coreId>3723079632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3791,7 +3791,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_20_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3807,7 +3807,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3820,7 +3820,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3732854498</coreId>
+						<coreId>3718839520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3849,7 +3849,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_21_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3865,7 +3865,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3878,7 +3878,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612203136</coreId>
+						<coreId>3718839520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3907,7 +3907,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_22_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3923,7 +3923,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3936,7 +3936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3723079392</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -3965,7 +3965,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_23_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -3981,7 +3981,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -3994,7 +3994,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604901600</coreId>
+						<coreId>557759833</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4023,7 +4023,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_24_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4039,7 +4039,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4052,7 +4052,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605195280</coreId>
+						<coreId>3717506832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4078,10 +4078,10 @@
 					<Obj>
 						<type>0</type>
 						<id>100</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_102</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_106</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4097,7 +4097,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4110,7 +4110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3717504048</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4139,7 +4139,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_26_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4155,7 +4155,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4168,7 +4168,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3717512400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4197,7 +4197,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_27_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4213,7 +4213,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4226,7 +4226,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>561609130</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4255,7 +4255,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_28_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4271,7 +4271,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4284,7 +4284,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4313,7 +4313,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_29_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4329,7 +4329,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4342,7 +4342,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4371,7 +4371,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_30_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4387,7 +4387,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4400,7 +4400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608641264</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4429,7 +4429,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_31_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4445,7 +4445,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4458,7 +4458,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608160208</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4487,7 +4487,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_32_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4503,7 +4503,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4516,7 +4516,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605534976</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4545,7 +4545,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_33_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4561,7 +4561,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4574,7 +4574,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3728574976</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4603,7 +4603,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_34_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4619,7 +4619,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4632,7 +4632,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>3723302528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4658,10 +4658,10 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_103</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_107</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4677,7 +4677,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4690,7 +4690,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3723302528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4719,7 +4719,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_36_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4735,7 +4735,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4748,7 +4748,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3731612928</coreId>
+						<coreId>556094504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4777,7 +4777,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_37_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4793,7 +4793,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4806,7 +4806,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610919424</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4835,7 +4835,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_38_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4851,7 +4851,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4864,7 +4864,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508187</coreId>
+						<coreId>559925777</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4893,7 +4893,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_39_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4909,7 +4909,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4922,7 +4922,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1397508096</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -4951,7 +4951,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_40_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -4967,7 +4967,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -4980,7 +4980,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>979906157</coreId>
+						<coreId>560130115</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5009,7 +5009,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_41_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5025,7 +5025,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5038,7 +5038,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605351904</coreId>
+						<coreId>3719441664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5067,7 +5067,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_42_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5083,7 +5083,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5096,7 +5096,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3731585653</coreId>
+						<coreId>561914575</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5125,7 +5125,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_43_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5141,7 +5141,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5154,7 +5154,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610902080</coreId>
+						<coreId>554206549</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5183,7 +5183,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_44_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5199,7 +5199,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5212,7 +5212,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608114304</coreId>
+						<coreId>3718917296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5238,10 +5238,10 @@
 					<Obj>
 						<type>0</type>
 						<id>120</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_104</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_108</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5257,7 +5257,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5270,7 +5270,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610615888</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5299,7 +5299,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_46_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5315,7 +5315,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5328,7 +5328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725590580</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5357,7 +5357,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_47_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5373,7 +5373,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5386,7 +5386,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609099376</coreId>
+						<coreId>911426885</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5415,7 +5415,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_48_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5431,7 +5431,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5444,7 +5444,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610876640</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5473,7 +5473,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_49_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5489,7 +5489,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5502,7 +5502,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610870192</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5531,7 +5531,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5547,7 +5547,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5560,7 +5560,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3731301474</coreId>
+						<coreId>3718355584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5589,7 +5589,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_10_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5605,7 +5605,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5618,7 +5618,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609256016</coreId>
+						<coreId>3718471648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5647,7 +5647,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5663,7 +5663,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5676,7 +5676,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605177440</coreId>
+						<coreId>554331867</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5705,7 +5705,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5721,7 +5721,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5734,7 +5734,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607737136</coreId>
+						<coreId>3720928768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5763,7 +5763,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5779,7 +5779,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5792,7 +5792,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3731245189</coreId>
+						<coreId>1953853279</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5821,7 +5821,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5837,7 +5837,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5850,7 +5850,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607032336</coreId>
+						<coreId>3720610688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5879,7 +5879,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5895,7 +5895,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5908,7 +5908,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610624240</coreId>
+						<coreId>557798632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5937,7 +5937,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -5953,7 +5953,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -5966,7 +5966,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>613095056</coreId>
+						<coreId>558320747</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -5995,7 +5995,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6011,7 +6011,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6024,7 +6024,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3729308497</coreId>
+						<coreId>558319897</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -6053,7 +6053,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6069,7 +6069,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6082,7 +6082,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608939904</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -6111,7 +6111,7 @@
 						<name>trunc_ln9</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>383</lineNumber>
+						<lineNumber>374</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6127,7 +6127,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>383</second>
+										<second>374</second>
 									</item>
 								</second>
 							</item>
@@ -6140,7 +6140,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610536208</coreId>
+						<coreId>3720610688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6170,7 +6170,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6186,7 +6186,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6199,7 +6199,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612993984</coreId>
+						<coreId>3717165664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6226,7 +6226,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_2_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6242,7 +6242,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6255,7 +6255,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3733412472</coreId>
+						<coreId>563528184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6282,7 +6282,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_3_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6298,7 +6298,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6311,7 +6311,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612985632</coreId>
+						<coreId>3718471040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6338,7 +6338,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_4_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6354,7 +6354,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6367,7 +6367,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608891872</coreId>
+						<coreId>3716962816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6394,7 +6394,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_5_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6410,7 +6410,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6423,7 +6423,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610663408</coreId>
+						<coreId>560369920</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6450,7 +6450,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_6_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6466,7 +6466,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6479,7 +6479,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612991200</coreId>
+						<coreId>3721034864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6506,7 +6506,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_7_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6522,7 +6522,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6535,7 +6535,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3731588325</coreId>
+						<coreId>3717132768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6562,7 +6562,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_8_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6578,7 +6578,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6591,7 +6591,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605294064</coreId>
+						<coreId>3716980176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6618,7 +6618,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_9_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6634,7 +6634,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6647,7 +6647,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>611997840</coreId>
+						<coreId>560078188</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6674,7 +6674,7 @@
 						<name>process_data_int_char_FDHDChannelMapSP_int_adc_vectors_10_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6690,7 +6690,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6703,7 +6703,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607410304</coreId>
+						<coreId>1936942336</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6730,7 +6730,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_10_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6746,7 +6746,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6759,7 +6759,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610712832</coreId>
+						<coreId>1953853279</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6783,10 +6783,10 @@
 					<Obj>
 						<type>0</type>
 						<id>147</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_105</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_109</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6802,7 +6802,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6815,7 +6815,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604810640</coreId>
+						<coreId>3720701008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6839,10 +6839,10 @@
 					<Obj>
 						<type>0</type>
 						<id>148</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_106</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_110</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6858,7 +6858,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6871,7 +6871,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604864448</coreId>
+						<coreId>560689402</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6895,10 +6895,10 @@
 					<Obj>
 						<type>0</type>
 						<id>149</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_107</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_111</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6914,7 +6914,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6927,7 +6927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725359626</coreId>
+						<coreId>3714752176</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -6951,10 +6951,10 @@
 					<Obj>
 						<type>0</type>
 						<id>150</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_108</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_112</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -6970,7 +6970,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -6983,7 +6983,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604939872</coreId>
+						<coreId>3719197824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7007,10 +7007,10 @@
 					<Obj>
 						<type>0</type>
 						<id>151</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_109</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_113</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7026,7 +7026,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7039,7 +7039,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609698832</coreId>
+						<coreId>3717418304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7066,7 +7066,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_16_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7082,7 +7082,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7095,7 +7095,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605352624</coreId>
+						<coreId>557722463</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7122,7 +7122,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_17_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7138,7 +7138,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7151,7 +7151,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610875920</coreId>
+						<coreId>160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7178,7 +7178,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_18_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7194,7 +7194,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7207,7 +7207,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612160896</coreId>
+						<coreId>3717349248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7234,7 +7234,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_19_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7250,7 +7250,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7263,7 +7263,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610911040</coreId>
+						<coreId>561997035</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7290,7 +7290,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_20_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7306,7 +7306,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7319,7 +7319,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725539341</coreId>
+						<coreId>3717970272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7343,10 +7343,10 @@
 					<Obj>
 						<type>0</type>
 						<id>157</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_110</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_114</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7362,7 +7362,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7375,7 +7375,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3736966912</coreId>
+						<coreId>562004117</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7399,10 +7399,10 @@
 					<Obj>
 						<type>0</type>
 						<id>158</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_111</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_115</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7418,7 +7418,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7431,7 +7431,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609221760</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7455,10 +7455,10 @@
 					<Obj>
 						<type>0</type>
 						<id>159</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_112</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_116</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7474,7 +7474,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7487,7 +7487,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3730132992</coreId>
+						<coreId>561696825</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7511,10 +7511,10 @@
 					<Obj>
 						<type>0</type>
 						<id>160</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_113</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_117</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7530,7 +7530,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7543,7 +7543,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609182464</coreId>
+						<coreId>3715094224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7567,10 +7567,10 @@
 					<Obj>
 						<type>0</type>
 						<id>161</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_114</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_118</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7586,7 +7586,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7599,7 +7599,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3730112768</coreId>
+						<coreId>3717662352</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7626,7 +7626,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_26_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7642,7 +7642,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7655,7 +7655,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604912320</coreId>
+						<coreId>3717349248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7682,7 +7682,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_27_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7698,7 +7698,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7711,7 +7711,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1274592240</coreId>
+						<coreId>3722168128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7738,7 +7738,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_28_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7754,7 +7754,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7767,7 +7767,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>611169536</coreId>
+						<coreId>3714884880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7794,7 +7794,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_29_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7810,7 +7810,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7823,7 +7823,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>606887824</coreId>
+						<coreId>557340808</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7850,7 +7850,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_30_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7866,7 +7866,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7879,7 +7879,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612091712</coreId>
+						<coreId>1952804462</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7903,10 +7903,10 @@
 					<Obj>
 						<type>0</type>
 						<id>167</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_115</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_119</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7922,7 +7922,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7935,7 +7935,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725764171</coreId>
+						<coreId>3720907472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -7959,10 +7959,10 @@
 					<Obj>
 						<type>0</type>
 						<id>168</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_116</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_120</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -7978,7 +7978,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -7991,7 +7991,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609841856</coreId>
+						<coreId>3716917504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8015,10 +8015,10 @@
 					<Obj>
 						<type>0</type>
 						<id>169</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_117</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_121</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8034,7 +8034,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8047,7 +8047,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608677520</coreId>
+						<coreId>3714884880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8071,10 +8071,10 @@
 					<Obj>
 						<type>0</type>
 						<id>170</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_118</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_122</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8090,7 +8090,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8103,7 +8103,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3732504987</coreId>
+						<coreId>539768369</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8127,10 +8127,10 @@
 					<Obj>
 						<type>0</type>
 						<id>171</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_119</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_123</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8146,7 +8146,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8159,7 +8159,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609047696</coreId>
+						<coreId>826041445</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8186,7 +8186,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_36_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8202,7 +8202,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8215,7 +8215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609299280</coreId>
+						<coreId>826041445</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8242,7 +8242,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_37_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8258,7 +8258,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8271,7 +8271,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836208</coreId>
+						<coreId>826041445</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8298,7 +8298,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_38_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8314,7 +8314,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8327,7 +8327,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610317168</coreId>
+						<coreId>4149084891</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8354,7 +8354,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_39_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8370,7 +8370,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8383,7 +8383,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769235821</coreId>
+						<coreId>3720346624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8410,7 +8410,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_40_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8426,7 +8426,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8439,7 +8439,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3730474012</coreId>
+						<coreId>3715803680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8463,10 +8463,10 @@
 					<Obj>
 						<type>0</type>
 						<id>177</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_120</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_124</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8482,7 +8482,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8495,7 +8495,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609673664</coreId>
+						<coreId>561811413</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8519,10 +8519,10 @@
 					<Obj>
 						<type>0</type>
 						<id>178</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_121</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_125</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8538,7 +8538,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8551,7 +8551,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>542329928</coreId>
+						<coreId>564066226</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8575,10 +8575,10 @@
 					<Obj>
 						<type>0</type>
 						<id>179</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_122</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_126</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8594,7 +8594,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8607,7 +8607,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3733512954</coreId>
+						<coreId>3715309696</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8631,10 +8631,10 @@
 					<Obj>
 						<type>0</type>
 						<id>180</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_123</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_127</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8650,7 +8650,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8663,7 +8663,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>613066736</coreId>
+						<coreId>3721193648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8687,10 +8687,10 @@
 					<Obj>
 						<type>0</type>
 						<id>181</id>
-						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_124</name>
+						<name>process_data_int_char_dune_FDHDChannelMapSP_int_adc_vectors_128</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8706,7 +8706,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8719,7 +8719,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725395210</coreId>
+						<coreId>558863140</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8746,7 +8746,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_46_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8762,7 +8762,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8775,7 +8775,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605086720</coreId>
+						<coreId>3721193648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8802,7 +8802,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_47_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8818,7 +8818,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8831,7 +8831,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>109</coreId>
+						<coreId>3718400256</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8858,7 +8858,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_48_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8874,7 +8874,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8887,7 +8887,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610736592</coreId>
+						<coreId>3721193648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8914,7 +8914,7 @@
 						<name>p_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors_49_load</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8930,7 +8930,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8943,7 +8943,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725395220</coreId>
+						<coreId>562008388</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -8970,7 +8970,7 @@
 						<name>tmp_5</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -8986,7 +8986,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -8999,7 +8999,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605036688</coreId>
+						<coreId>3718703040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -9074,10 +9074,10 @@
 					<Obj>
 						<type>0</type>
 						<id>187</id>
-						<name>zext_ln389</name>
+						<name>zext_ln380</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9093,7 +9093,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -9106,7 +9106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725648250</coreId>
+						<coreId>558575694</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>21</bitwidth>
@@ -9133,7 +9133,7 @@
 						<name>sum_1</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9149,7 +9149,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -9162,7 +9162,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>3715124624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>21</bitwidth>
@@ -9187,10 +9187,10 @@
 					<Obj>
 						<type>0</type>
 						<id>189</id>
-						<name>add_ln387</name>
+						<name>add_ln378</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9206,7 +9206,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -9219,7 +9219,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>611170144</coreId>
+						<coreId>3718385824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -9247,7 +9247,7 @@
 						<name>ifzero</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9263,7 +9263,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -9276,7 +9276,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612403216</coreId>
+						<coreId>3716030096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -9301,10 +9301,10 @@
 					<Obj>
 						<type>0</type>
 						<id>191</id>
-						<name>br_ln387</name>
+						<name>br_ln378</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9320,7 +9320,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -9333,7 +9333,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609173232</coreId>
+						<coreId>3718400816</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9359,10 +9359,10 @@
 					<Obj>
 						<type>0</type>
 						<id>193</id>
-						<name>zext_ln391</name>
+						<name>zext_ln382</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>391</lineNumber>
+						<lineNumber>382</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9378,7 +9378,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>391</second>
+										<second>382</second>
 									</item>
 								</second>
 							</item>
@@ -9391,7 +9391,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>610736592</coreId>
+						<coreId>3721193648</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>43</bitwidth>
@@ -9415,10 +9415,10 @@
 					<Obj>
 						<type>0</type>
 						<id>194</id>
-						<name>mul_ln391</name>
+						<name>mul_ln382</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>391</lineNumber>
+						<lineNumber>382</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9434,7 +9434,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>391</second>
+										<second>382</second>
 									</item>
 								</second>
 							</item>
@@ -9447,7 +9447,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612403216</coreId>
+						<coreId>562072773</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>43</bitwidth>
@@ -9475,7 +9475,7 @@
 						<name>trunc_ln</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>391</lineNumber>
+						<lineNumber>382</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9491,7 +9491,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>391</second>
+										<second>382</second>
 									</item>
 								</second>
 							</item>
@@ -9504,7 +9504,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612403216</coreId>
+						<coreId>3716429424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>14</bitwidth>
@@ -9534,7 +9534,7 @@
 						<name>ave_addr</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>391</lineNumber>
+						<lineNumber>382</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9550,7 +9550,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>391</second>
+										<second>382</second>
 									</item>
 								</second>
 							</item>
@@ -9563,7 +9563,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>606412080</coreId>
+						<coreId>3718385824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -9589,10 +9589,10 @@
 					<Obj>
 						<type>0</type>
 						<id>197</id>
-						<name>ave_addr_write_ln391</name>
+						<name>ave_addr_write_ln382</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>391</lineNumber>
+						<lineNumber>382</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9608,7 +9608,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>391</second>
+										<second>382</second>
 									</item>
 								</second>
 							</item>
@@ -9621,7 +9621,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3727883755</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9664,7 +9664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>607173760</coreId>
+						<coreId>563976436</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9688,10 +9688,10 @@
 					<Obj>
 						<type>0</type>
 						<id>200</id>
-						<name>indvar_flatten_write_ln381</name>
+						<name>indvar_flatten_write_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9707,7 +9707,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -9720,7 +9720,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>3718702144</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9747,10 +9747,10 @@
 					<Obj>
 						<type>0</type>
 						<id>201</id>
-						<name>iChan_write_ln381</name>
+						<name>iChan_write_ln372</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>381</lineNumber>
+						<lineNumber>372</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9766,7 +9766,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>381</second>
+										<second>372</second>
 									</item>
 								</second>
 							</item>
@@ -9779,7 +9779,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>3717359104</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9806,10 +9806,10 @@
 					<Obj>
 						<type>0</type>
 						<id>202</id>
-						<name>i_write_ln387</name>
+						<name>i_write_ln378</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>387</lineNumber>
+						<lineNumber>378</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9825,7 +9825,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>387</second>
+										<second>378</second>
 									</item>
 								</second>
 							</item>
@@ -9838,7 +9838,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>3717421472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9865,10 +9865,10 @@
 					<Obj>
 						<type>0</type>
 						<id>203</id>
-						<name>sum_write_ln389</name>
+						<name>sum_write_ln380</name>
 						<fileName>kernel.cpp</fileName>
 						<fileDirectory>/home/brenton/kernel/processAPA</fileDirectory>
-						<lineNumber>389</lineNumber>
+						<lineNumber>380</lineNumber>
 						<contextFuncName>process_data</contextFuncName>
 						<contextNormFuncName>process_data</contextNormFuncName>
 						<inlineStackInfo>
@@ -9884,7 +9884,7 @@
 											<first>kernel.cpp</first>
 											<second>process_data</second>
 										</first>
-										<second>389</second>
+										<second>380</second>
 									</item>
 								</second>
 							</item>
@@ -9897,7 +9897,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605281616</coreId>
+						<coreId>246269536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9942,7 +9942,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>605244160</coreId>
+						<coreId>3718385824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9984,7 +9984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>3718385824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10060,7 +10060,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725659220</coreId>
+						<coreId>3716373024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -10091,7 +10091,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3725579136</coreId>
+						<coreId>558639400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -10122,7 +10122,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>228</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -10153,7 +10153,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>604868256</coreId>
+						<coreId>3717638976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>21</bitwidth>
@@ -10184,7 +10184,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>246270272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -10215,7 +10215,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>620836864</coreId>
+						<coreId>228</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>15</bitwidth>
@@ -10246,7 +10246,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>608564432</coreId>
+						<coreId>3722543664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -10277,7 +10277,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612022144</coreId>
+						<coreId>228</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -10308,7 +10308,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609127600</coreId>
+						<coreId>3722543664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -10339,7 +10339,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>606766896</coreId>
+						<coreId>3718917328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -10370,7 +10370,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3732471371</coreId>
+						<coreId>562305644</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -10401,7 +10401,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609127600</coreId>
+						<coreId>228</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>43</bitwidth>
@@ -10432,7 +10432,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>609127600</coreId>
+						<coreId>3718377536</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -10463,7 +10463,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>612322352</coreId>
+						<coreId>3717687888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>

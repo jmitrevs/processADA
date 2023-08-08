@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_frame_chan_loop'" level="0">
-<item name = "Date">Mon Aug  7 16:46:48 2023
+<item name = "Date">Tue Aug  8 12:26:59 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -91,13 +91,13 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln111_fu_2557_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln170_fu_2576_p2">+, 0, 0, 22, 15, 15</column>
+<column name="add_ln163_fu_2576_p2">+, 0, 0, 22, 15, 15</column>
 <column name="iChan_2_fu_2490_p2">+, 0, 0, 16, 9, 1</column>
 <column name="sub_ln102_fu_2532_p2">-, 0, 0, 20, 13, 13</column>
 <column name="sub_ln106_fu_2724_p2">-, 0, 0, 14, 7, 6</column>
 <column name="icmp_ln106_fu_2734_p2">icmp, 0, 0, 13, 6, 4</column>
 <column name="icmp_ln110_fu_2758_p2">icmp, 0, 0, 12, 4, 3</column>
-<column name="icmp_ln124_fu_2484_p2">icmp, 0, 0, 17, 9, 10</column>
+<column name="icmp_ln119_fu_2484_p2">icmp, 0, 0, 17, 9, 10</column>
 <column name="adc_fu_2748_p2">lshr, 0, 0, 100, 32, 32</column>
 <column name="adc_1_fu_2786_p2">or, 0, 0, 14, 14, 14</column>
 <column name="bits_from_first_word_fu_2740_p3">select, 0, 0, 4, 1, 3</column>

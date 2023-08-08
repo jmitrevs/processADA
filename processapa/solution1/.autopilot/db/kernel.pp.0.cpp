@@ -54133,13 +54133,11 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 #pragma HLS INTERFACE m_axi port=infiledata depth=28320800
 #pragma HLS INTERFACE m_axi port=infiledata depth=276
 
- int a;
 
 
  constexpr unsigned int NUM_LINKS = 10;
  const int z_channels = 480;
  const int n_frames = 6000;
-
 
 
  static int adc_vectors[256][100];
@@ -54207,7 +54205,6 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 #pragma HLS ARRAY_PARTITION variable=adc_vectors type=block factor=60 dim=2
 
 
-
  static int planes[z_channels][n_frames];
  static int planes2[z_channels][n_frames];
 
@@ -54220,7 +54217,6 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
 
 
-
     link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++)
     {
@@ -54230,7 +54226,6 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
         unsigned int slot = 0, link_from_frameheader = 0, crate = 0;
         size_t ibegin = link*fragsize;
         dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
-
 
         frame_loop:
         for (size_t iFrame = 0; iFrame < n_frames; iFrame++)
@@ -54251,16 +54246,14 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
  auto adc = frame->get_adc(iChan);
 
-
-                 if(iFrame<100)
-                 {
-                  adc_vectors[iFrame][iChan] = adc;
-                 }
-
+    if(iFrame<100)
+    {
+     adc_vectors[iFrame][iChan] = adc;
+    }
                  else if(iFrame < 200)
-     {
-    adc_vectors2[iFrame][iChan] = adc;
-     }
+                {
+                 adc_vectors2[iFrame][iChan] = adc;
+                }
                  else if(iFrame < 300)
     {
      adc_vectors3[iFrame][iChan] = adc;
@@ -54494,8 +54487,6 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
         adc_vectors60[iFrame][iChan] = adc;
     }
 
-
-
             }
 
         }
@@ -54529,7 +54520,7 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
             if(offline_plane == 2 && offline_chan - CHAN_MIN < z_channels)
                                          {
-                VITIS_LOOP_408_1: for (int i = 0; i < n_frames; i++)
+                VITIS_LOOP_399_1: for (int i = 0; i < n_frames; i++)
                 {
 
 
@@ -54777,7 +54768,262 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
                 }
             }
-# 912 "kernel.cpp"
+
+            else if(offline_plane == 2 && offline_chan - CHAN_MIN - z_channels < z_channels)
+            {
+
+             VITIS_LOOP_651_2: for (int i = 0; i < n_frames; i++)
+             {
+
+              if(i<100)
+              {
+               planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors[iChan][i]-ave[iChan];
+              }
+
+              else if(i<200)
+                 {
+                  planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors2[iChan][i]-ave[iChan];
+                 }
+
+              else if(i<300)
+     {
+      planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors3[iChan][i]-ave[iChan];
+     }
+              else if(i<400)
+     {
+      planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors4[iChan][i]-ave[iChan];
+     }
+              else if(i<500)
+     {
+      planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors5[iChan][i]-ave[iChan];
+     }
+              else if(i<600)
+     {
+      planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors6[iChan][i]-ave[iChan];
+     }
+              else if(i<700)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors7[iChan][i]-ave[iChan];
+              }
+              else if(i<800)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors8[iChan][i]-ave[iChan];
+              }
+              else if(i<900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors9[iChan][i]-ave[iChan];
+              }
+              else if(i<1000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors10[iChan][i]-ave[iChan];
+              }
+             else if(i<1100)
+              {
+                   planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors11[iChan][i]-ave[iChan];
+              }
+              else if(i<1200)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors12[iChan][i]-ave[iChan];
+              }
+              else if(i<1300)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors13[iChan][i]-ave[iChan];
+              }
+              else if(i<1400)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors14[iChan][i]-ave[iChan];
+              }
+              else if(i<1500)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors15[iChan][i]-ave[iChan];
+              }
+              else if(i<1600)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors16[iChan][i]-ave[iChan];
+              }
+              else if(i<1700)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors17[iChan][i]-ave[iChan];
+              }
+              else if(i<1800)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors18[iChan][i]-ave[iChan];
+              }
+              else if(i<1900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors19[iChan][i]-ave[iChan];
+              }
+              else if(i<2000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors20[iChan][i]-ave[iChan];
+              }
+              else if(i<2100)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors21[iChan][i]-ave[iChan];
+              }
+              else if(i<2200)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors22[iChan][i]-ave[iChan];
+              }
+              else if(i<2300)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors23[iChan][i]-ave[iChan];
+              }
+              else if(i<2400)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors24[iChan][i]-ave[iChan];
+              }
+              else if(i<2500)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors25[iChan][i]-ave[iChan];
+              }
+              else if(i<2600)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors26[iChan][i]-ave[iChan];
+              }
+              else if(i<2700)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors27[iChan][i]-ave[iChan];
+              }
+              else if(i<2800)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors28[iChan][i]-ave[iChan];
+              }
+              else if(i<2900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors29[iChan][i]-ave[iChan];
+              }
+              else if(i<3000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors30[iChan][i]-ave[iChan];
+              }
+              else if(i<3100)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors31[iChan][i]-ave[iChan];
+              }
+              else if(i<3200)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors32[iChan][i]-ave[iChan];
+              }
+              else if(i<3300)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors33[iChan][i]-ave[iChan];
+              }
+              else if(i<3400)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors34[iChan][i]-ave[iChan];
+              }
+              else if(i<3500)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors35[iChan][i]-ave[iChan];
+              }
+              else if(i<3600)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors36[iChan][i]-ave[iChan];
+              }
+              else if(i<3700)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors37[iChan][i]-ave[iChan];
+              }
+              else if(i<3800)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors38[iChan][i]-ave[iChan];
+              }
+              else if(i<3900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors39[iChan][i]-ave[iChan];
+              }
+              else if(i<4000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors40[iChan][i]-ave[iChan];
+              }
+              else if(i<4100)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors41[iChan][i]-ave[iChan];
+              }
+              else if(i<4200)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors42[iChan][i]-ave[iChan];
+              }
+              else if(i<4300)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors43[iChan][i]-ave[iChan];
+              }
+              else if(i<4400)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors44[iChan][i]-ave[iChan];
+              }
+              else if(i<4500)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors45[iChan][i]-ave[iChan];
+              }
+              else if(i<4600)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors46[iChan][i]-ave[iChan];
+              }
+              else if(i<4700)
+              {
+                  planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors47[iChan][i]-ave[iChan];
+              }
+              else if(i<4800)
+              {
+                  planes2[offline_chan - CHAN_MIN - z_channels][i] = adc_vectors48[iChan][i]-ave[iChan];
+              }
+              else if(i<4900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors49[iChan][i]-ave[iChan];
+              }
+              else if(i<5000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors50[iChan][i]-ave[iChan];
+              }
+              else if(i<5100)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors51[iChan][i]-ave[iChan];
+              }
+              else if(i<5200)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors52[iChan][i]-ave[iChan];
+              }
+              else if(i<5300)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors53[iChan][i]-ave[iChan];
+              }
+              else if(i<5400)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors54[iChan][i]-ave[iChan];
+              }
+              else if(i<5500)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors55[iChan][i]-ave[iChan];
+              }
+              else if(i<5600)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors56[iChan][i]-ave[iChan];
+              }
+              else if(i<5700)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors57[iChan][i]-ave[iChan];
+              }
+              else if(i<5800)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors58[iChan][i]-ave[iChan];
+              }
+              else if(i<5900)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors59[iChan][i]-ave[iChan];
+              }
+              else if(i<6000)
+              {
+                  planes2[offline_chan - CHAN_MIN- z_channels][i] = adc_vectors60[iChan][i]-ave[iChan];
+              }
+
+
+
+           }
+
+            }
+
         }
     }
 
@@ -54791,12 +55037,11 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
 
 
-
- VITIS_LOOP_926_2: for (int i = 0; i < 128; i += TICK_SIZE)
+ VITIS_LOOP_916_3: for (int i = 0; i < 128; i += TICK_SIZE)
  {
-  VITIS_LOOP_928_3: for(int j = 0; j < z_channels; j++)
+  VITIS_LOOP_918_4: for(int j = 0; j < z_channels; j++)
   {
-   VITIS_LOOP_930_4: for(int k = 0; k <TICK_SIZE; k++)
+   VITIS_LOOP_920_5: for(int k = 0; k <TICK_SIZE; k++)
    {
        int fill = planes[j][i+k];
        pack[0] = typename input_t::value_type(fill);
@@ -54806,11 +55051,36 @@ __attribute__((sdx_kernel("process_data", 0))) void process_data(const int infil
 
   myproject(zero_padding2d_input, layer19_out);
   auto cc_prob = layer19_out.read();
-  VITIS_LOOP_940_5: for (int z = 0; z < 3; z++)
+  VITIS_LOOP_930_6: for (int z = 0; z < 3; z++)
   {
-   outdata[z+(i/TICK_SIZE)*3] = cc_prob[z]+a;
+   outdata[z+(i/TICK_SIZE)*3] = cc_prob[z];
 
   }
  }
-# 972 "kernel.cpp"
+
+
+
+ VITIS_LOOP_939_7: for (int i = 0; i < n_frames; i += TICK_SIZE)
+ {
+  VITIS_LOOP_941_8: for(int j = 0; j < z_channels; j++)
+  {
+   VITIS_LOOP_943_9: for(int k = 0; k <TICK_SIZE; k++)
+   {
+       int fill = planes2[j][i+k];
+       pack[0] = typename input_t::value_type(fill);
+       zero_padding2d_input.write(pack);
+   }
+  }
+
+  myproject(zero_padding2d_input, layer19_out);
+  auto cc_prob = layer19_out.read();
+  int side1_data = 138;
+  VITIS_LOOP_954_10: for (int z = 0; z < 3; z++)
+  {
+   outdata[side1_data+z+(i/TICK_SIZE)*3] = cc_prob[z];
+  }
+ }
+
+
+
 }

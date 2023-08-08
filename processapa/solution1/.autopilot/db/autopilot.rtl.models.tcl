@@ -13,12 +13,13 @@ set SynModuleInfo {
   }
   {SRCNAME process_data_Pipeline_VITIS_LOOP_169_1 MODELNAME process_data_Pipeline_VITIS_LOOP_169_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_169_1}
   {SRCNAME process_data_Pipeline_4 MODELNAME process_data_Pipeline_4 RTLNAME process_data_process_data_Pipeline_4}
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_408_1 MODELNAME process_data_Pipeline_VITIS_LOOP_408_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_408_1
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_651_2 MODELNAME process_data_Pipeline_VITIS_LOOP_651_2 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_651_2
     SUBMODULES {
       {MODELNAME process_data_mux_60_6_14_1_1 RTLNAME process_data_mux_60_6_14_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_928_3_VITIS_LOOP_930_4 MODELNAME process_data_Pipeline_VITIS_LOOP_928_3_VITIS_LOOP_930_4 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_928_3_VITIS_LOOP_930_4
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_399_1 MODELNAME process_data_Pipeline_VITIS_LOOP_399_1 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_399_1}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_918_4_VITIS_LOOP_920_5 MODELNAME process_data_Pipeline_VITIS_LOOP_918_4_VITIS_LOOP_920_5 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_918_4_VITIS_LOOP_920_5
     SUBMODULES {
       {MODELNAME process_data_mac_muladd_9ns_13ns_8ns_22_4_1 RTLNAME process_data_mac_muladd_9ns_13ns_8ns_22_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
@@ -106,7 +107,6 @@ set SynModuleInfo {
       {MODELNAME process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb RTLNAME process_data_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_void_pooling2d_bujdb BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME dense<array,array<ap_fixed<16,6,5,3,0>,8u>,config16>_Pipeline_DataPrepare MODELNAME dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare RTLNAME process_data_dense_array_array_ap_fixed_16_6_5_3_0_8u_config16_Pipeline_DataPrepare}
   {SRCNAME {dense_wrapper<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config16>} MODELNAME dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config16_s RTLNAME process_data_dense_wrapper_ap_fixed_16_6_5_3_0_ap_fixed_16_6_5_3_0_config16_s
     SUBMODULES {
       {MODELNAME process_data_mux_128_7_16_1_1 RTLNAME process_data_mux_128_7_16_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
@@ -156,7 +156,13 @@ set SynModuleInfo {
       {MODELNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 RTLNAME process_data_start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0 BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME start_for_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0_U}
     }
   }
-  {SRCNAME process_data_Pipeline_VITIS_LOOP_940_5 MODELNAME process_data_Pipeline_VITIS_LOOP_940_5 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_940_5}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_930_6 MODELNAME process_data_Pipeline_VITIS_LOOP_930_6 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_930_6}
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_941_8_VITIS_LOOP_943_9 MODELNAME process_data_Pipeline_VITIS_LOOP_941_8_VITIS_LOOP_943_9 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_941_8_VITIS_LOOP_943_9
+    SUBMODULES {
+      {MODELNAME process_data_mac_muladd_9ns_13ns_13ns_22_4_1 RTLNAME process_data_mac_muladd_9ns_13ns_13ns_22_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME process_data_Pipeline_VITIS_LOOP_954_10 MODELNAME process_data_Pipeline_VITIS_LOOP_954_10 RTLNAME process_data_process_data_Pipeline_VITIS_LOOP_954_10}
   {SRCNAME process_data MODELNAME process_data RTLNAME process_data IS_TOP 1
     SUBMODULES {
       {MODELNAME process_data_mul_32ns_34ns_65_1_1 RTLNAME process_data_mul_32ns_34ns_65_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}

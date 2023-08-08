@@ -22,11 +22,11 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>9830280</Best-caseLatency>
-<Average-caseLatency>9830280</Average-caseLatency>
+<Best-caseLatency>9830412</Best-caseLatency>
+<Average-caseLatency>9830412</Average-caseLatency>
 <Worst-caseLatency>9830568</Worst-caseLatency>
-<Best-caseRealTimeLatency>98.303 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>98.303 ms</Average-caseRealTimeLatency>
+<Best-caseRealTimeLatency>98.304 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>98.304 ms</Average-caseRealTimeLatency>
 <Worst-caseRealTimeLatency>98.306 ms</Worst-caseRealTimeLatency>
 <DataflowPipelineThroughput>
 <range>
@@ -43,8 +43,8 @@
 <Resources>
 <BRAM_18K>2599</BRAM_18K>
 <DSP>382</DSP>
-<FF>178468</FF>
-<LUT>131815</LUT>
+<FF>192800</FF>
+<LUT>131777</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

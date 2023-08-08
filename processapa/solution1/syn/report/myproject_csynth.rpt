@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'myproject'
 ================================================================
-* Date:           Mon Aug  7 16:48:17 2023
+* Date:           Tue Aug  8 12:28:29 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |     Interval     | Pipeline |
     |   min   |   max   |    min    |    max    |   min  |   max   |   Type   |
     +---------+---------+-----------+-----------+--------+---------+----------+
-    |  9830280|  9830568|  98.303 ms|  98.306 ms|  262146|  9830402|  dataflow|
+    |  9830412|  9830568|  98.304 ms|  98.306 ms|  262146|  9830402|  dataflow|
     +---------+---------+-----------+-----------+--------+---------+----------+
 
     + Detail: 
@@ -47,7 +47,7 @@
         |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_64u_config11_U0             |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_64u_config11_s             |      723|      723|   7.230 us|   7.230 us|     723|      723|       no|
         |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_U0  |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s  |      721|    52741|   7.210 us|   0.527 ms|     721|    52741|       no|
         |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_U0             |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s             |      115|      115|   1.150 us|   1.150 us|     115|      115|       no|
-        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_U0        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s        |      162|      163|   1.620 us|   1.630 us|     162|      163|       no|
+        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_U0        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s        |      187|      188|   1.870 us|   1.880 us|     187|      188|       no|
         |dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_U0         |dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s         |        9|       10|  90.000 ns|   0.100 us|       9|       10|       no|
         |softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0           |softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s           |        6|        6|  60.000 ns|  60.000 ns|       6|        6|       no|
         +-------------------------------------------------------------------------+------------------------------------------------------------------------+---------+---------+-----------+-----------+--------+---------+---------+
@@ -67,20 +67,20 @@
 |DSP                  |        -|     -|        -|        -|    -|
 |Expression           |        -|     -|        0|        2|    -|
 |FIFO                 |     2427|     -|     1658|      689|    -|
-|Instance             |      172|   382|   176810|   131124|    -|
+|Instance             |      172|   382|   191142|   131086|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|        -|    -|
 |Register             |        -|     -|        -|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |     2599|   382|   178468|   131815|    0|
+|Total                |     2599|   382|   192800|   131777|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3072|   864000|   432000|  320|
 +---------------------+---------+------+---------+---------+-----+
-|Utilization SLR (%)  |      193|    12|       20|       30|    0|
+|Utilization SLR (%)  |      193|    12|       22|       30|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available            |     4032|  9216|  2592000|  1296000|  960|
 +---------------------+---------+------+---------+---------+-----+
-|Utilization (%)      |       64|     4|        6|       10|    0|
+|Utilization (%)      |       64|     4|        7|       10|    0|
 +---------------------+---------+------+---------+---------+-----+
 
 + Detail: 
@@ -92,7 +92,7 @@
     |conv_2d_cl_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_64u_config6_U0   |conv_2d_cl_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_64u_config6_s   |       57|  128|  20654|  15057|    0|
     |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_U0  |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s  |       29|   64|  38060|  23629|    0|
     |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_64u_config9_U0   |conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_64u_config9_s   |       57|  128|  39086|  25553|    0|
-    |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_U0        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s        |       25|   56|  43433|  22451|    0|
+    |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_U0        |dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s        |       25|   56|  57765|  22413|    0|
     |dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_U0         |dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s         |        0|    3|    539|    469|    0|
     |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_U0             |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s             |        0|    0|   3765|   5389|    0|
     |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config5_U0              |pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config5_s              |        0|    0|  14028|  14348|    0|
@@ -101,7 +101,7 @@
     |softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_U0           |softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s           |        3|    1|    149|    475|    0|
     |zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_U0   |zeropad2d_cl_array_ap_fixed_1u_array_ap_fixed_16_6_5_3_0_1u_config2_s   |        0|    0|     62|    394|    0|
     +-------------------------------------------------------------------------+------------------------------------------------------------------------+---------+-----+-------+-------+-----+
-    |Total                                                                    |                                                                        |      172|  382| 176810| 131124|    0|
+    |Total                                                                    |                                                                        |      172|  382| 191142| 131086|    0|
     +-------------------------------------------------------------------------+------------------------------------------------------------------------+---------+-----+-------+-------+-----+
 
     * DSP: 

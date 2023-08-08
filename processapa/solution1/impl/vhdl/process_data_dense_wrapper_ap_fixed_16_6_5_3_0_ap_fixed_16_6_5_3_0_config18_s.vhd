@@ -231,7 +231,7 @@ begin
         ce0 => w18_ce0,
         q0 => w18_q0);
 
-    mux_8_3_16_1_1_U5819 : component process_data_mux_8_3_16_1_1
+    mux_8_3_16_1_1_U5037 : component process_data_mux_8_3_16_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -257,7 +257,7 @@ begin
         din8 => w_index3_reg_161,
         dout => a_fu_443_p10);
 
-    mul_16s_16s_26_1_1_U5820 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5038 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -269,7 +269,7 @@ begin
         din1 => mul_ln55_fu_477_p1,
         dout => mul_ln55_fu_477_p2);
 
-    mul_16s_16s_26_1_1_U5821 : component process_data_mul_16s_16s_26_1_1
+    mul_16s_16s_26_1_1_U5039 : component process_data_mul_16s_16s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -281,7 +281,7 @@ begin
         din1 => mul_ln55_1_fu_513_p1,
         dout => mul_ln55_1_fu_513_p2);
 
-    mul_16s_11s_26_1_1_U5822 : component process_data_mul_16s_11s_26_1_1
+    mul_16s_11s_26_1_1_U5040 : component process_data_mul_16s_11s_26_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,

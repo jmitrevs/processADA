@@ -1354,10 +1354,10 @@ newFuncRoot:0 %i = alloca i32 1
 
 <Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:1 %zext_ln395_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln395
+newFuncRoot:1 %zext_ln386_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %zext_ln386
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln395_read"/></StgValue>
+<StgValue><ssdm name="zext_ln386_read"/></StgValue>
 </operation>
 
 <operation id="226" st_id="1" stage="1" lat="1">
@@ -1399,10 +1399,10 @@ newFuncRoot:3 %upri_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %upri
 
 <Node id="14" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-newFuncRoot:4 %zext_ln402_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln402
+newFuncRoot:4 %zext_ln393_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln393
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln402_read"/></StgValue>
+<StgValue><ssdm name="zext_ln393_read"/></StgValue>
 </operation>
 
 <operation id="229" st_id="1" stage="1" lat="1">
@@ -1444,10 +1444,10 @@ newFuncRoot:6 %chanmap_DetToChanInfo_read = read i64 @_ssdm_op_Read.ap_auto.i64,
 
 <Node id="17" bw="32" op_0_bw="4">
 <![CDATA[
-newFuncRoot:7 %zext_ln395_cast = zext i4 %zext_ln395_read
+newFuncRoot:7 %zext_ln386_cast = zext i4 %zext_ln386_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln395_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln386_cast"/></StgValue>
 </operation>
 
 <operation id="232" st_id="1" stage="1" lat="1">
@@ -1459,10 +1459,10 @@ newFuncRoot:7 %zext_ln395_cast = zext i4 %zext_ln395_read
 
 <Node id="18" bw="32" op_0_bw="8">
 <![CDATA[
-newFuncRoot:8 %zext_ln402_cast = zext i8 %zext_ln402_read
+newFuncRoot:8 %zext_ln393_cast = zext i8 %zext_ln393_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln402_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln393_cast"/></StgValue>
 </operation>
 
 <operation id="233" st_id="1" stage="1" lat="1">
@@ -1474,7 +1474,7 @@ newFuncRoot:8 %zext_ln402_cast = zext i8 %zext_ln402_read
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem4, void @empty_37, i32 0, i32 0, void @empty_8, i32 64, i32 0, void @empty_14, void @empty_38, void @empty_8, i32 16, i32 16, i32 16, i32 16, void @empty_8, void @empty_8, i32 4294967295, i32 0
+newFuncRoot:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem4, void @empty_26, i32 0, i32 0, void @empty_5, i32 64, i32 0, void @empty_32, void @empty_7, void @empty_5, i32 16, i32 16, i32 16, i32 16, void @empty_5, void @empty_5, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -1519,10 +1519,10 @@ newFuncRoot:11 %br_ln0 = br void %for.body38.i
 
 <Node id="23" bw="64" op_0_bw="64" op_1_bw="0">
 <![CDATA[
-for.body38.i:0 %i_2 = load i64 %i
+for.body38.i:0 %i_3 = load i64 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_2"/></StgValue>
+<StgValue><ssdm name="i_3"/></StgValue>
 </operation>
 
 <operation id="237" st_id="1" stage="1" lat="1">
@@ -1534,7 +1534,7 @@ for.body38.i:0 %i_2 = load i64 %i
 
 <Node id="26" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-for.body38.i:3 %shl_ln202 = shl i64 %i_2, i64 6
+for.body38.i:3 %shl_ln202 = shl i64 %i_3, i64 6
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln202"/></StgValue>
@@ -1549,7 +1549,7 @@ for.body38.i:3 %shl_ln202 = shl i64 %i_2, i64 6
 
 <Node id="27" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-for.body38.i:4 %shl_ln202_2 = shl i64 %i_2, i64 3
+for.body38.i:4 %shl_ln202_2 = shl i64 %i_3, i64 3
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln202_2"/></StgValue>
@@ -1564,7 +1564,7 @@ for.body38.i:4 %shl_ln202_2 = shl i64 %i_2, i64 3
 
 <Node id="28" bw="3" op_0_bw="64">
 <![CDATA[
-for.body38.i:5 %trunc_ln202 = trunc i64 %i_2
+for.body38.i:5 %trunc_ln202 = trunc i64 %i_3
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln202"/></StgValue>
@@ -3043,10 +3043,10 @@ for.body38.i:16 %add_ln202_4 = add i6 %add_ln202_3, i6 12
 
 <Node id="40" bw="9" op_0_bw="9" op_1_bw="6" op_2_bw="3">
 <![CDATA[
-for.body38.i:17 %shl_ln2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %add_ln202_4, i3 0
+for.body38.i:17 %shl_ln3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %add_ln202_4, i3 0
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln2"/></StgValue>
+<StgValue><ssdm name="shl_ln3"/></StgValue>
 </operation>
 
 <operation id="324" st_id="74" stage="1" lat="1">
@@ -3058,7 +3058,7 @@ for.body38.i:17 %shl_ln2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, 
 
 <Node id="41" bw="512" op_0_bw="9">
 <![CDATA[
-for.body38.i:18 %zext_ln202 = zext i9 %shl_ln2
+for.body38.i:18 %zext_ln202 = zext i9 %shl_ln3
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln202"/></StgValue>
@@ -3103,7 +3103,7 @@ for.body38.i:20 %trunc_ln202_1 = trunc i512 %lshr_ln202
 
 <Node id="44" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body38.i:21 %icmp_ln202 = icmp_eq  i32 %trunc_ln202_1, i32 %zext_ln402_cast
+for.body38.i:21 %icmp_ln202 = icmp_eq  i32 %trunc_ln202_1, i32 %zext_ln393_cast
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln202"/></StgValue>
@@ -3118,7 +3118,7 @@ for.body38.i:21 %icmp_ln202 = icmp_eq  i32 %trunc_ln202_1, i32 %zext_ln402_cast
 
 <Node id="45" bw="64" op_0_bw="64" op_1_bw="64">
 <![CDATA[
-for.body38.i:22 %add_ln201 = add i64 %i_2, i64 1
+for.body38.i:22 %add_ln201 = add i64 %i_3, i64 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln201"/></StgValue>
@@ -5899,10 +5899,10 @@ land.lhs.true48.i:6 %add_ln203_2 = add i6 %add_ln202_3, i6 8
 
 <Node id="67" bw="9" op_0_bw="9" op_1_bw="6" op_2_bw="3">
 <![CDATA[
-land.lhs.true48.i:7 %shl_ln3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %add_ln203_2, i3 0
+land.lhs.true48.i:7 %shl_ln4 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %add_ln203_2, i3 0
 
 ]]></Node>
-<StgValue><ssdm name="shl_ln3"/></StgValue>
+<StgValue><ssdm name="shl_ln4"/></StgValue>
 </operation>
 
 <operation id="489" st_id="148" stage="1" lat="1">
@@ -5915,7 +5915,7 @@ land.lhs.true48.i:7 %shl_ln3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.
 
 <Node id="68" bw="512" op_0_bw="9">
 <![CDATA[
-land.lhs.true48.i:8 %zext_ln203 = zext i9 %shl_ln3
+land.lhs.true48.i:8 %zext_ln203 = zext i9 %shl_ln4
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln203"/></StgValue>
@@ -7592,7 +7592,7 @@ land.lhs.true54.i:10 %trunc_ln203_1 = trunc i512 %lshr_ln203_1
 
 <Node id="85" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-land.lhs.true54.i:11 %icmp_ln203_1 = icmp_eq  i32 %trunc_ln203_1, i32 %zext_ln395_cast
+land.lhs.true54.i:11 %icmp_ln203_1 = icmp_eq  i32 %trunc_ln203_1, i32 %zext_ln386_cast
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln203_1"/></StgValue>

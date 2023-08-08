@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'process_data_Pipeline_frame_chan_loop'
 ================================================================
-* Date:           Mon Aug  7 16:46:48 2023
+* Date:           Tue Aug  8 12:26:59 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -105,13 +105,13 @@
     |          Variable Name          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
     +---------------------------------+----------+----+---+-----+------------+------------+
     |add_ln111_fu_2557_p2             |         +|   0|  0|   15|           8|           1|
-    |add_ln170_fu_2576_p2             |         +|   0|  0|   22|          15|          15|
+    |add_ln163_fu_2576_p2             |         +|   0|  0|   22|          15|          15|
     |iChan_2_fu_2490_p2               |         +|   0|  0|   16|           9|           1|
     |sub_ln102_fu_2532_p2             |         -|   0|  0|   20|          13|          13|
     |sub_ln106_fu_2724_p2             |         -|   0|  0|   14|           7|           6|
     |icmp_ln106_fu_2734_p2            |      icmp|   0|  0|   13|           6|           4|
     |icmp_ln110_fu_2758_p2            |      icmp|   0|  0|   12|           4|           3|
-    |icmp_ln124_fu_2484_p2            |      icmp|   0|  0|   17|           9|          10|
+    |icmp_ln119_fu_2484_p2            |      icmp|   0|  0|   17|           9|          10|
     |adc_fu_2748_p2                   |      lshr|   0|  0|  100|          32|          32|
     |adc_1_fu_2786_p2                 |        or|   0|  0|   14|          14|          14|
     |bits_from_first_word_fu_2740_p3  |    select|   0|  0|    4|           1|           3|

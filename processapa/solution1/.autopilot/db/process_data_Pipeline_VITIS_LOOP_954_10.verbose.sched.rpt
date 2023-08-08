@@ -1,0 +1,166 @@
+
+
+================================================================
+== Vitis HLS Report for 'process_data_Pipeline_VITIS_LOOP_954_10'
+================================================================
+* Date:           Tue Aug  8 12:26:49 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        processapa
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu11p-flga2577-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_954_10  |        4|        4|         3|          1|          1|     3|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.08>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%z = alloca i32 1"   --->   Operation 6 'alloca' 'z' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sext_ln954_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln954"   --->   Operation 7 'read' 'sext_ln954_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sext_ln954_cast = sext i62 %sext_ln954_read"   --->   Operation 8 'sext' 'sext_ln954_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem5, void @empty_26, i32 0, i32 0, void @empty_5, i32 64, i32 0, void @empty_35, void @empty_7, void @empty_5, i32 16, i32 16, i32 16, i32 16, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.46ns)   --->   "%store_ln0 = store i2 0, i2 %z"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body2321"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%z_1 = load i2 %z" [kernel.cpp:954]   --->   Operation 12 'load' 'z_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.62ns)   --->   "%icmp_ln954 = icmp_eq  i2 %z_1, i2 3" [kernel.cpp:954]   --->   Operation 13 'icmp' 'icmp_ln954' <Predicate = true> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.62ns)   --->   "%add_ln954 = add i2 %z_1, i2 1" [kernel.cpp:954]   --->   Operation 14 'add' 'add_ln954' <Predicate = true> <Delay = 0.62> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln954 = br i1 %icmp_ln954, void %for.body2321.split_ifconv, void %for.inc2334.exitStub" [kernel.cpp:954]   --->   Operation 15 'br' 'br_ln954' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%z_1_cast = zext i2 %z_1" [kernel.cpp:954]   --->   Operation 16 'zext' 'z_1_cast' <Predicate = (!icmp_ln954)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%cc_prob_1_addr = getelementptr i16 %cc_prob_1, i64 0, i64 %z_1_cast" [kernel.cpp:956]   --->   Operation 17 'getelementptr' 'cc_prob_1_addr' <Predicate = (!icmp_ln954)> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (0.73ns)   --->   "%cc_prob_1_load = load i2 %cc_prob_1_addr" [kernel.cpp:956]   --->   Operation 18 'load' 'cc_prob_1_load' <Predicate = (!icmp_ln954)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3> <RAM>
+ST_1 : Operation 19 [1/1] (0.46ns)   --->   "%store_ln954 = store i2 %add_ln954, i2 %z" [kernel.cpp:954]   --->   Operation 19 'store' 'store_ln954' <Predicate = (!icmp_ln954)> <Delay = 0.46>
+
+State 2 <SV = 1> <Delay = 2.02>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem5"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%gmem5_addr = getelementptr i32 %gmem5, i64 %sext_ln954_cast" [kernel.cpp:954]   --->   Operation 21 'getelementptr' 'gmem5_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 22 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.73ns)   --->   "%cc_prob_1_load = load i2 %cc_prob_1_addr" [kernel.cpp:956]   --->   Operation 23 'load' 'cc_prob_1_load' <Predicate = (!icmp_ln954)> <Delay = 0.73> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 3> <RAM>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_s = partselect i6 @_ssdm_op_PartSelect.i6.i16.i32.i32, i16 %cc_prob_1_load, i32 10, i32 15" [kernel.cpp:956]   --->   Operation 24 'partselect' 'tmp_s' <Predicate = (!icmp_ln954)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node select_ln956_1)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %cc_prob_1_load, i32 15" [kernel.cpp:956]   --->   Operation 25 'bitselect' 'tmp' <Predicate = (!icmp_ln954)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln956 = trunc i16 %cc_prob_1_load" [kernel.cpp:956]   --->   Operation 26 'trunc' 'trunc_ln956' <Predicate = (!icmp_ln954)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.93ns)   --->   "%icmp_ln956 = icmp_eq  i10 %trunc_ln956, i10 0" [kernel.cpp:956]   --->   Operation 27 'icmp' 'icmp_ln956' <Predicate = (!icmp_ln954)> <Delay = 0.93> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.84ns)   --->   "%add_ln956 = add i6 %tmp_s, i6 1" [kernel.cpp:956]   --->   Operation 28 'add' 'add_ln956' <Predicate = (!icmp_ln954)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln956_1)   --->   "%select_ln956 = select i1 %icmp_ln956, i6 %tmp_s, i6 %add_ln956" [kernel.cpp:956]   --->   Operation 29 'select' 'select_ln956' <Predicate = (!icmp_ln954)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.36ns) (out node of the LUT)   --->   "%select_ln956_1 = select i1 %tmp, i6 %select_ln956, i6 %tmp_s" [kernel.cpp:956]   --->   Operation 30 'select' 'select_ln956_1' <Predicate = (!icmp_ln954)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 36 'ret' 'ret_ln0' <Predicate = (icmp_ln954)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%speclooptripcount_ln954 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [kernel.cpp:954]   --->   Operation 31 'speclooptripcount' 'speclooptripcount_ln954' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%specloopname_ln954 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41" [kernel.cpp:954]   --->   Operation 32 'specloopname' 'specloopname_ln954' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%sext_ln956 = sext i6 %select_ln956_1" [kernel.cpp:956]   --->   Operation 33 'sext' 'sext_ln956' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (7.30ns)   --->   "%write_ln956 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem5_addr, i32 %sext_ln956, i4 15" [kernel.cpp:956]   --->   Operation 34 'write' 'write_ln956' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln954 = br void %for.body2321" [kernel.cpp:954]   --->   Operation 35 'br' 'br_ln954' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.081ns
+The critical path consists of the following:
+	'alloca' operation ('z') [4]  (0.000 ns)
+	'load' operation ('z', kernel.cpp:954) on local variable 'z' [11]  (0.000 ns)
+	'add' operation ('add_ln954', kernel.cpp:954) [16]  (0.621 ns)
+	'store' operation ('store_ln954', kernel.cpp:954) of variable 'add_ln954', kernel.cpp:954 on local variable 'z' [33]  (0.460 ns)
+
+ <State 2>: 2.026ns
+The critical path consists of the following:
+	'load' operation ('cc_prob_1_load', kernel.cpp:956) on array 'cc_prob_1' [23]  (0.730 ns)
+	'icmp' operation ('icmp_ln956', kernel.cpp:956) [27]  (0.933 ns)
+	'select' operation ('select_ln956', kernel.cpp:956) [29]  (0.000 ns)
+	'select' operation ('select_ln956_1', kernel.cpp:956) [30]  (0.363 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus write operation ('write_ln956', kernel.cpp:956) on port 'gmem5' (kernel.cpp:956) [32]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

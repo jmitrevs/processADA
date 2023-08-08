@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s'
 ================================================================
-* Date:           Mon Aug  7 16:48:15 2023
+* Date:           Tue Aug  8 12:28:28 2023
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        processapa
@@ -213,8 +213,8 @@ ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%data_5 = partselect i16 @_ssdm_op_
 ST_1 : Operation 12 [2/2] (0.46ns)   --->   "%call_ret = call i48 @dense_wrapper<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config18>, i16 %data, i16 %data_1, i16 %data_2, i16 %data_3, i16 %data_4, i16 %data_5, i16 %data_6, i16 %data_7, i43 %w18" [./nnet_utils/nnet_dense_stream.h:48]   --->   Operation 12 'call' 'call_ret' <Predicate = true> <Delay = 0.46> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 6.93>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %layer18_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %layer16_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %layer18_out, void @empty, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %layer16_out, void @empty, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 15 [1/2] (4.83ns)   --->   "%call_ret = call i48 @dense_wrapper<ap_fixed<16, 6, 5, 3, 0>, ap_fixed<16, 6, 5, 3, 0>, config18>, i16 %data, i16 %data_1, i16 %data_2, i16 %data_3, i16 %data_4, i16 %data_5, i16 %data_6, i16 %data_7, i43 %w18" [./nnet_utils/nnet_dense_stream.h:48]   --->   Operation 15 'call' 'call_ret' <Predicate = true> <Delay = 4.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%res = extractvalue i48 %call_ret" [./nnet_utils/nnet_dense_stream.h:48]   --->   Operation 16 'extractvalue' 'res' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%res_1 = extractvalue i48 %call_ret" [./nnet_utils/nnet_dense_stream.h:48]   --->   Operation 17 'extractvalue' 'res_1' <Predicate = true> <Delay = 0.00>
@@ -462,7 +462,7 @@ ret_ln64          (ret           ) [ 000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_22"/></StgValue>
+<StgValue><ssdm name="empty"/></StgValue>
 </bind>
 </comp>
 
@@ -480,7 +480,7 @@ ret_ln64          (ret           ) [ 000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 

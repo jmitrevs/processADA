@@ -196,7 +196,7 @@ process_data_mul_18s_17ns_26_1_1 #(
     .din0_WIDTH( 18 ),
     .din1_WIDTH( 17 ),
     .dout_WIDTH( 26 ))
-mul_18s_17ns_26_1_1_U5836(
+mul_18s_17ns_26_1_1_U5054(
     .din0(grp_fu_145_p0),
     .din1(grp_fu_145_p1),
     .dout(grp_fu_145_p2)

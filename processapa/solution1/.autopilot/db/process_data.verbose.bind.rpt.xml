@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data'" level="0">
-<item name = "Date">Mon Aug  7 16:46:46 2023
+<item name = "Date">Tue Aug  8 12:26:56 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -31,14 +31,17 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_928_3_VITIS_LOOP_930_4_fu_6493">process_data_Pipeline_VITIS_LOOP_928_3_VITIS_LOOP_930_4, 61445, 61445, 0.614 ms, 0.614 ms, 61445, 61445, no</column>
-<column name="grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6500">process_data_Pipeline_first_chan_loop_first_chan_frame_loop, 25603, 25603, 0.256 ms, 0.256 ms, 25603, 25603, no</column>
-<column name="grp_process_data_Pipeline_frame_chan_loop_fu_6605">process_data_Pipeline_frame_chan_loop, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6909">process_data_Pipeline_VITIS_LOOP_169_1, 153, 153, 1.530 us, 1.530 us, 153, 153, no</column>
-<column name="grp_process_data_Pipeline_4_fu_6919">process_data_Pipeline_4, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_408_1_fu_6934">process_data_Pipeline_VITIS_LOOP_408_1, 6002, 6002, 60.020 us, 60.020 us, 6002, 6002, no</column>
-<column name="grp_myproject_fu_7164">myproject, 9830280, 9830568, 98.303 ms, 98.306 ms, 262146, 9830402, dataflow</column>
-<column name="grp_process_data_Pipeline_VITIS_LOOP_940_5_fu_12714">process_data_Pipeline_VITIS_LOOP_940_5, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_918_4_VITIS_LOOP_920_5_fu_6580">process_data_Pipeline_VITIS_LOOP_918_4_VITIS_LOOP_920_5, 61445, 61445, 0.614 ms, 0.614 ms, 61445, 61445, no</column>
+<column name="grp_process_data_Pipeline_first_chan_loop_first_chan_frame_loop_fu_6587">process_data_Pipeline_first_chan_loop_first_chan_frame_loop, 25603, 25603, 0.256 ms, 0.256 ms, 25603, 25603, no</column>
+<column name="grp_process_data_Pipeline_frame_chan_loop_fu_6692">process_data_Pipeline_frame_chan_loop, 258, 258, 2.580 us, 2.580 us, 258, 258, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_169_1_fu_6996">process_data_Pipeline_VITIS_LOOP_169_1, 153, 153, 1.530 us, 1.530 us, 153, 153, no</column>
+<column name="grp_process_data_Pipeline_4_fu_7006">process_data_Pipeline_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_651_2_fu_7021">process_data_Pipeline_VITIS_LOOP_651_2, 6002, 6002, 60.020 us, 60.020 us, 6002, 6002, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_399_1_fu_7251">process_data_Pipeline_VITIS_LOOP_399_1, 6002, 6002, 60.020 us, 60.020 us, 6002, 6002, no</column>
+<column name="grp_myproject_fu_7481">myproject, 9830412, 9830568, 98.304 ms, 98.306 ms, 262146, 9830402, dataflow</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_930_6_fu_13031">process_data_Pipeline_VITIS_LOOP_930_6, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_941_8_VITIS_LOOP_943_9_fu_13039">process_data_Pipeline_VITIS_LOOP_941_8_VITIS_LOOP_943_9, 61445, 61445, 0.614 ms, 0.614 ms, 61445, 61445, no</column>
+<column name="grp_process_data_Pipeline_VITIS_LOOP_954_10_fu_13047">process_data_Pipeline_VITIS_LOOP_954_10, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -46,6 +49,7 @@
 <column name="- link_loop">?, ?, ?, -, -, 10, no</column>
 <column name=" + frame_loop">1566000, 2004000, 261 ~ 334, -, -, 6000, no</column>
 <column name=" + second_chan_loop">?, ?, ?, -, -, 256, no</column>
+<column name="- VITIS_LOOP_939_7">464921133, 464928465, 9891939 ~ 9892095, -, -, 47, no</column>
 </table>
 </item>
 </section>

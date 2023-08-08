@@ -14,13 +14,13 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:10:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="process_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=infiledata depth=276" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:82:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:80:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="process_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1536000 port=adc_vectors offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:83:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:81:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="process_data" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=adc_vectors type=block factor=60 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:126:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="kernel.cpp:121:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="process_data" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_INVALID" msg_id="207-5532" msg_severity="WARNING" msg_loc="./nnet_utils/nnet_conv2d.h:47:26" msg_body="'region' in '#pragma HLS Inline' is deprecated, use 'Inline Pragma' instead">
@@ -1694,7 +1694,7 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="kernel.cpp:8:0" msg_body="Inlining function 'nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)' into 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
         <args Callee="nnet::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 3u&gt;::operator[](unsigned long)" Callee-DebugLoc="File ./nnet_utils/nnet_types.h Line 17 Column 0" Caller="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Caller-DebugLoc="File kernel.cpp Line 8 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:21:0" msg_body="Applying array_partition to '_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors': Block partitioning with factor 60 on dimension 2.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="kernel.cpp:19:0" msg_body="Applying array_partition to '_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors': Block partitioning with factor 60 on dimension 2.">
         <args Dim="2" Factor="60" Mode="Block" UOName="_ZZ12process_dataiPcRN4dune16FDHDChannelMapSPEPiE11adc_vectors"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./nnet_utils/nnet_pooling_stream.h:236:0" msg_body="Applying array_partition to '_ZZN4nnet19pooling2d_buffer_clINS_5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELj32EEES6_8config14EEvRN3hls6streamIT_Li0EEERNS9_IT0_Li0EEEE11line_buffer': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
@@ -1814,10 +1814,10 @@
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="myproject.cpp:41:24" msg_body="Aggregating fifo (hls::stream) variable 'layer2_out' with compact=bit mode in 16-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="16" HwTyName="fifo (hls::stream)" Name="layer2_out"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:919:26" msg_body="Aggregating fifo (hls::stream) variable 'zero_padding2d_input' with compact=bit mode in 15-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:910:26" msg_body="Aggregating fifo (hls::stream) variable 'zero_padding2d_input' with compact=bit mode in 15-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="15" HwTyName="fifo (hls::stream)" Name="zero_padding2d_input"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:921:27" msg_body="Aggregating fifo (hls::stream) variable 'layer19_out' with compact=bit mode in 48-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="kernel.cpp:912:27" msg_body="Aggregating fifo (hls::stream) variable 'layer19_out' with compact=bit mode in 48-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="48" HwTyName="fifo (hls::stream)" Name="layer19_out"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights/w18.h:12:0" msg_body="Applying array_reshape to 'w18': Block reshaping with factor 3 on dimension 1.">
@@ -1838,10 +1838,10 @@
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights/w3.h:12:0" msg_body="Applying array_reshape to 'w3': Block reshaping with factor 2 on dimension 1.">
         <args Dim="1" Factor="2" Mode="Block" UOName="w3"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-385" msg_severity="WARNING" msg_loc="kernel.cpp:82:9" msg_body="Cannot apply INTERFACE pragma on a global variable. In function 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-385" msg_severity="WARNING" msg_loc="kernel.cpp:80:9" msg_body="Cannot apply INTERFACE pragma on a global variable. In function 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
         <args Function="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Function-DebugLoc="File kernel.cpp Line 8 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-385" msg_severity="WARNING" msg_loc="kernel.cpp:90:7" msg_body="Cannot apply INTERFACE pragma on a global variable. In function 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-385" msg_severity="WARNING" msg_loc="kernel.cpp:87:7" msg_body="Cannot apply INTERFACE pragma on a global variable. In function 'process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)'">
         <args Function="process_data(int, char*, dune::FDHDChannelMapSP&amp;, int*)" Function-DebugLoc="File kernel.cpp Line 8 Column 0"/>
     </msg>
 </xilinx:hls_fe_msgs>

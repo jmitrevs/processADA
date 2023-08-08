@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_4'" level="0">
-<item name = "Date">Mon Aug  7 16:46:49 2023
+<item name = "Date">Tue Aug  8 12:27:00 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -109,7 +109,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">1178, 222, 1, 222</column>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_2">9, 2, 64, 128</column>
+<column name="ap_sig_allocacmp_i_3">9, 2, 64, 128</column>
 <column name="gmem4_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem4_blk_n_R">9, 2, 1, 2</column>
 <column name="i_fu_94">9, 2, 64, 128</column>
@@ -127,7 +127,7 @@
 <column name="gmem4_addr_2_read_reg_577">512, 0, 512, 0</column>
 <column name="gmem4_addr_3_read_reg_597">512, 0, 512, 0</column>
 <column name="gmem4_addr_read_reg_537">512, 0, 512, 0</column>
-<column name="i_2_reg_504">64, 0, 64, 0</column>
+<column name="i_3_reg_504">64, 0, 64, 0</column>
 <column name="i_fu_94">64, 0, 64, 0</column>
 <column name="icmp_ln202_1_reg_573">1, 0, 1, 0</column>
 <column name="icmp_ln202_reg_542">1, 0, 1, 0</column>
@@ -135,8 +135,8 @@
 <column name="trunc_ln1_reg_586">58, 0, 58, 0</column>
 <column name="trunc_ln202_5_reg_526">58, 0, 58, 0</column>
 <column name="trunc_ln203_2_reg_557">58, 0, 58, 0</column>
-<column name="zext_ln395_cast_reg_494">4, 0, 32, 28</column>
-<column name="zext_ln402_cast_reg_499">8, 0, 32, 24</column>
+<column name="zext_ln386_cast_reg_494">4, 0, 32, 28</column>
+<column name="zext_ln393_cast_reg_499">8, 0, 32, 24</column>
 </table>
 </item>
 </section>
@@ -200,10 +200,10 @@
 <column name="m_axi_gmem4_BUSER">in, 1, m_axi, gmem4, pointer</column>
 <column name="chanmap_DetToChanInfo">in, 64, ap_none, chanmap_DetToChanInfo, scalar</column>
 <column name="trunc_ln202_4">in, 6, ap_none, trunc_ln202_4, scalar</column>
-<column name="zext_ln402">in, 8, ap_none, zext_ln402, scalar</column>
+<column name="zext_ln393">in, 8, ap_none, zext_ln393, scalar</column>
 <column name="upri_reload">in, 32, ap_none, upri_reload, scalar</column>
 <column name="link_from_frameheader">in, 32, ap_none, link_from_frameheader, scalar</column>
-<column name="zext_ln395">in, 4, ap_none, zext_ln395, scalar</column>
+<column name="zext_ln386">in, 4, ap_none, zext_ln386, scalar</column>
 <column name="add_ln202_out">out, 64, ap_vld, add_ln202_out, pointer</column>
 <column name="add_ln202_out_ap_vld">out, 1, ap_vld, add_ln202_out, pointer</column>
 <column name="add_ln202_3_out">out, 6, ap_vld, add_ln202_3_out, pointer</column>

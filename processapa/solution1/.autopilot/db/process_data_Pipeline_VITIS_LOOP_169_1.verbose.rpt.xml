@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'process_data_Pipeline_VITIS_LOOP_169_1'" level="0">
-<item name = "Date">Mon Aug  7 16:46:49 2023
+<item name = "Date">Tue Aug  8 12:27:00 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -97,7 +97,7 @@
 <column name="ap_phi_mux_empty_phi_fu_107_p4">14, 3, 128, 384</column>
 <column name="ap_sig_allocacmp_i">9, 2, 8, 16</column>
 <column name="gmem1_blk_n_R">9, 2, 1, 2</column>
-<column name="i_1_fu_76">9, 2, 8, 16</column>
+<column name="i_2_fu_76">9, 2, 8, 16</column>
 <column name="shiftreg_fu_68">9, 2, 64, 128</column>
 </table>
 </item>
@@ -108,10 +108,10 @@
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="empty_148_reg_254">1, 0, 1, 0</column>
-<column name="empty_148_reg_254_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="empty_175_reg_254">1, 0, 1, 0</column>
+<column name="empty_175_reg_254_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="gmem1_addr_read_reg_258">128, 0, 128, 0</column>
-<column name="i_1_fu_76">8, 0, 8, 0</column>
+<column name="i_2_fu_76">8, 0, 8, 0</column>
 <column name="icmp_ln169_reg_250">1, 0, 1, 0</column>
 <column name="icmp_ln169_reg_250_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="shiftreg_fu_68">64, 0, 64, 0</column>

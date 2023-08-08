@@ -1009,7 +1009,7 @@ entry:65 %call_ln286 = call void @shift_line_buffer<array<ap_fixed<16, 6, 5, 3, 
 
 <Node id="775" bw="0" op_0_bw="0" op_1_bw="512" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer12_out, void @empty_22, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0
+entry:0 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %layer12_out, void @empty, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -1131,10 +1131,10 @@ land.lhs.true:0 %icmp_ln289_4 = icmp_eq  i32 %sY_7_load, i32 2
 
 <Node id="849" bw="31" op_0_bw="31" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-land.lhs.true:1 %tmp_274 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pY_7_load, i32 1, i32 31
+land.lhs.true:1 %tmp_276 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pY_7_load, i32 1, i32 31
 
 ]]></Node>
-<StgValue><ssdm name="tmp_274"/></StgValue>
+<StgValue><ssdm name="tmp_276"/></StgValue>
 </operation>
 
 <operation id="78" st_id="2" stage="1" lat="1">
@@ -1147,7 +1147,7 @@ land.lhs.true:1 %tmp_274 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, 
 
 <Node id="850" bw="1" op_0_bw="31" op_1_bw="31">
 <![CDATA[
-land.lhs.true:2 %icmp_ln289_10 = icmp_sgt  i31 %tmp_274, i31 0
+land.lhs.true:2 %icmp_ln289_10 = icmp_sgt  i31 %tmp_276, i31 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln289_10"/></StgValue>
@@ -1163,10 +1163,10 @@ land.lhs.true:2 %icmp_ln289_10 = icmp_sgt  i31 %tmp_274, i31 0
 
 <Node id="851" bw="31" op_0_bw="31" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-land.lhs.true:3 %tmp_275 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pX_7_load, i32 1, i32 31
+land.lhs.true:3 %tmp_277 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %pX_7_load, i32 1, i32 31
 
 ]]></Node>
-<StgValue><ssdm name="tmp_275"/></StgValue>
+<StgValue><ssdm name="tmp_277"/></StgValue>
 </operation>
 
 <operation id="80" st_id="2" stage="1" lat="1">
@@ -1179,7 +1179,7 @@ land.lhs.true:3 %tmp_275 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, 
 
 <Node id="852" bw="1" op_0_bw="31" op_1_bw="31">
 <![CDATA[
-land.lhs.true:4 %icmp_ln289_11 = icmp_sgt  i31 %tmp_275, i31 0
+land.lhs.true:4 %icmp_ln289_11 = icmp_sgt  i31 %tmp_277, i31 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln289_11"/></StgValue>
@@ -6510,23 +6510,23 @@ if.end39:0 %ret_ln330 = ret
 </dataflow>
 <dataflow id="1824" from="layer12_out" to="specinterface_ln0" fromId="213" toId="69">
 </dataflow>
-<dataflow id="1826" from="empty_22" to="specinterface_ln0" fromId="1825" toId="69">
+<dataflow id="1826" from="empty" to="specinterface_ln0" fromId="1825" toId="69">
 </dataflow>
 <dataflow id="1828" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
 <dataflow id="1829" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
-<dataflow id="1831" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1831" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
 <dataflow id="1832" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
 <dataflow id="1833" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
-<dataflow id="1834" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1834" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
-<dataflow id="1835" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1835" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
-<dataflow id="1836" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1836" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
 <dataflow id="1837" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
@@ -6536,9 +6536,9 @@ if.end39:0 %ret_ln330 = ret
 </dataflow>
 <dataflow id="1840" from="StgValue_1827" to="specinterface_ln0" fromId="1827" toId="69">
 </dataflow>
-<dataflow id="1841" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1841" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
-<dataflow id="1842" from="empty_8" to="specinterface_ln0" fromId="1830" toId="69">
+<dataflow id="1842" from="empty_5" to="specinterface_ln0" fromId="1830" toId="69">
 </dataflow>
 <dataflow id="1844" from="StgValue_1843" to="specinterface_ln0" fromId="1843" toId="69">
 </dataflow>
@@ -6562,27 +6562,27 @@ if.end39:0 %ret_ln330 = ret
 </dataflow>
 <dataflow id="1855" from="StgValue_1848" to="icmp_ln289_4" fromId="1848" toId="76">
 </dataflow>
-<dataflow id="1857" from="_ssdm_op_PartSelect.i31.i32.i32.i32" to="tmp_274" fromId="1856" toId="77">
+<dataflow id="1857" from="_ssdm_op_PartSelect.i31.i32.i32.i32" to="tmp_276" fromId="1856" toId="77">
 </dataflow>
-<dataflow id="1858" from="pY_7_load" to="tmp_274" fromId="73" toId="77">
+<dataflow id="1858" from="pY_7_load" to="tmp_276" fromId="73" toId="77">
 </dataflow>
-<dataflow id="1860" from="StgValue_1859" to="tmp_274" fromId="1859" toId="77">
+<dataflow id="1860" from="StgValue_1859" to="tmp_276" fromId="1859" toId="77">
 </dataflow>
-<dataflow id="1862" from="StgValue_1861" to="tmp_274" fromId="1861" toId="77">
+<dataflow id="1862" from="StgValue_1861" to="tmp_276" fromId="1861" toId="77">
 </dataflow>
-<dataflow id="1863" from="tmp_274" to="icmp_ln289_10" fromId="77" toId="78">
+<dataflow id="1863" from="tmp_276" to="icmp_ln289_10" fromId="77" toId="78">
 </dataflow>
 <dataflow id="1865" from="StgValue_1864" to="icmp_ln289_10" fromId="1864" toId="78">
 </dataflow>
-<dataflow id="1866" from="_ssdm_op_PartSelect.i31.i32.i32.i32" to="tmp_275" fromId="1856" toId="79">
+<dataflow id="1866" from="_ssdm_op_PartSelect.i31.i32.i32.i32" to="tmp_277" fromId="1856" toId="79">
 </dataflow>
-<dataflow id="1867" from="pX_7_load" to="tmp_275" fromId="74" toId="79">
+<dataflow id="1867" from="pX_7_load" to="tmp_277" fromId="74" toId="79">
 </dataflow>
-<dataflow id="1868" from="StgValue_1859" to="tmp_275" fromId="1859" toId="79">
+<dataflow id="1868" from="StgValue_1859" to="tmp_277" fromId="1859" toId="79">
 </dataflow>
-<dataflow id="1869" from="StgValue_1861" to="tmp_275" fromId="1861" toId="79">
+<dataflow id="1869" from="StgValue_1861" to="tmp_277" fromId="1861" toId="79">
 </dataflow>
-<dataflow id="1870" from="tmp_275" to="icmp_ln289_11" fromId="79" toId="80">
+<dataflow id="1870" from="tmp_277" to="icmp_ln289_11" fromId="79" toId="80">
 </dataflow>
 <dataflow id="1871" from="StgValue_1864" to="icmp_ln289_11" fromId="1864" toId="80">
 </dataflow>

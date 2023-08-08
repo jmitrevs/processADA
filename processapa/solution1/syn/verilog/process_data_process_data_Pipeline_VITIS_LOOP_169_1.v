@@ -136,7 +136,7 @@ reg    ap_enable_reg_pp0_iter2;
 reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg   [0:0] icmp_ln169_reg_250;
-reg   [0:0] empty_148_reg_254;
+reg   [0:0] empty_175_reg_254;
 reg    ap_predicate_op25_read_state2;
 reg    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_state3_pp0_stage0_iter2;
@@ -149,8 +149,8 @@ reg    gmem1_blk_n_R;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
 reg   [0:0] icmp_ln169_reg_250_pp0_iter1_reg;
-wire   [0:0] empty_148_fu_142_p1;
-reg   [0:0] empty_148_reg_254_pp0_iter1_reg;
+wire   [0:0] empty_175_fu_142_p1;
+reg   [0:0] empty_175_reg_254_pp0_iter1_reg;
 reg   [127:0] gmem1_addr_read_reg_258;
 reg    ap_condition_exit_pp0_iter1_stage0;
 reg   [127:0] ap_phi_mux_empty_phi_fu_107_p4;
@@ -160,7 +160,7 @@ reg   [63:0] shiftreg_fu_68;
 wire    ap_loop_init;
 reg   [31:0] upri_fu_72;
 wire   [31:0] upri_2_fu_197_p3;
-reg   [7:0] i_1_fu_76;
+reg   [7:0] i_2_fu_76;
 wire   [7:0] add_ln169_fu_136_p2;
 reg   [7:0] ap_sig_allocacmp_i;
 reg    ap_block_pp0_stage0_01001;
@@ -244,9 +244,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         if (((ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln169_fu_130_p2 == 1'd0))) begin
-            i_1_fu_76 <= add_ln169_fu_136_p2;
+            i_2_fu_76 <= add_ln169_fu_136_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_1_fu_76 <= 8'd0;
+            i_2_fu_76 <= 8'd0;
         end
     end
 end
@@ -264,7 +264,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        empty_148_reg_254_pp0_iter1_reg <= empty_148_reg_254;
+        empty_175_reg_254_pp0_iter1_reg <= empty_175_reg_254;
         icmp_ln169_reg_250 <= icmp_ln169_fu_130_p2;
         icmp_ln169_reg_250_pp0_iter1_reg <= icmp_ln169_reg_250;
     end
@@ -272,7 +272,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln169_fu_130_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        empty_148_reg_254 <= empty_148_fu_142_p1;
+        empty_175_reg_254 <= empty_175_fu_142_p1;
     end
 end
 
@@ -330,9 +330,9 @@ end
 
 always @ (*) begin
     if ((icmp_ln169_reg_250_pp0_iter1_reg == 1'd0)) begin
-        if ((empty_148_reg_254_pp0_iter1_reg == 1'd1)) begin
+        if ((empty_175_reg_254_pp0_iter1_reg == 1'd1)) begin
             ap_phi_mux_empty_phi_fu_107_p4 = shiftreg_cast_fu_160_p1;
-        end else if ((empty_148_reg_254_pp0_iter1_reg == 1'd0)) begin
+        end else if ((empty_175_reg_254_pp0_iter1_reg == 1'd0)) begin
             ap_phi_mux_empty_phi_fu_107_p4 = gmem1_addr_read_reg_258;
         end else begin
             ap_phi_mux_empty_phi_fu_107_p4 = ap_phi_reg_pp0_iter2_empty_reg_104;
@@ -354,7 +354,7 @@ always @ (*) begin
     if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
         ap_sig_allocacmp_i = 8'd0;
     end else begin
-        ap_sig_allocacmp_i = i_1_fu_76;
+        ap_sig_allocacmp_i = i_2_fu_76;
     end
 end
 
@@ -428,10 +428,10 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 assign ap_phi_reg_pp0_iter2_empty_reg_104 = 'bx;
 
 always @ (*) begin
-    ap_predicate_op25_read_state2 = ((empty_148_reg_254 == 1'd0) & (icmp_ln169_reg_250 == 1'd0));
+    ap_predicate_op25_read_state2 = ((empty_175_reg_254 == 1'd0) & (icmp_ln169_reg_250 == 1'd0));
 end
 
-assign empty_148_fu_142_p1 = ap_sig_allocacmp_i[0:0];
+assign empty_175_fu_142_p1 = ap_sig_allocacmp_i[0:0];
 
 assign icmp_ln169_fu_130_p2 = ((ap_sig_allocacmp_i == 8'd150) ? 1'b1 : 1'b0);
 

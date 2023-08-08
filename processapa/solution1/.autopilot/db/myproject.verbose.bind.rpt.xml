@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'myproject'" level="0">
-<item name = "Date">Mon Aug  7 16:46:38 2023
+<item name = "Date">Tue Aug  8 12:26:46 2023
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">processapa</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">9830280, 9830568, 98.303 ms, 98.306 ms, 262146, 9830402, dataflow</column>
+<column name="">9830412, 9830568, 98.304 ms, 98.306 ms, 262146, 9830402, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -40,7 +40,7 @@
 <column name="grp_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_64u_config11_s_fu_9239">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_64u_config11_s, 723, 723, 7.230 us, 7.230 us, 723, 723, no</column>
 <column name="grp_conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s_fu_9637">conv_2d_cl_array_ap_fixed_64u_array_ap_fixed_16_6_5_3_0_32u_config12_s, 721, 52741, 7.210 us, 0.527 ms, 721, 52741, no</column>
 <column name="grp_pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s_fu_11061">pooling2d_cl_array_array_ap_fixed_16_6_5_3_0_32u_config14_s, 115, 115, 1.150 us, 1.150 us, 115, 115, no</column>
-<column name="grp_dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s_fu_11267">dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s, 162, 163, 1.620 us, 1.630 us, 162, 163, no</column>
+<column name="grp_dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s_fu_11267">dense_array_ap_fixed_32u_array_ap_fixed_16_6_5_3_0_8u_config16_s, 187, 188, 1.870 us, 1.880 us, 187, 188, no</column>
 <column name="grp_dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s_fu_11275">dense_array_ap_fixed_8u_array_ap_fixed_16_6_5_3_0_3u_config18_s, 9, 10, 90.000 ns, 0.100 us, 9, 10, no</column>
 <column name="grp_softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s_fu_11283">softmax_array_array_ap_fixed_16_6_5_3_0_3u_softmax_config19_s, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 </table>
