@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/brenton/kernel/processAPA/processapa/solution1/./sim/autowrap/testbench/kernel.cpp_pre.cpp.tb.cpp
