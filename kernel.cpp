@@ -13,11 +13,14 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
 	const int z_channels = 480;
 	const int n_frames = 6000;
 
+	//Z plane arrays for both sides
 	static int planes[z_channels][n_frames];
     static int planes2[z_channels][n_frames];
 
+    //array to track adc values link by link. Is essentially 60 2D arrays that are 256 channels by 100 ticks
 	static int adc_vectors[60][256][100];
 
+	//stores the average value of each channel
 	int ave[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels];
 
 	if ( infile_size% NUM_LINKS != 0)
@@ -26,8 +29,6 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
 	}
 
 	size_t fragsize = (infile_size / NUM_LINKS);
-
-    //Fill z planes and subtract pedestal
 
     link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++)
@@ -47,16 +48,19 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
                 link_from_frameheader = frame->header.link;
             }
 
-
+            //fill adc vectors
             frame_chan_loop:
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++)
             {
+
 				#pragma HLS pipeline
-            	auto adc = frame->get_adc(iChan);
+            	auto adc = frame->get_adc(iChan); //get adc causes a violation, can be rewritten
+
             	int main_array_index = iFrame / 100;
             	int sub_array_index = iFrame % 100;
             	adc_vectors[main_array_index][iChan][sub_array_index] = adc;
             }
+            //calculate the average of each channel
      	first_chan_loop:
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++)
         {
@@ -72,7 +76,7 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
             ave[iChan] = sum / AVG_SIZE;
 
         }
-
+        //fills z plane. Channels 0 - 480 go in planes and 480-960 goes in planes2
         second_chan_loop:
         for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++)
         {
@@ -608,7 +612,7 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
 				   zero_padding2d_input.write(pack);
 			}
 		}
-
+		//first half of outdata is filled with the first side of z_plane outputs
 		myproject(zero_padding2d_input, layer19_out);
 		auto cc_prob = layer19_out.read();
 		for (int z = 0; z < 3; z++)
@@ -631,7 +635,7 @@ void process_data(const int infile_size, char infiledata[28320800],dune::FDHDCha
 				   zero_padding2d_input.write(pack);
 			}
 		}
-
+		//second half of outdata is filled with second side of z plane outputs
 		myproject(zero_padding2d_input, layer19_out);
 		auto cc_prob = layer19_out.read();
 		int side1_data = 138;
