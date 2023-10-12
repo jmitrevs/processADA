@@ -18,6 +18,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <stdexcept> // For std::out_of_range
+#include "ap_int.h"
 
 namespace dunedaq {
 namespace detdataformats {
@@ -29,6 +30,9 @@ namespace wib2 {
  *  The canonical definition of the WIB format is given in EDMS document 2088713:
  *  https://edms.cern.ch/document/2088713/4
  */
+
+static constexpr int s_bits_per_adc = 14;
+
 class WIB2Frame
 {
 public:
@@ -39,7 +43,7 @@ public:
   // The definition of the format is in terms of 32-bit words
   typedef uint32_t word_t; // NOLINT
 
-  static constexpr int s_bits_per_adc = 14;
+  //static constexpr int s_bits_per_adc = 14;
   static constexpr int s_bits_per_word = 8 * sizeof(word_t);
   static constexpr int s_u_channels_per_femb = 40;
   static constexpr int s_v_channels_per_femb = 40;
@@ -90,24 +94,25 @@ public:
    */
   uint16_t get_adc(int i) const // NOLINT(build/unsigned)
   {
-    if (i < 0 || i >= s_num_channels)
-      throw std::out_of_range("ADC index out of range");
+	  if (i < 0 || i >= s_num_channels)
+	       return 0;
 
-    // The index of the first (and sometimes only) word containing the required ADC value
-    int word_index = s_bits_per_adc * i / s_bits_per_word;
-    assert(word_index < s_num_adc_words);
-    // Where in the word the lowest bit of our ADC value is located
-    int first_bit_position = (s_bits_per_adc * i) % s_bits_per_word;
-    // How many bits of our desired ADC are located in the `word_index`th word
-    int bits_from_first_word = std::min(s_bits_per_adc, s_bits_per_word - first_bit_position);
-    uint16_t adc = adc_words[word_index] >> first_bit_position; // NOLINT(build/unsigned)
-    // If we didn't get the full 14 bits from this word, we need the rest from the next word
-    if (bits_from_first_word < s_bits_per_adc) {
-      assert(word_index + 1 < s_num_adc_words);
-      adc |= adc_words[word_index + 1] << bits_from_first_word;
-    }
-    // Mask out all but the lowest 14 bits;
-    return adc & 0x3FFFu;
+	     // The index of the first (and sometimes only) word containing the required ADC value
+	     int word_index = s_bits_per_adc * i / s_bits_per_word;
+	     assert(word_index < s_num_adc_words);
+	     // Where in the word the lowest bit of our ADC value is located
+	     int first_bit_position = (s_bits_per_adc * i) % s_bits_per_word;
+	     // How many bits of our desired ADC are located in the `word_index`th word
+	     int bits_from_first_word = std::min(s_bits_per_adc, s_bits_per_word - first_bit_position);
+	     uint16_t adc = adc_words[word_index] >> first_bit_position; // NOLINT(build/unsigned)
+	     // If we didn't get the full 14 bits from this word, we need the rest from the next word
+	     if (bits_from_first_word < s_bits_per_adc) {
+	       assert(word_index + 1 < s_num_adc_words);
+	       adc |= adc_words[word_index + 1] << bits_from_first_word;
+	     }
+	     // Mask out all but the lowest 14 bits;
+	     return adc & 0x3FFFu;
+
   }
 
   /**
@@ -116,9 +121,9 @@ public:
   void set_adc(int i, uint16_t val) // NOLINT(build/unsigned)
   {
     if (i < 0 || i >= s_num_channels)
-      throw std::out_of_range("ADC index out of range");
+      return;
     if (val >= (1 << s_bits_per_adc))
-      throw std::out_of_range("ADC value out of range");
+      return;
 
     // The index of the first (and sometimes only) word containing the required ADC value
     int word_index = s_bits_per_adc * i / s_bits_per_word;

@@ -248,15 +248,15 @@ private:
 Fragment::Fragment(const std::vector<std::pair<void*, size_t>>& pieces)
 {
   size_t size = sizeof(FragmentHeader) +
-                std::accumulate(pieces.begin(), pieces.end(), 0ULL, [](auto& a, auto& b) { return a + b.second; });
+                std::accumulate(pieces.begin(), pieces.end(), 0ULL, [](size_t a, const std::pair<void*, size_t>& b) { return a + b.second; });
 
   if (size < sizeof(FragmentHeader)) {
-    throw std::length_error("The Fragment size is smaller than the Fragment header size.");
+    return;
   }
 
   m_data_arr = malloc(size); // NOLINT(build/unsigned)
   if (m_data_arr == nullptr) {
-    throw std::bad_alloc();
+    return;
   }
   m_alloc = true;
 
@@ -267,7 +267,7 @@ Fragment::Fragment(const std::vector<std::pair<void*, size_t>>& pieces)
   size_t offset = sizeof(FragmentHeader);
   for (auto& piece : pieces) {
     if (piece.first == nullptr) {
-      throw std::invalid_argument("The Fragment buffer point to NULL.");
+      return;
     }
     memcpy(static_cast<uint8_t*>(m_data_arr) + offset, piece.first, piece.second); // NOLINT(build/unsigned)
     offset += piece.second;
@@ -289,7 +289,7 @@ Fragment::Fragment(void* existing_fragment_buffer, BufferAdoptionMode adoption_m
     auto header = reinterpret_cast<FragmentHeader*>(existing_fragment_buffer); // NOLINT
     m_data_arr = malloc(header->size);
     if (m_data_arr == nullptr) {
-      throw std::bad_alloc();
+      return;
     }
     m_alloc = true;
     memcpy(m_data_arr, existing_fragment_buffer, header->size);
