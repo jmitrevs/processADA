@@ -1,13 +1,16 @@
-ROOTCFLAGS    = $(shell root-config --cflags)
-ROOTLDFLAGS   = $(shell root-config --ldflags)
-ROOTGLIBS     = $(shell root-config --glibs)
+#ROOTCFLAGS    = $(shell root-config --cflags)
+#ROOTLDFLAGS   = $(shell root-config --ldflags)
+#ROOTGLIBS     = $(shell root-config --glibs)
+ROOTCFLAGS    = 
+ROOTLDFLAGS   = 
+ROOTGLIBS     = 
 CXX=g++
 RM=rm -f
-CXXFLAGS=-g -std=c++17 -MMD $(ROOTCFLAGS)
+CXXFLAGS=-g -std=c++17 -MMD $(ROOTCFLAGS) -I${XILINX_HLS}/include
 LDFLAGS=$(ROOTLDFLAGS)
 LDLIBS=$(ROOTGLIBS)
 
-SRCS := processAPA.cxx FDHDChannelMapSP.cxx
+SRCS := processAPA.cxx FDHDChannelMapSP.cxx kernel.cxx myproject.cxx
 OBJS := $(SRCS:.cxx=.o)
 
 
