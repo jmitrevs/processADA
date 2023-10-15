@@ -4,9 +4,10 @@
 ROOTCFLAGS    = 
 ROOTLDFLAGS   = 
 ROOTGLIBS     = 
+#CXX=clang++
 CXX=g++
 RM=rm -f
-CXXFLAGS=-g -std=c++17 -MMD $(ROOTCFLAGS) -I${XILINX_HLS}/include
+CXXFLAGS=-g -std=c++17 $(ROOTCFLAGS) -I${XILINX_HLS}/include
 LDFLAGS=$(ROOTLDFLAGS)
 LDLIBS=$(ROOTGLIBS)
 
