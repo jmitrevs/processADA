@@ -1,7 +1,7 @@
 CXX=g++
 RM=rm -f
 CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include
-VPPFLAGS=-I../daqdataformats/include -I../detdataformats/include -I. -I./cnn/firmware -I${XILINX_HLS}/include
+VPPFLAGS=-I../daqdataformats/include -I../detdataformats/include -I. -I./cnn/firmware
 LDFLAGS=-L${XILINX_XRT}/lib
 LDLIBS=-lboost_program_options -lOpenCL
 

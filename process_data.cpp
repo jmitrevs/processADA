@@ -1,4 +1,4 @@
-#include "kernel.h"
+#include "process_data.h"
 #include "hls_stream.h"
 #include "defines3.h"
 
