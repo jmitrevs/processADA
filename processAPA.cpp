@@ -76,11 +76,13 @@ int main(int ac, char** av) {
 
         if (!vm.count("input-file")) {
             std::cerr << "input-file not given." << std::endl;
+            std::cerr << desc << "\n";
             return 1;
         }
 
         if (!vm.count("output-file")) {
             std::cerr << "output-file not given." << std::endl;
+            std::cerr << desc << "\n";
             return 1;
         }
 
