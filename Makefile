@@ -1,28 +1,50 @@
-#ROOTCFLAGS    = $(shell root-config --cflags)
-#ROOTLDFLAGS   = $(shell root-config --ldflags)
-#ROOTGLIBS     = $(shell root-config --glibs)
-ROOTCFLAGS    = 
-ROOTLDFLAGS   = 
-ROOTGLIBS     = 
-#CXX=clang++
 CXX=g++
 RM=rm -f
-CXXFLAGS=-g -std=c++17 $(ROOTCFLAGS) -I${XILINX_HLS}/include
-LDFLAGS=$(ROOTLDFLAGS)
-LDLIBS=$(ROOTGLIBS)
+CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include
+VPPFLAGS=-I../daqdataformats/include -I../detdataformats/include -I. -I./cnn/firmware -I${XILINX_HLS}/include
+LDFLAGS=-L${XILINX_XRT}/lib
+LDLIBS=-lboost_program_options -lOpenCL
 
-SRCS := processAPA.cxx FDHDChannelMapSP.cxx kernel.cxx myproject.cxx
-OBJS := $(SRCS:.cxx=.o)
+SRCS=processAPA.cpp xcl2.cpp FDHDChannelMapSP.cpp
+OBJS=$(subst .cpp,.o,$(SRCS))
 
+KERNEL=process_data
+KERNEL_SRCS=process_data.cpp myproject.cpp
 
-processAPA : $(OBJS)
+#PLATFORM=xilinx_u2_gen3x4_xdma_gc_2_202110_1
+PLATFORM=xilinx_u55c_gen3x16_xdma_3_202210_1
+TYPE=sw_emu
+#TYPE=hw_emu
+#TYPE=hw
+
+all: processAPA $(KERNEL).xclbin
+
+processAPA: $(OBJS)
 	$(CXX) $(LDFLAGS) -o processAPA $(OBJS) $(LDLIBS)
 
-$(OBJS): %.o: %.cxx
-	$(CXX) -c $(CXXFLAGS) $< -o $@
+depend: .depend
 
-.PHONY: clean
+$(KERNEL).xclbin: $(KERNEL).xo
+	v++ -l -t $(TYPE) --platform $(PLATFORM) $(KERNEL).xo $(VPPFLAGS) -o $(KERNEL).xclbin
+
+$(KERNEL).xo: $(KERNEL_SRCS) process_data.h
+	v++ -c -t $(TYPE) --platform $(PLATFORM) -k $(KERNEL) $(VPPFLAGS) $(KERNEL_SRCS) -o $(KERNEL).xo
+
+.depend: $(SRCS)
+	$(RM) ./.depend
+	$(CXX) $(CPPFLAGS) -MM $^>>./.depend;
+
 clean:
-	$(RM) $(OBJS) processAPA
+	$(RM) $(OBJS) $(KERNEL).xclbin $(KERNEL).xo
 
--include $(OBJS:.o=.d)
+distclean: clean
+	$(RM) *~ .depend
+
+setup:
+	emconfigutil --platform $(PLATFORM) --nd 1
+
+note:
+	export XCL_EMULATION_MODE=$(TYPE)  # doesn't work called here
+
+
+include .depend
