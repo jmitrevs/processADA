@@ -22,7 +22,7 @@ const int OUTBUF_SIZE = 0x200;  // alighed
 using writebuf_t = result_t::value_type;
 
 extern "C" {
-    void process_data(const uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
-        dune::FDHDChannelMapSP *chanmap, writebuf_t outdata[OUTBUF_SIZE]);
+    void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
+        dune::FDHDChannelMapSP chanmap, writebuf_t outdata[OUTBUF_SIZE]);
 }
 #endif

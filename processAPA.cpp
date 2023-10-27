@@ -153,8 +153,8 @@ int main(int ac, char** av) {
                                                 &outExt, &err));
 
 
-        OCL_CHECK(err, cl::Buffer remapClass(context, CL_MEM_READ_ONLY | CL_MEM_EXT_PTR_XILINX, sizeof(dune::FDHDChannelMapSP), 
-                                                &chanmap, &err));
+        // OCL_CHECK(err, cl::Buffer remapClass(context, CL_MEM_READ_ONLY, sizeof(dune::FDHDChannelMapSP), 
+        //                                         &chanmap, &err));
 
 
         cl::Kernel krnl;
@@ -179,7 +179,7 @@ int main(int ac, char** av) {
 
         OCL_CHECK(err, err = krnl.setArg(0, static_cast<uint32_t>(numread)));
         OCL_CHECK(err, err = krnl.setArg(1, buffer_input));
-        OCL_CHECK(err, err = krnl.setArg(2, remapClass));
+        OCL_CHECK(err, err = krnl.setArg(2, chanmap));
         OCL_CHECK(err, err = krnl.setArg(3, buffer_output));
 
         // Launch the Kernel
