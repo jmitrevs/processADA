@@ -217,7 +217,7 @@ struct config8 : nnet::pooling2d_config {
 struct config9_mult : nnet::dense_config {
     static const unsigned n_in = 576;
     static const unsigned n_out = 64;
-    static const unsigned reuse_factor = 288;
+    static const unsigned reuse_factor = 144;
     static const unsigned strategy = nnet::resource;
     static const unsigned n_zeros = 0;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
@@ -244,7 +244,7 @@ struct config9 : nnet::conv2d_config {
     static const unsigned stride_width = 1;
     static const unsigned out_height = 60;
     static const unsigned out_width = 12;
-    static const unsigned reuse_factor = 288;
+    static const unsigned reuse_factor = 144;
     static const unsigned n_zeros = 0;
     static const unsigned multiplier_limit =
         DIV_ROUNDUP(kernel_size * n_chan * n_filt, reuse_factor) - n_zeros / reuse_factor;
@@ -300,7 +300,7 @@ struct config11 : nnet::pooling2d_config {
 struct config12_mult : nnet::dense_config {
     static const unsigned n_in = 576;
     static const unsigned n_out = 32;
-    static const unsigned reuse_factor = 288;
+    static const unsigned reuse_factor = 144;
     static const unsigned strategy = nnet::resource;
     static const unsigned n_zeros = 0;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
@@ -327,7 +327,7 @@ struct config12 : nnet::conv2d_config {
     static const unsigned stride_width = 1;
     static const unsigned out_height = 28;
     static const unsigned out_width = 4;
-    static const unsigned reuse_factor = 288;
+    static const unsigned reuse_factor = 144;
     static const unsigned n_zeros = 0;
     static const unsigned multiplier_limit =
         DIV_ROUNDUP(kernel_size * n_chan * n_filt, reuse_factor) - n_zeros / reuse_factor;
@@ -404,7 +404,7 @@ struct config18 : nnet::dense_config {
     static const unsigned n_out = 3;
     static const unsigned io_type = nnet::io_stream;
     static const unsigned strategy = nnet::resource;
-    static const unsigned reuse_factor = 8;
+    static const unsigned reuse_factor = 24;
     static const unsigned n_zeros = 0;
     static const unsigned n_nonzeros = 24;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;

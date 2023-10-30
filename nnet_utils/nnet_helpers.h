@@ -256,13 +256,13 @@ template <class src_T, class dst_T, size_t OFFSET, size_t SIZE> void copy_data(s
 }
 
 template <class src_T, class dst_T, size_t OFFSET, size_t SIZE>
-void copy_data(src_T src[1], hls::stream<dst_T> &dst) {
-    src_T* in_begin = src + OFFSET;
-    src_T* in_end = in_begin + SIZE;
+void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {
+    typename std::vector<src_T>::const_iterator in_begin = src.cbegin() + OFFSET;
+    typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE;
 
     size_t i_pack = 0;
     dst_T dst_pack;
-    for (src_T* i = in_begin; i != in_end; ++i) {
+    for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {
         dst_pack[i_pack++] = typename dst_T::value_type(*i);
         if (i_pack == dst_T::size) {
             i_pack = 0;
@@ -270,7 +270,6 @@ void copy_data(src_T src[1], hls::stream<dst_T> &dst) {
         }
     }
 }
-
 
 template <class src_T, class dst_T, size_t OFFSET, size_t SIZE> void copy_data_axi(std::vector<src_T> src, dst_T dst[SIZE]) {
     for (auto i = 0; i < SIZE; i++)

@@ -2,6 +2,8 @@
 #include "hls_stream.h"
 #include "defines3.h"
 
+#include <iostream>
+
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
 int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
 
@@ -138,6 +140,8 @@ void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++)
     {
+
+        std::cout << "link = " << link << std::endl;
         uint16_t crate;
         uint8_t slot;
         uint8_t link_from_frameheader;
@@ -148,6 +152,7 @@ link_loop:
     frame_loop:
         for (size_t iFrame = 0; iFrame < n_frames; iFrame++)
         {
+            std::cout << "iFrame = " << std::endl;
             auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
             if (iFrame == 0)
             {

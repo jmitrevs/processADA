@@ -44,32 +44,32 @@
 #define N_LAYER_18 3
 
 // hls-fpga-machine-learning insert layer-precision
-typedef nnet::array<ap_fixed<15,15>, 1*1> input_t;
+typedef nnet::array<ap_fixed<16,6>, 1*1> input_t;
 typedef nnet::array<ap_fixed<16,6>, 1*1> layer2_t;
 typedef ap_fixed<16,6> model_default_t;
 typedef nnet::array<ap_fixed<16,6>, 32*1> layer3_t;
-typedef ap_fixed<16,6> conv2d_weight_t;
-typedef ap_fixed<16,6> conv2d_bias_t;
+typedef ap_fixed<8,1> conv2d_weight_t;
+typedef ap_fixed<8,1> conv2d_bias_t;
 typedef nnet::array<ap_fixed<16,6>, 32*1> layer5_t;
 typedef nnet::array<ap_fixed<16,6>, 64*1> layer6_t;
-typedef ap_fixed<16,6> conv2d_1_weight_t;
-typedef ap_fixed<16,6> conv2d_1_bias_t;
+typedef ap_fixed<8,1> conv2d_1_weight_t;
+typedef ap_fixed<8,1> conv2d_1_bias_t;
 typedef nnet::array<ap_fixed<16,6>, 64*1> layer8_t;
 typedef nnet::array<ap_fixed<16,6>, 64*1> layer9_t;
-typedef ap_fixed<16,6> conv2d_2_weight_t;
-typedef ap_fixed<16,6> conv2d_2_bias_t;
+typedef ap_fixed<8,1> conv2d_2_weight_t;
+typedef ap_fixed<8,1> conv2d_2_bias_t;
 typedef nnet::array<ap_fixed<16,6>, 64*1> layer11_t;
 typedef nnet::array<ap_fixed<16,6>, 32*1> layer12_t;
-typedef ap_fixed<16,6> conv2d_3_weight_t;
-typedef ap_fixed<16,6> conv2d_3_bias_t;
+typedef ap_fixed<8,1> conv2d_3_weight_t;
+typedef ap_fixed<8,1> conv2d_3_bias_t;
 typedef nnet::array<ap_fixed<16,6>, 32*1> layer14_t;
 typedef nnet::array<ap_fixed<16,6>, 8*1> layer16_t;
-typedef ap_fixed<16,6> dense_weight_t;
-typedef ap_fixed<16,6> dense_bias_t;
+typedef ap_fixed<8,1> dense_weight_t;
+typedef ap_fixed<8,1> dense_bias_t;
 typedef ap_uint<1> layer16_index;
 typedef nnet::array<ap_fixed<16,6>, 3*1> layer18_t;
-typedef ap_fixed<16,6> dense_1_weight_t;
-typedef ap_fixed<16,6> dense_1_bias_t;
+typedef ap_fixed<8,1> dense_1_weight_t;
+typedef ap_fixed<8,1> dense_1_bias_t;
 typedef ap_uint<1> layer18_index;
 typedef nnet::array<ap_fixed<16,6>, 3*1> result_t;
 typedef ap_fixed<18,8> dense_1_softmax_table_t;

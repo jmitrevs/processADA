@@ -9,7 +9,7 @@
 #ifndef __SYNTHESIS__
 dense_1_bias_t b18[3];
 #else
-dense_1_bias_t b18[3] = {-0.0261011273, -0.0242789481, 0.0264608990};
+dense_1_bias_t b18[3] = {-0.026101, -0.024279, 0.026461};
 #endif
 
 #endif
