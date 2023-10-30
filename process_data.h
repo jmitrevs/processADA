@@ -9,7 +9,6 @@
 //#include <fstream>
 //#include <CL/cl.h>
 
-#include "FDHDChannelMapSP.h"
 #include "Fragment.hpp"
 #include "WIB2Frame.hpp"
 #include "myproject.h"
@@ -23,6 +22,6 @@ using writebuf_t = result_t::value_type;
 
 extern "C" {
     void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
-        dune::FDHDChannelMapSP chanmap, writebuf_t outdata[OUTBUF_SIZE]);
+         writebuf_t outdata[OUTBUF_SIZE]);
 }
 #endif

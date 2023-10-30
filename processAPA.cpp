@@ -138,9 +138,6 @@ int main(int ac, char** av) {
         fileHelper fhin(infile, O_RDONLY | O_DIRECT);
         fileHelper fhout(outfile, O_CREAT | O_WRONLY | O_DIRECT, 0644);
 
-        dune::FDHDChannelMapSP chanmap;
-        chanmap.ReadMapFromFiles("FDHDChannelMap_v1_wireends.txt","FDHD_CrateMap_v1.txt");
-
         // Allocate Buffer in Global Memory
         cl_mem_ext_ptr_t inExt = {0};
         cl_mem_ext_ptr_t outExt = {0};
@@ -179,8 +176,7 @@ int main(int ac, char** av) {
 
         OCL_CHECK(err, err = krnl.setArg(0, static_cast<uint32_t>(numread)));
         OCL_CHECK(err, err = krnl.setArg(1, buffer_input));
-        OCL_CHECK(err, err = krnl.setArg(2, chanmap));
-        OCL_CHECK(err, err = krnl.setArg(3, buffer_output));
+        OCL_CHECK(err, err = krnl.setArg(2, buffer_output));
 
         // Launch the Kernel
         OCL_CHECK(err, err = q.enqueueTask(krnl));
