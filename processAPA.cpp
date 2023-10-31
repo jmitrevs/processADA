@@ -171,6 +171,10 @@ int main(int ac, char** av) {
         auto numread = pread(fhin.fd(), p2p_in, READBUF_SIZE, 0);
         std::cout << "numread = " << std::hex << numread <<  std::endl;
 
+        if (numread % NUM_LINKS != 0) {
+            std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
+            exit(1);
+        }
         //OCL_CHECK(err, err = q.enqueueUnmapBuffer(buffer_input, p2p_in));
 
 

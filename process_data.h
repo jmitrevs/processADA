@@ -18,6 +18,8 @@ const int INBUF_SIZE = 0x1b02600;  // aligned
 const int LOGIC_OUTBUF_SIZE = 276;
 const int OUTBUF_SIZE = 0x200;  // alighed
 
+constexpr unsigned int NUM_LINKS = 10;
+
 using writebuf_t = result_t::value_type;
 
 extern "C" {
