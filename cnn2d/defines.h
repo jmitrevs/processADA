@@ -9,71 +9,87 @@
 
 // hls-fpga-machine-learning insert numbers
 #define N_INPUT_1_1 480
-#define N_INPUT_2_1 128
+#define N_INPUT_2_1 200
 #define N_INPUT_3_1 1
-#define OUT_HEIGHT_2 512
-#define OUT_WIDTH_2 128
-#define N_CHAN_2 1
-#define OUT_HEIGHT_3 510
-#define OUT_WIDTH_3 126
-#define N_FILT_3 32
-#define OUT_HEIGHT_5 127
-#define OUT_WIDTH_5 31
+#define OUT_HEIGHT_2 478
+#define OUT_WIDTH_2 198
+#define N_FILT_2 32
+#define OUT_HEIGHT_2 478
+#define OUT_WIDTH_2 198
+#define N_FILT_2 32
+#define OUT_HEIGHT_5 119
+#define OUT_WIDTH_5 49
 #define N_FILT_5 32
-#define OUT_HEIGHT_6 125
-#define OUT_WIDTH_6 29
+#define OUT_HEIGHT_6 117
+#define OUT_WIDTH_6 47
 #define N_FILT_6 64
-#define OUT_HEIGHT_8 62
-#define OUT_WIDTH_8 14
-#define N_FILT_8 64
-#define OUT_HEIGHT_9 60
-#define OUT_WIDTH_9 12
+#define OUT_HEIGHT_6 117
+#define OUT_WIDTH_6 47
+#define N_FILT_6 64
+#define OUT_HEIGHT_9 58
+#define OUT_WIDTH_9 23
 #define N_FILT_9 64
-#define OUT_HEIGHT_11 30
-#define OUT_WIDTH_11 6
-#define N_FILT_11 64
-#define OUT_HEIGHT_12 28
-#define OUT_WIDTH_12 4
-#define N_FILT_12 32
-#define OUT_HEIGHT_14 14
-#define OUT_WIDTH_14 2
+#define OUT_HEIGHT_10 56
+#define OUT_WIDTH_10 21
+#define N_FILT_10 64
+#define OUT_HEIGHT_10 56
+#define OUT_WIDTH_10 21
+#define N_FILT_10 64
+#define OUT_HEIGHT_13 28
+#define OUT_WIDTH_13 10
+#define N_FILT_13 64
+#define OUT_HEIGHT_14 26
+#define OUT_WIDTH_14 8
 #define N_FILT_14 32
-#define N_SIZE_0_15 896
-#define N_LAYER_16 8
-#define N_LAYER_18 3
-#define N_LAYER_18 3
+#define OUT_HEIGHT_14 26
+#define OUT_WIDTH_14 8
+#define N_FILT_14 32
+#define OUT_HEIGHT_17 13
+#define OUT_WIDTH_17 4
+#define N_FILT_17 32
+#define N_SIZE_0_18 1664
+#define N_LAYER_19 8
+#define N_LAYER_21 2
+#define N_LAYER_21 2
 
 // hls-fpga-machine-learning insert layer-precision
-typedef nnet::array<ap_fixed<16,6>, 1*1> input_t;
-typedef nnet::array<ap_fixed<16,6>, 1*1> layer2_t;
-typedef ap_fixed<16,6> model_default_t;
-typedef nnet::array<ap_fixed<16,6>, 32*1> layer3_t;
-typedef ap_fixed<8,1> conv2d_weight_t;
-typedef ap_fixed<8,1> conv2d_bias_t;
-typedef nnet::array<ap_fixed<16,6>, 32*1> layer5_t;
-typedef nnet::array<ap_fixed<16,6>, 64*1> layer6_t;
-typedef ap_fixed<8,1> conv2d_1_weight_t;
-typedef ap_fixed<8,1> conv2d_1_bias_t;
-typedef nnet::array<ap_fixed<16,6>, 64*1> layer8_t;
-typedef nnet::array<ap_fixed<16,6>, 64*1> layer9_t;
-typedef ap_fixed<8,1> conv2d_2_weight_t;
-typedef ap_fixed<8,1> conv2d_2_bias_t;
-typedef nnet::array<ap_fixed<16,6>, 64*1> layer11_t;
-typedef nnet::array<ap_fixed<16,6>, 32*1> layer12_t;
-typedef ap_fixed<8,1> conv2d_3_weight_t;
-typedef ap_fixed<8,1> conv2d_3_bias_t;
-typedef nnet::array<ap_fixed<16,6>, 32*1> layer14_t;
-typedef nnet::array<ap_fixed<16,6>, 8*1> layer16_t;
-typedef ap_fixed<8,1> dense_weight_t;
-typedef ap_fixed<8,1> dense_bias_t;
-typedef ap_uint<1> layer16_index;
-typedef nnet::array<ap_fixed<16,6>, 3*1> layer18_t;
-typedef ap_fixed<8,1> dense_1_weight_t;
-typedef ap_fixed<8,1> dense_1_bias_t;
-typedef ap_uint<1> layer18_index;
-typedef nnet::array<ap_fixed<16,6>, 3*1> result_t;
-typedef ap_fixed<18,8> dense_1_softmax_table_t;
-typedef ap_fixed<18,8,AP_RND,AP_SAT> dense_1_softmax_exp_table_t;
-typedef ap_fixed<18,8,AP_RND,AP_SAT> dense_1_softmax_inv_table_t;
+typedef nnet::array<ap_fixed<16,4>, 1*1> input_t;
+typedef ap_fixed<24,8> model_default_t;
+typedef nnet::array<ap_fixed<24,8>, 32*1> layer2_t;
+typedef ap_fixed<7,1> weight2_t;
+typedef ap_fixed<7,1> bias2_t;
+typedef nnet::array<ap_ufixed<6,5,AP_RND_CONV,AP_SAT,0>, 32*1> layer4_t;
+typedef ap_fixed<18,8> q_activation_8_table_t;
+typedef nnet::array<ap_ufixed<8,7>, 32*1> layer5_t;
+typedef nnet::array<ap_fixed<24,8>, 64*1> layer6_t;
+typedef ap_fixed<7,1> weight6_t;
+typedef ap_fixed<7,1> bias6_t;
+typedef nnet::array<ap_ufixed<6,5,AP_RND_CONV,AP_SAT,0>, 64*1> layer8_t;
+typedef ap_fixed<18,8> q_activation_9_table_t;
+typedef nnet::array<ap_ufixed<8,7>, 64*1> layer9_t;
+typedef nnet::array<ap_fixed<24,8>, 64*1> layer10_t;
+typedef ap_fixed<7,1> weight10_t;
+typedef ap_fixed<7,1> bias10_t;
+typedef nnet::array<ap_ufixed<6,5,AP_RND_CONV,AP_SAT,0>, 64*1> layer12_t;
+typedef ap_fixed<18,8> q_activation_10_table_t;
+typedef nnet::array<ap_ufixed<8,7>, 64*1> layer13_t;
+typedef nnet::array<ap_fixed<24,8>, 32*1> layer14_t;
+typedef ap_fixed<7,1> weight14_t;
+typedef ap_fixed<7,1> bias14_t;
+typedef nnet::array<ap_ufixed<6,5,AP_RND_CONV,AP_SAT,0>, 32*1> layer16_t;
+typedef ap_fixed<18,8> q_activation_11_table_t;
+typedef nnet::array<ap_ufixed<8,7>, 32*1> layer17_t;
+typedef nnet::array<ap_fixed<24,8>, 8*1> layer19_t;
+typedef ap_fixed<7,1> weight19_t;
+typedef ap_fixed<7,1> bias19_t;
+typedef ap_uint<1> layer19_index;
+typedef nnet::array<ap_fixed<24,8>, 2*1> layer21_t;
+typedef ap_fixed<7,1> weight21_t;
+typedef ap_fixed<7,1> bias21_t;
+typedef ap_uint<1> layer21_index;
+typedef nnet::array<ap_ufixed<8,0,AP_RND_CONV,AP_WRAP,0>, 2*1> result_t;
+typedef ap_fixed<18,8> activation_2_table_t;
+typedef ap_fixed<18,8,AP_RND,AP_SAT,0> activation_2_exp_table_t;
+typedef ap_fixed<18,8,AP_RND,AP_SAT,0> activation_2_inv_table_t;
 
 #endif
