@@ -9,7 +9,7 @@ void myproject(
 ) {
 
     // hls-fpga-machine-learning insert IO
-    #pragma HLS INTERFACE axis port=zero_padding2d_input,layer19_out 
+    //#pragma HLS INTERFACE axis port=zero_padding2d_input,layer19_out 
     #pragma HLS DATAFLOW 
 
 #ifndef __SYNTHESIS__

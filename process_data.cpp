@@ -3,6 +3,7 @@
 #include "defines.h"
 
 #include <iostream>
+#include <cmath>
 
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
 int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
@@ -111,10 +112,7 @@ int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t w
 void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 {
-#pragma HLS INTERFACE m_axi port=infiledata depth=28320800
-#pragma HLS INTERFACE m_axi port=outdata depth=276
-
-    //Create variables
+   //Create variables
 
     const unsigned int z_channels = 480;
     const unsigned int n_frames = 6000;
@@ -131,6 +129,10 @@ void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
     //stores the average value of each channel
     int ave[z_channels];
     int ave2[z_channels];
+
+    //stores the average sq value of each channel
+    int avesq[z_channels];
+    int avesq2[z_channels];
 
     size_t fragsize = (infile_size / NUM_LINKS);  // this will be exact; there's a check in the host
 
@@ -183,23 +185,44 @@ link_loop:
     const unsigned int LG_NUM_AVE_TICKS = 7;
     for (unsigned int chan; chan < z_channels; chan++) {
         ave[chan] = 0;
+        ave2[chan] = 0;
         for (int i = 0; i < NUM_AVE_TICKS; i++) {
             ave[chan] += planes[chan][i];
             ave2[chan] += planes2[chan][i]; 
         }
-        ave[chan] >> LG_NUM_AVE_TICKS;
-        ave2[chan] >> LG_NUM_AVE_TICKS;
+        ave[chan] >>= LG_NUM_AVE_TICKS;
+        ave2[chan] >>= LG_NUM_AVE_TICKS;
     }
 
-    std::cout << "averages calculated" << std::endl;
+    // // find averages2 for ~128 entries for baseline subtraction
+    // for (unsigned int chan; chan < z_channels; chan++) {
+    //     avesq[chan] = 0;
+    //     avesq2[chan] = 0;
+    //     for (int i = 0; i < NUM_AVE_TICKS; i++) {
+    //         avesq[chan] += planes[chan][i] * planes[chan][i];
+    //         avesq2[chan] += planes2[chan][i] * planes2[chan][i]; 
+    //     }
+    //     avesq[chan] >>= LG_NUM_AVE_TICKS;
+    //     avesq2[chan] >>= LG_NUM_AVE_TICKS;
+    //     std::cout << "chan " << chan << " is " << ave[chan] << " +- " << std::sqrt(avesq[chan] - ave[chan] * ave[chan]) << std::endl;
+    //     std::cout << "chan' " << chan << " is " << ave2[chan] << " +- " << std::sqrt(avesq2[chan] - ave2[chan] * ave2[chan]) << std::endl;
+    // }
+
+    // std::cout << "averages calculated" << std::endl;
 
     //Call 2D CNN on both sides of z plane
 
-    const int TICK_SIZE = 128;
+    const int TICK_SIZE = 200;
     const int N_OUT = 3;
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
+    #pragma HLS STREAM variable=zero_padding2d_input depth=61500
+    hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
+    #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
     input_t pack;  // array of size 1
     hls::stream<result_t> layer19_out;
+    #pragma HLS STREAM variable=layer19_out depth=2
+    hls::stream<result_t> layer19_out2;
+    #pragma HLS STREAM variable=layer19_out2 depth=2
 
     //only does ticks by 128, there will be some ticks never processed
 
@@ -233,12 +256,12 @@ link_loop:
             for(int k = 0; k <TICK_SIZE; k++) {
                 auto fill = planes2[j][i*TICK_SIZE + k] - ave2[j];
                 pack[0] = fill;
-                zero_padding2d_input.write(pack);
+                zero_padding2d_input2.write(pack);
             }
         }
         //second half of outdata is filled with second side of z plane outputs
-        myproject(zero_padding2d_input, layer19_out);
-        auto cc_prob = layer19_out.read();
+        myproject(zero_padding2d_input2, layer19_out2);
+        auto cc_prob = layer19_out2.read();
         for (int z = 0; z < N_OUT; z++) {
             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
         }
