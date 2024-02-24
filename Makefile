@@ -1,6 +1,6 @@
 CXX=g++
 RM=rm -f
-CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include -I./cnn2d
+CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include
 VPPFLAGS=--config ./myconfig.cfg -I. -I./cnn2d
 LDFLAGS=-L${XILINX_XRT}/lib
 LDLIBS=-lboost_program_options -lOpenCL
@@ -9,7 +9,7 @@ SRCS=processAPA.cpp xcl2.cpp FDHDChannelMapSP.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 KERNEL=process_data
-KERNEL_SRCS=process_data.cpp cnn2d/myproject.cpp
+KERNEL_SRCS=process_data.cpp cnn2d/cnn2d.cpp
 
 #PLATFORM=xilinx_u2_gen3x4_xdma_gc_2_202110_1
 PLATFORM=xilinx_u55c_gen3x16_xdma_3_202210_1

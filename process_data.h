@@ -11,7 +11,7 @@
 
 #include "Fragment.hpp"
 #include "WIB2Frame.hpp"
-#include "myproject.h"
+#include "cnn2d/cnn2d.h"
 
 //const int INFILE_SIZE = 28320800; // == 0x1b02420
 const int INBUF_SIZE = 0x1b02600;  // aligned

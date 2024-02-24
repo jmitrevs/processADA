@@ -1,6 +1,6 @@
 #include "process_data.h"
 #include "hls_stream.h"
-#include "defines.h"
+#include "cnn2d/defines.h"
 
 #include <iostream>
 #include <cmath>
@@ -219,10 +219,10 @@ link_loop:
     hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
     #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
     input_t pack;  // array of size 1
-    hls::stream<result_t> layer19_out;
-    #pragma HLS STREAM variable=layer19_out depth=2
-    hls::stream<result_t> layer19_out2;
-    #pragma HLS STREAM variable=layer19_out2 depth=2
+    hls::stream<result_t> result_out;
+    #pragma HLS STREAM variable=result_out depth=2
+    hls::stream<result_t> result_out2;
+    #pragma HLS STREAM variable=result_out2 depth=2
 
     //only does ticks by 128, there will be some ticks never processed
 
@@ -239,8 +239,8 @@ link_loop:
             }
         }
         //first half of outdata is filled with the first side of z_plane outputs
-        myproject(zero_padding2d_input, layer19_out);
-        auto cc_prob = layer19_out.read();
+        cnn2d(zero_padding2d_input, result_out);
+        auto cc_prob = result_out.read();
         for (int z = 0; z < N_OUT; z++) {
             outdata[i*N_OUT + z] = cc_prob[z];
         }
@@ -260,8 +260,8 @@ link_loop:
             }
         }
         //second half of outdata is filled with second side of z plane outputs
-        myproject(zero_padding2d_input2, layer19_out2);
-        auto cc_prob = layer19_out2.read();
+        cnn2d(zero_padding2d_input2, result_out2);
+        auto cc_prob = result_out2.read();
         for (int z = 0; z < N_OUT; z++) {
             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
         }
