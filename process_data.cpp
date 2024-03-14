@@ -109,13 +109,13 @@ int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t w
     return -2;
 }
 
-void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
+void process_data(uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 {
    //Create variables
 
-    const unsigned int z_channels = 480;
-    const unsigned int n_frames = 6000;
+    constexpr unsigned int z_channels = 480;
+    constexpr unsigned int n_frames = 6000;
 
     std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl; 
 
@@ -126,15 +126,16 @@ void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
     //array to track adc values link by link. Is essentially 60 2D arrays that are 256 channels by 100 ticks
     //static uint16_t adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][n_frames];
 
+
     //stores the average value of each channel
-    int ave[z_channels];
-    int ave2[z_channels];
+    static int ave[z_channels];
+    static int ave2[z_channels];
 
-    //stores the average sq value of each channel
-    int avesq[z_channels];
-    int avesq2[z_channels];
+    // //stores the average sq value of each channel
+    // static int avesq[z_channels];
+    // static int avesq2[z_channels];
 
-    size_t fragsize = (infile_size / NUM_LINKS);  // this will be exact; there's a check in the host
+    constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
 
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++)
@@ -183,6 +184,7 @@ link_loop:
     // find average for ~128 entries for baseline subtraction
     const unsigned int NUM_AVE_TICKS = 128;
     const unsigned int LG_NUM_AVE_TICKS = 7;
+ave_loop:
     for (unsigned int chan; chan < z_channels; chan++) {
         ave[chan] = 0;
         ave2[chan] = 0;
@@ -212,41 +214,48 @@ link_loop:
 
     //Call 2D CNN on both sides of z plane
 
-    const int TICK_SIZE = 200;
-    const int N_OUT = 3;
+    constexpr int TICK_SIZE = 200;
+    constexpr int N_OUT = 3;
+    
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     #pragma HLS STREAM variable=zero_padding2d_input depth=61500
     hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
     #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
-    input_t pack;  // array of size 1
+    // input_t pack;  // array of size 1
     hls::stream<result_t> result_out;
     #pragma HLS STREAM variable=result_out depth=2
     hls::stream<result_t> result_out2;
     #pragma HLS STREAM variable=result_out2 depth=2
 
+    cnn2d(zero_padding2d_input, result_out);
+    cnn2d(zero_padding2d_input2, result_out2);
+    
     //only does ticks by 128, there will be some ticks never processed
 
     // calculate range
-    const int NUM_CALLS = n_frames / TICK_SIZE;
+    constexpr int NUM_CALLS = n_frames / TICK_SIZE;
 
+calls_loop:
     for (int i = 0; i < NUM_CALLS; i++) {
         std::cout << "part 1, call number: " << i << std::endl;
         for(int j = 0; j < z_channels; j++) {
             for(int k = 0; k <TICK_SIZE; k++) {
                 auto fill = planes[j][i*TICK_SIZE + k] - ave[j];
+                input_t pack;  // array of size 1
                 pack[0] = fill;
                 zero_padding2d_input.write(pack);
             }
         }
-        //first half of outdata is filled with the first side of z_plane outputs
-        cnn2d(zero_padding2d_input, result_out);
+        // //first half of outdata is filled with the first side of z_plane outputs
+        // cnn2d(zero_padding2d_input, result_out);
         auto cc_prob = result_out.read();
+    filling_loop:
         for (int z = 0; z < N_OUT; z++) {
             outdata[i*N_OUT + z] = cc_prob[z];
         }
     }
 
-    //only does ticks by 128, there will be some ticks never processed
+    // //only does ticks by 128, there will be some ticks never processed
 
     const int OUTPUT_OFFSET = N_OUT * NUM_CALLS;
 
@@ -255,12 +264,12 @@ link_loop:
         for(int j = 0; j < z_channels; j++) {
             for(int k = 0; k <TICK_SIZE; k++) {
                 auto fill = planes2[j][i*TICK_SIZE + k] - ave2[j];
+                input_t pack;  // array of size 1
                 pack[0] = fill;
                 zero_padding2d_input2.write(pack);
             }
         }
-        //second half of outdata is filled with second side of z plane outputs
-        cnn2d(zero_padding2d_input2, result_out2);
+
         auto cc_prob = result_out2.read();
         for (int z = 0; z < N_OUT; z++) {
             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];

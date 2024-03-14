@@ -175,12 +175,16 @@ int main(int ac, char** av) {
             std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
             exit(1);
         }
+        if (numread != INFILE_SIZE) {
+            std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
+            exit(1);
+        }
+
         //OCL_CHECK(err, err = q.enqueueUnmapBuffer(buffer_input, p2p_in));
 
 
-        OCL_CHECK(err, err = krnl.setArg(0, static_cast<uint32_t>(numread)));
-        OCL_CHECK(err, err = krnl.setArg(1, buffer_input));
-        OCL_CHECK(err, err = krnl.setArg(2, buffer_output));
+        OCL_CHECK(err, err = krnl.setArg(0, buffer_input));
+        OCL_CHECK(err, err = krnl.setArg(1, buffer_output));
 
         // Launch the Kernel
         OCL_CHECK(err, err = q.enqueueTask(krnl));

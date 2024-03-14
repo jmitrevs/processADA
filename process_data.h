@@ -13,7 +13,7 @@
 #include "WIB2Frame.hpp"
 #include "cnn2d/cnn2d.h"
 
-//const int INFILE_SIZE = 28320800; // == 0x1b02420
+const int INFILE_SIZE = 28320800; // == 0x1b02420
 const int INBUF_SIZE = 0x1b02600;  // aligned
 const int LOGIC_OUTBUF_SIZE = 276;
 const int OUTBUF_SIZE = 0x200;  // alighed
@@ -23,7 +23,7 @@ constexpr unsigned int NUM_LINKS = 10;
 using writebuf_t = result_t::value_type;
 
 extern "C" {
-    void process_data(uint32_t infile_size, uint8_t infiledata[INBUF_SIZE],
+    void process_data(uint8_t infiledata[INBUF_SIZE],
          writebuf_t outdata[OUTBUF_SIZE]);
 }
 #endif

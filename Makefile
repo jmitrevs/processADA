@@ -1,11 +1,11 @@
 CXX=g++
 RM=rm -f
-CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include
+CPPFLAGS=-O2 -std=c++17 -I${XILINX_XRT}/include -I${XILINX_HLS}/include -I/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/include
 VPPFLAGS=--config ./myconfig.cfg -I. -I./cnn2d
-LDFLAGS=-L${XILINX_XRT}/lib
+LDFLAGS=-L${XILINX_XRT}/lib -L/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/lib
 LDLIBS=-lboost_program_options -lOpenCL
 
-SRCS=processAPA.cpp xcl2.cpp FDHDChannelMapSP.cpp
+SRCS=processAPA.cpp xcl2.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 KERNEL=process_data
