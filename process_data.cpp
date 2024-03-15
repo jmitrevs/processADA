@@ -112,12 +112,12 @@ int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t w
 void process_data(uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 {
-   //Create variables
 
+    //Create variables
     constexpr unsigned int z_channels = 480;
     constexpr unsigned int n_frames = 6000;
 
-    std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl; 
+    std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
     //Z plane arrays for both sides
     static int16_t planes[z_channels][n_frames];
@@ -190,7 +190,7 @@ ave_loop:
         ave2[chan] = 0;
         for (int i = 0; i < NUM_AVE_TICKS; i++) {
             ave[chan] += planes[chan][i];
-            ave2[chan] += planes2[chan][i]; 
+            ave2[chan] += planes2[chan][i];
         }
         ave[chan] >>= LG_NUM_AVE_TICKS;
         ave2[chan] >>= LG_NUM_AVE_TICKS;
@@ -202,7 +202,7 @@ ave_loop:
     //     avesq2[chan] = 0;
     //     for (int i = 0; i < NUM_AVE_TICKS; i++) {
     //         avesq[chan] += planes[chan][i] * planes[chan][i];
-    //         avesq2[chan] += planes2[chan][i] * planes2[chan][i]; 
+    //         avesq2[chan] += planes2[chan][i] * planes2[chan][i];
     //     }
     //     avesq[chan] >>= LG_NUM_AVE_TICKS;
     //     avesq2[chan] >>= LG_NUM_AVE_TICKS;
@@ -210,13 +210,13 @@ ave_loop:
     //     std::cout << "chan' " << chan << " is " << ave2[chan] << " +- " << std::sqrt(avesq2[chan] - ave2[chan] * ave2[chan]) << std::endl;
     // }
 
-    // std::cout << "averages calculated" << std::endl;
+    std::cout << "averages calculated" << std::endl;
 
     //Call 2D CNN on both sides of z plane
 
     constexpr int TICK_SIZE = 200;
     constexpr int N_OUT = 3;
-    
+
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     #pragma HLS STREAM variable=zero_padding2d_input depth=61500
     hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
@@ -227,9 +227,6 @@ ave_loop:
     hls::stream<result_t> result_out2;
     #pragma HLS STREAM variable=result_out2 depth=2
 
-    cnn2d(zero_padding2d_input, result_out);
-    cnn2d(zero_padding2d_input2, result_out2);
-    
     //only does ticks by 128, there will be some ticks never processed
 
     // calculate range
@@ -246,8 +243,8 @@ calls_loop:
                 zero_padding2d_input.write(pack);
             }
         }
-        // //first half of outdata is filled with the first side of z_plane outputs
-        // cnn2d(zero_padding2d_input, result_out);
+        //first half of outdata is filled with the first side of z_plane outputs
+        cnn2d(zero_padding2d_input, result_out);
         auto cc_prob = result_out.read();
     filling_loop:
         for (int z = 0; z < N_OUT; z++) {
@@ -258,7 +255,7 @@ calls_loop:
     // //only does ticks by 128, there will be some ticks never processed
 
     const int OUTPUT_OFFSET = N_OUT * NUM_CALLS;
-
+calls_loop2:
     for (int i = 0; i < NUM_CALLS; i++) {
         std::cout << "part 2, call number: " << i << std::endl;
         for(int j = 0; j < z_channels; j++) {
@@ -269,7 +266,7 @@ calls_loop:
                 zero_padding2d_input2.write(pack);
             }
         }
-
+        cnn2d(zero_padding2d_input2, result_out2);
         auto cc_prob = result_out2.read();
         for (int z = 0; z < N_OUT; z++) {
             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
