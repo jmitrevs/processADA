@@ -121,7 +121,7 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
 
     //Z plane arrays for both sides
     static int16_t planes[z_channels][n_frames];
-    static int16_t planes2[z_channels][n_frames];
+    // static int16_t planes2[z_channels][n_frames];
 
     //array to track adc values link by link. Is essentially 60 2D arrays that are 256 channels by 100 ticks
     //static uint16_t adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][n_frames];
@@ -129,7 +129,7 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
 
     //stores the average value of each channel
     static int ave[z_channels];
-    static int ave2[z_channels];
+    // static int ave2[z_channels];
 
     // //stores the average sq value of each channel
     // static int avesq[z_channels];
@@ -172,8 +172,8 @@ link_loop:
 
                 if(offline_chan >= 0 && offline_chan < z_channels) {
                     planes[offline_chan][iFrame] = adc;
-                } else if(offline_chan >= 0 && offline_chan - z_channels < z_channels) {
-                    planes2[offline_chan - z_channels][iFrame] = adc;
+                // } else if(offline_chan >= 0 && offline_chan - z_channels < z_channels) {
+                //     planes2[offline_chan - z_channels][iFrame] = adc;
                 }
             }
         }
@@ -187,13 +187,13 @@ link_loop:
 ave_loop:
     for (unsigned int chan; chan < z_channels; chan++) {
         ave[chan] = 0;
-        ave2[chan] = 0;
+        //ave2[chan] = 0;
         for (int i = 0; i < NUM_AVE_TICKS; i++) {
             ave[chan] += planes[chan][i];
-            ave2[chan] += planes2[chan][i];
+            //ave2[chan] += planes2[chan][i];
         }
         ave[chan] >>= LG_NUM_AVE_TICKS;
-        ave2[chan] >>= LG_NUM_AVE_TICKS;
+        //ave2[chan] >>= LG_NUM_AVE_TICKS;
     }
 
     // // find averages2 for ~128 entries for baseline subtraction
@@ -219,13 +219,13 @@ ave_loop:
 
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     #pragma HLS STREAM variable=zero_padding2d_input depth=61500
-    hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
-    #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
+    // hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
+    // #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
     // input_t pack;  // array of size 1
     hls::stream<result_t> result_out;
     #pragma HLS STREAM variable=result_out depth=2
-    hls::stream<result_t> result_out2;
-    #pragma HLS STREAM variable=result_out2 depth=2
+    // hls::stream<result_t> result_out2;
+    // #pragma HLS STREAM variable=result_out2 depth=2
 
     //only does ticks by 128, there will be some ticks never processed
 
@@ -254,22 +254,22 @@ calls_loop:
 
     // //only does ticks by 128, there will be some ticks never processed
 
-    const int OUTPUT_OFFSET = N_OUT * NUM_CALLS;
-calls_loop2:
-    for (int i = 0; i < NUM_CALLS; i++) {
-        std::cout << "part 2, call number: " << i << std::endl;
-        for(int j = 0; j < z_channels; j++) {
-            for(int k = 0; k <TICK_SIZE; k++) {
-                auto fill = planes2[j][i*TICK_SIZE + k] - ave2[j];
-                input_t pack;  // array of size 1
-                pack[0] = fill;
-                zero_padding2d_input2.write(pack);
-            }
-        }
-        cnn2d(zero_padding2d_input2, result_out2);
-        auto cc_prob = result_out2.read();
-        for (int z = 0; z < N_OUT; z++) {
-            outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
-        }
-    }
+//     const int OUTPUT_OFFSET = N_OUT * NUM_CALLS;
+// calls_loop2:
+//     for (int i = 0; i < NUM_CALLS; i++) {
+//         std::cout << "part 2, call number: " << i << std::endl;
+//         for(int j = 0; j < z_channels; j++) {
+//             for(int k = 0; k <TICK_SIZE; k++) {
+//                 auto fill = planes2[j][i*TICK_SIZE + k] - ave2[j];
+//                 input_t pack;  // array of size 1
+//                 pack[0] = fill;
+//                 zero_padding2d_input2.write(pack);
+//             }
+//         }
+//         cnn2d(zero_padding2d_input2, result_out2);
+//         auto cc_prob = result_out2.read();
+//         for (int z = 0; z < N_OUT; z++) {
+//             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
+//         }
+//     }
 }
