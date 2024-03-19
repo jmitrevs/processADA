@@ -1,6 +1,6 @@
 #include "process_data.h"
 #include "hls_stream.h"
-#include "cnn2d/defines.h"
+#include "defines.h"
 
 #include <iostream>
 #include <cmath>
