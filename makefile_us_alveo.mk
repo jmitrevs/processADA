@@ -47,7 +47,7 @@ VPP_FLAGS += --save-temps
 KERNEL=process_data
 KERNEL_SRCS=src/process_data.cpp src/cnn2d.cpp
 
-EXECUTABLE = ./ProcessAPA
+EXECUTABLE = ./processAPA
 EMCONFIG_DIR = $(TEMP_DIR)
 
 ############################## Setting up Project Variables ##############################
@@ -70,13 +70,15 @@ LDFLAGS += -L$(XILINX_XRT)/lib -pthread -lOpenCL
 PLATFORM_BLOCKLIST += nodma 
 ############################## Setting up Host Variables ##############################
 #Include Required Host Source Files
-CXXFLAGS += -I/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/include
-HOST_SRCS += ./src/processAPA.cpp ./src/xcl2.cpp
+#CXXFLAGS += -I/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/include
+#CXXFLAGS += -I/opt/rh/devtoolset-9/root/usr/local/include/
+HOST_SRCS += ./src/processAPA.cpp
 # Host compiler global settings
 CXXFLAGS += -fmessage-length=0
 LDFLAGS += -lrt -lstdc++ 
 LDFLAGS += -luuid -lxrt_coreutil
-LDFLAGS += -L/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/lib
+#LDFLAGS += -L/cvmfs/sft.cern.ch/lcg/releases/Boost/1.78.0-f6f04/x86_64-centos8-gcc11-opt/lib
+#LDFLAGS += -L/opt/rh/devtoolset-9/root/usr/local/lib
 LDFLAGS += -lboost_program_options
 
 

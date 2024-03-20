@@ -10,7 +10,12 @@
 #include <cstdint>
 #include <boost/program_options.hpp>
 namespace po = boost::program_options;
-#include "xcl2.hpp"
+
+// XRT includes
+#include "experimental/xrt_bo.h"
+#include "experimental/xrt_device.h"
+#include "experimental/xrt_kernel.h"
+
 #include "process_data.h"
 
 // Use a class for file acces for RAII
@@ -49,13 +54,13 @@ int main(int ac, char** av) {
         std::string infile;
         std::string outfile;
         std::string xclbin_file;
-        std::string dev_id;
+        std::string device_index;
 
         po::options_description desc("Allowed options");
         desc.add_options()
             ("help,h", "produce help message")
             ("xclbin-file,x", po::value<std::string>(&xclbin_file), "xclbin file")
-            ("device,d", po::value<std::string>(&dev_id)->default_value("0"), "device id")
+            ("device,d", po::value<std::string>(&device_index)->default_value("0"), "device index")
             ("input-file,i", po::value<std::string>(&infile), "input file")
             ("output-file,o", po::value<std::string>(&outfile), "output file")
             ;
@@ -86,46 +91,16 @@ int main(int ac, char** av) {
             return 1;
         }
 
-        // setup OpenCL stuff
-        cl_int err;
-        cl::Context context;
-        cl::CommandQueue q;
 
-        auto devices = xcl::get_xil_devices();
-        // read_binary_file() is a utility API which will load the binaryFile
-        // and will return the pointer to file buffer.
-        auto fileBuf = xcl::read_binary_file(xclbin_file);
-        cl::Program::Binaries bins{{fileBuf.data(), fileBuf.size()}};
-        cl::Program program;
+        std::cout << "Open the device" << device_index << std::endl;
+        auto device = xrt::device(device_index);
+        auto device_name = device.get_info<xrt::info::device::name>();
 
-        auto pos = dev_id.find(":");
-        cl::Device device;
-        if (pos == std::string::npos) {
-            uint32_t device_index = stoi(dev_id);
-            if (device_index >= devices.size()) {
-                std::cout << "The device_index provided using -d flag is outside the range of "
-                             "available devices\n";
-                return EXIT_FAILURE;
-            }
-            device = devices[device_index];
-        } else {
-            if (xcl::is_emulation()) {
-                std::cout << "Device bdf is not supported for the emulation flow\n";
-                return EXIT_FAILURE;
-            }
-            device = xcl::find_device_bdf(devices, dev_id);
-        }
+        std::cout << "Load the xclbin " << xclbin_file << std::endl;
+        auto uuid = device.load_xclbin(xclbin_file);
 
-        // Creating Context and Command Queue for selected Device
-        OCL_CHECK(err, context = cl::Context(device, nullptr, nullptr, nullptr, &err));
-        OCL_CHECK(err, q = cl::CommandQueue(context, device, CL_QUEUE_PROFILING_ENABLE, &err));
-        std::cout << "Trying to program device[" << dev_id << "]: " << device.getInfo<CL_DEVICE_NAME>() << std::endl;
-        program = cl::Program(context, {device}, bins, nullptr, &err);
-        if (err != CL_SUCCESS) {
-            std::cout << "Failed to program device[" << dev_id << "] with xclbin file!\n";
-            exit(EXIT_FAILURE);
-        } else
-            std::cout << "Device[" << dev_id << "]: program successful!\n";
+        auto krnl = xrt::kernel(device, uuid, "process_data");
+
 
         // Now do buffers
 
@@ -139,36 +114,19 @@ int main(int ac, char** av) {
         fileHelper fhout(outfile, O_CREAT | O_WRONLY | O_DIRECT, 0644);
 
         // Allocate Buffer in Global Memory
-        cl_mem_ext_ptr_t inExt = {0};
-        cl_mem_ext_ptr_t outExt = {0};
-        inExt.flags = XCL_MEM_EXT_P2P_BUFFER;
-        outExt.flags = XCL_MEM_EXT_P2P_BUFFER;
 
-        OCL_CHECK(err, cl::Buffer buffer_input(context, CL_MEM_READ_ONLY | CL_MEM_EXT_PTR_XILINX, READBUF_SIZE, &inExt,
-                                               &err));
-        OCL_CHECK(err, cl::Buffer buffer_output(context, CL_MEM_WRITE_ONLY | CL_MEM_EXT_PTR_XILINX, WRITEBUF_SIZE,
-                                                &outExt, &err));
+        xrt::bo::flags flags = xrt::bo::flags::p2p;
+        std::cout << "Allocate Buffer in Global Memory\n";
+        auto bo_in = xrt::bo(device, READBUF_SIZE, flags, krnl.group_id(0));
+        auto bo_out = xrt::bo(device, WRITEBUF_SIZE, flags, krnl.group_id(1));
 
+        // Map the contents of the buffer object into host memory
+        auto bo_in_map = bo_in.map<uint8_t*>();
+        auto bo_out_map = bo_out.map<writebuf_t*>();
+        std::fill(bo_in_map, bo_in_map + INBUF_SIZE, 0);
+        std::fill(bo_out_map, bo_out_map + OUTBUF_SIZE, 0);
 
-        // OCL_CHECK(err, cl::Buffer remapClass(context, CL_MEM_READ_ONLY, sizeof(dune::FDHDChannelMapSP), 
-        //                                         &chanmap, &err));
-
-
-        cl::Kernel krnl;
-        OCL_CHECK(err, krnl = cl::Kernel(program, "process_data", &err));
-
-
-
-        // nMap P2P device buffers to host access pointers
-        OCL_CHECK(err, void* p2p_in = q.enqueueMapBuffer(buffer_input,      // buffer
-                            CL_TRUE,           // blocking call
-                            CL_MAP_READ,       // Indicates we will be writing
-                            0,                 // buffer offset
-                            READBUF_SIZE, // size in bytes
-                            nullptr, nullptr,
-                            &err)); // error code
-
-        auto numread = pread(fhin.fd(), p2p_in, READBUF_SIZE, 0);
+        auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
         std::cout << "numread = " << std::hex << numread <<  std::endl;
 
         if (numread % NUM_LINKS != 0) {
@@ -180,25 +138,13 @@ int main(int ac, char** av) {
             exit(1);
         }
 
-        //OCL_CHECK(err, err = q.enqueueUnmapBuffer(buffer_input, p2p_in));
+
+        std::cout << "Execution of the kernel\n";
+        auto run = krnl(bo_in, bo_out);
+        run.wait();
 
 
-        OCL_CHECK(err, err = krnl.setArg(0, buffer_input));
-        OCL_CHECK(err, err = krnl.setArg(1, buffer_output));
-
-        // Launch the Kernel
-        OCL_CHECK(err, err = q.enqueueTask(krnl));
-
-        // read the output
-        OCL_CHECK(err, void* p2p_out = q.enqueueMapBuffer(buffer_output,                      // buffer
-                                                            CL_TRUE,                    // blocking call
-                                                            CL_MAP_WRITE | CL_MAP_READ,                // Indicates we will be writing
-                                                            0,                          // buffer offset
-                                                            WRITEBUF_SIZE,          // size in bytes
-                                                            nullptr, nullptr,
-                                                            &err)); // error code
-
-        auto numActuallyWritten = pwrite(fhout.fd(), p2p_out, WRITEBUF_SIZE, 0);
+        auto numActuallyWritten = pwrite(fhout.fd(), static_cast<void*>(bo_out_map), WRITEBUF_SIZE, 0);
         if (numActuallyWritten < 0) {
             std::cerr << "ERR: pwrite failed: "
                         << " error: " << errno << ", " << strerror(errno) << std::endl;

@@ -218,12 +218,12 @@ ave_loop:
     constexpr int N_OUT = 3;
 
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
-    #pragma HLS STREAM variable=zero_padding2d_input depth=61500
+    #pragma HLS STREAM variable=zero_padding2d_input depth=96000
     // hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
     // #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
     // input_t pack;  // array of size 1
     hls::stream<result_t> result_out;
-    #pragma HLS STREAM variable=result_out depth=2
+    #pragma HLS STREAM variable=result_out depth=96000
     // hls::stream<result_t> result_out2;
     // #pragma HLS STREAM variable=result_out2 depth=2
 
