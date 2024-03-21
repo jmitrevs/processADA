@@ -8,6 +8,9 @@
 #include <iostream>
 #include <sstream>
 #include <cstdint>
+#include <filesystem>
+namespace fs = std::filesystem;
+
 #include <boost/program_options.hpp>
 namespace po = boost::program_options;
 
@@ -53,8 +56,11 @@ int main(int ac, char** av) {
 
         std::string infile;
         std::string outfile;
+        std::string indir;
+        std::string outdir;
         std::string xclbin_file;
         std::string device_index;
+        bool usingDirectories = false;
 
         po::options_description desc("Allowed options");
         desc.add_options()
@@ -62,12 +68,14 @@ int main(int ac, char** av) {
             ("xclbin-file,x", po::value<std::string>(&xclbin_file), "xclbin file")
             ("device,d", po::value<std::string>(&device_index)->default_value("0"), "device index")
             ("input-file,i", po::value<std::string>(&infile), "input file")
+            ("input-dir", po::value<std::string>(&indir), "input directory")
             ("output-file,o", po::value<std::string>(&outfile), "output file")
+            ("output-dir", po::value<std::string>(&outdir), "output directory")
             ;
 
         po::positional_options_description p;
         p.add("input-file", -1);
-
+        
         po::variables_map vm;
         po::store(po::command_line_parser(ac, av).
                   options(desc).positional(p).run(), vm);
@@ -79,18 +87,29 @@ int main(int ac, char** av) {
             return 0;
         }
 
-        if (!vm.count("input-file")) {
-            std::cerr << "input-file not given." << std::endl;
-            std::cerr << desc << "\n";
-            return 1;
-        }
+        if (vm.count("input-dir")) {
+            if (!vm.count("output-dir")) {
+                std::cerr << "output directory not given while input directory is given" << std::endl;
+                std::cerr << desc << "\n";
+                return 1;
+            } else {
+                usingDirectories = true;
+                std::cout << "Input directory is given; ignoring any passed input file" << std::endl;
+            }
+        } else {
 
-        if (!vm.count("output-file")) {
-            std::cerr << "output-file not given." << std::endl;
-            std::cerr << desc << "\n";
-            return 1;
-        }
+            if (!vm.count("input-file")) {
+                std::cerr << "input-file not given." << std::endl;
+                std::cerr << desc << "\n";
+                return 1;
+            }
 
+            if (!vm.count("output-file")) {
+                std::cerr << "output-file not given." << std::endl;
+                std::cerr << desc << "\n";
+                return 1;
+            }
+        }
 
         std::cout << "Open the device" << device_index << std::endl;
         auto device = xrt::device(device_index);
@@ -109,10 +128,6 @@ int main(int ac, char** av) {
 
         std::cout << "READBUF_SIZE = " << std::hex << READBUF_SIZE << ", WRITEBUF_SIZE = " << WRITEBUF_SIZE << std::endl;
 
-        // open files
-        fileHelper fhin(infile, O_RDONLY | O_DIRECT);
-        fileHelper fhout(outfile, O_CREAT | O_WRONLY | O_DIRECT, 0644);
-
         // Allocate Buffer in Global Memory
 
         xrt::bo::flags flags = xrt::bo::flags::p2p;
@@ -126,33 +141,76 @@ int main(int ac, char** av) {
         std::fill(bo_in_map, bo_in_map + INBUF_SIZE, 0);
         std::fill(bo_out_map, bo_out_map + OUTBUF_SIZE, 0);
 
-        auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
-        std::cout << "numread = " << std::hex << numread <<  std::endl;
+        if (usingDirectories) {
+            fs::path outpath{outdir};
 
-        if (numread % NUM_LINKS != 0) {
-            std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
-            exit(1);
-        }
-        if (numread != INFILE_SIZE) {
-            std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
-            exit(1);
-        }
+            for (const auto & entry : fs::directory_iterator(indir)) {
+                auto infilepath = entry.path();
+                auto outfilepath = outpath / infilepath.filename().replace_extension(".out");
+
+                // open files
+                fileHelper fhin(infilepath, O_RDONLY | O_DIRECT);
+                fileHelper fhout(outfilepath, O_CREAT | O_WRONLY | O_DIRECT, 0644);
+
+                auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
+                std::cout << "Creating " << outfilepath << ", numread = " << std::hex << numread <<  std::endl;
+            
+                if (numread % NUM_LINKS != 0) {
+                    std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
+                    exit(1);
+                }
+                if (numread != INFILE_SIZE) {
+                    std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
+                    exit(1);
+                }
+                std::cout << "Execution of the kernel\n";
+                auto run = krnl(bo_in, bo_out);
+                run.wait();
 
 
-        std::cout << "Execution of the kernel\n";
-        auto run = krnl(bo_in, bo_out);
-        run.wait();
-
-
-        auto numActuallyWritten = pwrite(fhout.fd(), static_cast<void*>(bo_out_map), WRITEBUF_SIZE, 0);
-        if (numActuallyWritten < 0) {
-            std::cerr << "ERR: pwrite failed: "
-                        << " error: " << errno << ", " << strerror(errno) << std::endl;
-            exit(EXIT_FAILURE);
+                auto numActuallyWritten = pwrite(fhout.fd(), static_cast<void*>(bo_out_map), WRITEBUF_SIZE, 0);
+                if (numActuallyWritten < 0) {
+                    std::cerr << "ERR: pwrite failed: "
+                              << " error: " << errno << ", " << strerror(errno) << std::endl;
+                    exit(EXIT_FAILURE);
+                } else {
+                    std::cout << "Amount written:" << numActuallyWritten << "  bytes" << std::endl;
+                }
+            }
+            
         } else {
-            std::cout << "Amount written: " << numActuallyWritten << "  bytes" << std::endl;
-        }
+            // open files
+            fileHelper fhin(infile, O_RDONLY | O_DIRECT);
+            fileHelper fhout(outfile, O_CREAT | O_WRONLY | O_DIRECT, 0644);
 
+
+            auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
+            std::cout << "numread = " << std::hex << numread <<  std::endl;
+
+            if (numread % NUM_LINKS != 0) {
+                std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
+                exit(1);
+            }
+            if (numread != INFILE_SIZE) {
+                std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
+                exit(1);
+            }
+
+
+            std::cout << "Execution of the kernel\n";
+            auto run = krnl(bo_in, bo_out);
+            run.wait();
+
+
+            auto numActuallyWritten = pwrite(fhout.fd(), static_cast<void*>(bo_out_map), WRITEBUF_SIZE, 0);
+            if (numActuallyWritten < 0) {
+                std::cerr << "ERR: pwrite failed: "
+                          << " error: " << errno << ", " << strerror(errno) << std::endl;
+                exit(EXIT_FAILURE);
+            } else {
+                std::cout << "Amount written: " << numActuallyWritten << "  bytes" << std::endl;
+            }
+        }
     }
     catch(std::exception& e) {
         std::cerr << "error: " << e.what() << "\n";
