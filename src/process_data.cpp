@@ -109,137 +109,146 @@ int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t w
     return -2;
 }
 
+
+// constexpr int floorlog2(int x) { return (x < 2) ? 0 : 1 + floorlog2(x / 2); }
+// replace with template metaprogramming
+template <int n> struct floorlog2 {
+    enum { val = 1 + floorlog2<(n / 2)>::val };
+};
+
+template <> struct floorlog2<1> {
+    enum { val = 0 };
+};
+
+template <> struct floorlog2<0> {
+    enum { val = 0 };
+};
+
+// constexpr int pow2(int x) { return x == 0 ? 1 : 2 * pow2(x - 1); }
+// replace with template metaprogramming
+template <int n> struct pow2 {
+    enum { val = 2 * pow2<(n - 1)>::val };
+};
+
+template <> struct pow2<0> {
+    enum { val = 1 };
+};
+
+template <class T, int N> int sum_reduce(const T *x) {
+    static constexpr int leftN = pow2<floorlog2<N - 1>::val>::val > 0 ? pow2<floorlog2<N - 1>::val>::val : 0;
+    static constexpr int rightN = N - leftN > 0 ? N - leftN : 0;
+    if constexpr (N == 1) {
+        return static_cast<int>(x[0]);
+    } else if constexpr (N == 2) {
+        return static_cast<int>(x[0]) + static_cast<int>(x[1]);
+    } else {
+        return sum_reduce<T, leftN>(x) + sum_reduce<T, rightN>(x + leftN);
+    }
+}
+
+void calculate_averages(int16_t planes[z_channels][TICK_SIZE], int16_t ave[z_channels]) {
+
+    // find average for ~128 entries for baseline subtraction
+    constexpr unsigned int NUM_AVE_TICKS = 128;
+    constexpr unsigned int LG_NUM_AVE_TICKS = 7;
+ave_loop:
+    for (unsigned int chan = 0; chan < z_channels; chan++) {
+        int aveval = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]);
+        ave[chan] = aveval >> LG_NUM_AVE_TICKS;
+    }
+}
+
 void process_data(uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 {
 
-    //Create variables
-    constexpr unsigned int z_channels = 480;
-    constexpr unsigned int n_frames = 6000;
-
     std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
-    //Z plane arrays for both sides
-    static int16_t planes[z_channels][n_frames];
-    // static int16_t planes2[z_channels][n_frames];
-
-    //array to track adc values link by link. Is essentially 60 2D arrays that are 256 channels by 100 ticks
-    //static uint16_t adc_vectors[dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels][n_frames];
+    //Z plane arrays
+    static int16_t planes[z_channels][TICK_SIZE];
+    static int16_t planes_noped[z_channels][TICK_SIZE];  // these have the pedestal subtracted
 
 
     //stores the average value of each channel
-    static int ave[z_channels];
-    // static int ave2[z_channels];
-
-    // //stores the average sq value of each channel
-    // static int avesq[z_channels];
-    // static int avesq2[z_channels];
+    static int16_t ave[z_channels];
 
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
 
-link_loop:
-    for (size_t link = 0; link < NUM_LINKS; link++)
-    {
+    // calculate range
+    constexpr int NUM_CALLS = (n_frames - TICK_SIZE) / SKIP_SIZE + 1;
 
-        std::cout << "link = " << link << std::endl;
-        uint16_t crate;
-        uint8_t slot;
-        uint8_t link_from_frameheader;
-        uint8_t slotloc; // = slot & 0x7;
-        size_t ibegin = link*fragsize;
-        dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
+calls_loop:
+    for (int call_num = 0; call_num < NUM_CALLS; call_num++) {
+#pragma HLS dataflow
 
-    frame_loop:
-        for (size_t iFrame = 0; iFrame < n_frames; iFrame++) {
-            // std::cout << "iFrame = " << iFrame << std::endl;
-            auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data()) + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
-            if (iFrame == 0)
-            {
-                crate = frame->header.crate;
-                slot = frame->header.slot;
-                slotloc = slot & 0x7;
-                link_from_frameheader = frame->header.link;
-            }
+    link_loop:
+        for (size_t link = 0; link < NUM_LINKS; link++) {
 
-            //fill adc vectors
-        frame_chan_loop:
-            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++) {
-                #pragma HLS pipeline
-                //std::cout << "iChan = " << iChan << std::endl;
-                auto adc = frame->get_adc(iChan); //get adc causes a violation, can be rewritten
+            std::cout << "link = " << link << std::endl;
+            size_t ibegin = link*fragsize;
+            dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
 
-                auto offline_chan = getOfflineChannel(crate, slotloc, link_from_frameheader, iChan);
+            const size_t iFrameBegin = call_num*SKIP_SIZE;
 
-                if(offline_chan >= 0 && offline_chan < z_channels) {
-                    planes[offline_chan][iFrame] = adc;
-                // } else if(offline_chan >= 0 && offline_chan - z_channels < z_channels) {
-                //     planes2[offline_chan - z_channels][iFrame] = adc;
+        frame_loop:
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+
+                const size_t iFrame = tick + iFrameBegin;
+                // std::cout << "iFrame = " << iFrame << std::endl;
+                auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data())
+                                                                                         + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+
+                auto crate = frame->header.crate;
+                auto slot = frame->header.slot;
+                uint8_t slotloc = slot & 0x7;
+                auto link_from_frameheader = frame->header.link;
+
+                //fill adc vectors
+            frame_chan_loop:
+                for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++) {
+#pragma HLS pipeline
+
+                    auto adc = frame->get_adc(iChan);
+
+                    auto offline_chan = getOfflineChannel(crate, slotloc, link_from_frameheader, iChan);
+
+                    if(offline_chan >= 0 && offline_chan < z_channels) {
+                        planes[offline_chan][tick] = adc;
+                    }
                 }
             }
         }
-    }
 
-    std::cout << "about to calculate averages" << std::endl;
-
-    // find average for ~128 entries for baseline subtraction
-    const unsigned int NUM_AVE_TICKS = 128;
-    const unsigned int LG_NUM_AVE_TICKS = 7;
-ave_loop:
-    for (unsigned int chan; chan < z_channels; chan++) {
-        ave[chan] = 0;
-        //ave2[chan] = 0;
-        for (int i = 0; i < NUM_AVE_TICKS; i++) {
-            ave[chan] += planes[chan][i];
-            //ave2[chan] += planes2[chan][i];
+        // find average for ~128 entries for baseline subtraction
+        constexpr unsigned int NUM_AVE_TICKS = 128;
+        constexpr unsigned int LG_NUM_AVE_TICKS = 7;
+    ave_loop:
+        for (unsigned int chan = 0; chan < z_channels; chan++) {
+            int aveval = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]);
+            ave[chan] = aveval >> LG_NUM_AVE_TICKS;
         }
-        ave[chan] >>= LG_NUM_AVE_TICKS;
-        //ave2[chan] >>= LG_NUM_AVE_TICKS;
-    }
 
-    // // find averages2 for ~128 entries for baseline subtraction
-    // for (unsigned int chan; chan < z_channels; chan++) {
-    //     avesq[chan] = 0;
-    //     avesq2[chan] = 0;
-    //     for (int i = 0; i < NUM_AVE_TICKS; i++) {
-    //         avesq[chan] += planes[chan][i] * planes[chan][i];
-    //         avesq2[chan] += planes2[chan][i] * planes2[chan][i];
-    //     }
-    //     avesq[chan] >>= LG_NUM_AVE_TICKS;
-    //     avesq2[chan] >>= LG_NUM_AVE_TICKS;
-    //     std::cout << "chan " << chan << " is " << ave[chan] << " +- " << std::sqrt(avesq[chan] - ave[chan] * ave[chan]) << std::endl;
-    //     std::cout << "chan' " << chan << " is " << ave2[chan] << " +- " << std::sqrt(avesq2[chan] - ave2[chan] * ave2[chan]) << std::endl;
-    // }
+        //calculate_averages(planes, ave);
 
-    std::cout << "averages calculated" << std::endl;
+        for (size_t chan = 0; chan < z_channels; chan++) {
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+# pragma HLS unroll
+                planes_noped[chan][tick] = planes[chan][tick] - ave[chan];
+            }
+        }
 
-    //Call 2D CNN on both sides of z plane
 
-    constexpr int TICK_SIZE = 200;
-    constexpr int N_OUT = 2;
+        hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
+#pragma HLS STREAM variable=zero_padding2d_input depth=96000
+        hls::stream<result_t> result_out;
+#pragma HLS STREAM variable=result_out depth=2
 
-    hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
-    #pragma HLS STREAM variable=zero_padding2d_input depth=96000
-    // hls::stream<input_t> zero_padding2d_input2("zero_padding2d_input2");
-    // #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
-    // input_t pack;  // array of size 1
-    hls::stream<result_t> result_out;
-    #pragma HLS STREAM variable=result_out depth=2
-    // hls::stream<result_t> result_out2;
-    // #pragma HLS STREAM variable=result_out2 depth=2
 
-    //only does ticks by 128, there will be some ticks never processed
-
-    // calculate range
-    constexpr int NUM_CALLS = n_frames / TICK_SIZE;
-
-calls_loop:
-    for (int i = 0; i < NUM_CALLS; i++) {
-        std::cout << "part 1, call number: " << i << std::endl;
-        for(int j = 0; j < z_channels; j++) {
-            for(int k = 0; k <TICK_SIZE; k++) {
-                auto fill = planes[j][i*TICK_SIZE + k] - ave[j];
-                input_t pack;  // array of size 1
-                pack[0] = fill;
+        std::cout << "part 1, call number: " << call_num << std::endl;
+        for (size_t chan = 0; chan < z_channels; chan++) {
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+                input_t pack;
+                pack[0] = planes_noped[chan][tick];
                 zero_padding2d_input.write(pack);
             }
         }
@@ -249,28 +258,8 @@ calls_loop:
     filling_loop:
         for (int z = 0; z < N_OUT; z++) {
             std::cout << "cc_prob[" << z << "] = " << static_cast<float>(cc_prob[z]) << std::endl;
-            outdata[i*N_OUT + z] = cc_prob[z];
+            outdata[call_num*N_OUT + z] = cc_prob[z];
         }
     }
 
-    // //only does ticks by 128, there will be some ticks never processed
-
-//     const int OUTPUT_OFFSET = N_OUT * NUM_CALLS;
-// calls_loop2:
-//     for (int i = 0; i < NUM_CALLS; i++) {
-//         std::cout << "part 2, call number: " << i << std::endl;
-//         for(int j = 0; j < z_channels; j++) {
-//             for(int k = 0; k <TICK_SIZE; k++) {
-//                 auto fill = planes2[j][i*TICK_SIZE + k] - ave2[j];
-//                 input_t pack;  // array of size 1
-//                 pack[0] = fill;
-//                 zero_padding2d_input2.write(pack);
-//             }
-//         }
-//         cnn2d(zero_padding2d_input2, result_out2);
-//         auto cc_prob = result_out2.read();
-//         for (int z = 0; z < N_OUT; z++) {
-//             outdata[OUTPUT_OFFSET + i*N_OUT + z] = cc_prob[z];
-//         }
-//     }
 }

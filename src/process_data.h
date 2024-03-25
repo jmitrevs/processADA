@@ -20,6 +20,14 @@ const int OUTBUF_SIZE = 0x200;  // alighed
 
 constexpr unsigned int NUM_LINKS = 10;
 
+//Create variables
+constexpr unsigned int z_channels = 480;
+constexpr unsigned int n_frames = 6000;
+
+constexpr size_t TICK_SIZE = 200;
+constexpr size_t SKIP_SIZE = 145;
+constexpr size_t N_OUT = 2;
+
 using writebuf_t = result_t::value_type;
 
 extern "C" {

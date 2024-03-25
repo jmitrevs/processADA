@@ -43,8 +43,8 @@ endif
 ############################## Setting up Kernel Variables ##############################
 # Kernel compiler global settings
 VPP_FLAGS += --save-temps
-VPP_FLAGS += --vivado.prop run.synth_1.strategy=Flow_PerfThresholdCarry
-VPP_FLAGS += --vivado.prop run.impl_1.strategy=Performance_ExploreWithRemap
+#VPP_FLAGS += --vivado.prop run.synth_1.strategy=Flow_PerfThresholdCarry
+#VPP_FLAGS += --vivado.prop run.impl_1.strategy=Performance_ExploreWithRemap
 
 KERNEL=process_data
 KERNEL_SRCS=src/process_data.cpp src/cnn2d.cpp
