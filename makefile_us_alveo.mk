@@ -42,7 +42,9 @@ endif
 
 ############################## Setting up Kernel Variables ##############################
 # Kernel compiler global settings
-VPP_FLAGS += --save-temps 
+VPP_FLAGS += --save-temps
+VPP_FLAGS += --vivado.prop run.synth_1.strategy=Flow_PerfThresholdCarry
+VPP_FLAGS += --vivado.prop run.impl_1.strategy=Performance_ExploreWithRemap
 
 KERNEL=process_data
 KERNEL_SRCS=src/process_data.cpp src/cnn2d.cpp
@@ -63,6 +65,7 @@ PACKAGE_OUT = ./package.$(TARGET)
 
 VPP_PFLAGS := 
 CMD_ARGS = -x $(BUILD_DIR)/$(KERNEL).xclbin --input-dir ../datfiles --output-dir ./results
+CMD_ARGS_ONE = -x $(BUILD_DIR)/$(KERNEL).xclbin -i ../datfiles/TriggerRecord00001_0000TPCAPA002.dat -o test_dump.out
 CXXFLAGS += -I$(XILINX_XRT)/include -I${XILINX_HLS}/include -I$(XILINX_VIVADO)/include -Wall -O0 -g -std=c++17
 LDFLAGS += -L$(XILINX_XRT)/lib -pthread -lOpenCL
 
@@ -120,6 +123,14 @@ ifeq ($(TARGET),$(filter $(TARGET),sw_emu hw_emu))
 	XCL_EMULATION_MODE=$(TARGET) $(EXECUTABLE) $(CMD_ARGS)
 else
 	$(EXECUTABLE) $(CMD_ARGS)
+endif
+
+one: all
+ifeq ($(TARGET),$(filter $(TARGET),sw_emu hw_emu))
+	cp -rf $(EMCONFIG_DIR)/emconfig.json .
+	XCL_EMULATION_MODE=$(TARGET) $(EXECUTABLE) $(CMD_ARGS_ONE)
+else
+	$(EXECUTABLE) $(CMD_ARGS_ONE)
 endif
 
 .PHONY: test

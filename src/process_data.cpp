@@ -215,7 +215,7 @@ ave_loop:
     //Call 2D CNN on both sides of z plane
 
     constexpr int TICK_SIZE = 200;
-    constexpr int N_OUT = 3;
+    constexpr int N_OUT = 2;
 
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
     #pragma HLS STREAM variable=zero_padding2d_input depth=96000
@@ -223,7 +223,7 @@ ave_loop:
     // #pragma HLS STREAM variable=zero_padding2d_input2 depth=61500
     // input_t pack;  // array of size 1
     hls::stream<result_t> result_out;
-    #pragma HLS STREAM variable=result_out depth=96000
+    #pragma HLS STREAM variable=result_out depth=2
     // hls::stream<result_t> result_out2;
     // #pragma HLS STREAM variable=result_out2 depth=2
 
@@ -248,6 +248,7 @@ calls_loop:
         auto cc_prob = result_out.read();
     filling_loop:
         for (int z = 0; z < N_OUT; z++) {
+            std::cout << "cc_prob[" << z << "] = " << static_cast<float>(cc_prob[z]) << std::endl;
             outdata[i*N_OUT + z] = cc_prob[z];
         }
     }
