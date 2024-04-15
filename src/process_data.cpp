@@ -5,6 +5,8 @@
 #include <iostream>
 #include <cmath>
 
+constexpr int16_t skip_threshold = 1024;
+
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
 int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
 
@@ -146,6 +148,18 @@ template <class T, int N> int sum_reduce(const T *x) {
     }
 }
 
+template <int N> bool or_reduce(bool *x) {
+    static constexpr int leftN = pow2<floorlog2<N - 1>::val>::val > 0 ? pow2<floorlog2<N - 1>::val>::val : 0;
+    static constexpr int rightN = N - leftN > 0 ? N - leftN : 0;
+    if constexpr (N == 1) {
+        return x[0];
+    } else if constexpr (N == 2) {
+        return x[0] || x[1];
+    } else {
+        return or_reduce<leftN>(x) || or_reduce<rightN>(x + leftN);
+    }
+}
+
 
 void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], int16_t planes[z_channels][TICK_SIZE]) {
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
@@ -210,62 +224,74 @@ link_loop:
 //     }
 // }
 
-void subtract_pedestal(int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE]) {
+
+
+//bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE]) 
+bool subtract_pedestal(int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
 
+    bool keep = false;
+
 pedestal_pipe:
     for (size_t chan = 0; chan < z_channels; chan++) {
-        auto ave = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]);
+
+        bool keep_arr[TICK_SIZE];
+#pragma HLS ARRAY_PARTITION variable=keep_arr complete
+
+        auto ave = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]) >> LG_NUM_AVE_TICKS;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 # pragma HLS unroll
-            planes_noped[chan][tick] = planes[chan][tick] - ave;
+            auto val = planes[chan][tick] - ave;
+            planes_noped[chan][tick] = val;
+            keep_arr[tick] = (val > skip_threshold || val < - skip_threshold);
         }
+        keep |= or_reduce<TICK_SIZE>(keep_arr);
     }
+    return keep;
 }
 
 
 
-void call_cnn2d(int call_num, int16_t planes_noped[z_channels][TICK_SIZE], writebuf_t outdata[OUTBUF_SIZE]) {
+void call_cnn2d(int call_num, bool keep, int16_t planes_noped[z_channels][TICK_SIZE], writebuf_t outdata[OUTBUF_SIZE]) {
     hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
 #pragma HLS STREAM variable=zero_padding2d_input depth=96000
     hls::stream<result_t> result_out;
 #pragma HLS STREAM variable=result_out depth=2
 
-
-    std::cout << "part 1, call number: " << call_num << std::endl;
-    for (size_t chan = 0; chan < z_channels; chan++) {
-        for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-            input_t pack;
-            pack[0] = planes_noped[chan][tick];
-            zero_padding2d_input.write(pack);
+    if (keep) {
+        std::cout << "part 1, call number: " << call_num << std::endl;
+        for (size_t chan = 0; chan < z_channels; chan++) {
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+                input_t pack;
+                pack[0] = planes_noped[chan][tick];
+                zero_padding2d_input.write(pack);
+            }
         }
-    }
-    //first half of outdata is filled with the first side of z_plane outputs
-    cnn2d(zero_padding2d_input, result_out);
-    auto cc_prob = result_out.read();
-filling_loop:
-    for (int z = 0; z < N_OUT; z++) {
-        std::cout << "cc_prob[" << z << "] = " << static_cast<float>(cc_prob[z]) << std::endl;
-        outdata[call_num*N_OUT + z] = cc_prob[z];
+        //first half of outdata is filled with the first side of z_plane outputs
+        cnn2d(zero_padding2d_input, result_out);
+        auto cc_prob = result_out.read();
+    filling_loop:
+        for (int z = 0; z < N_OUT; z++) {
+            #pragma HLS unroll
+            std::cout << "cc_prob[" << z << "] = " << static_cast<float>(cc_prob[z]) << std::endl;
+            outdata[call_num*N_OUT + z] = cc_prob[z];
+        }
+    } else {
+        outdata[call_num*N_OUT] = 1;
+        outdata[call_num*N_OUT+1] = 0;
     }
 }
 
 void process_data(uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
+//                  int16_t skip_threshold)
 {
 
     std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
-    //Z plane arrays
-    static int16_t planes[z_channels][TICK_SIZE];
-    static int16_t planes_noped[z_channels][TICK_SIZE];  // these have the pedestal subtracted
-
-
-    // //stores the average value of each channel
-    // static int16_t ave[z_channels];
 
     // calculate range
     constexpr int NUM_CALLS = (n_frames - TICK_SIZE) / SKIP_SIZE + 1;
@@ -274,10 +300,14 @@ calls_loop:
     for (int call_num = 0; call_num < NUM_CALLS; call_num++) {
 #pragma HLS dataflow
 
+        //Z plane arrays
+        int16_t planes[z_channels][TICK_SIZE];
+        int16_t planes_noped[z_channels][TICK_SIZE];  // these have the pedestal subtracted
+
         make_planes(call_num, infiledata, planes);
 
-        subtract_pedestal(planes, planes_noped);
+        auto keep = subtract_pedestal(planes, planes_noped);
 
-        call_cnn2d(call_num, planes_noped, outdata);
+        call_cnn2d(call_num, keep, planes_noped, outdata);
     }
 }

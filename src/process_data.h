@@ -32,6 +32,7 @@ using writebuf_t = result_t::value_type;
 
 extern "C" {
     void process_data(uint8_t infiledata[INBUF_SIZE],
-         writebuf_t outdata[OUTBUF_SIZE]);
+                      writebuf_t outdata[OUTBUF_SIZE]);
+//         int16_t skip_threshold);
 }
 #endif

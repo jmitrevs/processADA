@@ -21,6 +21,8 @@ namespace po = boost::program_options;
 
 #include "process_data.h"
 
+constexpr int16_t THRESHOLD = 1000;
+
 // Use a class for file acces for RAII
 class fileHelper {
 public:
@@ -164,6 +166,7 @@ int main(int ac, char** av) {
                     exit(1);
                 }
                 std::cout << "Execution of the kernel\n";
+                //auto run = krnl(bo_in, bo_out, THRESHOLD);
                 auto run = krnl(bo_in, bo_out);
                 run.wait();
 
