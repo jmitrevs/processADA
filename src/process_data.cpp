@@ -161,7 +161,7 @@ template <int N> bool or_reduce(bool *x) {
 }
 
 
-void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], int16_t planes[z_channels][TICK_SIZE]) {
+void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], int16_t planes[TICK_SIZE][z_channels]) {
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++) {
@@ -188,14 +188,15 @@ link_loop:
             //fill adc vectors
         frame_chan_loop:
             for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++) {
-#pragma HLS pipeline
+//#pragma HLS unroll factor=128
+//#pragma HLS dependence variable=planes type=inter false
 
                 auto adc = frame->get_adc(iChan);
 
                 auto offline_chan = getOfflineChannel(crate, slotloc, link_from_frameheader, iChan);
 
                 if(offline_chan >= 0 && offline_chan < z_channels) {
-                    planes[offline_chan][tick] = adc;
+                    planes[tick][offline_chan] = adc;
                 }
             }
         }
@@ -226,8 +227,8 @@ link_loop:
 
 
 
-//bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE]) 
-bool subtract_pedestal(int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE]) {
+//bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
+bool subtract_pedestal(int16_t planes[TICK_SIZE][z_channels], int16_t planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
@@ -238,14 +239,18 @@ pedestal_pipe:
     for (size_t chan = 0; chan < z_channels; chan++) {
 
         bool keep_arr[TICK_SIZE];
-#pragma HLS ARRAY_PARTITION variable=keep_arr complete
+//#pragma HLS ARRAY_PARTITION variable=keep_arr complete
+        int16_t sum = 0;
+        for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
+            sum += planes[tick][chan];
+        }
 
-        auto ave = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]) >> LG_NUM_AVE_TICKS;
+        auto ave = sum >> LG_NUM_AVE_TICKS;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-# pragma HLS unroll
-            auto val = planes[chan][tick] - ave;
-            planes_noped[chan][tick] = val;
+//#pragma HLS unroll
+            auto val = planes[tick][chan] - ave;
+            planes_noped[tick][chan] = val;
             keep_arr[tick] = (val > skip_threshold || val < - skip_threshold);
         }
         keep |= or_reduce<TICK_SIZE>(keep_arr);
@@ -255,31 +260,13 @@ pedestal_pipe:
 
 
 
-void call_cnn2d(int call_num, bool keep, int16_t planes_noped[z_channels][TICK_SIZE], writebuf_t outdata[OUTBUF_SIZE]) {
-    hls::stream<input_t> zero_padding2d_input("zero_padding2d_input");
-#pragma HLS STREAM variable=zero_padding2d_input depth=96000
-    hls::stream<result_t> result_out;
-#pragma HLS STREAM variable=result_out depth=2
-
+void call_cnn2d(int call_num, bool keep, int16_t planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
     if (keep) {
-        std::cout << "part 1, call number: " << call_num << std::endl;
-        for (size_t chan = 0; chan < z_channels; chan++) {
-            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-                input_t pack;
-                pack[0] = planes_noped[chan][tick];
-                zero_padding2d_input.write(pack);
-            }
-        }
-        //first half of outdata is filled with the first side of z_plane outputs
-        cnn2d(zero_padding2d_input, result_out);
-        auto cc_prob = result_out.read();
-    filling_loop:
-        for (int z = 0; z < N_OUT; z++) {
-            #pragma HLS unroll
-            std::cout << "cc_prob[" << z << "] = " << static_cast<float>(cc_prob[z]) << std::endl;
-            outdata[call_num*N_OUT + z] = cc_prob[z];
-        }
+        // std::cout << "keep is true" << std::endl;
+        outdata[call_num*N_OUT] = 0;
+        outdata[call_num*N_OUT+1] = 1;
     } else {
+        // std::cout << "keep is false" << std::endl;
         outdata[call_num*N_OUT] = 1;
         outdata[call_num*N_OUT+1] = 0;
     }
@@ -289,6 +276,8 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 //                  int16_t skip_threshold)
 {
+
+//#pragma HLS ARRAY_PARTITION variable=infiledata type=cyclic factor=16
 
     std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
@@ -301,8 +290,10 @@ calls_loop:
 #pragma HLS dataflow
 
         //Z plane arrays
-        int16_t planes[z_channels][TICK_SIZE];
-        int16_t planes_noped[z_channels][TICK_SIZE];  // these have the pedestal subtracted
+        int16_t planes[TICK_SIZE][z_channels];
+//#pragma HLS array_partition variable=planes type=cyclic dim=2 factor=32
+        int16_t planes_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
+//#pragma HLS array_partition variable=planes_noped type=cyclic dim=2 factor=32
 
         make_planes(call_num, infiledata, planes);
 

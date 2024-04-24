@@ -92,7 +92,7 @@ public:
    * - 40 values from FEMB1 V channels
    * - 48 values from FEMB1 X channels (collection)
    */
-  uint16_t get_adc(int i) const // NOLINT(build/unsigned)
+  inline uint16_t get_adc(int i) const // NOLINT(build/unsigned)
   {
 	  if (i < 0 || i >= s_num_channels)
 	       return 0;
