@@ -7,107 +7,116 @@
 
 constexpr int16_t skip_threshold = 1024;
 
+constexpr size_t NUM_VALS_Z = 48;
+constexpr size_t NUM_BYTES_Z = 84;  // (48*14/8)
+//constexpr size_t NUM_WORDS_Z = 21;  // (48*14/32)
+
+
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
-int16_t getOfflineChannel(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
+// This is for channels 80 - 128 (but wibframechan has 80 subtracted)
+int16_t getOfflineChannelZa(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
 
     const auto up = static_cast<bool>(crate & 1); // odd number crates are upright
     const auto wib = slot + 1;
 
-    if (208 <= wibframechan && wibframechan < 256) {
-        if (!up && wib == 1 && link == 1) {
-            return wibframechan + 272;
-        } else if (!up && wib == 2 && link == 1) {
-            return wibframechan + 368;
-        } else if (!up && wib == 1 && link == 0) {
-            return wibframechan + 464;
-        } else if (!up && wib == 2 && link == 0) {
-            return wibframechan + 560;
-        } else if (!up && wib == 3 && link == 1) {
-            return wibframechan + 656;
-        } else if (!up && wib == 4 && link == 1) {
-            return 687 - wibframechan;
-        } else if (!up && wib == 3 && link == 0) {
-            return 591 - wibframechan;
-        } else if (!up && wib == 4 && link == 0) {
-            return 495 - wibframechan;
-        } else if (!up && wib == 5 && link == 1) {
-            return 399 - wibframechan;
-        } else if (!up && wib == 5 && link == 0) {
-            return 303 - wibframechan;
-        }
-
-        else if (up && wib == 1 && link == 1) {
-            return wibframechan - 208;
-        } else if (up && wib == 2 && link == 1) {
-            return wibframechan - 112;
-        } else if (up && wib == 1 && link == 0) {
-            return wibframechan - 16;
-        } else if (up && wib == 2 && link == 0) {
-            return wibframechan + 80;
-        } else if (up && wib == 3 && link == 1) {
-            return wibframechan + 176;
-        } else if (up && wib == 4 && link == 1) {
-            return 1167 - wibframechan;
-        } else if (up && wib == 3 && link == 0) {
-            return 1071 - wibframechan;
-        } else if (up && wib == 4 && link == 0) {
-            return 975 - wibframechan;
-        } else if (up && wib == 5 && link == 1) {
-            return 879 - wibframechan;
-        } else if (up && wib == 5 && link == 0) {
-            return 783 - wibframechan;
-        }
-
-
-    } else if (80 <= wibframechan && wibframechan < 128) {
-        if (!up && wib == 1 && link == 1) {
-            return wibframechan + 448;
-        } else if (!up && wib == 2 && link == 1) {
-            return wibframechan + 544;
-        } else if (!up && wib == 1 && link == 0) {
-            return wibframechan + 640;
-        } else if (!up && wib == 2 && link == 0) {
-            return wibframechan + 736;
-        } else if (!up && wib == 3 && link == 1) {
-            return wibframechan + 832;
-        } else if (!up && wib == 4 && link == 1) {
-            return 511 - wibframechan;
-        } else if (!up && wib == 3 && link == 0) {
-            return 415 - wibframechan;
-        } else if (!up && wib == 4 && link == 0) {
-            return 319 - wibframechan;
-        } else if (!up && wib == 5 && link == 1) {
-            return 223 - wibframechan;
-        } else if (!up && wib == 5 && link == 0) {
-            return 127 - wibframechan;
-        }
-
-        else if (up && wib == 1 && link == 1) {
-            return wibframechan - 32;
-        } else if (up && wib == 2 && link == 1) {
-            return wibframechan + 64;
-        } else if (up && wib == 1 && link == 0) {
-            return wibframechan + 160;
-        } else if (up && wib == 2 && link == 0) {
-            return wibframechan + 256;
-        } else if (up && wib == 3 && link == 1) {
-            return wibframechan + 352;
-        } else if (up && wib == 4 && link == 1) {
-            return 991 - wibframechan;
-        } else if (up && wib == 3 && link == 0) {
-            return 895 - wibframechan;
-        } else if (up && wib == 4 && link == 0) {
-            return 799 - wibframechan;
-        } else if (up && wib == 5 && link == 1) {
-            return 703 - wibframechan;
-        } else if (up && wib == 5 && link == 0) {
-            return 607 - wibframechan;
-        }
-
-    } else {
-        // not collection plane
-        return -1;
+    if (!up && wib == 1 && link == 1) {
+        return wibframechan + 528;
+    } else if (!up && wib == 2 && link == 1) {
+        return wibframechan + 624;
+    } else if (!up && wib == 1 && link == 0) {
+        return wibframechan + 720;
+    } else if (!up && wib == 2 && link == 0) {
+        return wibframechan + 816;
+    } else if (!up && wib == 3 && link == 1) {
+        return wibframechan + 912;
+    } else if (!up && wib == 4 && link == 1) {
+        return 431 - wibframechan;
+    } else if (!up && wib == 3 && link == 0) {
+        return 335 - wibframechan;
+    } else if (!up && wib == 4 && link == 0) {
+        return 239 - wibframechan;
+    } else if (!up && wib == 5 && link == 1) {
+        return 143 - wibframechan;
+    } else if (!up && wib == 5 && link == 0) {
+        return 47 - wibframechan;
     }
+
+    else if (up && wib == 1 && link == 1) {
+        return wibframechan + 48;
+    } else if (up && wib == 2 && link == 1) {
+        return wibframechan + 144;
+    } else if (up && wib == 1 && link == 0) {
+        return wibframechan + 240;
+    } else if (up && wib == 2 && link == 0) {
+        return wibframechan + 336;
+    } else if (up && wib == 3 && link == 1) {
+        return wibframechan + 432;
+    } else if (up && wib == 4 && link == 1) {
+        return 911 - wibframechan;
+    } else if (up && wib == 3 && link == 0) {
+        return 815 - wibframechan;
+    } else if (up && wib == 4 && link == 0) {
+        return 719 - wibframechan;
+    } else if (up && wib == 5 && link == 1) {
+        return 623 - wibframechan;
+    } else if (up && wib == 5 && link == 0) {
+        return 527 - wibframechan;
+    }
+
+    return -2;
+}
+
+// this is only for collection plane, and it subtracts outs 1600 from the returned vallue
+// This is for 208-256 (but wibframe has 208 subtracted)
+int16_t getOfflineChannelZb(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
+
+    const auto up = static_cast<bool>(crate & 1); // odd number crates are upright
+    const auto wib = slot + 1;
+
+    if (!up && wib == 1 && link == 1) {
+        return wibframechan + 480;
+    } else if (!up && wib == 2 && link == 1) {
+        return wibframechan + 576;
+    } else if (!up && wib == 1 && link == 0) {
+        return wibframechan + 672;
+    } else if (!up && wib == 2 && link == 0) {
+        return wibframechan + 768;
+    } else if (!up && wib == 3 && link == 1) {
+        return wibframechan + 864;
+    } else if (!up && wib == 4 && link == 1) {
+        return 479 - wibframechan;
+    } else if (!up && wib == 3 && link == 0) {
+        return 383 - wibframechan;
+    } else if (!up && wib == 4 && link == 0) {
+        return 287 - wibframechan;
+    } else if (!up && wib == 5 && link == 1) {
+        return 191 - wibframechan;
+    } else if (!up && wib == 5 && link == 0) {
+        return 95 - wibframechan;
+    }
+
+    else if (up && wib == 1 && link == 1) {
+        return wibframechan;
+    } else if (up && wib == 2 && link == 1) {
+        return wibframechan + 96;
+    } else if (up && wib == 1 && link == 0) {
+        return wibframechan + 192;
+    } else if (up && wib == 2 && link == 0) {
+        return wibframechan + 288;
+    } else if (up && wib == 3 && link == 1) {
+        return wibframechan + 384;
+    } else if (up && wib == 4 && link == 1) {
+        return 959 - wibframechan;
+    } else if (up && wib == 3 && link == 0) {
+        return 863 - wibframechan;
+    } else if (up && wib == 4 && link == 0) {
+        return 767 - wibframechan;
+    } else if (up && wib == 5 && link == 1) {
+        return 671 - wibframechan;
+    } else if (up && wib == 5 && link == 0) {
+        return 575 - wibframechan;
+    }
+
     return -2;
 }
 
@@ -161,42 +170,193 @@ template <int N> bool or_reduce(bool *x) {
 }
 
 
-void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], int16_t planes[TICK_SIZE][z_channels]) {
+void separate_helper(const uint8_t *bytes, ap_uint<14> *vals) {
+    // NOTE:  this assumes little-endian
+
+    uint8_t buf[3]; // where data is buffered
+
+    size_t bytes_idx;
+
+    for (bytes_idx = 0; bytes_idx < 3; bytes_idx++) {
+        #pragma HLS unroll
+        buf[bytes_idx] = bytes[bytes_idx];
+    }
+
+    // evaluate 0
+    {
+        unsigned int temp0 = buf[0];
+        unsigned int temp1 = buf[1];
+        temp1 &= 0x3F;
+
+        vals[0] = temp0 | (temp1 << 8);
+    }
+
+    // shift values
+    buf[0] = buf[1];
+    buf[1] = buf[2];
+    buf[2] = bytes[bytes_idx++];
+
+    // evaluate 1
+    {
+        unsigned int temp0 = buf[0];
+        temp0 >>= 6;
+        unsigned int temp1 = buf[1];
+        temp1 <<= 2;
+        unsigned int temp2 = buf[2];
+        temp2 &= 0xF;
+
+        vals[1] = temp0 | temp1 | (temp2 << 10);
+    }
+
+    // shift values
+    buf[0] = buf[1];
+    buf[1] = buf[2];
+    buf[2] = bytes[bytes_idx++];
+
+    // shift values
+    buf[0] = buf[1];
+    buf[1] = buf[2];
+    buf[2] = bytes[bytes_idx++];
+
+    // evaluate 2
+    {
+        unsigned int temp0 = buf[0];
+        temp0 >>= 4;
+        unsigned int temp1 = buf[1];
+        temp1 <<= 4;
+        unsigned int temp2 = buf[2];
+        temp2 &= 0x3;
+
+        vals[2] = temp0 | temp1 | (temp2 << 12);
+    }
+
+    // shift values
+    buf[0] = buf[1];
+    buf[1] = buf[2];
+    buf[2] = bytes[bytes_idx++];
+
+    // evaluate 3
+    {
+        unsigned int temp1 = buf[1];
+        temp1 >>= 2;
+        unsigned int temp2 = buf[2];
+
+        vals[2] = temp1 | (temp2 << 6);
+    }
+}
+
+
+void separate_data(const uint8_t bytes[NUM_BYTES_Z], ap_uint<14> vals[NUM_VALS_Z]) {
+
+    // 4*14 = 7*8; For every 7 bytes taken in, we produce 4
+    constexpr size_t pat_values = 4;
+    constexpr size_t pat_bytes = 7;
+
+    for (size_t val_count = 0, byte_count = 0; val_count < z_channels; val_count += pat_values, byte_count += pat_bytes) {
+        separate_helper(&bytes[byte_count], &vals[val_count]);
+    }
+}
+
+
+
+void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels]) {
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
+
+    constexpr size_t OFFSETA = 140; // 80*14/8
+    constexpr size_t OFFSETB = 364; // (128 + 80)*14/8
+
+    constexpr auto fragHeadSize = sizeof(dunedaq::daqdataformats::FragmentHeader);
+    constexpr auto fragSize = sizeof(dunedaq::daqdataformats::Fragment);
+
+    constexpr auto wibHeaderSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame::Header);
+    constexpr auto wibFrameSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame);  // this includes the header
+
+    std::cout << "fragment header size = " << std::dec << fragHeadSize << std::endl;
+    std::cout << "fragment size = " << fragSize << std::endl;
+
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++) {
 
-        // std::cout << "link = " << link << std::endl;
-        size_t ibegin = link*fragsize;
-        dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
+        const size_t ibegin = link*fragsize;
 
-        const size_t iFrameBegin = call_num*SKIP_SIZE;
+        // uint8_t fragdata[fragsize];
+        // for (size_t data_index = 0; data_index < fragsize; data_index++) {
+        //     fragdata[i] = infiledata[
+
+        // std::cout << "link = " << link << std::endl;
+        // dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
+
+
+        const auto wibFrameStart = ibegin + sizeof(dunedaq::daqdataformats::FragmentHeader);
+        // let's first find the WIB header
+        uint8_t wib_header_buf[wibHeaderSize];
+
+    header_loop:
+        for (size_t i = 0; i < wibHeaderSize; i++) {
+            wib_header_buf[i] = infiledata[wibFrameStart + i];
+        }
+
+        const auto wib_header = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame::Header*>(wib_header_buf);
+
+        const auto crate = wib_header->crate;
+        const auto slot = wib_header->slot;
+        const auto link_from_frameheader = wib_header->link;
+
+        std::cout << "link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
+        // call_num is the window number we are currently processing
+        const size_t iWindowBegin = call_num*SKIP_SIZE;
+
+        //std::cout << "data pointer diff = " << static_cast<uint8_t*>(frag.get_data()) - &infiledata[ibegin] << std::endl;
+        //std::cout << "header pointer diff = " << reinterpret_cast<uint8_t*>(frag.header_()) - &infiledata[ibegin] << std::endl;
+
+        const auto wibDataStart = wibFrameStart + wibHeaderSize;
 
     frame_loop:
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 
-            const size_t iFrame = tick + iFrameBegin;
-            // std::cout << "iFrame = " << iFrame << std::endl;
-            auto frame = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame*>(static_cast<uint8_t*>(frag.get_data())
-                                                                                     + iFrame*sizeof(dunedaq::detdataformats::wib2::WIB2Frame));
+            // these are from the given link
+            uint8_t z_plane_bytesa[NUM_BYTES_Z];
+            uint8_t z_plane_bytesb[NUM_BYTES_Z];
 
-            auto crate = frame->header.crate;
-            auto slot = frame->header.slot;
-            uint8_t slotloc = slot & 0x7;
-            auto link_from_frameheader = frame->header.link;
+            // these are from the given link
+            ap_uint<14> z_plane_valsa[NUM_VALS_Z];
+            ap_uint<14> z_plane_valsb[NUM_VALS_Z];
+
+            const size_t iFrame = tick + iWindowBegin;
+
+            const auto data_begin = wibDataStart + iFrame * wibFrameSize;
 
             //fill adc vectors
-        frame_chan_loop:
-            for (size_t iChan = 0; iChan < dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels; iChan++) {
-//#pragma HLS unroll factor=128
-//#pragma HLS dependence variable=planes type=inter false
+        frame_chan_loopa:
+            for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
+                z_plane_bytesa[iByte] = infiledata[data_begin + OFFSETA + iByte];
+            }
 
-                auto adc = frame->get_adc(iChan);
+        frame_chan_loopb:
+            for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
+                z_plane_bytesb[iByte] = infiledata[data_begin + OFFSETB + iByte];
+            }
 
-                auto offline_chan = getOfflineChannel(crate, slotloc, link_from_frameheader, iChan);
+            // create the vals
+            separate_data(z_plane_bytesa, z_plane_valsa);
+            separate_data(z_plane_bytesb, z_plane_valsb);
 
-                if(offline_chan >= 0 && offline_chan < z_channels) {
-                    planes[tick][offline_chan] = adc;
+            for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
+
+                #pragma HLS dependence variable=planes type=inter false
+                #pragma HLS dependence variable=planes type=intra false
+
+                auto offline_chana = getOfflineChannelZa(crate, slot, link_from_frameheader, iVal);
+
+                // should be easy to add the other Z-channel
+                if (offline_chana < z_channels) {
+                    planes[tick][offline_chana] = z_plane_valsa[iVal];
+                }
+                auto offline_chanb = getOfflineChannelZb(crate, slot, link_from_frameheader, iVal);
+
+                // should be easy to add the other Z-channel
+                if (offline_chanb < z_channels) {
+                    planes[tick][offline_chanb] = z_plane_valsb[iVal];
                 }
             }
         }
@@ -219,7 +379,7 @@ link_loop:
 // subtract_pipe:
 //     for (size_t chan = 0; chan < z_channels; chan++) {
 //         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-// # pragma HLS unroll
+// # pragm aHLS unroll
 //             planes_noped[chan][tick] = planes[chan][tick] - ave[chan];
 //         }
 //     }
@@ -228,39 +388,44 @@ link_loop:
 
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
-bool subtract_pedestal(int16_t planes[TICK_SIZE][z_channels], int16_t planes_noped[TICK_SIZE][z_channels]) {
+bool subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels], ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
 
     bool keep = false;
 
+
 pedestal_pipe:
     for (size_t chan = 0; chan < z_channels; chan++) {
 
-        bool keep_arr[TICK_SIZE];
-//#pragma HLS ARRAY_PARTITION variable=keep_arr complete
-        int16_t sum = 0;
-        for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
-            sum += planes[tick][chan];
-        }
+//         bool keep_arr[TICK_SIZE];
+// //#pragma HLS ARRAY_PARTITION variable=keep_arr complete
+//         int16_t sum = 0;
+//         for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
+//             sum += planes[tick][chan];
+//         }
 
-        auto ave = sum >> LG_NUM_AVE_TICKS;
+//         auto ave = sum >> LG_NUM_AVE_TICKS;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-//#pragma HLS unroll
-            auto val = planes[tick][chan] - ave;
-            planes_noped[tick][chan] = val;
-            keep_arr[tick] = (val > skip_threshold || val < - skip_threshold);
+// //#pragma HLS unroll
+//             auto val = planes[tick][chan] - ave;
+            auto val = planes[tick][chan];
+//             planes_noped[tick][chan] = val;
+//             keep_arr[tick] = (val > skip_threshold || val < - skip_threshold);
+            if (val > skip_threshold || val < - skip_threshold) {
+                keep = true;
+            }
         }
-        keep |= or_reduce<TICK_SIZE>(keep_arr);
+//        keep |= or_reduce<TICK_SIZE>(keep_arr);
     }
     return keep;
 }
 
 
 
-void call_cnn2d(int call_num, bool keep, int16_t planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
+void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
     if (keep) {
         // std::cout << "keep is true" << std::endl;
         outdata[call_num*N_OUT] = 0;
@@ -277,6 +442,9 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
 //                  int16_t skip_threshold)
 {
 
+#pragma HLS INTERFACE mode=m_axi port=infiledata bundle=indatabun
+#pragma HLS INTERFACE mode=m_axi port=outdata bundle=outdatabun
+
 //#pragma HLS ARRAY_PARTITION variable=infiledata type=cyclic factor=16
 
     std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
@@ -288,17 +456,18 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
 calls_loop:
     for (int call_num = 0; call_num < NUM_CALLS; call_num++) {
 #pragma HLS dataflow
-
-        //Z plane arrays
-        int16_t planes[TICK_SIZE][z_channels];
+    
+    //Z plane arrays
+        ap_uint<14> planes[TICK_SIZE][z_channels];
 //#pragma HLS array_partition variable=planes type=cyclic dim=2 factor=32
-        int16_t planes_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
+        ap_int<15> planes_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
 //#pragma HLS array_partition variable=planes_noped type=cyclic dim=2 factor=32
 
         make_planes(call_num, infiledata, planes);
 
         auto keep = subtract_pedestal(planes, planes_noped);
 
+        // call_cnn2d(call_num, true, planes_noped, outdata);
         call_cnn2d(call_num, keep, planes_noped, outdata);
     }
 }
