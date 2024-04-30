@@ -14,10 +14,12 @@ constexpr size_t NUM_BYTES_Z = 84;  // (48*14/8)
 
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
 // This is for channels 80 - 128 (but wibframechan has 80 subtracted)
-int16_t getOfflineChannelZa(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
+int16_t getOfflineChannelZa(uint16_t crate, uint16_t slot, uint16_t link, uint16_t wibframechan ) {
 
     const auto up = static_cast<bool>(crate & 1); // odd number crates are upright
     const auto wib = slot + 1;
+
+    // std::cout << "up = " << up << ", slot = " << static_cast<unsigned>(slot) << ", wib = " << static_cast<unsigned>(wib) << ", link = " << static_cast<unsigned>(link) << ", frame = " << wibframechan << std::endl;
 
     if (!up && wib == 1 && link == 1) {
         return wibframechan + 528;
@@ -252,7 +254,8 @@ void separate_data(const uint8_t bytes[NUM_BYTES_Z], ap_uint<14> vals[NUM_VALS_Z
     constexpr size_t pat_values = 4;
     constexpr size_t pat_bytes = 7;
 
-    for (size_t val_count = 0, byte_count = 0; val_count < z_channels; val_count += pat_values, byte_count += pat_bytes) {
+    for (size_t val_count = 0, byte_count = 0; byte_count < NUM_BYTES_Z; val_count += pat_values, byte_count += pat_bytes) {
+        // std::cout << "byte_count = " << byte_count << ", val_count = " << val_count << std::endl;
         separate_helper(&bytes[byte_count], &vals[val_count]);
     }
 }
@@ -271,8 +274,8 @@ void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], ap_uint<14> plane
     constexpr auto wibHeaderSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame::Header);
     constexpr auto wibFrameSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame);  // this includes the header
 
-    std::cout << "fragment header size = " << std::dec << fragHeadSize << std::endl;
-    std::cout << "fragment size = " << fragSize << std::endl;
+    // std::cout << "fragment header size = " << std::dec << fragHeadSize << std::endl;
+    // std::cout << "fragment size = " << fragSize << std::endl;
 
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++) {
@@ -298,11 +301,11 @@ link_loop:
 
         const auto wib_header = reinterpret_cast<dunedaq::detdataformats::wib2::WIB2Frame::Header*>(wib_header_buf);
 
-        const auto crate = wib_header->crate;
-        const auto slot = wib_header->slot;
-        const auto link_from_frameheader = wib_header->link;
+        const uint16_t crate = wib_header->crate;
+        const uint16_t slot = wib_header->slot;
+        const uint16_t link_from_frameheader = wib_header->link;
 
-        std::cout << "link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
+        // std::cout << "link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
         // call_num is the window number we are currently processing
         const size_t iWindowBegin = call_num*SKIP_SIZE;
 
@@ -310,6 +313,7 @@ link_loop:
         //std::cout << "header pointer diff = " << reinterpret_cast<uint8_t*>(frag.header_()) - &infiledata[ibegin] << std::endl;
 
         const auto wibDataStart = wibFrameStart + wibHeaderSize;
+
 
     frame_loop:
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
@@ -337,6 +341,8 @@ link_loop:
                 z_plane_bytesb[iByte] = infiledata[data_begin + OFFSETB + iByte];
             }
 
+            // std::cout << "here link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
+
             // create the vals
             separate_data(z_plane_bytesa, z_plane_valsa);
             separate_data(z_plane_bytesb, z_plane_valsb);
@@ -346,13 +352,20 @@ link_loop:
                 #pragma HLS dependence variable=planes type=inter false
                 #pragma HLS dependence variable=planes type=intra false
 
+
+                // std::cout << "before call: link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
+
                 auto offline_chana = getOfflineChannelZa(crate, slot, link_from_frameheader, iVal);
+
+                // std::cout << "offline_chana = " << offline_chana << std::endl;
 
                 // should be easy to add the other Z-channel
                 if (offline_chana < z_channels) {
                     planes[tick][offline_chana] = z_plane_valsa[iVal];
                 }
                 auto offline_chanb = getOfflineChannelZb(crate, slot, link_from_frameheader, iVal);
+
+                // std::cout << "offline_chanb = " << offline_chanb << std::endl;
 
                 // should be easy to add the other Z-channel
                 if (offline_chanb < z_channels) {
@@ -456,7 +469,7 @@ void process_data(uint8_t infiledata[INBUF_SIZE],
 calls_loop:
     for (int call_num = 0; call_num < NUM_CALLS; call_num++) {
 #pragma HLS dataflow
-    
+
     //Z plane arrays
         ap_uint<14> planes[TICK_SIZE][z_channels];
 //#pragma HLS array_partition variable=planes type=cyclic dim=2 factor=32
