@@ -248,19 +248,59 @@ void separate_helper(const uint8_t *bytes, ap_uint<14> *vals) {
 }
 
 
-void separate_data(const uint8_t bytes[NUM_BYTES_Z], ap_uint<14> vals[NUM_VALS_Z]) {
+void separate_data(const uint8_t bytesa[NUM_BYTES_Z],
+                   const uint8_t bytesb[NUM_BYTES_Z],
+                   ap_uint<14> valsa[NUM_VALS_Z],
+                   ap_uint<14> valsb[NUM_VALS_Z]) {
 
     // 4*14 = 7*8; For every 7 bytes taken in, we produce 4
     constexpr size_t pat_values = 4;
     constexpr size_t pat_bytes = 7;
 
+seperate_data_loop:
     for (size_t val_count = 0, byte_count = 0; byte_count < NUM_BYTES_Z; val_count += pat_values, byte_count += pat_bytes) {
-        // std::cout << "byte_count = " << byte_count << ", val_count = " << val_count << std::endl;
-        separate_helper(&bytes[byte_count], &vals[val_count]);
+        separate_helper(&bytesa[byte_count], &valsa[val_count]);
+        separate_helper(&bytesb[byte_count], &valsb[val_count]);
     }
 }
 
+void fill_bytes(const uint8_t *infiledata, uint8_t* z_plane_bytesa, size_t offseta, uint8_t* z_plane_bytesb, size_t offsetb) {
+fill_bytes_loop:
+    for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
+#pragma HLS pipeline ii=2
+        z_plane_bytesa[iByte] = infiledata[offseta + iByte];
+        z_plane_bytesb[iByte] = infiledata[offsetb + iByte];
+    }
+}
 
+void fill_planes(const ap_uint<14> valsa[NUM_VALS_Z],
+                 const ap_uint<14> valsb[NUM_VALS_Z],
+                 ap_uint<14> planes[TICK_SIZE][z_channels],
+                 size_t tick,
+                 uint16_t crate,
+                 uint16_t slot,
+                 uint16_t link_from_frameheader) {
+
+fill_planes_loop:
+    for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
+
+#pragma HLS dependence variable=planes type=inter false
+#pragma HLS dependence variable=planes type=intra false
+
+        auto offline_chana = getOfflineChannelZa(crate, slot, link_from_frameheader, iVal);
+
+        // should be easy to add the other Z-channel
+        if (offline_chana < z_channels) {
+            planes[tick][offline_chana] = valsa[iVal];
+        }
+
+        auto offline_chanb = getOfflineChannelZb(crate, slot, link_from_frameheader, iVal);
+        // should be easy to add the other Z-channel
+        if (offline_chanb < z_channels) {
+            planes[tick][offline_chanb] = valsb[iVal];
+        }
+    }
+}
 
 void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels]) {
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
@@ -339,48 +379,12 @@ link_loop:
             const auto data_begin = wibDataStart + iFrame * wibFrameSize;
 
             //fill adc vectors
-        frame_chan_loopa:
-            for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
-                z_plane_bytesa[iByte] = infiledata[data_begin + OFFSETA + iByte];
-            }
-
-        frame_chan_loopb:
-            for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
-                z_plane_bytesb[iByte] = infiledata[data_begin + OFFSETB + iByte];
-            }
-
-            // std::cout << "here link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
+            fill_bytes(infiledata, z_plane_bytesa, data_begin + OFFSETA, z_plane_bytesb, data_begin + OFFSETB);
 
             // create the vals
-            separate_data(z_plane_bytesa, z_plane_valsa);
-            separate_data(z_plane_bytesb, z_plane_valsb);
+            separate_data(z_plane_bytesa, z_plane_bytesb, z_plane_valsa, z_plane_valsb);
 
-        fill_planes:
-            for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
-
-                #pragma HLS dependence variable=planes type=inter false
-                #pragma HLS dependence variable=planes type=intra false
-
-
-                // std::cout << "before call: link = " << link << ", crate = " << crate << ", slot = " << slot << ", link from frame = " << link_from_frameheader << std::endl;
-
-                auto offline_chana = getOfflineChannelZa(crate, slot, link_from_frameheader, iVal);
-
-                // std::cout << "offline_chana = " << offline_chana << std::endl;
-
-                // should be easy to add the other Z-channel
-                if (offline_chana < z_channels) {
-                    planes[tick][offline_chana] = z_plane_valsa[iVal];
-                }
-                auto offline_chanb = getOfflineChannelZb(crate, slot, link_from_frameheader, iVal);
-
-                // std::cout << "offline_chanb = " << offline_chanb << std::endl;
-
-                // should be easy to add the other Z-channel
-                if (offline_chanb < z_channels) {
-                    planes[tick][offline_chanb] = z_plane_valsb[iVal];
-                }
-            }
+            fill_planes(z_plane_valsa, z_plane_valsb, planes, tick, crate, slot, link_from_frameheader);
         }
     }
 }
