@@ -284,6 +284,10 @@ void fill_planes(const ap_uint<14> valsa[NUM_VALS_Z],
 fill_planes_loop:
     for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
 
+//#pragma HLS pipeline ii=3
+
+        #pragma HLS unroll factor=4
+
 #pragma HLS dependence variable=planes type=inter false
 #pragma HLS dependence variable=planes type=intra false
 
