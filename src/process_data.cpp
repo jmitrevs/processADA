@@ -293,6 +293,7 @@ link_loop:
         const auto wibFrameStart = ibegin + sizeof(dunedaq::daqdataformats::FragmentHeader);
         // let's first find the WIB header
         uint8_t wib_header_buf[wibHeaderSize];
+//#pragma HLS ARRAY_PARTITION variable=wib_header_buf type=complete
 
     header_loop:
         for (size_t i = 0; i < wibHeaderSize; i++) {
@@ -318,13 +319,20 @@ link_loop:
     frame_loop:
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 
+            //#pragma HLS dataflow
+
             // these are from the given link
             uint8_t z_plane_bytesa[NUM_BYTES_Z];
             uint8_t z_plane_bytesb[NUM_BYTES_Z];
+            #pragma HLS array_partition variable=z_plane_bytesa type=complete
+            #pragma HLS array_partition variable=z_plane_bytesb type=complete
 
             // these are from the given link
             ap_uint<14> z_plane_valsa[NUM_VALS_Z];
             ap_uint<14> z_plane_valsb[NUM_VALS_Z];
+
+            #pragma HLS array_partition variable=z_plane_valsa type=complete
+            #pragma HLS array_partition variable=z_plane_valsb type=complete
 
             const size_t iFrame = tick + iWindowBegin;
 
@@ -347,6 +355,7 @@ link_loop:
             separate_data(z_plane_bytesa, z_plane_valsa);
             separate_data(z_plane_bytesb, z_plane_valsb);
 
+        fill_planes:
             for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
 
                 #pragma HLS dependence variable=planes type=inter false
