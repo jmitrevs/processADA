@@ -359,7 +359,7 @@ link_loop:
     frame_loop:
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 
-            //#pragma HLS dataflow
+            #pragma HLS dataflow
 
             // these are from the given link
             uint8_t z_plane_bytesa[NUM_BYTES_Z];
