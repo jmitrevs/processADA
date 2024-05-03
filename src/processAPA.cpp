@@ -155,7 +155,7 @@ int main(int ac, char** av) {
                 fileHelper fhout(outfilepath, O_CREAT | O_WRONLY | O_DIRECT, 0644);
 
                 auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
-                std::cout << "Creating " << outfilepath << ", numread = " << std::hex << numread <<  std::endl;
+                // std::cout << "Creating " << outfilepath << ", numread = " << std::hex << numread <<  std::endl;
             
                 if (numread % NUM_LINKS != 0) {
                     std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
@@ -165,7 +165,7 @@ int main(int ac, char** av) {
                     std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
                     exit(1);
                 }
-                std::cout << "Execution of the kernel\n";
+                // std::cout << "Execution of the kernel\n";
                 //auto run = krnl(bo_in, bo_out, THRESHOLD);
                 auto run = krnl(bo_in, bo_out);
                 run.wait();
@@ -177,7 +177,7 @@ int main(int ac, char** av) {
                               << " error: " << errno << ", " << strerror(errno) << std::endl;
                     exit(EXIT_FAILURE);
                 } else {
-                    std::cout << "Amount written:" << numActuallyWritten << "  bytes" << std::endl;
+                    // std::cout << "Amount written:" << numActuallyWritten << "  bytes" << std::endl;
                 }
             }
             

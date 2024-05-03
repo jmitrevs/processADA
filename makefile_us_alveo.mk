@@ -66,7 +66,8 @@ PACKAGE_OUT = ./package.$(TARGET)
 VPP_PFLAGS := 
 CMD_ARGS = -x $(BUILD_DIR)/$(KERNEL).xclbin --input-dir ../datfiles --output-dir ./results
 CMD_ARGS_ONE = -x $(BUILD_DIR)/$(KERNEL).xclbin -i ../datfiles/TriggerRecord00001_0000TPCAPA002.dat -o test_dump.out
-CXXFLAGS += -I$(XILINX_XRT)/include -I${XILINX_HLS}/include -I$(XILINX_VIVADO)/include -Wall -O0 -g -std=c++17
+#CXXFLAGS += -I$(XILINX_XRT)/include -I${XILINX_HLS}/include -I$(XILINX_VIVADO)/include -Wall -O0 -g -std=c++17
+CXXFLAGS += -I$(XILINX_XRT)/include -I${XILINX_HLS}/include -I$(XILINX_VIVADO)/include -Wall -O2 -std=c++17
 LDFLAGS += -L$(XILINX_XRT)/lib -pthread -lOpenCL
 
 ########################## Checking if PLATFORM in allowlist #######################
