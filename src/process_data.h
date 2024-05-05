@@ -16,7 +16,8 @@
 const int INFILE_SIZE = 28320800; // == 0x1b02420
 const int INBUF_SIZE = 0x1b02600;  // aligned
 const int LOGIC_OUTBUF_SIZE = 276;
-const int OUTBUF_SIZE = 0x200;  // alighed
+//const int OUTBUF_SIZE = 0x200;  // alighed
+const int OUTBUF_SIZE = INBUF_SIZE;  // alighed
 
 constexpr unsigned int NUM_LINKS = 10;
 
@@ -28,7 +29,7 @@ constexpr size_t TICK_SIZE = 200;
 constexpr size_t SKIP_SIZE = 145;
 constexpr size_t N_OUT = 2;
 
-using writebuf_t = result_t::value_type;
+using writebuf_t = uint8_t;
 
 extern "C" {
     void process_data(uint8_t infiledata[INBUF_SIZE],
