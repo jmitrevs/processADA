@@ -125,7 +125,7 @@ int main(int ac, char** av) {
 
         // Now do buffers
 
-        constexpr size_t READBUF_SIZE = INBUF_SIZE * sizeof(uint8_t);
+        constexpr size_t READBUF_SIZE = INBUF_SIZE * sizeof(readbuf_t);
         constexpr size_t WRITEBUF_SIZE = OUTBUF_SIZE * sizeof(writebuf_t);
 
         std::cout << "READBUF_SIZE = " << std::hex << READBUF_SIZE << ", WRITEBUF_SIZE = " << WRITEBUF_SIZE << std::endl;
@@ -138,7 +138,7 @@ int main(int ac, char** av) {
         auto bo_out = xrt::bo(device, WRITEBUF_SIZE, flags, krnl.group_id(1));
 
         // Map the contents of the buffer object into host memory
-        auto bo_in_map = bo_in.map<uint8_t*>();
+        auto bo_in_map = bo_in.map<readbuf_t*>();
         auto bo_out_map = bo_out.map<writebuf_t*>();
         std::fill(bo_in_map, bo_in_map + INBUF_SIZE, 0);
         std::fill(bo_out_map, bo_out_map + OUTBUF_SIZE, 0);
@@ -157,12 +157,12 @@ int main(int ac, char** av) {
                 auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
                 // std::cout << "Creating " << outfilepath << ", numread = " << std::hex << numread <<  std::endl;
             
-                if (numread % NUM_LINKS != 0) {
+                if (numread % (NUM_LINKS * sizeof(readbuf_t)) != 0) {
                     std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
                     exit(1);
                 }
-                if (numread != INFILE_SIZE) {
-                    std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
+                if (numread != INFILE_SIZE * sizeof(readbuf_t)) {
+                    std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE * sizeof(readbuf_t) << std::endl;
                     exit(1);
                 }
                 // std::cout << "Execution of the kernel\n";
@@ -190,12 +190,13 @@ int main(int ac, char** av) {
             auto numread = pread(fhin.fd(), static_cast<void*>(bo_in_map), READBUF_SIZE, 0);
             std::cout << "numread = " << std::hex << numread <<  std::endl;
 
-            if (numread % NUM_LINKS != 0) {
+            if (numread % (NUM_LINKS * sizeof(readbuf_t)) != 0) {
                 std::cerr << "numread does not divide evenly by the number of links; exiting." << std::endl;
                 exit(1);
             }
-            if (numread != INFILE_SIZE) {
-                std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE << std::endl;
+
+            if (numread != INFILE_SIZE * sizeof(readbuf_t)) {
+                std::cerr << "numread = " << numread << ", expected " << INFILE_SIZE * sizeof(readbuf_t) << std::endl;
                 exit(1);
             }
 

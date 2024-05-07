@@ -8,9 +8,10 @@
 constexpr int16_t skip_threshold = 1024;
 
 constexpr size_t NUM_VALS_Z = 48;
-constexpr size_t NUM_BYTES_Z = 84;  // (48*14/8)
-//constexpr size_t NUM_WORDS_Z = 21;  // (48*14/32)
+//constexpr size_t NUM_BYTES_Z = 84;  // (48*14/8)
+constexpr size_t NUM_WORDS_Z = 11;  // ceil(48*14/64)
 
+using dunedaq::detdataformats::wib2::s_bits_per_adc;
 
 // this is only for collection plane, and it subtracts outs 1600 from the returned vallue
 // This is for channels 80 - 128 (but wibframechan has 80 subtracted)
@@ -172,104 +173,83 @@ template <int N> bool or_reduce(bool *x) {
 }
 
 
-void separate_helper(const uint8_t *bytes, ap_uint<14> *vals) {
-    // NOTE:  this assumes little-endian
+void separate_helper5(const uint64_t *words, ap_uint<14> *vals, unsigned int offset) {
+    constexpr uint64_t mask = 0x3FFF;
 
-    uint8_t buf[3]; // where data is buffered
+    const int from_next = 8 - offset;
 
-    size_t bytes_idx;
-
-    for (bytes_idx = 0; bytes_idx < 3; bytes_idx++) {
-        #pragma HLS unroll
-        buf[bytes_idx] = bytes[bytes_idx];
-    }
-
-    // evaluate 0
-    {
-        unsigned int temp0 = buf[0];
-        unsigned int temp1 = buf[1];
-        temp1 &= 0x3F;
-
-        vals[0] = temp0 | (temp1 << 8);
-    }
-
-    // shift values
-    buf[0] = buf[1];
-    buf[1] = buf[2];
-    buf[2] = bytes[bytes_idx++];
-
-    // evaluate 1
-    {
-        unsigned int temp0 = buf[0];
-        temp0 >>= 6;
-        unsigned int temp1 = buf[1];
-        temp1 <<= 2;
-        unsigned int temp2 = buf[2];
-        temp2 &= 0xF;
-
-        vals[1] = temp0 | temp1 | (temp2 << 10);
-    }
-
-    // shift values
-    buf[0] = buf[1];
-    buf[1] = buf[2];
-    buf[2] = bytes[bytes_idx++];
-
-    // shift values
-    buf[0] = buf[1];
-    buf[1] = buf[2];
-    buf[2] = bytes[bytes_idx++];
-
-    // evaluate 2
-    {
-        unsigned int temp0 = buf[0];
-        temp0 >>= 4;
-        unsigned int temp1 = buf[1];
-        temp1 <<= 4;
-        unsigned int temp2 = buf[2];
-        temp2 &= 0x3;
-
-        vals[2] = temp0 | temp1 | (temp2 << 12);
-    }
-
-    // shift values
-    buf[0] = buf[1];
-    buf[1] = buf[2];
-    buf[2] = bytes[bytes_idx++];
-
-    // evaluate 3
-    {
-        unsigned int temp1 = buf[1];
-        temp1 >>= 2;
-        unsigned int temp2 = buf[2];
-
-        vals[2] = temp1 | (temp2 << 6);
-    }
+    vals[0] = (words[0] >> offset) & mask;
+    vals[1] = (words[0] >> s_bits_per_adc + offset) & mask;
+    vals[2] = (words[0] >> 2*s_bits_per_adc + offset) & mask;
+    vals[3] = (words[0] >> 3*s_bits_per_adc + offset) & mask;
+    vals[4] = (words[0] >> 4*s_bits_per_adc + offset) & mask | (words[1] << from_next) & mask;
 }
 
+void separate_helper4(const uint64_t *words, ap_uint<14> *vals, unsigned int offset) {
+    constexpr uint64_t mask = 0x3FFF;
 
-void separate_data(const uint8_t bytesa[NUM_BYTES_Z],
-                   const uint8_t bytesb[NUM_BYTES_Z],
+    const int from_next = 22 - offset;
+
+    vals[0] = (words[0] >> offset) & mask;
+    vals[1] = (words[0] >> s_bits_per_adc + offset) & mask;
+    vals[2] = (words[0] >> 2*s_bits_per_adc + offset) & mask;
+    vals[3] = (words[0] >> 4*s_bits_per_adc + offset) & mask | (words[1] << from_next) & mask;
+}
+   
+void separate_helper2(const uint64_t *words, ap_uint<14> *vals, unsigned int offset) {
+    constexpr uint64_t mask = 0x3FFF;
+
+    vals[0] = (words[0] >> offset) & mask;
+    vals[1] = (words[0] >> s_bits_per_adc + offset) & mask;
+}    
+
+
+void separate_data(const uint64_t wordsa[NUM_WORDS_Z],
+                   const uint64_t wordsb[NUM_WORDS_Z],
                    ap_uint<14> valsa[NUM_VALS_Z],
                    ap_uint<14> valsb[NUM_VALS_Z]) {
 
-    // 4*14 = 7*8; For every 7 bytes taken in, we produce 4
-    constexpr size_t pat_values = 4;
-    constexpr size_t pat_bytes = 7;
+    separate_helper5(&wordsa[0], &valsa[0], 0);
+    separate_helper5(&wordsb[0], &valsb[0], 0);
 
-seperate_data_loop:
-    for (size_t val_count = 0, byte_count = 0; byte_count < NUM_BYTES_Z; val_count += pat_values, byte_count += pat_bytes) {
-        separate_helper(&bytesa[byte_count], &valsa[val_count]);
-        separate_helper(&bytesb[byte_count], &valsb[val_count]);
-    }
+    separate_helper5(&wordsa[1], &valsa[5], 6);
+    separate_helper5(&wordsb[1], &valsb[5], 6);
+
+    separate_helper4(&wordsa[2], &valsa[10], 12);
+    separate_helper4(&wordsb[2], &valsb[10], 12);
+
+    separate_helper5(&wordsa[3], &valsa[14], 4);
+    separate_helper5(&wordsb[3], &valsb[14], 4);
+
+    separate_helper4(&wordsa[4], &valsa[19], 10);
+    separate_helper4(&wordsb[4], &valsb[19], 10);
+
+    separate_helper5(&wordsa[5], &valsa[23], 2);
+    separate_helper5(&wordsb[5], &valsb[23], 2);
+
+    separate_helper4(&wordsa[6], &valsa[27], 8);
+    separate_helper4(&wordsb[6], &valsb[27], 8);
+
+    // pattern repeats
+    separate_helper5(&wordsa[7], &valsa[31], 0);
+    separate_helper5(&wordsb[7], &valsb[31], 0);
+
+    separate_helper5(&wordsa[8], &valsa[36], 6);
+    separate_helper5(&wordsb[8], &valsb[36], 6);
+
+    separate_helper4(&wordsa[9], &valsa[41], 12);
+    separate_helper4(&wordsb[9], &valsb[41], 12);
+
+    separate_helper2(&wordsa[10], &valsa[45], 4);
+    separate_helper2(&wordsb[10], &valsb[45], 4);
 }
 
-void fill_bytes(const uint8_t *infiledata, uint8_t* z_plane_bytesa, size_t offseta, uint8_t* z_plane_bytesb, size_t offsetb) {
-fill_bytes_loop:
-    for (size_t iByte = 0; iByte < NUM_BYTES_Z; iByte++) {
+void fill_words(const readbuf_t *infiledata, readbuf_t* z_plane_wordsa, size_t offseta, readbuf_t* z_plane_wordsb, size_t offsetb) {
+fill_words_loop:
+    for (size_t iWord = 0; iWord < NUM_WORDS_Z; iWord++) {
 #pragma HLS pipeline ii=2
-        z_plane_bytesa[iByte] = infiledata[offseta + iByte];
-        z_plane_bytesb[iByte] = infiledata[offsetb + iByte];
+        z_plane_wordsa[iWord] = infiledata[offseta + iWord];
+        z_plane_wordsb[iWord] = infiledata[offsetb + iWord];
     }
 }
 
@@ -306,20 +286,28 @@ fill_planes_loop:
     }
 }
 
-void make_planes(int call_num, uint8_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels]) {
+void make_planes(int call_num, readbuf_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels]) {
+    // note, fragsize is in readbuf_t size (64 bit words)
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
 
-    constexpr size_t OFFSETA = 140; // 80*14/8
-    constexpr size_t OFFSETB = 364; // (128 + 80)*14/8
+    constexpr size_t OFFSETA = 18; // 80*14/64 + 0.5
+    constexpr size_t OFFSETB = 46; // (128 + 80)*14/64 + 0.5
 
-    constexpr auto fragHeadSize = sizeof(dunedaq::daqdataformats::FragmentHeader);
-    constexpr auto fragSize = sizeof(dunedaq::daqdataformats::Fragment);
+    constexpr auto fragHeaderWords = sizeof(dunedaq::daqdataformats::FragmentHeader) / sizeof(readbuf_t);  // divides evenly
 
-    constexpr auto wibHeaderSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame::Header);
+    constexpr auto wibHeaderSizeBytes = sizeof(dunedaq::detdataformats::wib2::WIB2Frame::Header);
+    
+    constexpr auto wibHeaderWordsFloor = wibHeaderSizeBytes / sizeof(readbuf_t);  // floor division
+    constexpr auto wibHeaderWordsCeil = (wibHeaderSizeBytes + sizeof(readbuf_t) - 1) / sizeof(readbuf_t);  // ceil division
+
     constexpr auto wibFrameSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame);  // this includes the header
 
     // std::cout << "fragment header size = " << std::dec << fragHeadSize << std::endl;
     // std::cout << "fragment size = " << fragSize << std::endl;
+
+    // std::cout << "wib header size = " << std::dec << wibHeaderSize << std::endl;
+    // std::cout << "wib size = " << wibFrameSize << std::endl;
+
 
 link_loop:
     for (size_t link = 0; link < NUM_LINKS; link++) {
@@ -333,14 +321,14 @@ link_loop:
         // std::cout << "link = " << link << std::endl;
         // dunedaq::daqdataformats::Fragment frag( &infiledata[ibegin], dunedaq::daqdataformats::Fragment::BufferAdoptionMode::kReadOnlyMode);
 
-
-        const auto wibFrameStart = ibegin + sizeof(dunedaq::daqdataformats::FragmentHeader);
+        // in 64-bit words
+        const auto wibFrameStart = ibegin + fragHeaderWords;
         // let's first find the WIB header
-        uint8_t wib_header_buf[wibHeaderSize];
+        readbuf_t wib_header_buf[wibHeaderWordsCeil];
 //#pragma HLS ARRAY_PARTITION variable=wib_header_buf type=complete
 
     header_loop:
-        for (size_t i = 0; i < wibHeaderSize; i++) {
+        for (size_t i = 0; i < wibHeaderWordsCeil; i++) {
             wib_header_buf[i] = infiledata[wibFrameStart + i];
         }
 
@@ -357,7 +345,7 @@ link_loop:
         //std::cout << "data pointer diff = " << static_cast<uint8_t*>(frag.get_data()) - &infiledata[ibegin] << std::endl;
         //std::cout << "header pointer diff = " << reinterpret_cast<uint8_t*>(frag.header_()) - &infiledata[ibegin] << std::endl;
 
-        const auto wibDataStart = wibFrameStart + wibHeaderSize;
+        const auto wibDataStart = wibFrameStart + wibHeaderWordsFloor;
 
 
     frame_loop:
@@ -365,11 +353,11 @@ link_loop:
 
             #pragma HLS dataflow
 
-            // these are from the given link
-            uint8_t z_plane_bytesa[NUM_BYTES_Z];
-            uint8_t z_plane_bytesb[NUM_BYTES_Z];
-            #pragma HLS array_partition variable=z_plane_bytesa type=complete
-            #pragma HLS array_partition variable=z_plane_bytesb type=complete
+            // these are from the given link  -- NOTE: assumes readbuf_t = uint64_t;
+            readbuf_t z_plane_wordsa[NUM_WORDS_Z];
+            readbuf_t z_plane_wordsb[NUM_WORDS_Z];
+            #pragma HLS array_partition variable=z_plane_wordsa type=complete
+            #pragma HLS array_partition variable=z_plane_wordsb type=complete
 
             // these are from the given link
             ap_uint<14> z_plane_valsa[NUM_VALS_Z];
@@ -380,13 +368,13 @@ link_loop:
 
             const size_t iFrame = tick + iWindowBegin;
 
-            const auto data_begin = wibDataStart + iFrame * wibFrameSize;
+            const auto data_begin = wibDataStart + iFrame * wibFrameSize;  // note that the first 32 bits are not actually used
 
             //fill adc vectors
-            fill_bytes(infiledata, z_plane_bytesa, data_begin + OFFSETA, z_plane_bytesb, data_begin + OFFSETB);
+            fill_words(infiledata, z_plane_wordsa, data_begin + OFFSETA, z_plane_wordsb, data_begin + OFFSETB);
 
             // create the vals
-            separate_data(z_plane_bytesa, z_plane_bytesb, z_plane_valsa, z_plane_valsb);
+            separate_data(z_plane_wordsa, z_plane_wordsb, z_plane_valsa, z_plane_valsb);
 
             fill_planes(z_plane_valsa, z_plane_valsb, planes, tick, crate, slot, link_from_frameheader);
         }
@@ -467,7 +455,8 @@ void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_ch
     }
 }
 
-void process_data(uint8_t infiledata[INBUF_SIZE],
+// readbuf_t changed to uint64_t
+void process_data(readbuf_t infiledata[INBUF_SIZE],
                   writebuf_t outdata[OUTBUF_SIZE])
 //                  int16_t skip_threshold)
 {
