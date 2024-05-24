@@ -1,6 +1,7 @@
 #include "process_data.h"
 #include "hls_stream.h"
 #include "defines.h"
+#include "remap.h"
 
 #include <iostream>
 #include <cmath>
@@ -12,116 +13,6 @@ constexpr size_t NUM_VALS_Z = 48;
 constexpr size_t NUM_WORDS_Z = 11;  // ceil(48*14/64)
 
 using dunedaq::detdataformats::wib2::s_bits_per_adc;
-
-// this is only for collection plane, and it subtracts outs 1600 from the returned vallue
-// This is for channels 80 - 128 (but wibframechan has 80 subtracted)
-int16_t getOfflineChannelZa(uint16_t crate, uint16_t slot, uint16_t link, uint16_t wibframechan ) {
-
-    const auto up = static_cast<bool>(crate & 1); // odd number crates are upright
-    const auto wib = slot + 1;
-
-    // std::cout << "up = " << up << ", slot = " << static_cast<unsigned>(slot) << ", wib = " << static_cast<unsigned>(wib) << ", link = " << static_cast<unsigned>(link) << ", frame = " << wibframechan << std::endl;
-
-    if (!up && wib == 1 && link == 1) {
-        return wibframechan + 528;
-    } else if (!up && wib == 2 && link == 1) {
-        return wibframechan + 624;
-    } else if (!up && wib == 1 && link == 0) {
-        return wibframechan + 720;
-    } else if (!up && wib == 2 && link == 0) {
-        return wibframechan + 816;
-    } else if (!up && wib == 3 && link == 1) {
-        return wibframechan + 912;
-    } else if (!up && wib == 4 && link == 1) {
-        return 431 - wibframechan;
-    } else if (!up && wib == 3 && link == 0) {
-        return 335 - wibframechan;
-    } else if (!up && wib == 4 && link == 0) {
-        return 239 - wibframechan;
-    } else if (!up && wib == 5 && link == 1) {
-        return 143 - wibframechan;
-    } else if (!up && wib == 5 && link == 0) {
-        return 47 - wibframechan;
-    }
-
-    else if (up && wib == 1 && link == 1) {
-        return wibframechan + 48;
-    } else if (up && wib == 2 && link == 1) {
-        return wibframechan + 144;
-    } else if (up && wib == 1 && link == 0) {
-        return wibframechan + 240;
-    } else if (up && wib == 2 && link == 0) {
-        return wibframechan + 336;
-    } else if (up && wib == 3 && link == 1) {
-        return wibframechan + 432;
-    } else if (up && wib == 4 && link == 1) {
-        return 911 - wibframechan;
-    } else if (up && wib == 3 && link == 0) {
-        return 815 - wibframechan;
-    } else if (up && wib == 4 && link == 0) {
-        return 719 - wibframechan;
-    } else if (up && wib == 5 && link == 1) {
-        return 623 - wibframechan;
-    } else if (up && wib == 5 && link == 0) {
-        return 527 - wibframechan;
-    }
-
-    return -2;
-}
-
-// this is only for collection plane, and it subtracts outs 1600 from the returned vallue
-// This is for 208-256 (but wibframe has 208 subtracted)
-int16_t getOfflineChannelZb(uint16_t crate, uint8_t slot, uint8_t link, uint16_t wibframechan ) {
-
-    const auto up = static_cast<bool>(crate & 1); // odd number crates are upright
-    const auto wib = slot + 1;
-
-    if (!up && wib == 1 && link == 1) {
-        return wibframechan + 480;
-    } else if (!up && wib == 2 && link == 1) {
-        return wibframechan + 576;
-    } else if (!up && wib == 1 && link == 0) {
-        return wibframechan + 672;
-    } else if (!up && wib == 2 && link == 0) {
-        return wibframechan + 768;
-    } else if (!up && wib == 3 && link == 1) {
-        return wibframechan + 864;
-    } else if (!up && wib == 4 && link == 1) {
-        return 479 - wibframechan;
-    } else if (!up && wib == 3 && link == 0) {
-        return 383 - wibframechan;
-    } else if (!up && wib == 4 && link == 0) {
-        return 287 - wibframechan;
-    } else if (!up && wib == 5 && link == 1) {
-        return 191 - wibframechan;
-    } else if (!up && wib == 5 && link == 0) {
-        return 95 - wibframechan;
-    }
-
-    else if (up && wib == 1 && link == 1) {
-        return wibframechan;
-    } else if (up && wib == 2 && link == 1) {
-        return wibframechan + 96;
-    } else if (up && wib == 1 && link == 0) {
-        return wibframechan + 192;
-    } else if (up && wib == 2 && link == 0) {
-        return wibframechan + 288;
-    } else if (up && wib == 3 && link == 1) {
-        return wibframechan + 384;
-    } else if (up && wib == 4 && link == 1) {
-        return 959 - wibframechan;
-    } else if (up && wib == 3 && link == 0) {
-        return 863 - wibframechan;
-    } else if (up && wib == 4 && link == 0) {
-        return 767 - wibframechan;
-    } else if (up && wib == 5 && link == 1) {
-        return 671 - wibframechan;
-    } else if (up && wib == 5 && link == 0) {
-        return 575 - wibframechan;
-    }
-
-    return -2;
-}
 
 
 // constexpr int floorlog2(int x) { return (x < 2) ? 0 : 1 + floorlog2(x / 2); }
@@ -193,7 +84,7 @@ void separate_helper4(const uint64_t *words, ap_uint<14> *vals, unsigned int off
     vals[0] = (words[0] >> offset) & mask;
     vals[1] = (words[0] >> s_bits_per_adc + offset) & mask;
     vals[2] = (words[0] >> 2*s_bits_per_adc + offset) & mask;
-    vals[3] = (words[0] >> 4*s_bits_per_adc + offset) & mask | (words[1] << from_next) & mask;
+    vals[3] = (words[0] >> 3*s_bits_per_adc + offset) & mask | (words[1] << from_next) & mask;
 }
    
 void separate_helper2(const uint64_t *words, ap_uint<14> *vals, unsigned int offset) {
@@ -227,21 +118,21 @@ void separate_data(const uint64_t wordsa[NUM_WORDS_Z],
     separate_helper5(&wordsa[5], &valsa[23], 2);
     separate_helper5(&wordsb[5], &valsb[23], 2);
 
-    separate_helper4(&wordsa[6], &valsa[27], 8);
-    separate_helper4(&wordsb[6], &valsb[27], 8);
+    separate_helper4(&wordsa[6], &valsa[28], 8);
+    separate_helper4(&wordsb[6], &valsb[28], 8);
 
     // pattern repeats
-    separate_helper5(&wordsa[7], &valsa[31], 0);
-    separate_helper5(&wordsb[7], &valsb[31], 0);
+    separate_helper5(&wordsa[7], &valsa[32], 0);
+    separate_helper5(&wordsb[7], &valsb[32], 0);
 
-    separate_helper5(&wordsa[8], &valsa[36], 6);
-    separate_helper5(&wordsb[8], &valsb[36], 6);
+    separate_helper5(&wordsa[8], &valsa[37], 6);
+    separate_helper5(&wordsb[8], &valsb[37], 6);
 
-    separate_helper4(&wordsa[9], &valsa[41], 12);
-    separate_helper4(&wordsb[9], &valsb[41], 12);
+    separate_helper4(&wordsa[9], &valsa[42], 12);
+    separate_helper4(&wordsb[9], &valsb[42], 12);
 
-    separate_helper2(&wordsa[10], &valsa[45], 4);
-    separate_helper2(&wordsb[10], &valsb[45], 4);
+    separate_helper2(&wordsa[10], &valsa[46], 4);
+    separate_helper2(&wordsb[10], &valsb[46], 4);
 }
 
 void fill_words(const readbuf_t *infiledata, readbuf_t* z_plane_wordsa, size_t offseta, readbuf_t* z_plane_wordsb, size_t offsetb) {
@@ -250,6 +141,8 @@ fill_words_loop:
 #pragma HLS pipeline ii=2
         z_plane_wordsa[iWord] = infiledata[offseta + iWord];
         z_plane_wordsb[iWord] = infiledata[offsetb + iWord];
+        // std::cout << std::dec << "iWord " << iWord << std::hex << ", worda = " << z_plane_wordsa[iWord]
+        //          << ", wordb = " << z_plane_wordsb[iWord] << std::endl;
     }
 }
 
@@ -376,6 +269,11 @@ link_loop:
             // create the vals
             separate_data(z_plane_wordsa, z_plane_wordsb, z_plane_valsa, z_plane_valsb);
 
+            // for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
+            //     std::cout << std::dec << "iVal = " << iVal << std::hex << ", vala = " << z_plane_valsa[iVal] 
+            //               << ", valb = " << z_plane_valsb[iVal] << std::endl;
+            // } 
+
             fill_planes(z_plane_valsa, z_plane_valsb, planes, tick, crate, slot, link_from_frameheader);
         }
     }
@@ -419,12 +317,14 @@ pedestal_pipe:
 
 //         bool keep_arr[TICK_SIZE];
 // //#pragma HLS ARRAY_PARTITION variable=keep_arr complete
-//         int16_t sum = 0;
-//         for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
-//             sum += planes[tick][chan];
-//         }
+        uint32_t sum = 0;
+        for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
+            sum += planes[tick][chan];
+        }
 
-//         auto ave = sum >> LG_NUM_AVE_TICKS;
+        auto ave = sum >> LG_NUM_AVE_TICKS;
+        // std::cout << "ave = " << std::dec << ave << std::endl;
+        // std::cout << "chan = " << chan << ", sum = " << sum << std::endl;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 // //#pragma HLS unroll
@@ -466,7 +366,7 @@ void process_data(readbuf_t infiledata[INBUF_SIZE],
 
 //#pragma HLS ARRAY_PARTITION variable=infiledata type=cyclic factor=16
 
-    std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
+    // std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
 
     // calculate range
