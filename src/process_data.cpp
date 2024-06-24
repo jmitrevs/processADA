@@ -86,13 +86,13 @@ void separate_helper4(const uint64_t *words, ap_uint<14> *vals, unsigned int off
     vals[2] = (words[0] >> 2*s_bits_per_adc + offset) & mask;
     vals[3] = (words[0] >> 3*s_bits_per_adc + offset) & mask | (words[1] << from_next) & mask;
 }
-   
+
 void separate_helper2(const uint64_t *words, ap_uint<14> *vals, unsigned int offset) {
     constexpr uint64_t mask = 0x3FFF;
 
     vals[0] = (words[0] >> offset) & mask;
     vals[1] = (words[0] >> s_bits_per_adc + offset) & mask;
-}    
+}
 
 
 void separate_data(const uint64_t wordsa[NUM_WORDS_Z],
@@ -142,7 +142,7 @@ fill_words_loop:
         z_plane_wordsa[iWord] = infiledata[offseta + iWord];
         z_plane_wordsb[iWord] = infiledata[offsetb + iWord];
         // std::cout << std::dec << "iWord " << iWord << std::hex << ", worda = " << z_plane_wordsa[iWord]
-        //          << ", wordb = " << z_plane_wordsb[iWord] << std::endl;
+        //           << ", wordb = " << z_plane_wordsb[iWord] << std::endl;
     }
 }
 
@@ -189,11 +189,11 @@ void make_planes(int call_num, readbuf_t infiledata[INBUF_SIZE], ap_uint<14> pla
     constexpr auto fragHeaderWords = sizeof(dunedaq::daqdataformats::FragmentHeader) / sizeof(readbuf_t);  // divides evenly
 
     constexpr auto wibHeaderSizeBytes = sizeof(dunedaq::detdataformats::wib2::WIB2Frame::Header);
-    
+
     constexpr auto wibHeaderWordsFloor = wibHeaderSizeBytes / sizeof(readbuf_t);  // floor division
     constexpr auto wibHeaderWordsCeil = (wibHeaderSizeBytes + sizeof(readbuf_t) - 1) / sizeof(readbuf_t);  // ceil division
 
-    constexpr auto wibFrameSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame);  // this includes the header
+    constexpr auto wibFrameSize = sizeof(dunedaq::detdataformats::wib2::WIB2Frame) / 8;  // this includes the header
 
     // std::cout << "fragment header size = " << std::dec << fragHeadSize << std::endl;
     // std::cout << "fragment size = " << fragSize << std::endl;
@@ -270,9 +270,9 @@ link_loop:
             separate_data(z_plane_wordsa, z_plane_wordsb, z_plane_valsa, z_plane_valsb);
 
             // for (size_t iVal = 0; iVal < NUM_VALS_Z; iVal++) {
-            //     std::cout << std::dec << "iVal = " << iVal << std::hex << ", vala = " << z_plane_valsa[iVal] 
+            //     std::cout << std::dec << "Tick " << tick << ", iVal = " << iVal << std::hex << ", vala = " << z_plane_valsa[iVal]
             //               << ", valb = " << z_plane_valsb[iVal] << std::endl;
-            // } 
+            // }
 
             fill_planes(z_plane_valsa, z_plane_valsb, planes, tick, crate, slot, link_from_frameheader);
         }
@@ -324,7 +324,7 @@ pedestal_pipe:
 
         auto ave = sum >> LG_NUM_AVE_TICKS;
         // std::cout << "ave = " << std::dec << ave << std::endl;
-        // std::cout << "chan = " << chan << ", sum = " << sum << std::endl;
+        // std::cout << "chan = " << std::dec << chan << ", sum = " << std::hex << sum << std::endl;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
 // //#pragma HLS unroll
@@ -375,6 +375,8 @@ void process_data(readbuf_t infiledata[INBUF_SIZE],
 calls_loop:
     for (int call_num = 0; call_num < NUM_CALLS; call_num++) {
 #pragma HLS dataflow
+
+        // std::cout << "***CALL NUMBER*** " << call_num << std::endl;
 
     //Z plane arrays
         ap_uint<14> planes[TICK_SIZE][z_channels];
