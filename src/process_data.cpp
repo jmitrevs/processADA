@@ -6,7 +6,7 @@
 #include <iostream>
 #include <cmath>
 
-constexpr int16_t skip_threshold = 1024;
+constexpr int16_t skip_threshold = 70;
 
 constexpr size_t NUM_VALS_Z = 48;
 //constexpr size_t NUM_BYTES_Z = 84;  // (48*14/8)
@@ -279,29 +279,6 @@ link_loop:
     }
 }
 
-// void calculate_averages(int16_t planes[z_channels][TICK_SIZE], int16_t ave[z_channels]) {
-
-//     // find average for ~128 entries for baseline subtraction
-//     constexpr unsigned int NUM_AVE_TICKS = 128;
-//     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
-// ave_loop:
-//     for (unsigned int chan = 0; chan < z_channels; chan++) {
-//         int aveval = sum_reduce<int16_t, NUM_AVE_TICKS>(&planes[chan][0]);
-//         ave[chan] = aveval >> LG_NUM_AVE_TICKS;
-//     }
-// }
-
-// void subtract_ave(int16_t planes[z_channels][TICK_SIZE], int16_t ave[z_channels], int16_t planes_noped[z_channels][TICK_SIZE]) {
-// subtract_pipe:
-//     for (size_t chan = 0; chan < z_channels; chan++) {
-//         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-// # pragm aHLS unroll
-//             planes_noped[chan][tick] = planes[chan][tick] - ave[chan];
-//         }
-//     }
-// }
-
-
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
 bool subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels], ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
@@ -315,28 +292,23 @@ bool subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels], ap_int<15> pla
 pedestal_pipe:
     for (size_t chan = 0; chan < z_channels; chan++) {
 
-//         bool keep_arr[TICK_SIZE];
-// //#pragma HLS ARRAY_PARTITION variable=keep_arr complete
         uint32_t sum = 0;
         for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
             sum += planes[tick][chan];
         }
 
         auto ave = sum >> LG_NUM_AVE_TICKS;
-        // std::cout << "ave = " << std::dec << ave << std::endl;
-        // std::cout << "chan = " << std::dec << chan << ", sum = " << std::hex << sum << std::endl;
+        // std::cout << "chan = " << std::dec << chan << ", sum = " << std::hex << sum 
+        //           << ", ave = " << ave << std::endl;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
-// //#pragma HLS unroll
-//             auto val = planes[tick][chan] - ave;
-            auto val = planes[tick][chan];
-//             planes_noped[tick][chan] = val;
-//             keep_arr[tick] = (val > skip_threshold || val < - skip_threshold);
+            //#pragma HLS unroll
+            auto val = planes[tick][chan] - ave;
+            planes_noped[tick][chan] = val;
             if (val > skip_threshold || val < - skip_threshold) {
                 keep = true;
             }
         }
-//        keep |= or_reduce<TICK_SIZE>(keep_arr);
     }
     return keep;
 }
@@ -345,11 +317,11 @@ pedestal_pipe:
 
 void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
     if (keep) {
-        // std::cout << "keep is true" << std::endl;
+        std::cout << "keep is true" << std::endl;
         outdata[call_num*N_OUT] = 0;
         outdata[call_num*N_OUT+1] = 1;
     } else {
-        // std::cout << "keep is false" << std::endl;
+        std::cout << "keep is false" << std::endl;
         outdata[call_num*N_OUT] = 1;
         outdata[call_num*N_OUT+1] = 0;
     }
