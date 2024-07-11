@@ -315,11 +315,22 @@ pedestal_pipe:
 
 
 
-void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
+void call_cnn2d(int call_num, bool keep,  hls::stream<input_t>& stream_in,  hls::stream<result_t>& stream_out,
+                ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
     if (keep) {
         std::cout << "keep is true" << std::endl;
-        outdata[call_num*N_OUT] = 0;
-        outdata[call_num*N_OUT+1] = 1;
+
+        for(int zch = 0; zch < z_channels; zch++) {
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+                input_t pack;
+                pack[0] = planes_noped[tick][zch];
+                stream_in.write(pack);
+            }
+        }
+        cnn2d(stream_in, stream_out);
+        auto prob = stream_out.read();
+        outdata[call_num*N_OUT] = prob[0];
+        outdata[call_num*N_OUT+1] = prob[1];
     } else {
         std::cout << "keep is false" << std::endl;
         outdata[call_num*N_OUT] = 1;
@@ -341,6 +352,12 @@ void process_data(readbuf_t infiledata[INBUF_SIZE],
     // std::cout << "s_num_channels =  " << dunedaq::detdataformats::wib2::WIB2Frame::s_num_channels << std::endl;
 
 
+    static hls::stream<input_t> z1_stream_in("z1_stream_in");
+    #pragma HLS STREAM variable=z1_stream_in depth=61500
+
+    static hls::stream<result_t> z1_stream_out("z1_stream_out");
+    #pragma HLS STREAM variable=z1_stream_out depth=2
+
     // calculate range
     constexpr int NUM_CALLS = (n_frames - TICK_SIZE) / SKIP_SIZE + 1;
 
@@ -360,7 +377,6 @@ calls_loop:
 
         auto keep = subtract_pedestal(planes, planes_noped);
 
-        // call_cnn2d(call_num, true, planes_noped, outdata);
-        call_cnn2d(call_num, keep, planes_noped, outdata);
+        call_cnn2d(call_num, keep, z1_stream_in, z1_stream_out, planes_noped, outdata);
     }
 }
