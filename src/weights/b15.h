@@ -3,13 +3,13 @@
 //Max 1.000000000000
 //Number of zeros 5
 
-#ifndef B2_H_
-#define B2_H_
+#ifndef B15_H_
+#define B15_H_
 
 #ifndef __SYNTHESIS__
-bias2_t b2[8];
+bias15_t b15[8];
 #else
-bias2_t b2[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+bias15_t b15[8] = {1, 0, 0, 0, -2, 0, -1, 0};
 
 #endif
 

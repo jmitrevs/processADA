@@ -20,8 +20,8 @@ constexpr unsigned int NUM_LINKS = 10;
 constexpr unsigned int z_channels = 480;
 constexpr unsigned int n_frames = 6000;
 
-constexpr size_t TICK_SIZE = 200;
-constexpr size_t SKIP_SIZE = 145;
+constexpr size_t TICK_SIZE = 128;
+constexpr size_t SKIP_SIZE = 103;
 constexpr size_t N_OUT = 2;
 
 using readbuf_t = uint64_t;
