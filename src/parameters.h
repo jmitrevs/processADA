@@ -63,10 +63,10 @@ struct config2_mult : nnet::dense_config {
     static const unsigned n_in = 9;
     static const unsigned n_out = 8;
     static const unsigned reuse_factor = 1;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned strategy = nnet::resource;
     static const unsigned n_zeros = 1;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_3_accum_t accum_t;
     typedef bias2_t bias_t;
     typedef weight2_t weight_t;
     template<class x_T, class y_T>
@@ -94,7 +94,7 @@ struct config2 : nnet::conv2d_config {
     static const unsigned multiplier_limit =
         DIV_ROUNDUP(kernel_size * n_chan * n_filt, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned strategy = nnet::resource;
     static const nnet::conv_implementation implementation = nnet::conv_implementation::linebuffer;
     static const unsigned min_height = 5;
     static const unsigned min_width = 5;
@@ -103,7 +103,7 @@ struct config2 : nnet::conv2d_config {
     static const unsigned n_pixels = out_height * out_width / n_partitions;
     template<class data_T, class CONFIG_T>
     using fill_buffer = nnet::FillConv2DBuffer<data_T, CONFIG_T>;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_3_accum_t accum_t;
     typedef bias2_t bias_t;
     typedef weight2_t weight_t;
     typedef config2_mult mult_config;
@@ -129,13 +129,13 @@ struct config15 : nnet::batchnorm_config {
     using product = nnet::product::weight_exponential<x_T, y_T>;
 };
 
-// q_activation_4
+// q_conv2d_3_QActivation
 struct relu_config3 : nnet::activ_config {
     static const unsigned n_in = 131072;
     static const unsigned table_size = 1024;
     static const unsigned io_type = nnet::io_stream;
     static const unsigned reuse_factor = 1;
-    typedef q_activation_4_table_t table_t;
+    typedef q_conv2d_3_QActivation_table_t table_t;
 };
 
 // max_pooling2d_2
@@ -162,7 +162,7 @@ struct config4 : nnet::pooling2d_config {
     static const nnet::Pool_Op pool_op = nnet::Max;
     static const nnet::conv_implementation implementation = nnet::conv_implementation::linebuffer;
     static const unsigned reuse_factor = 1;
-    typedef model_default_t accum_t;
+    typedef max_pooling2d_2_accum_t accum_t;
 };
 
 // zp2d_q_conv2d_4
@@ -182,11 +182,11 @@ struct config21 : nnet::padding2d_config {
 struct config5_mult : nnet::dense_config {
     static const unsigned n_in = 72;
     static const unsigned n_out = 16;
-    static const unsigned reuse_factor = 1;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned reuse_factor = 4;
+    static const unsigned strategy = nnet::resource;
     static const unsigned n_zeros = 21;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_4_accum_t accum_t;
     typedef bias5_t bias_t;
     typedef weight5_t weight_t;
     template<class x_T, class y_T>
@@ -209,12 +209,12 @@ struct config5 : nnet::conv2d_config {
     static const unsigned stride_width = 1;
     static const unsigned out_height = 32;
     static const unsigned out_width = 32;
-    static const unsigned reuse_factor = 1;
+    static const unsigned reuse_factor = 4;
     static const unsigned n_zeros = 21;
     static const unsigned multiplier_limit =
         DIV_ROUNDUP(kernel_size * n_chan * n_filt, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned strategy = nnet::resource;
     static const nnet::conv_implementation implementation = nnet::conv_implementation::linebuffer;
     static const unsigned min_height = 5;
     static const unsigned min_width = 5;
@@ -223,7 +223,7 @@ struct config5 : nnet::conv2d_config {
     static const unsigned n_pixels = out_height * out_width / n_partitions;
     template<class data_T, class CONFIG_T>
     using fill_buffer = nnet::FillConv2DBuffer<data_T, CONFIG_T>;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_4_accum_t accum_t;
     typedef bias5_t bias_t;
     typedef weight5_t weight_t;
     typedef config5_mult mult_config;
@@ -249,13 +249,13 @@ struct config16 : nnet::batchnorm_config {
     using product = nnet::product::weight_exponential<x_T, y_T>;
 };
 
-// q_activation_5
+// q_conv2d_4_QActivation
 struct relu_config6 : nnet::activ_config {
     static const unsigned n_in = 16384;
     static const unsigned table_size = 1024;
     static const unsigned io_type = nnet::io_stream;
     static const unsigned reuse_factor = 1;
-    typedef q_activation_5_table_t table_t;
+    typedef q_conv2d_4_QActivation_table_t table_t;
 };
 
 // max_pooling2d_3
@@ -282,18 +282,18 @@ struct config7 : nnet::pooling2d_config {
     static const nnet::Pool_Op pool_op = nnet::Max;
     static const nnet::conv_implementation implementation = nnet::conv_implementation::linebuffer;
     static const unsigned reuse_factor = 1;
-    typedef model_default_t accum_t;
+    typedef max_pooling2d_3_accum_t accum_t;
 };
 
 // q_conv2d_5
 struct config8_mult : nnet::dense_config {
     static const unsigned n_in = 144;
     static const unsigned n_out = 32;
-    static const unsigned reuse_factor = 1;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned reuse_factor = 16;
+    static const unsigned strategy = nnet::resource;
     static const unsigned n_zeros = 61;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_5_accum_t accum_t;
     typedef bias8_t bias_t;
     typedef weight8_t weight_t;
     template<class x_T, class y_T>
@@ -316,12 +316,12 @@ struct config8 : nnet::conv2d_config {
     static const unsigned stride_width = 1;
     static const unsigned out_height = 6;
     static const unsigned out_width = 6;
-    static const unsigned reuse_factor = 1;
+    static const unsigned reuse_factor = 16;
     static const unsigned n_zeros = 61;
     static const unsigned multiplier_limit =
         DIV_ROUNDUP(kernel_size * n_chan * n_filt, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned strategy = nnet::resource;
     static const nnet::conv_implementation implementation = nnet::conv_implementation::linebuffer;
     static const unsigned min_height = 5;
     static const unsigned min_width = 5;
@@ -330,7 +330,7 @@ struct config8 : nnet::conv2d_config {
     static const unsigned n_pixels = out_height * out_width / n_partitions;
     template<class data_T, class CONFIG_T>
     using fill_buffer = nnet::FillConv2DBuffer<data_T, CONFIG_T>;
-    typedef model_default_t accum_t;
+    typedef q_conv2d_5_accum_t accum_t;
     typedef bias8_t bias_t;
     typedef weight8_t weight_t;
     typedef config8_mult mult_config;
@@ -356,13 +356,13 @@ struct config17 : nnet::batchnorm_config {
     using product = nnet::product::weight_exponential<x_T, y_T>;
 };
 
-// q_activation_6
+// q_conv2d_5_QActivation
 struct relu_config9 : nnet::activ_config {
     static const unsigned n_in = 1152;
     static const unsigned table_size = 1024;
     static const unsigned io_type = nnet::io_stream;
     static const unsigned reuse_factor = 1;
-    typedef q_activation_6_table_t table_t;
+    typedef q_conv2d_5_QActivation_table_t table_t;
 };
 
 // q_dense_2
@@ -370,13 +370,13 @@ struct config11 : nnet::dense_config {
     static const unsigned n_in = 1152;
     static const unsigned n_out = 12;
     static const unsigned io_type = nnet::io_stream;
-    static const unsigned strategy = nnet::latency;
-    static const unsigned reuse_factor = 1;
+    static const unsigned strategy = nnet::resource;
+    static const unsigned reuse_factor = 128;
     static const unsigned n_zeros = 411;
     static const unsigned n_nonzeros = 13413;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
-    typedef model_default_t accum_t;
+    typedef q_dense_2_accum_t accum_t;
     typedef bias11_t bias_t;
     typedef weight11_t weight_t;
     typedef layer11_index index_t;
@@ -399,13 +399,13 @@ struct config18 : nnet::batchnorm_config {
     using product = nnet::product::weight_exponential<x_T, y_T>;
 };
 
-// q_activation_7
+// q_dense_2_QActivation
 struct relu_config12 : nnet::activ_config {
     static const unsigned n_in = 12;
     static const unsigned table_size = 1024;
     static const unsigned io_type = nnet::io_stream;
     static const unsigned reuse_factor = 1;
-    typedef q_activation_7_table_t table_t;
+    typedef q_dense_2_QActivation_table_t table_t;
 };
 
 // q_dense_3
@@ -413,13 +413,13 @@ struct config13 : nnet::dense_config {
     static const unsigned n_in = 12;
     static const unsigned n_out = 2;
     static const unsigned io_type = nnet::io_stream;
-    static const unsigned strategy = nnet::latency;
+    static const unsigned strategy = nnet::resource;
     static const unsigned reuse_factor = 1;
     static const unsigned n_zeros = 0;
     static const unsigned n_nonzeros = 24;
     static const unsigned multiplier_limit = DIV_ROUNDUP(n_in * n_out, reuse_factor) - n_zeros / reuse_factor;
     static const bool store_weights_in_bram = false;
-    typedef model_default_t accum_t;
+    typedef q_dense_3_accum_t accum_t;
     typedef bias13_t bias_t;
     typedef weight13_t weight_t;
     typedef layer13_index index_t;

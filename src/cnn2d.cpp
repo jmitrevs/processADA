@@ -49,17 +49,17 @@ void cnn2d(
     #pragma HLS STREAM variable=layer20_out depth=16900
     nnet::zeropad2d_cl<input_t, layer20_t, config20>(input_3, layer20_out); // zp2d_q_conv2d_3
 
-    hls::stream<layer2_t> layer2_out("layer2_out");
+    hls::stream<q_conv2d_3_result_t> layer2_out("layer2_out");
     #pragma HLS STREAM variable=layer2_out depth=16384
-    nnet::conv_2d_cl<layer20_t, layer2_t, config2>(layer20_out, layer2_out, w2, b2); // q_conv2d_3
+    nnet::conv_2d_cl<layer20_t, q_conv2d_3_result_t, config2>(layer20_out, layer2_out, w2, b2); // q_conv2d_3
 
     hls::stream<layer15_t> layer15_out("layer15_out");
     #pragma HLS STREAM variable=layer15_out depth=16384
-    nnet::normalize<layer2_t, layer15_t, config15>(layer2_out, layer15_out, s15, b15); // q_conv2d_3_alpha
+    nnet::normalize<q_conv2d_3_result_t, layer15_t, config15>(layer2_out, layer15_out, s15, b15); // q_conv2d_3_alpha
 
     hls::stream<layer3_t> layer3_out("layer3_out");
     #pragma HLS STREAM variable=layer3_out depth=16384
-    nnet::relu<layer15_t, layer3_t, relu_config3>(layer15_out, layer3_out); // q_activation_4
+    nnet::relu<layer15_t, layer3_t, relu_config3>(layer15_out, layer3_out); // q_conv2d_3_QActivation
 
     hls::stream<layer4_t> layer4_out("layer4_out");
     #pragma HLS STREAM variable=layer4_out depth=1024
@@ -69,54 +69,54 @@ void cnn2d(
     #pragma HLS STREAM variable=layer21_out depth=1156
     nnet::zeropad2d_cl<layer4_t, layer21_t, config21>(layer4_out, layer21_out); // zp2d_q_conv2d_4
 
-    hls::stream<layer5_t> layer5_out("layer5_out");
+    hls::stream<q_conv2d_4_result_t> layer5_out("layer5_out");
     #pragma HLS STREAM variable=layer5_out depth=1024
-    nnet::conv_2d_cl<layer21_t, layer5_t, config5>(layer21_out, layer5_out, w5, b5); // q_conv2d_4
+    nnet::conv_2d_cl<layer21_t, q_conv2d_4_result_t, config5>(layer21_out, layer5_out, w5, b5); // q_conv2d_4
 
     hls::stream<layer16_t> layer16_out("layer16_out");
     #pragma HLS STREAM variable=layer16_out depth=1024
-    nnet::normalize<layer5_t, layer16_t, config16>(layer5_out, layer16_out, s16, b16); // q_conv2d_4_alpha
+    nnet::normalize<q_conv2d_4_result_t, layer16_t, config16>(layer5_out, layer16_out, s16, b16); // q_conv2d_4_alpha
 
     hls::stream<layer6_t> layer6_out("layer6_out");
     #pragma HLS STREAM variable=layer6_out depth=1024
-    nnet::relu<layer16_t, layer6_t, relu_config6>(layer16_out, layer6_out); // q_activation_5
+    nnet::relu<layer16_t, layer6_t, relu_config6>(layer16_out, layer6_out); // q_conv2d_4_QActivation
 
     hls::stream<layer7_t> layer7_out("layer7_out");
     #pragma HLS STREAM variable=layer7_out depth=64
     nnet::pooling2d_cl<layer6_t, layer7_t, config7>(layer6_out, layer7_out); // max_pooling2d_3
 
-    hls::stream<layer8_t> layer8_out("layer8_out");
+    hls::stream<q_conv2d_5_result_t> layer8_out("layer8_out");
     #pragma HLS STREAM variable=layer8_out depth=36
-    nnet::conv_2d_cl<layer7_t, layer8_t, config8>(layer7_out, layer8_out, w8, b8); // q_conv2d_5
+    nnet::conv_2d_cl<layer7_t, q_conv2d_5_result_t, config8>(layer7_out, layer8_out, w8, b8); // q_conv2d_5
 
     hls::stream<layer17_t> layer17_out("layer17_out");
     #pragma HLS STREAM variable=layer17_out depth=36
-    nnet::normalize<layer8_t, layer17_t, config17>(layer8_out, layer17_out, s17, b17); // q_conv2d_5_alpha
+    nnet::normalize<q_conv2d_5_result_t, layer17_t, config17>(layer8_out, layer17_out, s17, b17); // q_conv2d_5_alpha
 
     hls::stream<layer9_t> layer9_out("layer9_out");
     #pragma HLS STREAM variable=layer9_out depth=36
-    nnet::relu<layer17_t, layer9_t, relu_config9>(layer17_out, layer9_out); // q_activation_6
+    nnet::relu<layer17_t, layer9_t, relu_config9>(layer17_out, layer9_out); // q_conv2d_5_QActivation
 
     auto& layer10_out = layer9_out;
-    hls::stream<layer11_t> layer11_out("layer11_out");
+    hls::stream<q_dense_2_result_t> layer11_out("layer11_out");
     #pragma HLS STREAM variable=layer11_out depth=1
-    nnet::dense<layer9_t, layer11_t, config11>(layer10_out, layer11_out, w11, b11); // q_dense_2
+    nnet::dense<layer9_t, q_dense_2_result_t, config11>(layer10_out, layer11_out, w11, b11); // q_dense_2
 
     hls::stream<layer18_t> layer18_out("layer18_out");
     #pragma HLS STREAM variable=layer18_out depth=1
-    nnet::normalize<layer11_t, layer18_t, config18>(layer11_out, layer18_out, s18, b18); // q_dense_2_alpha
+    nnet::normalize<q_dense_2_result_t, layer18_t, config18>(layer11_out, layer18_out, s18, b18); // q_dense_2_alpha
 
     hls::stream<layer12_t> layer12_out("layer12_out");
     #pragma HLS STREAM variable=layer12_out depth=1
-    nnet::relu<layer18_t, layer12_t, relu_config12>(layer18_out, layer12_out); // q_activation_7
+    nnet::relu<layer18_t, layer12_t, relu_config12>(layer18_out, layer12_out); // q_dense_2_QActivation
 
-    hls::stream<layer13_t> layer13_out("layer13_out");
+    hls::stream<q_dense_3_result_t> layer13_out("layer13_out");
     #pragma HLS STREAM variable=layer13_out depth=1
-    nnet::dense<layer12_t, layer13_t, config13>(layer12_out, layer13_out, w13, b13); // q_dense_3
+    nnet::dense<layer12_t, q_dense_3_result_t, config13>(layer12_out, layer13_out, w13, b13); // q_dense_3
 
     hls::stream<layer19_t> layer19_out("layer19_out");
     #pragma HLS STREAM variable=layer19_out depth=1
-    nnet::normalize<layer13_t, layer19_t, config19>(layer13_out, layer19_out, s19, b19); // q_dense_3_alpha
+    nnet::normalize<q_dense_3_result_t, layer19_t, config19>(layer13_out, layer19_out, s19, b19); // q_dense_3_alpha
 
     nnet::softmax<layer19_t, result_t, softmax_config14>(layer19_out, layer14_out); // q_dense_3_softmax
 
