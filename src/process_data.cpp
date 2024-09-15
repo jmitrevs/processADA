@@ -316,14 +316,15 @@ pedestal_pipe:
 
 
 void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
-    static hls::stream<input_t> stream_in("stream_in");
-    #pragma HLS STREAM variable=stream_in depth=16384
-
-    static hls::stream<result_t> stream_out("stream_out");
-    #pragma HLS STREAM variable=stream_out depth=2
 
     if (keep) {
         std::cout << "keep is true" << std::endl;
+
+        hls::stream<input_t> stream_in("stream_in");
+        #pragma HLS STREAM variable=stream_in depth=16384
+
+        hls::stream<result_t> stream_out("stream_out");
+        #pragma HLS STREAM variable=stream_out depth=2
 
         // TODO:  add an offset based on max value
         for(int zch = 0; zch < NET_SIZE; zch++) {
@@ -337,6 +338,9 @@ void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_ch
         auto prob = stream_out.read();
         outdata[call_num*N_OUT] = prob[0];
         outdata[call_num*N_OUT+1] = prob[1];
+        // // if commenting out upper part
+        // outdata[call_num*N_OUT] = 0;
+        // outdata[call_num*N_OUT+1] = 1;
     } else {
         std::cout << "keep is false" << std::endl;
         outdata[call_num*N_OUT] = 1;
