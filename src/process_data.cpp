@@ -294,7 +294,7 @@ std::pair<bool, uint16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_chan
     uint16_t maxIdx = 0;
 
 pedestal_pipe:
-    for (unit16_t chan = 0; chan < z_channels; chan++) {
+    for (size_t chan = 0; chan < z_channels; chan++) {
 
         uint32_t sum = 0;
         for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
@@ -315,11 +315,11 @@ pedestal_pipe:
                     maxVal = val;
                     maxIdx = chan;
                 }
-            } else if (val < - skip_threshold) {
+            } else if (val < -skip_threshold) {
                 keep = true;
                 auto absval = -val;
-                if (abxval > maxVal) {
-                    maxVal = abxval;
+                if (absval > maxVal) {
+                    maxVal = absval;
                     maxIdx = chan;
                 }
             }
@@ -335,10 +335,10 @@ void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_
     if (keep.first) {
         std::cout << "keep is true" << std::endl;
 
-        uint16_t startIdx = 0;
+        int startidx = 0;
         if (keep.second > NET_SIZE_2) {
             auto idx = keep.second - NET_SIZE_2;
-            startIdx = std::min(idx, MAX_IDX); 
+            startidx = idx < MAX_IDX ? idx : MAX_IDX; 
         }
 
         hls::stream<input_t> stream_in("stream_in");
@@ -348,10 +348,10 @@ void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_
         #pragma HLS STREAM variable=stream_out depth=2
 
         // TODO:  add an offset based on max value
-        for(uint16_t zch = startIdx; zch < NET_SIZE + startIdx; zch++) {
+        for(int zch = 0; zch < NET_SIZE; zch++) {
             for (size_t tick = 0; tick < TICK_SIZE; tick++) {
                 input_t pack;
-                pack[0] = planes_noped[tick][zch];
+                pack[0] = planes_noped[tick][zch + startidx];
                 stream_in.write(pack);
             }
         }
