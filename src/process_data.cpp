@@ -3,6 +3,7 @@
 #include "defines.h"
 #include "remap.h"
 
+#include <utility>
 #include <iostream>
 #include <cmath>
 
@@ -281,7 +282,7 @@ link_loop:
 
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
-std::pair<bool, unit16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels],
+std::pair<bool, uint16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels],
                                             ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
@@ -293,7 +294,7 @@ std::pair<bool, unit16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_chan
     uint16_t maxIdx = 0;
 
 pedestal_pipe:
-    for (size_t chan = 0; chan < z_channels; chan++) {
+    for (unit16_t chan = 0; chan < z_channels; chan++) {
 
         uint32_t sum = 0;
         for (size_t tick = 0; tick < NUM_AVE_TICKS; tick++) {
@@ -334,10 +335,10 @@ void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_
     if (keep.first) {
         std::cout << "keep is true" << std::endl;
 
-        uint startIdx = 0;
-        if (keep.second > 64) {
-            auto idx = keep.second - 64;
-            startIdx = std::min(idx, z_channels-128); 
+        uint16_t startIdx = 0;
+        if (keep.second > NET_SIZE_2) {
+            auto idx = keep.second - NET_SIZE_2;
+            startIdx = std::min(idx, MAX_IDX); 
         }
 
         hls::stream<input_t> stream_in("stream_in");
@@ -347,7 +348,7 @@ void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_
         #pragma HLS STREAM variable=stream_out depth=2
 
         // TODO:  add an offset based on max value
-        for(int zch = startIdx; zch < NET_SIZE + startIdx; zch++) {
+        for(uint16_t zch = startIdx; zch < NET_SIZE + startIdx; zch++) {
             for (size_t tick = 0; tick < TICK_SIZE; tick++) {
                 input_t pack;
                 pack[0] = planes_noped[tick][zch];

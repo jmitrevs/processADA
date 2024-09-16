@@ -20,14 +20,16 @@ const int OUTBUF_SIZE = 0x100;  // aligned
 constexpr unsigned int NUM_LINKS = 10;
 
 //Create variables
-constexpr unsigned int z_channels = 480;
+constexpr uint16_t z_channels = 480;
 constexpr unsigned int n_frames = 6000;
 
 constexpr size_t TICK_SIZE = 128;
 constexpr size_t SKIP_SIZE = 103;
 constexpr size_t N_OUT = 2;
 
-constexpr size_t NET_SIZE = 128;
+constexpr uint16_t NET_SIZE = 128;
+constexpr uint16_t NET_SIZE_2 = 128 / 2;
+constexpr uint16_t MAX_IDX = z_channels - NET_SIZE;
 
 using readbuf_t = uint64_t;
 using writebuf_t = result_t::value_type;
