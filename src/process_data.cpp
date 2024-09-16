@@ -281,13 +281,16 @@ link_loop:
 
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
-bool subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels], ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
+std::pair<bool, unit16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels],
+                                            ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
 
     bool keep = false;
 
+    ap_int<15> maxVal = 0;
+    uint16_t maxIdx = 0;
 
 pedestal_pipe:
     for (size_t chan = 0; chan < z_channels; chan++) {
@@ -305,20 +308,37 @@ pedestal_pipe:
             //#pragma HLS unroll
             auto val = planes[tick][chan] - ave;
             planes_noped[tick][chan] = val;
-            if (val > skip_threshold || val < - skip_threshold) {
+            if (val > skip_threshold) {
                 keep = true;
+                if (val > maxVal) {
+                    maxVal = val;
+                    maxIdx = chan;
+                }
+            } else if (val < - skip_threshold) {
+                keep = true;
+                auto absval = -val;
+                if (abxval > maxVal) {
+                    maxVal = abxval;
+                    maxIdx = chan;
+                }
             }
         }
     }
-    return keep;
+    return std::make_pair(keep, maxIdx);
 }
 
 
 
-void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
+void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
 
-    if (keep) {
+    if (keep.first) {
         std::cout << "keep is true" << std::endl;
+
+        uint startIdx = 0;
+        if (keep.second > 64) {
+            auto idx = keep.second - 64;
+            startIdx = std::min(idx, z_channels-128); 
+        }
 
         hls::stream<input_t> stream_in("stream_in");
         #pragma HLS STREAM variable=stream_in depth=16384
@@ -327,7 +347,7 @@ void call_cnn2d(int call_num, bool keep, ap_int<15> planes_noped[TICK_SIZE][z_ch
         #pragma HLS STREAM variable=stream_out depth=2
 
         // TODO:  add an offset based on max value
-        for(int zch = 0; zch < NET_SIZE; zch++) {
+        for(int zch = startIdx; zch < NET_SIZE + startIdx; zch++) {
             for (size_t tick = 0; tick < TICK_SIZE; tick++) {
                 input_t pack;
                 pack[0] = planes_noped[tick][zch];
