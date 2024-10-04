@@ -288,7 +288,7 @@ link_loop:
 
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
-std::pair<bool, uint16_t> subtract_pedestal_helper(ap_uint<14> planes[TICK_SIZE][z_channels],
+std::pair<bool, uint16_t> subtract_pedestal_helper(const ap_uint<14> planes[TICK_SIZE][z_channels],
                                                    ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
@@ -345,10 +345,11 @@ std::tuple<bool, uint16_t, bool, uint16_t> subtract_pedestal(
         return {keep1.first, keep1.second, keep2.first, keep2.second};
 }
 
-std::array<writebuf_t, 2> call_cnn2d(const std::tuple<bool, uint16_t, bool, uint16_t> keep, const ap_int<15> planes_noped[TICK_SIZE][z_channels],
-                                     const ap_int<15> planes2_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
+void call_cnn2d(int call_num, const std::tuple<bool, uint16_t, bool, uint16_t> keep,
+                const ap_int<15> planes_noped[TICK_SIZE][z_channels],
+                const ap_int<15> planes2_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
 
-    bool keep1, keep2,
+    bool keep1, keep2;
     uint16_t maxIdx1, maxIdx2;
 
     std::tie(keep1, maxIdx1, keep2, maxIdx2) = keep;
@@ -420,7 +421,7 @@ std::array<writebuf_t, 2> call_cnn2d(const std::tuple<bool, uint16_t, bool, uint
         // outdata[call_num*N_OUT] = 0;
         // outdata[call_num*N_OUT+1] = 1;
     } else {
-        std::cout << "keep is false" << std::endl;
+        std::cout << "keep2 is false" << std::endl;
         outdata[call_num*N_OUT + 2] = 1;
         outdata[call_num*N_OUT + 3] = 0;
     }
@@ -463,7 +464,7 @@ calls_loop:
 
         auto keep = subtract_pedestal(planes, planes2, planes_noped, planes2_noped);
 
-        call_cnn2d(keep, planes_noped, planes2_noped, outdata);
+        call_cnn2d(call_num, keep, planes_noped, planes2_noped, outdata);
 
     }
 }
