@@ -4,6 +4,7 @@
 #include "remap.h"
 
 #include <utility>
+#include <tuple>
 #include <iostream>
 #include <cmath>
 
@@ -287,8 +288,8 @@ link_loop:
 
 
 //bool subtract_pedestal(int16_t skip_threshold, int16_t planes[z_channels][TICK_SIZE], int16_t planes_noped[z_channels][TICK_SIZE])
-std::pair<bool, uint16_t> subtract_pedestal(ap_uint<14> planes[TICK_SIZE][z_channels],
-                                            ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
+std::pair<bool, uint16_t> subtract_pedestal_helper(ap_uint<14> planes[TICK_SIZE][z_channels],
+                                                   ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
     // find average for ~128 entries for baseline subtraction
     constexpr unsigned int NUM_AVE_TICKS = 128;
     constexpr unsigned int LG_NUM_AVE_TICKS = 7;
@@ -307,7 +308,7 @@ pedestal_pipe:
         }
 
         auto ave = sum >> LG_NUM_AVE_TICKS;
-        // std::cout << "chan = " << std::dec << chan << ", sum = " << std::hex << sum 
+        // std::cout << "chan = " << std::dec << chan << ", sum = " << std::hex << sum
         //           << ", ave = " << ave << std::endl;
 
         for (size_t tick = 0; tick < TICK_SIZE; tick++) {
@@ -334,17 +335,31 @@ pedestal_pipe:
 }
 
 
-std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
+std::tuple<bool, uint16_t, bool, uint16_t> subtract_pedestal(
+    const ap_uint<14> planes[TICK_SIZE][z_channels],
+    const ap_uint<14> planes2[TICK_SIZE][z_channels],
+    ap_int<15> planes_noped[TICK_SIZE][z_channels],
+    ap_int<15> planes2_noped[TICK_SIZE][z_channels]) {
+        auto keep1 = subtract_pedestal_helper(planes, planes_noped);
+        auto keep2 = subtract_pedestal_helper(planes2, planes2_noped);
+        return {keep1.first, keep1.second, keep2.first, keep2.second};
+}
 
-    std::array<writebuf_t, 2> outvals;
+std::array<writebuf_t, 2> call_cnn2d(const std::tuple<bool, uint16_t, bool, uint16_t> keep, const ap_int<15> planes_noped[TICK_SIZE][z_channels],
+                                     const ap_int<15> planes2_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
 
-    if (keep.first) {
-        std::cout << "keep is true" << std::endl;
+    bool keep1, keep2,
+    uint16_t maxIdx1, maxIdx2;
+
+    std::tie(keep1, maxIdx1, keep2, maxIdx2) = keep;
+
+    if (keep1) {
+        std::cout << "keep1 is true" << std::endl;
 
         int startidx = 0;
-        if (keep.second > NET_SIZE_2) {
-            auto idx = keep.second - NET_SIZE_2;
-            startidx = idx < MAX_IDX ? idx : MAX_IDX; 
+        if (maxIdx1 > NET_SIZE_2) {
+            auto idx = maxIdx1 - NET_SIZE_2;
+            startidx = idx < MAX_IDX ? idx : MAX_IDX;
         }
 
         hls::stream<input_t> stream_in("stream_in");
@@ -363,25 +378,52 @@ std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> 
         }
         cnn2d(stream_in, stream_out);
         auto prob = stream_out.read();
-        outvals[0] = prob[0];
-        outvals[1] = prob[1];
+        outdata[call_num*N_OUT] = prob[0];
+        outdata[call_num*N_OUT + 1] = prob[1];
+        // // if commenting out upper part
+        // outdata[call_num*N_OUT] = 0;
+        // outdata[call_num*N_OUT+1] = 1;
+    } else {
+        std::cout << "keep1 is false" << std::endl;
+        outdata[call_num*N_OUT] = 1;
+        outdata[call_num*N_OUT + 1] = 0;
+    }
+
+    if (keep2) {
+        std::cout << "keep2 is true" << std::endl;
+
+        int startidx = 0;
+        if (maxIdx2 > NET_SIZE_2) {
+            auto idx = maxIdx2 - NET_SIZE_2;
+            startidx = idx < MAX_IDX ? idx : MAX_IDX;
+        }
+
+        hls::stream<input_t> stream_in("stream_in");
+        #pragma HLS STREAM variable=stream_in depth=16384
+
+        hls::stream<result_t> stream_out("stream_out");
+        #pragma HLS STREAM variable=stream_out depth=2
+
+        // TODO:  add an offset based on max value
+        for(int zch = 0; zch < NET_SIZE; zch++) {
+            for (size_t tick = 0; tick < TICK_SIZE; tick++) {
+                input_t pack;
+                pack[0] = planes_noped[tick][zch + startidx];
+                stream_in.write(pack);
+            }
+        }
+        cnn2d(stream_in, stream_out);
+        auto prob = stream_out.read();
+        outdata[call_num*N_OUT + 2] = prob[0];
+        outdata[call_num*N_OUT + 3] = prob[1];
         // // if commenting out upper part
         // outdata[call_num*N_OUT] = 0;
         // outdata[call_num*N_OUT+1] = 1;
     } else {
         std::cout << "keep is false" << std::endl;
-        outvals[0] = 1;
-        outvals[1] = 0;
+        outdata[call_num*N_OUT + 2] = 1;
+        outdata[call_num*N_OUT + 3] = 0;
     }
-    return outvals;
-}
-
-
-void write_out(int call_num, std::array<writebuf_t, 2> outvals, std::array<writebuf_t, 2> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
-    outdata[call_num*N_OUT] = outvals[0];
-    outdata[call_num*N_OUT + 1] = outvals[1];
-    outdata[call_num*N_OUT + 2] = outvals2[0];
-    outdata[call_num*N_OUT + 3] = outvals2[1];
 }
 
 
@@ -419,12 +461,9 @@ calls_loop:
 
         make_planes(call_num, infiledata, planes, planes2);
 
-        auto keep = subtract_pedestal(planes, planes_noped);
-        auto keep2 = subtract_pedestal(planes2, planes2_noped);
+        auto keep = subtract_pedestal(planes, planes2, planes_noped, planes2_noped);
 
-        auto outvals = call_cnn2d(keep, planes_noped);
-        auto outvals2 = call_cnn2d(keep2, planes2_noped);
-        
-        write_out(call_num, outvals, outvals2, outdata);
+        call_cnn2d(keep, planes_noped, planes2_noped, outdata);
+
     }
 }
