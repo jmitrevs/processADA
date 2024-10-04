@@ -334,9 +334,9 @@ pedestal_pipe:
 }
 
 
-std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
+std::pair<writebuf_t, writebuf_t> call_cnn2d(const std::pair<bool, uint16_t> keep, const ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
 
-    std::array<writebuf_t, 2> outvals;
+    writebuf_t outvals[2];
 
     if (keep.first) {
         std::cout << "keep is true" << std::endl;
@@ -373,15 +373,15 @@ std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> 
         outvals[0] = 1;
         outvals[1] = 0;
     }
-    return outvals;
+    return std::make_pair(outvals[0], outvals[1]);
 }
 
 
-void write_out(int call_num, std::array<writebuf_t, 2> outvals, std::array<writebuf_t, 2> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
-    outdata[call_num*N_OUT] = outvals[0];
-    outdata[call_num*N_OUT + 1] = outvals[1];
-    outdata[call_num*N_OUT + 2] = outvals2[0];
-    outdata[call_num*N_OUT + 3] = outvals2[1];
+void write_out(int call_num, const std::pair<writebuf_t, writebuf_t> outvals, const std::pair<writebuf_t, writebuf_t> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
+    outdata[call_num*N_OUT] = outvals.first;
+    outdata[call_num*N_OUT + 1] = outvals.second;
+    outdata[call_num*N_OUT + 2] = outvals2.first;
+    outdata[call_num*N_OUT + 3] = outvals2.second;
 }
 
 
