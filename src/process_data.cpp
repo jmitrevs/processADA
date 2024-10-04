@@ -377,7 +377,7 @@ std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> 
 }
 
 
-void write_out(int call_number, std::array<writebuf_t, 2> outvals, std::array<writebuf_t, 2> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
+void write_out(int call_num, std::array<writebuf_t, 2> outvals, std::array<writebuf_t, 2> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
     outdata[call_num*N_OUT] = outvals[0];
     outdata[call_num*N_OUT + 1] = outvals[1];
     outdata[call_num*N_OUT + 2] = outvals2[0];
@@ -417,13 +417,13 @@ calls_loop:
         ap_int<15> planes2_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
 //#pragma HLS array_partition variable=planes_noped type=cyclic dim=2 factor=32
 
-        make_planes(call_num, infiledata, planes, plans2);
+        make_planes(call_num, infiledata, planes, planes2);
 
         auto keep = subtract_pedestal(planes, planes_noped);
         auto keep2 = subtract_pedestal(planes2, planes2_noped);
 
         auto outvals = call_cnn2d(keep, planes_noped);
-        auto outvals2 = call_cnn2d(keep2, planes_noped2);
+        auto outvals2 = call_cnn2d(keep2, planes2_noped);
         
         write_out(call_num, outvals, outvals2, outdata);
     }
