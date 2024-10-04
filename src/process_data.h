@@ -14,7 +14,7 @@ const int INBUF_SIZE = 3540160;   // in 8-byte words
 //const int LOGIC_OUTBUF_SIZE = 276;
 //const int OUTBUF_SIZE = 0x200;  // aligned
 
-const int LOGIC_OUTBUF_SIZE = 116;
+//const int LOGIC_OUTBUF_SIZE = 232;
 const int OUTBUF_SIZE = 0x100;  // aligned
 
 constexpr unsigned int NUM_LINKS = 10;
@@ -25,7 +25,7 @@ constexpr unsigned int n_frames = 6000;
 
 constexpr size_t TICK_SIZE = 128;
 constexpr size_t SKIP_SIZE = 103;
-constexpr size_t N_OUT = 2;
+constexpr size_t N_OUT = 4;
 
 constexpr size_t NET_SIZE = 128;
 constexpr size_t NET_SIZE_2 = 128/2;

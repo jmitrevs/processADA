@@ -150,6 +150,7 @@ fill_words_loop:
 void fill_planes(const ap_uint<14> valsa[NUM_VALS_Z],
                  const ap_uint<14> valsb[NUM_VALS_Z],
                  ap_uint<14> planes[TICK_SIZE][z_channels],
+                 ap_uint<14> planes2[TICK_SIZE][z_channels],
                  size_t tick,
                  uint16_t crate,
                  uint16_t slot,
@@ -170,17 +171,21 @@ fill_planes_loop:
         // should be easy to add the other Z-channel
         if (offline_chana < z_channels) {
             planes[tick][offline_chana] = valsa[iVal];
+        } else {
+            planes2[tick][offline_chana - z_channels] = valsa[iVal];
         }
 
         auto offline_chanb = getOfflineChannelZb(crate, slot, link_from_frameheader, iVal);
         // should be easy to add the other Z-channel
         if (offline_chanb < z_channels) {
             planes[tick][offline_chanb] = valsb[iVal];
+        } else {
+            planes2[tick][offline_chanb - z_channels] = valsb[iVal];
         }
     }
 }
 
-void make_planes(int call_num, readbuf_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels]) {
+void make_planes(int call_num, readbuf_t infiledata[INBUF_SIZE], ap_uint<14> planes[TICK_SIZE][z_channels], ap_uint<14> planes2[TICK_SIZE][z_channels]) {
     // note, fragsize is in readbuf_t size (64 bit words)
     constexpr size_t fragsize = (INFILE_SIZE / NUM_LINKS);  // this will be exact; there's a check in the host
 
@@ -275,7 +280,7 @@ link_loop:
             //               << ", valb = " << z_plane_valsb[iVal] << std::endl;
             // }
 
-            fill_planes(z_plane_valsa, z_plane_valsb, planes, tick, crate, slot, link_from_frameheader);
+            fill_planes(z_plane_valsa, z_plane_valsb, planes, planes2, tick, crate, slot, link_from_frameheader);
         }
     }
 }
@@ -329,8 +334,9 @@ pedestal_pipe:
 }
 
 
+std::array<writebuf_t, 2> call_cnn2d(std::pair<bool, uint16_t> keep, ap_int<15> planes_noped[TICK_SIZE][z_channels]) {
 
-void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_noped[TICK_SIZE][z_channels], writebuf_t outdata[OUTBUF_SIZE]) {
+    std::array<writebuf_t, 2> outvals;
 
     if (keep.first) {
         std::cout << "keep is true" << std::endl;
@@ -357,17 +363,27 @@ void call_cnn2d(int call_num, std::pair<bool, uint16_t> keep, ap_int<15> planes_
         }
         cnn2d(stream_in, stream_out);
         auto prob = stream_out.read();
-        outdata[call_num*N_OUT] = prob[0];
-        outdata[call_num*N_OUT+1] = prob[1];
+        outvals[0] = prob[0];
+        outvals[1] = prob[1];
         // // if commenting out upper part
         // outdata[call_num*N_OUT] = 0;
         // outdata[call_num*N_OUT+1] = 1;
     } else {
         std::cout << "keep is false" << std::endl;
-        outdata[call_num*N_OUT] = 1;
-        outdata[call_num*N_OUT+1] = 0;
+        outvals[0] = 1;
+        outvals[1] = 0;
     }
+    return outvals;
 }
+
+
+void write_out(int call_number, std::array<writebuf_t, 2> outvals, std::array<writebuf_t, 2> outvals2, writebuf_t outdata[OUTBUF_SIZE]) {
+    outdata[call_num*N_OUT] = outvals[0];
+    outdata[call_num*N_OUT + 1] = outvals[1];
+    outdata[call_num*N_OUT + 2] = outvals2[0];
+    outdata[call_num*N_OUT + 3] = outvals2[1];
+}
+
 
 // readbuf_t changed to uint64_t
 void process_data(readbuf_t infiledata[INBUF_SIZE],
@@ -396,11 +412,19 @@ calls_loop:
 //#pragma HLS array_partition variable=planes type=cyclic dim=2 factor=32
         ap_int<15> planes_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
 //#pragma HLS array_partition variable=planes_noped type=cyclic dim=2 factor=32
+        ap_uint<14> planes2[TICK_SIZE][z_channels];
+//#pragma HLS array_partition variable=planes type=cyclic dim=2 factor=32
+        ap_int<15> planes2_noped[TICK_SIZE][z_channels];  // these have the pedestal subtracted
+//#pragma HLS array_partition variable=planes_noped type=cyclic dim=2 factor=32
 
-        make_planes(call_num, infiledata, planes);
+        make_planes(call_num, infiledata, planes, plans2);
 
         auto keep = subtract_pedestal(planes, planes_noped);
+        auto keep2 = subtract_pedestal(planes2, planes2_noped);
 
-        call_cnn2d(call_num, keep, planes_noped, outdata);
+        auto outvals = call_cnn2d(keep, planes_noped);
+        auto outvals2 = call_cnn2d(keep2, planes_noped2);
+        
+        write_out(call_num, outvals, outvals2, outdata);
     }
 }
